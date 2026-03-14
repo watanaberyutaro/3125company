@@ -1,17 +1,17 @@
 ---
 created: 2026-03-14
-status: pending
+status: done
 type: general
 target_folder: 3125情報受付事業部
 source: WebUI
 ---
 
-# 📥 タスク追加
-auのスタッフ、荒木さんと面談調整
+# 📥 タスクを追加
+契約書（Primepick、Regrife）
 
 ## 指示内容
-タスク追加
-auのスタッフ、荒木さんと面談調整
+タスクを追加
+契約書（Primepick、Regrife）
 
 ## 担当部署
 秘書室
