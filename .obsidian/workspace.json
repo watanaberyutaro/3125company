@@ -11,10 +11,14 @@
             "id": "ae5965638c92ebf3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "3125情報受付事業部/_pending/2026-03-14T22-42-29-スマホコンサルの提案書作って.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新規タブ"
+              "title": "2026-03-14T22-42-29-スマホコンサルの提案書作って"
             }
           }
         ]
@@ -175,10 +179,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "85367776133935ea",
+  "active": "ae5965638c92ebf3",
   "lastOpenFiles": [
-    "3125情報受付事業部/_pending/2026-03-14T22-42-29-スマホコンサルの提案書作って.md",
     "3125情報受付事業部/_pending/2026-03-14T14-17-39-今日やり残したことはある？.md",
+    "3125情報受付事業部/_pending/2026-03-14T22-42-29-スマホコンサルの提案書作って.md",
     "3125経営日誌事業部/news/2026-03-15-朝のニュース.md",
     "_MOC/ホーム.md",
     "3125マーケティング事業部/SNSマーケティング事業部/2026-03-15-SNS市場サマリー.md",
