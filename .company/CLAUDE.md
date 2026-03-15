@@ -133,7 +133,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🚀 [部署名]: [タスク概要] 開始\",\"description\":\"[リクエスト内容の要約]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🚀 …[部署名]が動き始めたわ\",\"description\":\"[タスク概要]\\n[リクエスト内容の要約]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 **② 作業完了時**（成果物保存後）:
