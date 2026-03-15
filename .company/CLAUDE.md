@@ -144,7 +144,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"✅ [部署名]: [タスク概要] 完了\",\"description\":\"保存先: [path]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"✅ 終わったわ。[タスク概要]\",\"description\":\"[部署名]が片付けた\\n保存先: [path]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 **通知ルール（シンプル版）:**
