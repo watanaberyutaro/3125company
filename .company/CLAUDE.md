@@ -133,7 +133,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🚀 [部署名]: [タスク概要] 開始\",\"description\":\"[リクエスト内容の要約]\",\"color\":5763719,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🚀 [部署名]: [タスク概要] 開始\",\"description\":\"[リクエスト内容の要約]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 **② 作業完了時**（成果物保存後）:
@@ -144,7 +144,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"✅ [部署名]: [タスク概要] 完了\",\"description\":\"保存先: [path]\",\"color\":5763719,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"✅ [部署名]: [タスク概要] 完了\",\"description\":\"保存先: [path]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 **通知ルール（シンプル版）:**
@@ -246,7 +246,7 @@ curl -s -X POST "https://3125obsidianapp.vercel.app/api/log" \
   -d "{\"title\":\"📦 閲覧済みファイルをアーカイブ\",\"description\":\"[ファイル名一覧]\",\"notify\":false}" ; \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📦 閲覧済みファイルをアーカイブ\",\"description\":\"[ファイル名一覧]\",\"color\":9807270,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📦 閲覧済みファイルをアーカイブ\",\"description\":\"[ファイル名一覧]\",\"color\":9807270,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 **① 今日のタスクまとめ**
@@ -306,7 +306,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"⏰ [タスク名]\",\"description\":\"[補足メモ]\",\"color\":3447003,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"⏰ [タスク名]\",\"description\":\"[補足メモ]\",\"color\":3447003,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 - 全タスク登録後、時間割サマリーをブリーフィングファイルの末尾に追記する
@@ -348,7 +348,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🌅 朝のブリーフィング YYYY-MM-DD\",\"description\":\"[タスク数・主要ニュース見出し]\",\"color\":3447003,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🌅 朝のブリーフィング YYYY-MM-DD\",\"description\":\"[タスク数・主要ニュース見出し]\",\"color\":3447003,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 #### Step 1: キュー確認
@@ -369,7 +369,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📋 処理計画: キュータスク X件\",\"description\":\"[タスク一覧と担当部署]\",\"color\":10181046,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📋 処理計画: キュータスク X件\",\"description\":\"[タスク一覧と担当部署]\",\"color\":10181046,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 （タスクが1件でも同じ形式で登録する）
@@ -382,7 +382,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🚀 秘書室: キュータスク X件 処理開始\",\"description\":\"[タイトル一覧]\",\"color\":5763719,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🚀 秘書室: キュータスク X件 処理開始\",\"description\":\"[タイトル一覧]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 #### Step 4: 各部署が処理実行
@@ -417,7 +417,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🤝 [依頼元]→[依頼先]: [依頼内容]\",\"description\":\"依頼理由: [理由]\",\"color\":9807270,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🤝 [依頼元]→[依頼先]: [依頼内容]\",\"description\":\"依頼理由: [理由]\",\"color\":9807270,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 **【重要】全成果物にブリーフィングを必須添付**
@@ -447,7 +447,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"✅ [部署名]: [タスクタイトル] 完了\",\"description\":\"保存先: [path]\",\"color\":5763719,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"✅ [部署名]: [タスクタイトル] 完了\",\"description\":\"保存先: [path]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 #### Step 4.5: CEO判断ループ（自律連携）
@@ -490,7 +490,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🔀 CEO→[次部署]: [タスクタイトル]\",\"description\":\"判断理由: [理由]\",\"color\":5793266,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🔀 CEO→[次部署]: [タスクタイトル]\",\"description\":\"判断理由: [理由]\",\"color\":5793266,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 **ログ凡例（Discordカラー）:**
@@ -530,7 +530,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🎉 全タスク処理完了\",\"description\":\"X件処理しました。\n[完了タイトル一覧]\",\"color\":16766720,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🎉 全タスク処理完了\",\"description\":\"X件処理しました。\n[完了タイトル一覧]\",\"color\":16766720,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 #### Step 7: Git プッシュ（必須・毎回実行）
@@ -697,7 +697,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🏢 新部署設立: [部署名]\",\"description\":\"設立理由: [理由]\\n担当業務: [役割]\",\"color\":3447003,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🏢 新部署設立: [部署名]\",\"description\":\"設立理由: [理由]\\n担当業務: [役割]\",\"color\":3447003,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 ---
