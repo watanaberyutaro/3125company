@@ -253,6 +253,65 @@ curl -s -X POST "$DEPT_WEBHOOK" \
 - **ウィークリー**: `reviews/` に週次レビューを生成
 - **マンスリー**（任意）: 完了項目のレビューとアーカイブ
 
+## `report` コマンド（引数: report）
+
+`/company report` または起動時の入力が `report` の場合、以下を**確認なしで自動実行**する。
+
+### reportフロー
+
+**① データ収集**
+```bash
+python3 "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/generate_report.py"
+```
+
+**② 各部署のDiscordチャンネルに現状レポートを送信**
+
+JSONデータを読み、**7部署それぞれ**のwebhookに送信する。
+各メッセージは担当キャラクターの口調で書くこと。
+
+送信フォーマット（各部署のembedに含める内容）:
+
+| 部署 | 含める内容 | キャラ |
+|------|-----------|--------|
+| アイデア保管 | 検討中アイデア件数・タイトル一覧 / 確定済み件数 | アイゼン |
+| マーケティング | 直近SNSサマリーの日付・本数 | フランメ |
+| 営業戦略 | 直近の戦略・提案書ファイル名 | シュタルク |
+| 企画開発 | 直近の企画書ファイル名（なければ「現在タスクなし」） | ハイター |
+| 経営日誌 | 直近ニュースファイルの日付 | フェルン |
+| 制作・納品 | 直近の仕様書ファイル名 | ゼーリエ |
+| 市場調査 | 直近の調査レポートファイル名 | ヒンメル |
+
+送信コマンド（各部署ごとに実行）:
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+WEBHOOK=$(cat "$VAULT/[3125事業部フォルダ]/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"embeds\":[{\"title\":\"📊 [部署名] 現状レポート\",\"description\":\"[キャラ口調でのレポート内容]\",\"color\":[部署カラー],\"footer\":{\"text\":\"[キャラ名]（[部署名]）\"}}]}"
+```
+
+**部署カラー対応表:**
+| 部署 | カラーコード |
+|------|------------|
+| アイデア保管（アイゼン） | 9807270（グレー） |
+| マーケティング（フランメ） | 16711680（赤） |
+| 営業戦略（シュタルク） | 16744272（オレンジ） |
+| 企画開発（ハイター） | 1752220（水色） |
+| 経営日誌（フェルン） | 3447003（空色） |
+| 制作・納品（ゼーリエ） | 10181046（紫） |
+| 市場調査（ヒンメル） | 5793266（青） |
+
+**③ secretaryチャンネルに全体サマリーを送信**
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📊 各事業部レポート送信完了\",\"description\":\"pendingキュー: [件数]件\\n[部署ごとの1行サマリー]\",\"color\":9807270,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
+```
+
+---
+
 ## 起動時の自動処理（必須・全自動）
 
 Claude Codeが起動したとき、または `/company` が呼ばれたとき、以下を**確認なしで自動実行**する。
