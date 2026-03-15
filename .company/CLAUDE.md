@@ -759,11 +759,24 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 ### Discord Webhook URL の取得ルール
 
 **Discord curl は必ずカレンダーcurl と同一Bashコマンド内で実行すること。**
-シェルセッションをまたぐと変数が消えるため、毎回インラインで取得する:
+シェルセッションをまたぐと変数が消えるため、毎回インラインで取得する。
+
 ```bash
-DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n')
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+
+# 秘書室・CEO・システム全体の通知
+SEC_WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n')
+
+# 各3125事業部の通知（担当部署のchに直接送る）
+DEPT_WEBHOOK=$(cat "$VAULT/3125[部署名]事業部/discord-webhook.txt" | tr -d '\n')
 ```
+
 カレンダーcurl と Discord curl を `;` または `&&` で1コマンドにつなぐこと（別のBash呼び出しにしない）。
+
+**ルーティング原則:**
+- システム全体・秘書・CEO の通知 → `SEC_WEBHOOK`（secretaryチャンネル、`<@817999891531825186>`メンション付き）
+- 3125各事業部の作業開始・完了通知 → 各部署の `DEPT_WEBHOOK`（メンションなし、キャラ口調）
+- 部署→部署の自発依頼通知 → `SEC_WEBHOOK`（秘書が中継報告）＋依頼先 `DEPT_WEBHOOK`
 
 ### 通知エンドポイント一覧
 
