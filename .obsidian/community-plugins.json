@@ -2,5 +2,6 @@
   "dataview",
   "templater-obsidian",
   "obsidian-excalidraw-plugin",
-  "obsidian-git"
+  "obsidian-git",
+  "editor-width-slider"
 ]
