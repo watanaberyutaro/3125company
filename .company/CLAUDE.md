@@ -621,13 +621,20 @@ curl -s -X POST "$DISCORD_WEBHOOK_URL" \
 
 部署ごとの処理完了後にカレンダーログ + Discord通知（同一コマンドで実行）:
 ```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
 curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
   -H "Content-Type: application/json" \
   -d "{\"title\":\"✅ [部署名]: [タスクタイトル] 完了\",\"description\":\"保存先: [path]\",\"notify\":false,\"link\":\"obsidian://open?vault=Obsidian%20Vault&file=[出力ファイルパスをURLエンコード]\"}" ; \
-DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
-curl -s -X POST "$DISCORD_WEBHOOK_URL" \
+# secretaryチャンネル（全体報告）
+SEC_WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$SEC_WEBHOOK" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"✅ [部署名]: [タスクタイトル] 完了\",\"description\":\"保存先: [path]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"✅ [部署名]: [タスクタイトル] 完了\",\"description\":\"保存先: [path]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}" ; \
+# 部署チャンネル（キャラ口調）
+DEPT_WEBHOOK=$(cat "$VAULT/[3125事業部フォルダ]/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$DEPT_WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"embeds\":[{\"title\":\"✅ [タスクタイトル] 完了\",\"description\":\"[キャラ口調の完了メッセージ]\\n保存先: [path]\",\"color\":5763719,\"footer\":{\"text\":\"[キャラ名]（[部署名]）\"}}]}"
 ```
 
 #### Step 4.5: CEO判断ループ（自律連携）
