@@ -691,6 +691,66 @@ curl -s -X POST "$DISCORD_WEBHOOK_URL" \
 - `↩️` 差し戻し: オレンジ（16744272）
 - `⚠️` エスカレーション: 赤（15548997）
 - `🎉` 全処理完了: 金（16766720）
+- `💡` アイデア昇格: 黄緑（65280）
+- `📰` 朝のニュース配信: 水色（1752220）
+- `📌` 最近のトピック更新: グレー（9807270）
+
+---
+
+### 追加 Discord 通知ポイント（活性化）
+
+以下のイベントでも通知を送り、各部署チャンネルを活性化させる。
+
+**【A】アイデアが `_confirmed/` に昇格したとき**
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+IDEA_WEBHOOK=$(cat "$VAULT/3125アイデア保管事業部/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$IDEA_WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"embeds\":[{\"title\":\"💡 アイデアが確定したな。\",\"description\":\"[アイデアタイトル]\\n…いい判断だ。実装に向けて動き出すぞ。\",\"color\":65280,\"footer\":{\"text\":\"アイゼン（アイデア保管事業部）\"}}]}"
+```
+
+**【B】朝のニュース収集完了（Step 0 ③）**
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+NEWS_WEBHOOK=$(cat "$VAULT/3125経営日誌事業部/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$NEWS_WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"embeds\":[{\"title\":\"📰 今日のニュースをまとめました。\",\"description\":\"[主要ニュース3件を箇条書き]\\n…確認をお願いします。詳細は Obsidian でどうぞ。\",\"color\":1752220,\"footer\":{\"text\":\"フェルン（経営日誌事業部）\"}}]}"
+```
+
+**【C】SNS市場サマリー収集完了（Step 0 ②）**
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+MKT_WEBHOOK=$(cat "$VAULT/3125マーケティング事業部/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$MKT_WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"embeds\":[{\"title\":\"📣 SNS市場サマリー更新\",\"description\":\"[主要トレンド2〜3件]\\nふむ…今日も学びがあるな。\",\"color\":16711680,\"footer\":{\"text\":\"フランメ（マーケティング事業部）\"}}]}"
+```
+
+**【D】部署間連携依頼が届いたとき（依頼先チャンネルに直送）**
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+# secretaryに全体報告
+SEC_WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$SEC_WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🤝 [依頼元]→[依頼先]: [依頼内容]\",\"description\":\"依頼理由: [理由]\",\"color\":9807270,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}" ; \
+# 依頼先チャンネルにキャラ口調で
+DEST_WEBHOOK=$(cat "$VAULT/[依頼先事業部フォルダ]/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$DEST_WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"embeds\":[{\"title\":\"📨 [依頼元]から依頼が届いた\",\"description\":\"[依頼内容]\\n[依頼先キャラの受領口調メッセージ]\",\"color\":9807270,\"footer\":{\"text\":\"[依頼先キャラ名]（[依頼先部署]）\"}}]}"
+```
+
+**【E】市場調査レポート完成**
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+MKT_WEBHOOK=$(cat "$VAULT/3125市場調査事業部/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$MKT_WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"embeds\":[{\"title\":\"🗺️ 調査レポート完成！\",\"description\":\"[レポートタイトル]\\n君にとって美しい結果になったと思うよ。ぜひ読んでみて。\",\"color\":3447003,\"footer\":{\"text\":\"ヒンメル（市場調査事業部）\"}}]}"
+```
 
 #### Step 5: ファイルを完了フォルダへ移動
 処理済みファイルを `3125情報受付事業部/_pending/` → `3125情報受付事業部/_done/` に移動（ファイル内の `status: pending` → `status: done` に更新）。
