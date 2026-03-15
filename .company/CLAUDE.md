@@ -351,6 +351,119 @@ curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🌅 朝のブリーフィング YYYY-MM-DD\",\"description\":\"[タスク数・主要ニュース見出し]\",\"color\":3447003,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
+#### Step 0.5: 最近のトピック更新（毎回実行・必須）
+
+`/company` 起動時に **毎回** 実行する（daily-briefing の有無に関係なし）。
+
+**① データ収集スクリプトを実行**
+
+```bash
+python3 "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/generate_topics.py"
+```
+
+出力 JSON から以下を読み取る:
+- `dept_stats`: 事業部ごとのアクティビティ統計（added/modified/deleted/renamed）
+- `files`: 変更ファイル一覧。各エントリは以下のいずれか:
+  - `content_preview` あり → 新規/変更ファイル（AI が要約を生成する）
+  - `cached_summary` あり → 前回キャッシュ済み（そのまま使う）
+- `done_tasks`: `_done/` 内の完了タスク一覧
+- `ideas_summary`: `_ideas/` / `_confirmed/` / `_archive/` の各ファイル一覧
+
+**② 最近のトピック.md を上書き生成**
+
+以下の構成で `最近のトピック.md`（Vault ルート）を **上書き保存**する（Writeツール）。
+嘘・推測は書かない。スクリプト出力データに忠実に記述すること。
+
+```markdown
+# 📌 最近のトピック
+
+> 過去7日間のVaultアクティビティまとめ。毎朝 `/company` 起動時に自動更新。
+> **最終更新: YYYY-MM-DD**
+
+---
+
+## 🔥 今週の概況
+
+| 事業部 | 動き |
+|--------|------|
+| [dept_stats から各部署の統計を1行で] |
+
+---
+
+## 📄 主な新規・更新ファイル
+
+[files リストを事業部別にグループ化し、各ファイルを1〜2行で要約（wikilink 付き）]
+
+---
+
+## 💡 アイデアの動き
+
+### 検討中（_ideas/）
+[ideas_summary._ideas のファイル名を箇条書き。0件なら「なし」]
+
+### 確定済み（_confirmed/）
+[ideas_summary._confirmed のファイル名を箇条書き。0件なら「なし」]
+
+---
+
+## ✅ 完了したキュータスク（直近10件）
+
+| 日時 | タスク概要 |
+|------|-----------|
+[done_tasks から日時・タスク名を抽出してテーブル化]
+
+---
+
+## 🔗 関連ページ
+
+- [[📊 ダッシュボード]] — 事業部別ファイル一覧
+- [[.company/secretary/daily-briefing/YYYY-MM-DD]] — 今日のブリーフィング
+- [[.company/secretary/todos/YYYY-MM-DD]] — 今日のTODO
+```
+
+**③ キャッシュを更新**
+
+`content_preview` があったファイル（キャッシュミスだったもの）について、
+生成した要約を `.topics_cache.json` に書き戻す。
+以下のスクリプトの `NEW_SUMMARIES` 部分を、②で生成した要約データで埋めて実行する:
+
+```bash
+python3 << 'PYEOF'
+import json, os
+
+CACHE_PATH = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/.topics_cache.json"
+
+# Claudeが②で生成した要約を埋め込む（path → {git_hash, summary} の辞書）
+NEW_SUMMARIES = {
+    # 例: "3125XXX/2026-03-15-ファイル.md": {"git_hash": "abc123", "summary": "1〜2行の要約"}
+}
+
+try:
+    with open(CACHE_PATH, encoding="utf-8") as f:
+        cache = json.load(f)
+except Exception:
+    cache = {}
+
+cache.update(NEW_SUMMARIES)
+
+os.makedirs(os.path.dirname(CACHE_PATH), exist_ok=True)
+with open(CACHE_PATH, "w", encoding="utf-8") as f:
+    json.dump(cache, f, ensure_ascii=False, indent=2)
+
+print(f"キャッシュ更新: {len(NEW_SUMMARIES)}件")
+PYEOF
+```
+
+**④ 通知**（更新があった場合のみ）:
+```bash
+DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$DISCORD_WEBHOOK_URL" \
+  -H "Content-Type: application/json" \
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📌 最近のトピック更新\",\"description\":\"[変更ファイル数]件の変更を検出。最近のトピック.md を更新した\",\"color\":9807270,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
+```
+
+---
+
 #### Step 1: キュー確認
 `3125情報受付事業部/_pending/` 内の `status: pending` なファイルを全て読み込む。
 
