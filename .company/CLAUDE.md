@@ -258,6 +258,121 @@ curl -s -X POST "$SEC_WEBHOOK" \
 - **ウィークリー**: `reviews/` に週次レビューを生成
 - **マンスリー**（任意）: 完了項目のレビューとアーカイブ
 
+## `diary` コマンド（引数: diary）
+
+`/company diary` または入力が `diary` の場合、以下を**確認なしで自動実行**する。
+
+---
+
+### diaryフロー
+
+**① 今日のデータを収集**
+
+```bash
+# カレンダー予定を取得
+EVENTS=$(curl -s "https://3125obsidianapp.vercel.app/api/calendar-events?date=YYYY-MM-DD")
+```
+
+あわせて以下を読み込む:
+- `📋 タスク/YYYY-MM-DD.md` → 完了タスク（`- [x]`）・未完了タスク（`- [ ]`）を抽出
+- `3125情報受付事業部/_done/` → 今日付（`YYYY-MM-DDT*`）のファイル名一覧（本日の活動まとめ）
+
+**② 日記ファイルを生成**
+
+保存先: `3125経営日誌事業部/YYYY-MM-DD.md`
+
+すでに存在する場合は末尾に `---` で区切って追記する。
+
+```markdown
+---
+date: "YYYY-MM-DD"
+type: daily-diary
+author: フェルン
+---
+
+# 日次レポート: YYYY-MM-DD（曜日）
+
+---
+
+## 📅 本日の予定・活動
+
+[カレンダー予定一覧]
+
+---
+
+## ✅ タスク実績
+
+### 完了
+[完了タスク一覧]
+
+### 持ち越し・未完了
+[未完了タスク一覧]
+
+---
+
+## 📥 本日のキャプチャ・メモ
+
+[3125情報受付事業部/_done/ の本日ファイル名一覧]
+
+---
+
+## 💭 今日の考え・気づき
+
+（ここに自由記述）
+
+---
+
+## 🔥 明日への引き継ぎ
+
+- [ ]
+
+---
+
+## 📊 フェルンの総評（150文字）
+
+[フェルンの口調で本日の活動を150文字程度でレポート風にまとめる。
+ 例: 「…本日はXXXとXXXを完了。面談1件、タスクX件処理。気になる点はYYY。明日はZZZを優先すべきかと。…まあ、悪くない一日だったわ。」]
+
+---
+*生成: YYYY-MM-DD / 3125経営日誌事業部 フェルン*
+```
+
+**③ カレンダーに日記イベントを登録**
+
+- 時間: 当日の 22:30〜23:30
+- color: `3`（Grape / 薄紫 — 日記専用色）
+
+```bash
+curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
+  -H "Content-Type: application/json" \
+  -d "{\"title\":\"📔 日次レポート YYYY-MM-DD\",\"description\":\"[フェルンの総評150文字]\",\"notify\":false,\"colorId\":\"3\",\"startTime\":\"YYYY-MM-DDT22:30:00+09:00\",\"endTime\":\"YYYY-MM-DDT23:30:00+09:00\",\"link\":\"obsidian://open?vault=Obsidian%20Vault&file=3125%E7%B5%8C%E5%96%B6%E6%97%A5%E8%AA%8C%E4%BA%8B%E6%A5%AD%E9%83%A8%2FYYYY-MM-DD.md\"}"
+```
+
+**④ Discord 通知（経営日誌チャンネル）**
+
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+NEWS_WEBHOOK=$(cat "$VAULT/3125経営日誌事業部/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$NEWS_WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"embeds\":[{\"title\":\"📔 日次レポート YYYY-MM-DD 完了\",\"description\":\"[フェルンの総評150文字]\\n\\n保存先: 3125経営日誌事業部/YYYY-MM-DD.md\",\"color\":3447003,\"footer\":{\"text\":\"フェルン（経営日誌事業部）\"}}]}" ; \
+SEC_WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$SEC_WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📔 日記を書いておいた\",\"description\":\"詳細は経営日誌チャンネルを確認。\",\"color\":3447003,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
+```
+
+**⑤ Git プッシュ**（diary コマンド終了時も必ず実行）
+
+```bash
+cd "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault" && \
+git add -A && \
+git diff --cached --quiet && echo "変更なし" || \
+  (git commit -m "vault backup: $(date '+%Y-%m-%d %H:%M:%S')" && git push origin main && echo "プッシュ完了")
+```
+
+---
+
 ## `report` コマンド（引数: report）
 
 `/company report` または起動時の入力が `report` の場合、以下を**確認なしで自動実行**する。
