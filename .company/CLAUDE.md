@@ -264,30 +264,28 @@ curl -s -X POST "$DEPT_WEBHOOK" \
 python3 "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/generate_report.py"
 ```
 
-**② 各部署のDiscordチャンネルに現状レポートを送信**
+**② ファイル内容を読んで各キャラの口調で要約を生成**
 
-JSONデータを読み、**7部署それぞれ**のwebhookに送信する。
-各メッセージは担当キャラクターの口調で書くこと。
+JSONの各部署データを処理する。ファイルごとに以下を判断:
+- `cached_summary` あり → そのまま使う
+- `content_preview` あり → 内容を読んで **2〜4文の要約** を生成する
 
-送信フォーマット（各部署のembedに含める内容）:
+要約の品質ルール:
+- 内容に忠実に書く。嘘・推測は書かない
+- そのキャラの `char_style` に従った口調・語尾にする
+- Discordのdescriptionは **1500文字以内** に収める（embedの制限）
+- ファイルが0件の場合も「現在タスクなし」とキャラ口調で書く
 
-| 部署 | 含める内容 | キャラ |
-|------|-----------|--------|
-| アイデア保管 | 検討中アイデア件数・タイトル一覧 / 確定済み件数 | アイゼン |
-| マーケティング | 直近SNSサマリーの日付・本数 | フランメ |
-| 営業戦略 | 直近の戦略・提案書ファイル名 | シュタルク |
-| 企画開発 | 直近の企画書ファイル名（なければ「現在タスクなし」） | ハイター |
-| 経営日誌 | 直近ニュースファイルの日付 | フェルン |
-| 制作・納品 | 直近の仕様書ファイル名 | ゼーリエ |
-| 市場調査 | 直近の調査レポートファイル名 | ヒンメル |
+**③ 各部署のDiscordチャンネルに送信**
 
-送信コマンド（各部署ごとに実行）:
+7部署それぞれのwebhookに順番に送信する。
+
 ```bash
 VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
 WEBHOOK=$(cat "$VAULT/[3125事業部フォルダ]/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$WEBHOOK" \
   -H "Content-Type: application/json" \
-  -d "{\"embeds\":[{\"title\":\"📊 [部署名] 現状レポート\",\"description\":\"[キャラ口調でのレポート内容]\",\"color\":[部署カラー],\"footer\":{\"text\":\"[キャラ名]（[部署名]）\"}}]}"
+  -d "{\"embeds\":[{\"title\":\"📊 [部署名] 現状レポート\",\"description\":\"[②で生成したキャラ口調の要約]\",\"color\":[部署カラー],\"footer\":{\"text\":\"[キャラ名]（[部署名]）\"}}]}"
 ```
 
 **部署カラー対応表:**
@@ -301,7 +299,37 @@ curl -s -X POST "$WEBHOOK" \
 | 制作・納品（ゼーリエ） | 10181046（紫） |
 | 市場調査（ヒンメル） | 5793266（青） |
 
-**③ secretaryチャンネルに全体サマリーを送信**
+**④ キャッシュを書き戻す**
+
+`content_preview` があったファイル（新規処理分）の要約を `.report_cache.json` に保存する。
+次回から変更がなければ再読み不要になる。
+
+```bash
+python3 << 'PYEOF'
+import json, os
+
+CACHE_PATH = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/.report_cache.json"
+
+# Claudeが②で生成した要約を埋め込む（rel_path → {mtime_key, summary} の辞書）
+NEW_SUMMARIES = {
+    # 例: "3125XXX/2026-03-15-ファイル.md": {"mtime_key": "1742...", "summary": "要約テキスト"}
+}
+
+try:
+    with open(CACHE_PATH, encoding="utf-8") as f:
+        cache = json.load(f)
+except Exception:
+    cache = {}
+
+cache.update(NEW_SUMMARIES)
+os.makedirs(os.path.dirname(CACHE_PATH), exist_ok=True)
+with open(CACHE_PATH, "w", encoding="utf-8") as f:
+    json.dump(cache, f, ensure_ascii=False, indent=2)
+print(f"キャッシュ更新: {len(NEW_SUMMARIES)}件")
+PYEOF
+```
+
+**⑤ secretaryチャンネルに全体サマリーを送信**
 ```bash
 VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
 WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
