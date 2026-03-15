@@ -560,6 +560,139 @@ DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCl
 
 ---
 
+## 部署自律作成・廃止フロー
+
+### トリガー条件
+
+CEOは以下のいずれかに該当したとき、部署新設を提案する：
+
+1. **同種タスク3回以上**: 同じtype・業務内容の `_pending/` タスクが累計3回以上来た
+2. **CEO手動判断**: 「この業務量には専用部署が必要」とCEOが判断した
+
+---
+
+### Step A: 重複チェック
+
+提案前に `.company/CLAUDE.md` の組織構成セクションを確認し、**既存部署と役割が重複しないか**チェックする。
+重複している場合は提案せず、既存部署に振り分ける。
+
+---
+
+### Step B: 提案書生成
+
+`ceo/decisions/YYYY-MM-DD-新部署提案-[部署名].md` を以下の形式で作成する：
+
+```markdown
+---
+type: department_proposal
+status: pending
+proposed_by: CEO
+proposed_at: YYYY-MM-DD
+---
+
+## 提案部署名
+[部署名]
+
+## 設立理由
+[どんな業務が溜まっているか / なぜ既存部署では対応できないか]
+
+## 想定する役割・業務範囲
+[具体的な担当業務]
+
+## 既存部署との違い
+[重複しない理由]
+
+## テンプレート種別
+[research / sales / engineering / marketing / custom]
+```
+
+---
+
+### Step C: オーナー承認確認
+
+`AskUserQuestion` で以下を確認する：
+
+> 「💡 CEO提案: **[部署名]** を新設しませんか？
+> 理由: [設立理由の要約]
+> 役割: [業務範囲の要約]
+>
+> 1. 承認して作成
+> 2. 却下
+> 3. 部署名・役割を変更したい」
+
+---
+
+### Step D: 承認後の自動処理
+
+承認された場合、以下を順番に実行する：
+
+**① フォルダ生成**
+```bash
+mkdir -p "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/[部署名]/"
+```
+
+**② 部署CLAUDE.mdを生成** (Writeツール)
+保存先: `.company/[部署名]/CLAUDE.md`
+
+```markdown
+# [部署名] 部署ルール
+
+**設立日**: YYYY-MM-DD
+**設立理由**: [CEOの判断理由]
+
+## 役割
+[部署の担当業務]
+
+## 対応するタスクtype
+[research / content_creation / idea / analysis / general 等]
+
+## 成果物の保存先
+[3125XXX事業部/]
+
+## 命名規則
+YYYY-MM-DD-[タイトル].md
+```
+
+**③ _template.mdを配置** (Writeツール)
+保存先: `.company/[部署名]/_template.md`
+
+**④ .company/CLAUDE.mdの組織構成を更新** (Editツール)
+「組織構成」セクションのフォルダツリーと「各部署の役割」テーブルに新部署を追記する。
+
+**⑤ 完了通知**
+```bash
+curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
+  -H "Content-Type: application/json" \
+  -d "{\"title\":\"🏢 新部署設立: [部署名]\",\"description\":\"設立理由: [理由]\n担当業務: [役割]\",\"notify\":false}" ; \
+DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$DISCORD_WEBHOOK_URL" \
+  -H "Content-Type: application/json" \
+  -d "{\"embeds\":[{\"title\":\"🏢 新部署設立: [部署名]\",\"description\":\"設立理由: [理由]\\n担当業務: [役割]\",\"color\":3447003,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+```
+
+---
+
+### Step E: 却下・変更時の処理
+
+- **却下**: 提案書の `status: pending` → `status: rejected` に更新して終了
+- **変更**: 修正内容を反映した提案書を再作成してStep Cに戻る
+
+---
+
+### 部署廃止フロー
+
+CEOは以下の条件に該当する部署を検知したら、廃止を提案する：
+
+**廃止基準**: 過去3ヶ月以上、その部署フォルダへの新規ファイル作成がゼロ
+
+**廃止手順**:
+1. `AskUserQuestion` でオーナーに廃止確認
+2. 承認後: `.company/[部署名]/` を `.company/_archived_depts/[部署名]/` に移動
+3. `.company/CLAUDE.md` の組織構成から削除
+4. Discord + カレンダーに廃止ログを送信
+
+---
+
 ## アイデア管理ルール
 
 ### フォルダ構成
