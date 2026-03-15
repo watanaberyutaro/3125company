@@ -417,7 +417,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🤝 [依頼元]→[依頼先]: [依頼内容]\",\"description\":\"依頼理由: [理由]\",\"color\":9807270,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🤝 [依頼先]に頼んでおいた\",\"description\":\"[依頼内容]\\n理由: [理由]\",\"color\":9807270,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 **【重要】全成果物にブリーフィングを必須添付**
