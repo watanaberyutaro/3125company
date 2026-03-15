@@ -477,6 +477,17 @@ curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🌅 朝のブリーフィング YYYY-MM-DD\",\"description\":\"[タスク数・主要ニュース見出し]\",\"color\":3447003,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
+**⑥ 各部署レポート送信（朝イチ）**
+
+ブリーフィングファイル保存後、`report` コマンドと同じフローを実行する。
+各部署のDiscordチャンネルに今日時点の現状を送信する。
+
+```bash
+python3 "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/generate_report.py"
+```
+
+→ 出力JSONを元に、`report` コマンドフローの「② 各部署のDiscordチャンネルに現状レポートを送信」を実行する。
+
 #### Step 0.5: 最近のトピック更新（毎回実行・必須）
 
 `/company` 起動時に **毎回** 実行する（daily-briefing の有無に関係なし）。
