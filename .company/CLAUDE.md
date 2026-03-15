@@ -382,7 +382,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🚀 秘書室: キュータスク X件 処理開始\",\"description\":\"[タイトル一覧]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🚀 …やっておく。X件ね\",\"description\":\"[タイトル一覧]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 #### Step 4: 各部署が処理実行
