@@ -378,6 +378,13 @@ curl -s -X POST "$DISCORD_WEBHOOK_URL" \
 
 #### Step 5: ファイルを完了フォルダへ移動
 処理済みファイルを `3125情報受付事業部/_pending/` → `3125情報受付事業部/_done/` に移動（ファイル内の `status: pending` → `status: done` に更新）。
+`mv -f` で強制上書きすること（同名ファイルが_doneに存在しても確認なしで上書き）。
+```bash
+for f in "$PENDING"/*.md; do
+  sed -i '' 's/status: pending/status: done/' "$f"
+  mv -f "$f" "$DONE/"
+done
+```
 
 #### Step 6: 全完了通知
 全タスク完了後、**Push通知 + カレンダー + Discord** を同時送信:
