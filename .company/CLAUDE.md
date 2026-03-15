@@ -503,6 +503,20 @@ curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -d "{\"embeds\":[{\"title\":\"🎉 全タスク処理完了\",\"description\":\"X件処理しました。\n[完了タイトル一覧]\",\"color\":16766720,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
 ```
 
+#### Step 7: Git プッシュ（必須・毎回実行）
+
+**キュー処理・直接リクエスト問わず、すべての `/company` セッションの最後に必ず実行する。**
+変更がない場合はコミットをスキップするが、コマンド自体は必ず走らせること。
+
+```bash
+cd "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault" && \
+git add -A && \
+git diff --cached --quiet && echo "変更なし: プッシュスキップ" || \
+  (git commit -m "vault backup: $(date '+%Y-%m-%d %H:%M:%S')" && git push origin main && echo "プッシュ完了")
+```
+
+---
+
 ### Obsidian URIの生成ルール
 
 カレンダーログに `link` を付与する際は以下の形式でObsidian URIを生成する:
