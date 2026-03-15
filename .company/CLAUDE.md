@@ -682,6 +682,7 @@ curl -s -X POST "$DISCORD_WEBHOOK_URL" \
 | `content_creation` | コンテンツ・LP・文章を作成 | `target_folder` |
 | `idea` | アイデアをブラッシュアップしてアイデアメモとして保存。**TODOに追加しない。実装・開発は一切しない。** 構成：① 元のアイデア整理 ② 課題・背景 ③ 展開案3〜5つ（メリット・懸念・収益モデル） ④ おすすめ案 ⑤ 次のアクション候補 | `3125アイデア保管事業部/_ideas/` |
 | `idea_development` | 実装確定アイデアの開発準備。以下を順番に作成: ① 要件定義書（目的・対象ユーザー・機能要件・非機能要件） ② 詳細設計書（画面設計・DB設計・API設計・技術スタック） ③ Claude Code MVP用プロンプト（このプロンプトをClaude Codeに渡せばMVPが作れるレベルで記述） **実装・コーディング自体は行わない。** | `3125制作・納品事業部/` |
+| `task` | 今日のTODOファイル（`secretary/todos/YYYY-MM-DD.md`）に `- [ ] [タスク内容] \| 優先度: 通常 \| 追加: YYYY-MM-DD` 形式で追記する。ファイルが存在しない場合は新規作成。**DiscordやPendingファイルは作成不要・完了通知も不要**。Editツールで直接TODOファイルを更新すること。 | `secretary/todos/` |
 | `memo` | メモを整理・分類し保存・関連する提案も追加 | `3125情報受付事業部` |
 | `analysis` | データ分析・レポート作成 | `target_folder` |
 | `coding` | コード・設計書作成 | `engineering/docs/` |
