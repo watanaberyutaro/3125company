@@ -369,7 +369,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📋 処理計画: キュータスク X件\",\"description\":\"[タスク一覧と担当部署]\",\"color\":10181046,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📋 そうねぇ…X件やっておくわ\",\"description\":\"[タスク一覧と担当部署]\",\"color\":10181046,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 （タスクが1件でも同じ形式で登録する）
