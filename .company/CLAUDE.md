@@ -149,6 +149,7 @@ curl -s -X POST "$DISCORD_WEBHOOK_URL" \
 3. 既存ファイルは上書きしない（追記のみ）
 4. 追記時はタイムスタンプを付ける
 5. 1トピック1ファイルを守る
+6. **`3125*/` 配下に保存する成果物ファイルは必ず先頭1行目に `- [ ] 閲覧済み` を追加すること**（_pending/_done/_ideas/_confirmed/_archiveフォルダ内は除く）
 
 ### レビューサイクル
 - **デイリー**: 秘書が朝晩のTODO確認をサポート
@@ -171,6 +172,52 @@ Claude Codeが起動したとき、または `/company` が呼ばれたとき、
 以下を**並行して**実施し、最後に1つのブリーフィングファイルにまとめてObsidianとカレンダーに登録する。
 
 ---
+
+**① - a: 閲覧済みファイルの自動アーカイブ**
+
+`3125*/` 配下のファイルで `- [x] 閲覧済み` がチェックされているものを各フォルダの `_archive/` に移動する。
+
+```bash
+python3 << 'EOF'
+import os, shutil, glob
+
+VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+SKIP_DIRS = {"_pending", "_done", "_ideas", "_confirmed", "_archive"}
+archived = []
+
+for dept_dir in glob.glob(os.path.join(VAULT, "3125*/")):
+    for f in glob.glob(os.path.join(dept_dir, "*.md")):
+        basename = os.path.basename(f)
+        if basename.startswith("_"):
+            continue
+        parent = os.path.basename(os.path.dirname(f))
+        if parent in SKIP_DIRS:
+            continue
+        with open(f, "r", encoding="utf-8") as fp:
+            content = fp.read()
+        if "- [x] 閲覧済み" not in content:
+            continue
+        archive_dir = os.path.join(dept_dir, "_archive")
+        os.makedirs(archive_dir, exist_ok=True)
+        shutil.move(f, os.path.join(archive_dir, basename))
+        archived.append(basename)
+
+print(f"アーカイブ完了: {len(archived)}件")
+for name in archived:
+    print(f"  - {name}")
+EOF
+```
+
+アーカイブされたファイルがある場合はDiscord + カレンダーに通知:
+```bash
+DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "https://3125obsidianapp.vercel.app/api/log" \
+  -H "Content-Type: application/json" \
+  -d "{\"title\":\"📦 閲覧済みファイルをアーカイブ\",\"description\":\"[ファイル名一覧]\",\"notify\":false}" ; \
+curl -s -X POST "$DISCORD_WEBHOOK_URL" \
+  -H "Content-Type: application/json" \
+  -d "{\"embeds\":[{\"title\":\"📦 閲覧済みファイルをアーカイブ\",\"description\":\"[ファイル名一覧]\",\"color\":9807270,\"footer\":{\"text\":\"渡邊カンパニー 秘書室\"}}]}"
+```
 
 **① 今日のタスクまとめ**
 - 前日のTODOファイル（`secretary/todos/YYYY-MM-DD.md`）を読み込み、未完了タスクを抽出
