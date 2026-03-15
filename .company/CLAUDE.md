@@ -198,20 +198,25 @@ curl -s -X POST "$DEPT_WEBHOOK" \
 ```
 
 **② 作業完了時**（成果物保存後）:
+
+完了通知は **部署チャンネルから発信** する。secretaryへは一言報告のみ。
+
 ```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+# カレンダーログ
 curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
   -H "Content-Type: application/json" \
   -d "{\"title\":\"✅ [部署名]: [タスク概要] 完了\",\"description\":\"保存先: [path]\",\"notify\":false,\"link\":\"[ObsidianURI]\"}" ; \
-# secretaryチャンネルに報告
-SEC_WEBHOOK=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
-curl -s -X POST "$SEC_WEBHOOK" \
-  -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"✅ [部署名]が片付けた。[タスク概要]\",\"description\":\"保存先: [path]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}" ; \
-# 部署チャンネルにキャラ口調で完了報告
-DEPT_WEBHOOK=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/[事業部フォルダ]/discord-webhook.txt" | tr -d '\n') && \
+# 【メイン】部署チャンネルにキャラ口調 + 実施内容の要約（2〜3文）を送信
+DEPT_WEBHOOK=$(cat "$VAULT/[事業部フォルダ]/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DEPT_WEBHOOK" \
   -H "Content-Type: application/json" \
-  -d "{\"embeds\":[{\"title\":\"✅ [タスク概要] 完了\",\"description\":\"[キャラ口調の完了メッセージ]\\n保存先: [path]\",\"color\":5763719,\"footer\":{\"text\":\"[キャラ名]（[部署名]）\"}}]}"
+  -d "{\"embeds\":[{\"title\":\"✅ [タスク概要] 完了\",\"description\":\"[実施内容の要約: 何を調べ/作り/分析したか・主要な発見・次のアクション候補を2〜3文で]\\n\\n[キャラ口調の完了ひとこと]\\n保存先: [path]\",\"color\":5763719,\"footer\":{\"text\":\"[キャラ名]（[部署名]）\"}}]}" ; \
+# 【サブ】secretaryチャンネルには一言報告のみ（詳細は部署チャンネルへ）
+SEC_WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$SEC_WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"✅ [部署名]: [タスク概要] 完了\",\"description\":\"詳細は [部署名] チャンネルを確認。\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 **通知ルール（シンプル版）:**
