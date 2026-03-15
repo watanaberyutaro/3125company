@@ -490,7 +490,7 @@ curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🔀 CEO→[次部署]: [タスクタイトル]\",\"description\":\"判断理由: [理由]\",\"color\":5793266,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"🔀 次は[次部署]ね。[タスクタイトル]\",\"description\":\"判断理由: [理由]\",\"color\":5793266,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 **ログ凡例（Discordカラー）:**
