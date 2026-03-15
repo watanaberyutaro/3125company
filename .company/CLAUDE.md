@@ -335,12 +335,17 @@ PYEOF
 ```
 
 **⑤ secretaryチャンネルに全体サマリーを送信**
+
+secretaryへの通知には以下を含める:
+- 全体の完了状況（pendingキュー件数・部署ごとの1行サマリー）
+- **最近のトピックの要約（150字以内）**: `最近のトピック.md` の内容を読み、今週の重要な動きを150字程度に圧縮する。嘘は書かない。
+
 ```bash
 VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
 WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$WEBHOOK" \
   -H "Content-Type: application/json" \
-  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📊 各事業部レポート送信完了\",\"description\":\"pendingキュー: [件数]件\\n[部署ごとの1行サマリー]\",\"color\":9807270,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📊 各事業部レポート送信完了\",\"description\":\"pendingキュー: [件数]件\\n[部署ごとの1行サマリー]\\n\\n**📌 今週のトピック（要約）**\\n[最近のトピック.md から150字以内で要約。今週の主要な動き・完了タスク・注目アイデアを凝縮する]\",\"color\":9807270,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
 ---
