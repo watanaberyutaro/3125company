@@ -268,6 +268,10 @@ curl -s -X POST "$SEC_WEBHOOK" \
 - **トピックファイル**: `kebab-case-title.md`
 - **テンプレート**: `_template.md`（各フォルダに1つ、変更しない）
 - **レビュー**: 週次 `YYYY-WXX.md`、月次 `YYYY-MM.md`
+- **受信トレイ用成果物ファイル**: `[キャラ名]より_YYYY-MM-DD-タイトル.md`
+  - 例: `アイゼンより_2026-03-16-MacroDroid-LINE代替-トーク保存-要約システム.md`
+  - 例: `ゼーリエより_2026-03-16-MacroDroid-LINE-capture-開発仕様書.md`
+  - **振り分け時に `[キャラ名]より_` を自動削除**してターゲットフォルダに保存する
 
 **Android互換ファイル名ルール（必須）:**
 ファイル名に以下の文字を使用しないこと。Android の git pull が失敗する原因になる。
