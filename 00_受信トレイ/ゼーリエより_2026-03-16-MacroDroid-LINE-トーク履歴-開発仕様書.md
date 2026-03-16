@@ -42,9 +42,10 @@ supersedes: 2026-03-16-MacroDroid-LINE-capture-開発仕様書.md
         ↓ 今日の日付でフィルタリング
         ↓ 差分のみ抽出（重複除去）
 [line-messages/YYYY-MM-DD.json] ← GitHub（Obsidian Vault）に蓄積
-        ↓ 23:00の実行時のみ
-        ↓ Claude Haiku API（要約）
-[02_3125経営日誌事業部（フェルン）/line-summary/YYYY-MM-DD-LINEサマリー.md]
+        ↓ 毎回実行
+        ↓ 直近14日分のJSONを全件読み込み
+        ↓ Claude Haiku API（要約・更新）
+[02_3125経営日誌事業部（フェルン）/line-summary/YYYY-MM-DD-LINEサマリー.md] ← 上書き更新
         ↓ Discord通知（フェルン）
 ```
 
