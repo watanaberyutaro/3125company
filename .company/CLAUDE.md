@@ -577,6 +577,75 @@ Claude Codeが起動したとき、または `/company` が呼ばれたとき、
 
 ### 実行フロー
 
+#### ⓪ 受信トレイ振り分け（毎回実行・1日1回制限なし）
+
+`00_受信トレイ/` 内のファイルを確認し、`- [x] 振り分け` がチェックされているものを自動的に振り分ける。
+
+```bash
+python3 << 'EOF'
+import os, shutil, re
+
+VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+INBOX = os.path.join(VAULT, "00_受信トレイ")
+moved = []
+archived = []
+
+for fname in sorted(os.listdir(INBOX)):
+    if not fname.endswith(".md") or fname.startswith("_"):
+        continue
+    fpath = os.path.join(INBOX, fname)
+    with open(fpath, "r", encoding="utf-8") as fp:
+        content = fp.read()
+
+    has_sort = "- [x] 振り分け" in content
+    has_read  = "- [x] 閲覧済み" in content
+
+    if not has_sort:
+        continue  # 未処理はスキップ
+
+    # frontmatter から target_folder を取得
+    target_folder = None
+    for line in content.split("\n"):
+        if line.startswith("target_folder:"):
+            target_folder = line.split(":", 1)[1].strip()
+            break
+
+    if not target_folder:
+        continue  # target_folder 未記載はスキップ
+
+    # [キャラ名]より_ prefix を削除
+    new_fname = re.sub(r'^[^_]+より_', '', fname)
+
+    dest_dir = os.path.join(VAULT, target_folder)
+    if has_read:
+        dest_dir = os.path.join(dest_dir, "_archive")
+    os.makedirs(dest_dir, exist_ok=True)
+
+    shutil.move(fpath, os.path.join(dest_dir, new_fname))
+
+    label = f"{fname} → {target_folder}{'/_archive' if has_read else ''}/{new_fname}"
+    if has_read:
+        archived.append(label)
+    else:
+        moved.append(label)
+
+print(f"振り分け完了: {len(moved)}件 / アーカイブ: {len(archived)}件")
+for item in moved + archived:
+    print(f"  - {item}")
+EOF
+```
+
+振り分けが1件以上あった場合は Discord（秘書チャンネル）に通知:
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+SEC_WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$SEC_WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📥 受信トレイ振り分け完了\",\"description\":\"[ファイル名と移動先の一覧]\",\"color\":5763719,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
+```
+
+---
+
 #### Step 0: 朝の定例ブリーフィング（1日1回のみ）
 
 `secretary/daily-briefing/YYYY-MM-DD.md` が**存在しない場合のみ**実行する。
