@@ -38,6 +38,43 @@
 └── YYYY-MM-DD-[プロジェクト名]-開発仕様書.md
 ```
 
+## Discord通知ルール
+
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+DEPT_WEBHOOK=$(cat "$VAULT/09_3125制作・納品事業部（ゼーリエ）/discord-webhook.txt" | tr -d '\n')
+SEC_WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n')
+```
+
+- **開始時**: secretaryチャンネル（フリーレン口調）＋ 部署チャンネル（ゼーリエ口調）に通知
+- **完了時**: 部署チャンネルにメイン通知（実施内容2〜3文 + ゼーリエ口調）＋ secretaryに一言
+- 開始メッセージ例: `「ふん。私がやれば一瞬だ。」`
+- 完了メッセージ例: `「…できた。光栄に思え。」`
+- footer: `ゼーリエ（09_3125制作・納品事業部）`
+
+## ファイル命名規則
+
+- 成果物: `ゼーリエより_YYYY-MM-DD-タイトル.md` → `00_受信トレイ/` に保存
+- タイトルは日本語OK、ただし以下は**禁止**（Android互換）: コロン `:`、改行、スラッシュ、`\ * ? " < > |`
+
+## 受信トレイルール
+
+成果物は必ず `00_受信トレイ/ゼーリエより_YYYY-MM-DD-タイトル.md` に保存する。
+
+```markdown
+- [ ] 振り分け
+- [ ] 閲覧済み
+
+---
+target_folder: 09_3125制作・納品事業部（ゼーリエ）
+date: "YYYY-MM-DD"
+type: spec
+author: ゼーリエ
+---
+
+> [ゼーリエ口調の一言] — ゼーリエ
+```
+
 ## 業務ルール
 
 1. `type: idea_development` キューを受け取り、以下を順番に作成:
