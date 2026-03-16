@@ -34,7 +34,8 @@ MAX_PER_DEPT = 5        # 1部署あたりの最大表示件数
 
 # 対象プレフィックス（これ以外はスキップ）
 FOCUS_PREFIXES = (
-    "3125",
+    "01_3125", "02_3125", "03_3125", "04_3125", "05_3125",
+    "06_3125", "07_3125", "08_3125", "09_3125",
     ".company/secretary/todos",
     ".company/secretary/notes",
     ".company/ceo/decisions",
@@ -49,8 +50,8 @@ SKIP_NAME_PREFIXES = ("_MOC_",)
 SKIP_FOLDERS = (".obsidian", ".company/secretary/daily-briefing")
 
 # _done/ はタイトルのみ（中身読まない）
-DONE_FOLDER = "3125情報受付事業部/_done"
-IDEAS_FOLDER = "3125アイデア保管事業部"
+DONE_FOLDER = "01_3125情報受付事業部（フリーレン）/_done"
+IDEAS_FOLDER = "04_3125アイデア保管事業部（アイゼン）"
 
 
 # ─────────────────────────────────────────

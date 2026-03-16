@@ -112,13 +112,13 @@ def count_md(folder: str) -> int:
 
 
 def pending_count() -> int:
-    d = os.path.join(VAULT, "3125情報受付事業部/_pending")
+    d = os.path.join(VAULT, "01_3125情報受付事業部（フリーレン）/_pending")
     return sum(1 for f in os.listdir(d) if f.endswith(".md")) if os.path.isdir(d) else 0
 
 
 def idea_files(subfolder: str) -> list[dict]:
     """アイデアフォルダのファイル一覧（内容プレビュー付き）。"""
-    return recent_md_files(f"3125アイデア保管事業部/{subfolder}", days=30, max_files=5)
+    return recent_md_files(f"04_3125アイデア保管事業部（アイゼン）/{subfolder}", days=30, max_files=5)
 
 
 # ──────────────────────────────────────
@@ -133,64 +133,64 @@ def main():
         "cache_path": CACHE_PATH,
         "departments": {
 
-            "3125アイデア保管事業部": {
+            "04_3125アイデア保管事業部（アイゼン）": {
                 "char": "アイゼン",
                 "char_style": "寡黙・簡潔・「俺」一人称・「〜だな」「〜だ」",
-                "webhook_file": "3125アイデア保管事業部/discord-webhook.txt",
+                "webhook_file": "04_3125アイデア保管事業部（アイゼン）/discord-webhook.txt",
                 "color": 9807270,
-                "ideas_count": count_md("3125アイデア保管事業部/_ideas"),
-                "confirmed_count": count_md("3125アイデア保管事業部/_confirmed"),
+                "ideas_count": count_md("04_3125アイデア保管事業部（アイゼン）/_ideas"),
+                "confirmed_count": count_md("04_3125アイデア保管事業部（アイゼン）/_confirmed"),
                 "ideas_files": idea_files("_ideas"),
                 "confirmed_files": idea_files("_confirmed"),
             },
 
-            "3125マーケティング事業部": {
+            "06_3125マーケティング事業部（フランメ）": {
                 "char": "フランメ",
                 "char_style": "自信家・師匠口調・「私」一人称・「〜だな」「〜ぞ」・少し上から",
-                "webhook_file": "3125マーケティング事業部/discord-webhook.txt",
+                "webhook_file": "06_3125マーケティング事業部（フランメ）/discord-webhook.txt",
                 "color": 16711680,
-                "recent_files": recent_md_files("3125マーケティング事業部/SNSマーケティング事業部"),
+                "recent_files": recent_md_files("06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部"),
             },
 
-            "3125営業戦略事業部": {
+            "07_3125営業戦略事業部（シュタルク）": {
                 "char": "シュタルク",
                 "char_style": "少年ぽい・「俺」一人称・弱音あり・でも覚悟を決める・「〜だろ」「やるしかない」",
-                "webhook_file": "3125営業戦略事業部/discord-webhook.txt",
+                "webhook_file": "07_3125営業戦略事業部（シュタルク）/discord-webhook.txt",
                 "color": 16744272,
-                "recent_files": recent_md_files("3125営業戦略事業部"),
+                "recent_files": recent_md_files("07_3125営業戦略事業部（シュタルク）"),
             },
 
-            "3125企画開発事業部": {
+            "05_3125企画開発事業部（ハイター）": {
                 "char": "ハイター",
                 "char_style": "明るく朗らか・「私」一人称・丁寧語・「〜ですよ」「〜ですねぇ」",
-                "webhook_file": "3125企画開発事業部/discord-webhook.txt",
+                "webhook_file": "05_3125企画開発事業部（ハイター）/discord-webhook.txt",
                 "color": 1752220,
-                "recent_files": recent_md_files("3125企画開発事業部"),
+                "recent_files": recent_md_files("05_3125企画開発事業部（ハイター）"),
             },
 
-            "3125経営日誌事業部": {
+            "02_3125経営日誌事業部（フェルン）": {
                 "char": "フェルン",
                 "char_style": "冷静沈着・敬語・「私」一人称・「…〜です」「ダメです」・淡々と的確",
-                "webhook_file": "3125経営日誌事業部/discord-webhook.txt",
+                "webhook_file": "02_3125経営日誌事業部（フェルン）/discord-webhook.txt",
                 "color": 3447003,
-                "news_files": recent_md_files("3125経営日誌事業部/news"),
-                "diary_files": recent_md_files("3125経営日誌事業部"),
+                "news_files": recent_md_files("02_3125経営日誌事業部（フェルン）/news"),
+                "diary_files": recent_md_files("02_3125経営日誌事業部（フェルン）"),
             },
 
-            "3125制作・納品事業部": {
+            "09_3125制作・納品事業部（ゼーリエ）": {
                 "char": "ゼーリエ",
                 "char_style": "高圧的・傲慢・「私（わたくし）」一人称・命令形多め・「〜しろ」「ふん」「光栄に思え」",
-                "webhook_file": "3125制作・納品事業部/discord-webhook.txt",
+                "webhook_file": "09_3125制作・納品事業部（ゼーリエ）/discord-webhook.txt",
                 "color": 10181046,
-                "recent_files": recent_md_files("3125制作・納品事業部"),
+                "recent_files": recent_md_files("09_3125制作・納品事業部（ゼーリエ）"),
             },
 
-            "3125市場調査事業部": {
+            "03_3125市場調査事業部（ヒンメル）": {
                 "char": "ヒンメル",
                 "char_style": "爽やか・自信家・「僕」一人称・「〜だね」「〜だよ」・美しいが口癖",
-                "webhook_file": "3125市場調査事業部/discord-webhook.txt",
+                "webhook_file": "03_3125市場調査事業部（ヒンメル）/discord-webhook.txt",
                 "color": 5793266,
-                "recent_files": recent_md_files("3125市場調査事業部"),
+                "recent_files": recent_md_files("03_3125市場調査事業部（ヒンメル）"),
             },
         },
     }

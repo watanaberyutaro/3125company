@@ -10,7 +10,7 @@ WEEK=$(date +%Y-W%V)
 
 VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
 COMPANY="/Users/watanaberyuutarou/Desktop/3125映像/Company/.company"
-OUTPUT="$VAULT/3125経営日誌事業部/$DATE.md"
+OUTPUT="$VAULT/02_3125経営日誌事業部（フェルン）/$DATE.md"
 
 # すでに存在する場合はスキップ
 if [ -f "$OUTPUT" ]; then
@@ -70,9 +70,9 @@ else
 fi
 
 # =============================================================
-# 3. 本日の3125情報受付事業部からInboxを取得
+# 3. 本日の01_3125情報受付事業部（フリーレン）からInboxを取得
 # =============================================================
-INBOX_DIR="$VAULT/3125情報受付事業部"
+INBOX_DIR="$VAULT/01_3125情報受付事業部（フリーレン）"
 INBOX_CONTENT=""
 if [ -d "$INBOX_DIR" ]; then
   # 本日作成されたファイル一覧を取得
