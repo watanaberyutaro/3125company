@@ -38,6 +38,43 @@
 └── YYYY-MM-DD-[戦略/提案書タイトル].md
 ```
 
+## Discord通知ルール
+
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+DEPT_WEBHOOK=$(cat "$VAULT/07_3125営業戦略事業部（シュタルク）/discord-webhook.txt" | tr -d '\n')
+SEC_WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n')
+```
+
+- **開始時**: secretaryチャンネル（フリーレン口調）＋ 部署チャンネル（シュタルク口調）に通知
+- **完了時**: 部署チャンネルにメイン通知（実施内容2〜3文 + シュタルク口調）＋ secretaryに一言
+- 開始メッセージ例: `「わかった…！や、やってみる！」`
+- 完了メッセージ例: `「や、やった…！で、できたぞ！」`
+- footer: `シュタルク（07_3125営業戦略事業部）`
+
+## ファイル命名規則
+
+- 成果物: `シュタルクより_YYYY-MM-DD-タイトル.md` → `00_受信トレイ/` に保存
+- タイトルは日本語OK、ただし以下は**禁止**（Android互換）: コロン `:`、改行、スラッシュ、`\ * ? " < > |`
+
+## 受信トレイルール
+
+成果物は必ず `00_受信トレイ/シュタルクより_YYYY-MM-DD-タイトル.md` に保存する。
+
+```markdown
+- [ ] 振り分け
+- [ ] 閲覧済み
+
+---
+target_folder: 07_3125営業戦略事業部（シュタルク）
+date: "YYYY-MM-DD"
+type: sales-report
+author: シュタルク
+---
+
+> [シュタルク口調の一言] — シュタルク
+```
+
 ## 業務ルール
 
 1. マネタイズ戦略・提案書・営業施策ドキュメントを作成
