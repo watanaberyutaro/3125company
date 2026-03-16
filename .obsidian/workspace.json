@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📋 タスクダッシュボード.md",
+                "file": "📅 ブリーフィング/2026-03-16.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "📋 タスクダッシュボード"
+              "title": "2026-03-16"
             }
           }
         ]
@@ -40,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byModifiedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -179,8 +179,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ad98c75166064bf0",
+  "active": "f9f12df0b3870cd4",
   "lastOpenFiles": [
+    "📋 タスクダッシュボード.md",
     "3125アイデア保管事業部/_ideas/2026-03-15-AI教育事業.md",
     "3125情報受付事業部/_done/2026-03-15T14-18-54-市場調査 ガソリンの値段高等関連と理由.md",
     "3125情報受付事業部/_done/2026-03-15T14-18-35-市場調査 ローカルLLMについて.md",
@@ -190,7 +191,6 @@
     "3125アイデア保管事業部/_ideas/2026-03-15-補助金申請フローシステム.md",
     "3125アイデア保管事業部/_ideas/2026-03-15-秘書アプリ雑談機能.md",
     "📅 ブリーフィング/2026-03-16.md",
-    "📋 タスクダッシュボード.md",
     "📅 ブリーフィング",
     "3125経営日誌事業部/news/2026-03-15-朝のニュース.md",
     "3125経営日誌事業部/news/2026-03-16-朝のニュース.md",
