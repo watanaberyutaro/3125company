@@ -918,6 +918,74 @@ curl -s -X POST "$NEWS_WEBHOOK" \
 
 `/company` 起動時に **毎回** 実行する（daily-briefing の有無に関係なし）。
 
+**⓪ 受信トレイ振り分け処理（毎回・最優先）**
+
+`00_受信トレイ/` を走査し、チェックボックスの状態に応じてファイルを移動する。
+
+```bash
+python3 << 'EOF'
+import os, shutil, re
+
+VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+INBOX = os.path.join(VAULT, "00_受信トレイ")
+moved = []
+skipped = []
+
+for fname in os.listdir(INBOX):
+    if not fname.endswith(".md"):
+        continue
+    fpath = os.path.join(INBOX, fname)
+    try:
+        with open(fpath, encoding="utf-8") as f:
+            content = f.read()
+    except Exception:
+        continue
+
+    has_furivake = "- [x] 振り分け" in content
+    has_kanran   = "- [x] 閲覧済み" in content
+
+    if not has_furivake:
+        skipped.append(fname)
+        continue
+
+    # target_folder を frontmatter から取得
+    m = re.search(r'^target_folder:\s*(.+)$', content, re.MULTILINE)
+    target_folder = m.group(1).strip() if m else None
+
+    if not target_folder:
+        print(f"[SKIP] target_folder 未定: {fname}")
+        skipped.append(fname)
+        continue
+
+    dest_dir = os.path.join(VAULT, target_folder)
+    if has_furivake and has_kanran:
+        dest_dir = os.path.join(dest_dir, "_archive")
+
+    os.makedirs(dest_dir, exist_ok=True)
+    dest_path = os.path.join(dest_dir, fname)
+    shutil.move(fpath, dest_path)
+    label = "_archive" if has_kanran else "通常"
+    moved.append(f"{fname} → {target_folder} ({label})")
+
+print(f"振り分け完了: {len(moved)}件 / スキップ: {len(skipped)}件")
+for m in moved:
+    print(f"  ✓ {m}")
+EOF
+```
+
+振り分けが1件以上あった場合、Discord に通知:
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
+curl -s -X POST "$WEBHOOK" \
+  -H "Content-Type: application/json" \
+  -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📂 受信トレイを振り分けた\",\"description\":\"[振り分けたファイル一覧]\",\"color\":3447003,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
+```
+
+`target_folder:` が未記載のファイルが残っている場合、Claudeがファイル内容を読んで `target_folder:` を判断・frontmatterに追記してから移動する。
+
+---
+
 **① データ収集スクリプトを実行**
 
 ```bash
