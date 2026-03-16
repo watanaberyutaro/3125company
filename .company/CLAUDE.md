@@ -709,6 +709,53 @@ curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -d "{\"content\":\"<@817999891531825186>\",\"embeds\":[{\"title\":\"📦 閲覧済みファイルをアーカイブ\",\"description\":\"[ファイル名一覧]\",\"color\":9807270,\"footer\":{\"text\":\"フリーレン（秘書）\"}}]}"
 ```
 
+**① - b2: タスク管理・朝礼ファイルの自動アーカイブ（前日以前）**
+
+`01_3125情報受付事業部（フリーレン）/3125 タスク管理事業部（フリーレン）/` および `01_3125情報受付事業部（フリーレン）/3125 朝礼（フリーレン）/` 内の **今日より前の日付ファイル**（`YYYY-MM-DD.md`）を各フォルダの `_archive/` に自動移動する。
+
+```bash
+python3 << 'EOF'
+import os, shutil, re, datetime
+
+VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+TODAY = datetime.date.today().isoformat()
+archived = []
+
+TARGETS = [
+    os.path.join(VAULT, "01_3125情報受付事業部（フリーレン）", "3125 タスク管理事業部（フリーレン）"),
+    os.path.join(VAULT, "01_3125情報受付事業部（フリーレン）", "3125 朝礼（フリーレン）"),
+]
+
+for target_dir in TARGETS:
+    if not os.path.isdir(target_dir):
+        continue
+    archive_dir = os.path.join(target_dir, "_archive")
+    for fname in sorted(os.listdir(target_dir)):
+        if not fname.endswith(".md") or fname.startswith("_"):
+            continue
+        # YYYY-MM-DD.md 形式のみ対象
+        m = re.match(r"^(\d{4}-\d{2}-\d{2})\.md$", fname)
+        if not m:
+            continue
+        file_date = m.group(1)
+        if file_date >= TODAY:
+            continue  # 今日以降はスキップ
+        os.makedirs(archive_dir, exist_ok=True)
+        src = os.path.join(target_dir, fname)
+        shutil.move(src, os.path.join(archive_dir, fname))
+        dept = os.path.basename(target_dir)
+        archived.append(f"{dept}/{fname}")
+
+print(f"タスク・朝礼アーカイブ: {len(archived)}件")
+for name in archived:
+    print(f"  - {name}")
+EOF
+```
+
+アーカイブが1件以上あった場合は「① - a」と同じDiscord通知に含める（まとめて1通知でOK）。
+
+---
+
 **① 今日のタスクまとめ**
 
 前日の未完了タスクを今日のファイルに引き継ぐ。
