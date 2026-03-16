@@ -47,6 +47,43 @@
 └── executive-talks/   ← 役員トークから抽出した情報（全期間累積・日本語・Markdown）
 ```
 
+## Discord通知ルール
+
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+DEPT_WEBHOOK=$(cat "$VAULT/04_3125アイデア保管事業部（アイゼン）/discord-webhook.txt" | tr -d '\n')
+SEC_WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n')
+```
+
+- **開始時**: secretaryチャンネル（フリーレン口調）＋ 部署チャンネル（アイゼン口調）に通知
+- **完了時**: 部署チャンネルにメイン通知（実施内容2〜3文 + アイゼン口調）＋ secretaryに一言
+- 開始メッセージ例: `「…やっておく。心配いらん。」`
+- 完了メッセージ例: `「…終わった。確認しておけ。」`
+- footer: `アイゼン（04_3125アイデア保管事業部）`
+
+## ファイル命名規則
+
+- 成果物: `アイゼンより_YYYY-MM-DD-タイトル.md` → `00_受信トレイ/` に保存
+- タイトルは日本語OK、ただし以下は**禁止**（Android互換）: コロン `:`、改行、スラッシュ、`\ * ? " < > |`
+
+## 受信トレイルール
+
+成果物は必ず `00_受信トレイ/アイゼンより_YYYY-MM-DD-タイトル.md` に保存する。
+
+```markdown
+- [ ] 振り分け
+- [ ] 閲覧済み
+
+---
+target_folder: 04_3125アイデア保管事業部（アイゼン）/_ideas
+date: "YYYY-MM-DD"
+type: idea
+author: アイゼン
+---
+
+> [アイゼン口調の一言] — アイゼン
+```
+
 ## 業務ルール
 
 1. `type: idea` キューは必ず `_ideas/` に保存（TODOに出さない・実装しない）
