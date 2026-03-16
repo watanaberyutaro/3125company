@@ -35,13 +35,16 @@
 
 ```
 04_3125アイデア保管事業部（アイゼン）/
-├── CLAUDE.md        ← このファイル
-├── _ideas/          ← 検討中アイデア
-├── _confirmed/      ← 実装確定アイデア
-├── _archive/        ← 長期未着手・完了済み
-├── line-inbox/      ← LINEトーク履歴 .txt の投入口（手動で置く）
-│   └── _archive/   ← 処理済み .txt の保管場所
-└── sales/           ← LINEから抽出した営業情報（日本語・Markdown）
+├── CLAUDE.md          ← このファイル
+├── _ideas/            ← 検討中アイデア
+├── _confirmed/        ← 実装確定アイデア
+├── _archive/          ← 長期未着手・完了済み
+├── line-inbox/        ← 営業LINEトーク履歴 .txt の投入口（手動で置く）
+│   └── _archive/     ← 処理済み .txt の保管場所
+├── sales/             ← 営業LINEから抽出した情報（日本語・Markdown）
+├── exec-inbox/        ← 役員LINEトーク履歴 .txt の投入口（手動で置く）
+│   └── _archive/     ← 処理済み .txt の保管場所
+└── executive-talks/   ← 役員トークから抽出した情報（全期間累積・日本語・Markdown）
 ```
 
 ## 業務ルール
