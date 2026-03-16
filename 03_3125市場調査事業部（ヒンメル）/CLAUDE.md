@@ -39,6 +39,43 @@
 └── YYYY-MM-DD-[調査テーマ].md
 ```
 
+## Discord通知ルール
+
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+DEPT_WEBHOOK=$(cat "$VAULT/03_3125市場調査事業部（ヒンメル）/discord-webhook.txt" | tr -d '\n')
+SEC_WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n')
+```
+
+- **開始時**: secretaryチャンネル（フリーレン口調）＋ 部署チャンネル（ヒンメル口調）に通知
+- **完了時**: 部署チャンネルにメイン通知（実施内容2〜3文 + ヒンメル口調）＋ secretaryに一言
+- 開始メッセージ例: `「任せて！美しい調査結果を見せてあげるよ。」`
+- 完了メッセージ例: `「どうだい、いい仕事だろう？」`
+- footer: `ヒンメル（03_3125市場調査事業部）`
+
+## ファイル命名規則
+
+- 成果物: `ヒンメルより_YYYY-MM-DD-タイトル.md` → `00_受信トレイ/` に保存
+- タイトルは日本語OK、ただし以下は**禁止**（Android互換）: コロン `:`、改行、スラッシュ、`\ * ? " < > |`
+
+## 受信トレイルール
+
+成果物は必ず `00_受信トレイ/ヒンメルより_YYYY-MM-DD-タイトル.md` に保存する。
+
+```markdown
+- [ ] 振り分け
+- [ ] 閲覧済み
+
+---
+target_folder: 03_3125市場調査事業部（ヒンメル）
+date: "YYYY-MM-DD"
+type: research
+author: ヒンメル
+---
+
+> [ヒンメル口調の一言] — ヒンメル
+```
+
 ## 業務ルール
 
 1. `type: research` キューを受けて市場調査レポートを作成
