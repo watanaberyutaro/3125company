@@ -243,23 +243,9 @@ LINEの.txtファイル内容を受信し、今日分を差分追記で蓄積。
 - Body:
   ```json
   {
-    "content": "{line_history_text}",
-    "summarize": false
+    "content": "{line_history_text}"
   }
   ```
-
----
-
-### マクロ: `LINE履歴収集 + 要約（夜）`
-
-上記と同じ構成だが、POSTのBodyのみ変更:
-
-```json
-{
-  "content": "{line_history_text}",
-  "summarize": true
-}
-```
 
 ---
 
