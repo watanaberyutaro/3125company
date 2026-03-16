@@ -704,7 +704,7 @@ curl -s -X POST "$DISCORD_WEBHOOK_URL" \
 ```bash
 curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
   -H "Content-Type: application/json" \
-  -d "{\"title\":\"🌅 朝のブリーフィング YYYY-MM-DD\",\"description\":\"[タスク数・主要ニュース見出し]\",\"notify\":false,\"link\":\"obsidian://open?vault=Obsidian%20Vault&file=%F0%9F%93%85%20%E3%83%96%E3%83%AA%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0%2FYYYY-MM-DD.md\"}" ; \
+  -d "{\"title\":\"🌅 朝のブリーフィング YYYY-MM-DD\",\"description\":\"[タスク数・主要ニュース見出し]\",\"notify\":false,\"link\":\"obsidian://open?vault=Obsidian%20Vault&file=3125%E6%83%85%E5%A0%B1%E5%8F%97%E4%BB%98%E4%BA%8B%E6%A5%AD%E9%83%A8%2F3125%20%E6%9C%9D%E7%A4%BC%EF%BC%88%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%EF%BC%89%2FYYYY-MM-DD.md\"}" ; \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
