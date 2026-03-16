@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_受信トレイ/ゼーリエより_2026-03-16-MacroDroid-LINE-capture-開発仕様書.md",
+                "file": "00_受信トレイ/ゼーリエより_2026-03-16-MacroDroid-LINE-トーク履歴-開発仕様書.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ゼーリエより_2026-03-16-MacroDroid-LINE-capture-開発仕様書"
+              "title": "ゼーリエより_2026-03-16-MacroDroid-LINE-トーク履歴-開発仕様書"
             }
           }
         ]
@@ -181,11 +181,13 @@
   },
   "active": "ad98c75166064bf0",
   "lastOpenFiles": [
+    "01_3125情報受付事業部（フリーレン）/_pending/2026-03-16T04-15-59-市場調査 ClaudeCodeのできるようになったこと、アップデート情報をまとめ.md",
+    "00_受信トレイ/ゼーリエより_2026-03-16-MacroDroid-LINE-capture-開発仕様書.md",
+    "00_受信トレイ/ゼーリエより_2026-03-16-MacroDroid-LINE-トーク履歴-開発仕様書.md",
     "04_3125アイデア保管事業部（アイゼン）/_confirmed/2026-03-16-MacroDroid-LINE代替-トーク保存-要約システム.md",
     "00_受信トレイ/アイゼンより_2026-03-16-MacroDroid-LINE代替-トーク保存-要約システム.md",
     "02_3125経営日誌事業部（フェルン）/2026-03-14.md",
     "00_受信トレイ/2026-03-16-MacroDroid-LINE-capture-開発仕様書.md",
-    "00_受信トレイ/ゼーリエより_2026-03-16-MacroDroid-LINE-capture-開発仕様書.md",
     "00_受信トレイ/2026-03-16-MacroDroid-LINE代替-トーク保存-要約システム.md",
     "02_3125経営日誌事業部（フェルン）/2026-03-13.md",
     "09_3125制作・納品事業部（ゼーリエ）/2026-03-16-MacroDroid-LINE-capture-開発仕様書.md",
@@ -206,8 +208,6 @@
     "タスク",
     "全情報まとめ.md",
     "📋 タスク/2026-03-16.md",
-    "📊 ダッシュボード.md",
-    "📋 全情報まとめ.md",
     "04_3125アイデア保管事業部（アイゼン）/Chat",
     "📋 タスク",
     "02_3125経営日誌事業部（フェルン）/_archive",
