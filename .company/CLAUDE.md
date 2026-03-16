@@ -383,7 +383,7 @@ author: フェルン
 ```bash
 curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
   -H "Content-Type: application/json" \
-  -d "{\"title\":\"📔 日次レポート YYYY-MM-DD\",\"description\":\"[フェルンの総評150文字]\",\"notify\":false,\"colorId\":\"3\",\"startTime\":\"YYYY-MM-DDT22:30:00+09:00\",\"endTime\":\"YYYY-MM-DDT23:30:00+09:00\",\"link\":\"obsidian://open?vault=Obsidian%20Vault&file=3125%E7%B5%8C%E5%96%B6%E6%97%A5%E8%AA%8C%E4%BA%8B%E6%A5%AD%E9%83%A8%2FYYYY-MM-DD.md\"}"
+  -d "{\"title\":\"📔 日次レポート YYYY-MM-DD\",\"description\":\"[フェルンの総評150文字]\",\"notify\":false,\"colorId\":\"3\",\"startTime\":\"YYYY-MM-DDT22:30:00+09:00\",\"endTime\":\"YYYY-MM-DDT23:30:00+09:00\",\"link\":\"obsidian://open?vault=Obsidian%20Vault&file=02_3125%E7%B5%8C%E5%96%B6%E6%97%A5%E8%AA%8C%E4%BA%8B%E6%A5%AD%E9%83%A8%EF%BC%88%E3%83%95%E3%82%A7%E3%83%AB%E3%83%B3%EF%BC%89%2FYYYY-MM-DD.md\"}"
 ```
 
 **④ Discord 通知（経営日誌チャンネル）**
