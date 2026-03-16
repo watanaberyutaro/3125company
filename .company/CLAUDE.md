@@ -672,7 +672,7 @@ curl -s -X POST "$DISCORD_WEBHOOK_URL" \
 ---
 
 **ブリーフィングファイルの構成**
-保存先: `secretary/daily-briefing/YYYY-MM-DD.md`（内部保存）および `📅 ブリーフィング/YYYY-MM-DD.md`（Obsidian可視）の **2か所に同一内容を保存**する。
+保存先: `secretary/daily-briefing/YYYY-MM-DD.md`（内部保存）および `3125情報受付事業部/3125 朝礼（フリーレン）/YYYY-MM-DD.md`（Obsidian可視）の **2か所に同一内容を保存**する。
 
 ```markdown
 # 🌅 YYYY-MM-DD 朝のブリーフィング
