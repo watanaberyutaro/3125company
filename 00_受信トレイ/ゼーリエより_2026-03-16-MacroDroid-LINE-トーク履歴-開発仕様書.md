@@ -82,7 +82,7 @@ LINEの「トーク履歴を送信」で出力されるファイルの形式:
 
 **POST /api/line-history**
 
-LINEの.txtファイル内容を受信し、今日分を差分追記で蓄積する。23:00実行時は要約まで行う。
+LINEの.txtファイル内容を受信し、今日分を差分追記で蓄積。毎回 Claude Haiku で要約し、今日のサマリーファイルを上書き更新する。
 
 **認証**: `Authorization: Bearer <MACRODROID_SECRET>`
 
@@ -90,8 +90,7 @@ LINEの.txtファイル内容を受信し、今日分を差分追記で蓄積す
 ```json
 {
   "content": "[LINE]グループ名 のトーク履歴\n保存日時：...\n\n2026/03/16(月)\n14:30\t田中\tメッセージ",
-  "roomName": "グループ名（任意・上書き用）",
-  "summarize": true
+  "roomName": "グループ名（任意・上書き用）"
 }
 ```
 
@@ -99,31 +98,20 @@ LINEの.txtファイル内容を受信し、今日分を差分追記で蓄積す
 |-----------|------|
 | `content` | LINEの.txtファイル全文（必須） |
 | `roomName` | ルーム名の上書き（省略時は.txtのヘッダーから取得） |
-| `summarize` | `true` のとき要約・保存まで実行。省略時は蓄積のみ |
 
 **処理フロー**:
 1. `content` から今日の日付（JST）のセクションを抽出
 2. `HH:MM\t送信者\t本文` をパースして配列化
-3. `line-messages/YYYY-MM-DD.json` を GitHub API で読み込む
+3. `line-messages/YYYY-MM-DD.json`（今日分）を GitHub API で読み込む
 4. 既存データと照合し、`ts + sender + message` が一致するものは除外（重複除去）
 5. 新規メッセージを追記して GitHub API で書き戻す
-6. `summarize: true` の場合のみ:
-   - Claude Haiku で要約
-   - `02_3125経営日誌事業部（フェルン）/line-summary/YYYY-MM-DD-LINEサマリー.md` に保存
-   - Discord通知（フェルン）
-7. レスポンスを返す
+6. 直近14日分の `line-messages/YYYY-MM-DD.json` を全件読み込む（存在するものだけ）
+7. Claude Haiku で要約（14日分を文脈として渡し、今日の要約をメインに生成）
+8. `02_3125経営日誌事業部（フェルン）/line-summary/YYYY-MM-DD-LINEサマリー.md` を**上書き保存**
+9. Discord通知（フェルン）
+10. レスポンスを返す
 
-**レスポンス（蓄積のみ）**:
-```json
-{
-  "ok": true,
-  "date": "2026-03-16",
-  "newMessages": 4,
-  "totalMessages": 11
-}
-```
-
-**レスポンス（要約あり）**:
+**レスポンス**:
 ```json
 {
   "ok": true,
@@ -134,6 +122,11 @@ LINEの.txtファイル内容を受信し、今日分を差分追記で蓄積す
   "savedTo": "02_3125経営日誌事業部（フェルン）/line-summary/2026-03-16-LINEサマリー.md"
 }
 ```
+
+**Claudeへのプロンプト方針**:
+- 直近14日分は「背景・文脈」として先頭に渡す
+- 今日分を「本日のトーク履歴」として要約の主体にする
+- 過去のやりとりの続きや関連する話題があれば言及する
 
 ---
 
