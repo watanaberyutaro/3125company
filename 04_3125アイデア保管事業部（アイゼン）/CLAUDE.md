@@ -64,16 +64,25 @@
 
 ### 営業情報の抽出（sales/）
 - LINE .txt の内容から営業に関連する情報を抽出し、日本語で構造化する
-- 保存先: `sales/YYYY-MM-DD-sales.md`（同日に複数ファイルがある場合は追記）
+- **保存先: `00_受信トレイ/アイゼンより_YYYY-MM-DD-LINE営業ログ.md`（受信トレイ経由・必須）**
+  - ファイル先頭に `- [ ] 振り分け` / `- [ ] 閲覧済み` の2行を追加
+  - frontmatter に `target_folder: 04_3125アイデア保管事業部（アイゼン）/sales` を記載
+  - 振り分けチェック後に `sales/YYYY-MM-DD-LINE営業ログ.md` として移動される
 - ファイルフォーマット:
 
 ```markdown
+- [ ] 振り分け
+- [ ] 閲覧済み
+
 ---
+target_folder: 04_3125アイデア保管事業部（アイゼン）/sales
 date: "YYYY-MM-DD"
 type: sales-log
 author: アイゼン
 source: LINE
 ---
+
+> …記録しておく。確認しておけ。 — アイゼン
 
 ## YYYY-MM-DD 営業ログ
 
