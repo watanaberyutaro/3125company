@@ -1112,6 +1112,92 @@ EOF
 
 ---
 
+**⓪-EXEC 役員トーク履歴処理（毎回実行・新規ファイルがなければスキップ）**
+
+`04_3125アイデア保管事業部（アイゼン）/exec-inbox/` を確認し、未処理の `.txt` ファイルがあれば以下を実行する。
+
+```bash
+python3 << 'EOF'
+import os, glob
+
+VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+INBOX = os.path.join(VAULT, "04_3125アイデア保管事業部（アイゼン）/exec-inbox")
+
+txts = [f for f in glob.glob(os.path.join(INBOX, "*.txt"))]
+print(f"役員トーク .txt ファイル数: {len(txts)}")
+for t in txts:
+    print(f"  - {os.path.basename(t)}")
+EOF
+```
+
+`.txt` が1件以上あった場合、以下を実行する（**担当: フリーレン**）:
+
+1. 各 `.txt` ファイルを Read ツールで読み込む（全期間を対象とし、期間を限定しない）
+2. 経営・意思決定・方針・数字に関する発言を抽出し、構造化する（雑談は省略）
+3. 以下フォーマットで `00_受信トレイ/フリーレンより_YYYY-MM-DD-役員トークログ.md` に保存:
+
+```markdown
+- [ ] 振り分け
+- [ ] 閲覧済み
+
+---
+target_folder: 04_3125アイデア保管事業部（アイゼン）/executive-talks
+date: "YYYY-MM-DD"
+type: executive-log
+author: フリーレン
+source: LINE
+period: "YYYY-MM-DD 〜 YYYY-MM-DD"
+---
+
+> …役員の言葉は記録しておくべきね。 — フリーレン
+
+## 役員トークログ YYYY-MM-DD（全期間: YYYY-MM-DD 〜 YYYY-MM-DD）
+
+### 経営方針・重要決定
+- 日付: YYYY-MM-DD
+- 内容: …
+
+### 案件・プロジェクト関連
+- …
+
+### 人事・組織
+- …
+
+### 財務・数字
+- …
+
+### 要注目発言
+- …
+
+### メモ・補足
+- …
+```
+
+4. 処理済み `.txt` を `exec-inbox/_archive/` に移動:
+
+```bash
+python3 << 'EOF'
+import os, shutil, glob
+
+VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+INBOX = os.path.join(VAULT, "04_3125アイデア保管事業部（アイゼン）/exec-inbox")
+ARCHIVE = os.path.join(INBOX, "_archive")
+os.makedirs(ARCHIVE, exist_ok=True)
+
+for fpath in glob.glob(os.path.join(INBOX, "*.txt")):
+    fname = os.path.basename(fpath)
+    shutil.move(fpath, os.path.join(ARCHIVE, fname))
+    print(f"アーカイブ: {fname}")
+EOF
+```
+
+5. exec-inboxに新規ファイルがあった場合、続けてシュタルクが役員トーク要約を生成:
+   - `07_3125営業戦略事業部（シュタルク）/CLAUDE.md` を読み込む
+   - `04_3125アイデア保管事業部（アイゼン）/executive-talks/` の **全件** を Read する
+   - 全期間の役員動向を分析し、`00_受信トレイ/シュタルクより_YYYY-MM-DD-役員トーク要約.md` を生成・保存
+
+---
+
 **① データ収集スクリプトを実行**
 
 ```bash
