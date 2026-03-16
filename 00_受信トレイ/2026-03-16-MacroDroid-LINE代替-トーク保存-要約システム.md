@@ -2,7 +2,7 @@
 - [ ] 閲覧済み
 
 ---
-target_folder: 04_3125アイデア保管事業部（アイゼン）/_ideas
+target_folder: 04_3125アイデア保管事業部（アイゼン）/_confirmed
 date: "2026-03-16"
 type: idea
 author: アイゼン
