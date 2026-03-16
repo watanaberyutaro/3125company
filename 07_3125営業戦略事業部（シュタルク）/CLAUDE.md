@@ -93,7 +93,7 @@ author: シュタルク
 ## 役員トーク要約ルール
 
 ### トリガー
-- `/company` 起動時、アイゼンのexec-inbox処理で新規 `executive-talks/*.md` が生成されたとき
+- `/company` 起動時、フリーレンのexec-inbox処理で新規 `executive-talks/*.md` が生成されたとき
 - または明示的に役員トーク要約を求められたとき
 
 ### 参照データ
