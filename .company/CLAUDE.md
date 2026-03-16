@@ -666,7 +666,7 @@ curl -s -X POST "$DISCORD_WEBHOOK_URL" \
 ```bash
 curl -s -X POST https://3125obsidianapp.vercel.app/api/log \
   -H "Content-Type: application/json" \
-  -d "{\"title\":\"🌅 朝のブリーフィング YYYY-MM-DD\",\"description\":\"[タスク数・主要ニュース見出し]\",\"notify\":false,\"link\":\"obsidian://open?vault=Obsidian%20Vault&file=secretary%2Fdaily-briefing%2FYYYY-MM-DD.md\"}" ; \
+  -d "{\"title\":\"🌅 朝のブリーフィング YYYY-MM-DD\",\"description\":\"[タスク数・主要ニュース見出し]\",\"notify\":false,\"link\":\"obsidian://open?vault=Obsidian%20Vault&file=%F0%9F%93%85%20%E3%83%96%E3%83%AA%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0%2FYYYY-MM-DD.md\"}" ; \
 DISCORD_WEBHOOK_URL=$(cat "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/.company/secretary/discord-webhook.txt" | tr -d '\n') && \
 curl -s -X POST "$DISCORD_WEBHOOK_URL" \
   -H "Content-Type: application/json" \
