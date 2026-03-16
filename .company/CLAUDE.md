@@ -1060,6 +1060,58 @@ curl -s -X POST "$WEBHOOK" \
 
 ---
 
+**⓪-LINE LINEトーク履歴処理（毎回実行・新規ファイルがなければスキップ）**
+
+`04_3125アイデア保管事業部（アイゼン）/line-inbox/` を確認し、未処理の `.txt` ファイルがあれば以下を実行する。
+
+```bash
+python3 << 'EOF'
+import os, glob
+
+VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+INBOX = os.path.join(VAULT, "04_3125アイデア保管事業部（アイゼン）/line-inbox")
+
+txts = [f for f in glob.glob(os.path.join(INBOX, "*.txt"))]
+print(f"LINE .txt ファイル数: {len(txts)}")
+for t in txts:
+    print(f"  - {os.path.basename(t)}")
+EOF
+```
+
+`.txt` が1件以上あった場合、以下を順に実行する:
+
+**フェーズ1 — アイゼン（営業情報の抽出・保存）**
+
+1. `04_3125アイデア保管事業部（アイゼン）/CLAUDE.md` を読み込む
+2. 各 `.txt` ファイルを Read ツールで読み込む
+3. LINEトーク内容から営業情報を抽出し、`04_3125アイデア保管事業部（アイゼン）/sales/YYYY-MM-DD-sales.md` に保存（同日ファイルがあれば追記）
+4. 処理済み `.txt` を `line-inbox/_archive/` に移動:
+
+```bash
+python3 << 'EOF'
+import os, shutil, glob
+
+VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+INBOX = os.path.join(VAULT, "04_3125アイデア保管事業部（アイゼン）/line-inbox")
+ARCHIVE = os.path.join(INBOX, "_archive")
+os.makedirs(ARCHIVE, exist_ok=True)
+
+for fpath in glob.glob(os.path.join(INBOX, "*.txt")):
+    fname = os.path.basename(fpath)
+    shutil.move(fpath, os.path.join(ARCHIVE, fname))
+    print(f"アーカイブ: {fname}")
+EOF
+```
+
+**フェーズ2 — シュタルク（営業レポート生成）**
+
+1. `07_3125営業戦略事業部（シュタルク）/CLAUDE.md` を読み込む
+2. `04_3125アイデア保管事業部（アイゼン）/sales/` 直近14日分の `.md` を全件 Read する
+3. 2週間分の営業動向を分析し、`00_受信トレイ/シュタルクより_YYYY-MM-DD-営業レポート.md` を生成・保存
+   - 同日のレポートがすでにあり `- [ ] 振り分け`（未チェック）の場合は上書きする
+
+---
+
 **① データ収集スクリプトを実行**
 
 ```bash
