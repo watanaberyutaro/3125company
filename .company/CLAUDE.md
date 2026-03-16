@@ -788,7 +788,7 @@ python3 "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Do
 ## 🔗 関連ページ
 
 - [[📊 ダッシュボード]] — 事業部別ファイル一覧
-- [[.company/secretary/daily-briefing/YYYY-MM-DD]] — 今日のブリーフィング
+- [[3125情報受付事業部/3125 朝礼（フリーレン）/YYYY-MM-DD]] — 今日のブリーフィング
 - [[.company/secretary/todos/YYYY-MM-DD]] — 今日のTODO
 ```
 
