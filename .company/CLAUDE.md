@@ -532,7 +532,7 @@ VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Do
 SKIP_DIRS = {"_pending", "_done", "_ideas", "_confirmed", "_archive"}
 archived = []
 
-for dept_dir in glob.glob(os.path.join(VAULT, "3125*/")):
+for dept_dir in glob.glob(os.path.join(VAULT, "[0-9][0-9]_3125*/")):
     for f in glob.glob(os.path.join(dept_dir, "*.md")):
         basename = os.path.basename(f)
         if basename.startswith("_"):
