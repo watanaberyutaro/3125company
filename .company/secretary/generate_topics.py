@@ -117,7 +117,7 @@ def should_skip(rel_path: str) -> bool:
 def dept_name(rel_path: str) -> str:
     """パスから事業部名を取得。"""
     parts = rel_path.split("/")
-    if parts[0].startswith("3125"):
+    if parts[0].startswith(("01_3125","02_3125","03_3125","04_3125","05_3125","06_3125","07_3125","08_3125","09_3125")):
         return parts[0]
     return parts[0]
 
