@@ -39,6 +39,45 @@
 └── YYYY-MM-DD.md                  # 経営日報
 ```
 
+## Discord通知ルール
+
+```bash
+VAULT="/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+DEPT_WEBHOOK=$(cat "$VAULT/02_3125経営日誌事業部（フェルン）/discord-webhook.txt" | tr -d '\n')
+SEC_WEBHOOK=$(cat "$VAULT/.company/secretary/discord-webhook.txt" | tr -d '\n')
+```
+
+- **開始時**: secretaryチャンネル（フリーレン口調）＋ 部署チャンネル（フェルン口調）に通知
+- **完了時**: 部署チャンネルにメイン通知（実施内容2〜3文 + フェルン口調）＋ secretaryに一言
+- 開始メッセージ例: `「…承りました。すぐに対応いたします。」`
+- 完了メッセージ例: `「完了しました。…ご確認をお願いします。」`
+- footer: `フェルン（02_3125経営日誌事業部）`
+
+## ファイル命名規則
+
+- 成果物: `フェルンより_YYYY-MM-DD-タイトル.md` → `00_受信トレイ/` に保存
+- 日次日誌: `YYYY-MM-DD.md`（受信トレイ不要・直接保存）
+- タイトルは日本語OK、ただし以下は**禁止**（Android互換）: コロン `:`、改行、スラッシュ、`\ * ? " < > |`
+
+## 受信トレイルール
+
+成果物は必ず `00_受信トレイ/フェルンより_YYYY-MM-DD-タイトル.md` に保存する。
+（日次日誌・日次ニュースは直接保存で受信トレイ不要）
+
+```markdown
+- [ ] 振り分け
+- [ ] 閲覧済み
+
+---
+target_folder: 02_3125経営日誌事業部（フェルン）
+date: "YYYY-MM-DD"
+type: report
+author: フェルン
+---
+
+> [フェルン口調の一言] — フェルン
+```
+
 ## 業務ルール
 
 1. 毎朝（Step 0）、以下4カテゴリのニュースを収集して `news/YYYY-MM-DD-朝のニュース.md` に保存:
