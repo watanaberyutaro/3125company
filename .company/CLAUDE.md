@@ -1167,6 +1167,115 @@ EOF
 
 ---
 
+**⓪-CASE 案件オープンチャット処理（毎回実行・新規ファイルがなければスキップ）**
+
+`04_3125アイデア保管事業部（アイゼン）/case-inbox/` を確認し、未処理の `.txt` ファイルがあれば以下を実行する。
+
+```bash
+python3 << 'EOF'
+import os, glob
+
+VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+INBOX = os.path.join(VAULT, "04_3125アイデア保管事業部（アイゼン）/case-inbox")
+
+txts = [f for f in glob.glob(os.path.join(INBOX, "*.txt"))]
+print(f"案件オープンチャット .txt ファイル数: {len(txts)}")
+for t in txts:
+    print(f"  - {os.path.basename(t)}")
+EOF
+```
+
+`.txt` が1件以上あった場合、以下を順に実行する:
+
+**フェーズ1 — アイゼン（案件情報の抽出・保存）**
+
+1. `04_3125アイデア保管事業部（アイゼン）/CLAUDE.md` の「案件オープンチャット処理ルール」を参照する
+2. 各 `.txt` ファイルを Read ツールで読み込む（直近3ヶ月分のメッセージを対象）
+3. トーク内容から**案件ごとに1ファイル**を生成し `cases/` に保存する:
+   - ファイル名: `cases/YYYY-MM-DD-案件名.md`（案件名はサニタイズ済み）
+   - **同一案件（案件名+エリアが同じ）のファイルが既に存在する場合は上書き（最新情報で更新）**
+   - 各ファイルの frontmatter に `type: case-entry` を設定
+   - インラインフィールド形式（`フィールド名:: 値`）で記述（Dataview対応）
+4. `00_受信トレイ/アイゼンより_YYYY-MM-DD-案件ログ.md` にも日別サマリーを保存
+5. 処理済み `.txt` を `case-inbox/_archive/` に移動:
+
+```bash
+python3 << 'EOF'
+import os, shutil, glob
+
+VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
+INBOX = os.path.join(VAULT, "04_3125アイデア保管事業部（アイゼン）/case-inbox")
+ARCHIVE = os.path.join(INBOX, "_archive")
+os.makedirs(ARCHIVE, exist_ok=True)
+
+for fpath in glob.glob(os.path.join(INBOX, "*.txt")):
+    fname = os.path.basename(fpath)
+    shutil.move(fpath, os.path.join(ARCHIVE, fname))
+    print(f"アーカイブ: {fname}")
+EOF
+```
+
+**フェーズ2 — 案件マスター（ダッシュボード）の更新**
+
+1. `cases/` 配下の直近3ヶ月分の `type: case-entry` ファイルを確認（3ヶ月より古いものは `cases/_archive/` に移動）
+2. `cases/_案件マスター.md` を以下の内容で**上書き生成**:
+
+```markdown
+> …全案件をまとめておいた。必要なものを探せ。 — アイゼン
+
+# 📋 案件マスター
+
+最終更新: YYYY-MM-DD HH:MM
+案件数: XX件（直近3ヶ月）
+
+---
+
+## 案件一覧（全件・ソート対応）
+
+\```dataview
+TABLE
+  案件名 AS "案件名",
+  クライアント AS "クライアント",
+  業務内容 AS "業務内容",
+  ブランド AS "ブランド",
+  単価 AS "単価",
+  エリア AS "エリア",
+  期間 AS "期間",
+  募集人数 AS "人数",
+  未経験 AS "未経験",
+  外国人 AS "外国人",
+  投稿者 AS "投稿者",
+  投稿日 AS "投稿日"
+FROM "04_3125アイデア保管事業部（アイゼン）/cases"
+WHERE type = "case-entry"
+SORT 投稿日 DESC
+\```
+
+## 外国人可の案件
+
+\```dataview
+TABLE
+  案件名, 業務内容, ブランド, 単価, エリア, 未経験, 投稿日
+FROM "04_3125アイデア保管事業部（アイゼン）/cases"
+WHERE type = "case-entry" AND 外国人 = "可"
+SORT 単価 DESC
+\```
+
+## 未経験可の案件
+
+\```dataview
+TABLE
+  案件名, 業務内容, ブランド, 単価, エリア, 外国人, 投稿日
+FROM "04_3125アイデア保管事業部（アイゼン）/cases"
+WHERE type = "case-entry" AND 未経験 = "可"
+SORT 単価 DESC
+\```
+```
+
+**注意**: 上記の `\``` ` はエスケープ表記。実際のファイルでは通常の ` ``` ` で記述すること。
+
+---
+
 **⓪-EXEC 役員トーク履歴処理（毎回実行・新規ファイルがなければスキップ）**
 
 `04_3125アイデア保管事業部（アイゼン）/exec-inbox/` を確認し、未処理の `.txt` ファイルがあれば以下を実行する。
