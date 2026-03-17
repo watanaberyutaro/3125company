@@ -42,6 +42,10 @@
 ├── line-inbox/        ← 営業LINEトーク履歴 .txt の投入口（手動で置く）
 │   └── _archive/     ← 処理済み .txt の保管場所
 ├── sales/             ← 営業LINEから抽出した情報（日本語・Markdown）
+├── case-inbox/        ← 案件オープンチャット .txt の投入口（手動で置く）
+│   └── _archive/     ← 処理済み .txt の保管場所
+├── cases/             ← 案件情報（構造化データ）
+│   └── _案件マスター.md  ← 全案件一覧テーブル（自動更新・上書き）
 ├── exec-inbox/        ← 役員LINEトーク履歴 .txt の投入口（手動で置く）
 │   └── _archive/     ← 処理済み .txt の保管場所
 └── executive-talks/   ← 役員トークから抽出した情報（全期間累積・日本語・Markdown）
