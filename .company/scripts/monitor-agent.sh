@@ -10,43 +10,18 @@ AGENT_NAME="$1"
 VAULT="${2:-/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault}"
 LOG_FILE="$VAULT/.company/logs/${AGENT_NAME}.log"
 
-# エージェント名 → キャラ名・部署名のマッピング
-declare -A CHAR_NAMES=(
-    [ceo]="CEO"
-    [himmel]="ヒンメル"
-    [fern]="フェルン"
-    [eisen]="アイゼン"
-    [heiter]="ハイター"
-    [flamme]="フランメ"
-    [stark]="シュタルク"
-    [serie]="ゼーリエ"
-)
-
-declare -A DEPT_NAMES=(
-    [ceo]="意思決定"
-    [himmel]="03_市場調査"
-    [fern]="02_経営日誌"
-    [eisen]="04_アイデア保管"
-    [heiter]="05_企画開発"
-    [flamme]="06_マーケティング"
-    [stark]="07_営業戦略"
-    [serie]="09_制作・納品"
-)
-
-declare -A DEPT_FOLDERS=(
-    [ceo]=".company/ceo"
-    [himmel]="03_3125市場調査事業部（ヒンメル）"
-    [fern]="02_3125経営日誌事業部（フェルン）"
-    [eisen]="04_3125アイデア保管事業部（アイゼン）"
-    [heiter]="05_3125企画開発事業部（ハイター）"
-    [flamme]="06_3125マーケティング事業部（フランメ）"
-    [stark]="07_3125営業戦略事業部（シュタルク）"
-    [serie]="09_3125制作・納品事業部（ゼーリエ）"
-)
-
-CHAR_NAME="${CHAR_NAMES[$AGENT_NAME]}"
-DEPT_NAME="${DEPT_NAMES[$AGENT_NAME]}"
-DEPT_FOLDER="${DEPT_FOLDERS[$AGENT_NAME]}"
+# エージェント名 → キャラ名・部署名のマッピング（bash 3.2互換）
+case "$AGENT_NAME" in
+    ceo)    CHAR_NAME="CEO";        DEPT_NAME="意思決定";           DEPT_FOLDER=".company/ceo" ;;
+    himmel) CHAR_NAME="ヒンメル";   DEPT_NAME="03_市場調査";        DEPT_FOLDER="03_3125市場調査事業部（ヒンメル）" ;;
+    fern)   CHAR_NAME="フェルン";   DEPT_NAME="02_経営日誌";        DEPT_FOLDER="02_3125経営日誌事業部（フェルン）" ;;
+    eisen)  CHAR_NAME="アイゼン";   DEPT_NAME="04_アイデア保管";    DEPT_FOLDER="04_3125アイデア保管事業部（アイゼン）" ;;
+    heiter) CHAR_NAME="ハイター";   DEPT_NAME="05_企画開発";        DEPT_FOLDER="05_3125企画開発事業部（ハイター）" ;;
+    flamme) CHAR_NAME="フランメ";   DEPT_NAME="06_マーケティング";  DEPT_FOLDER="06_3125マーケティング事業部（フランメ）" ;;
+    stark)  CHAR_NAME="シュタルク"; DEPT_NAME="07_営業戦略";        DEPT_FOLDER="07_3125営業戦略事業部（シュタルク）" ;;
+    serie)  CHAR_NAME="ゼーリエ";   DEPT_NAME="09_制作・納品";      DEPT_FOLDER="09_3125制作・納品事業部（ゼーリエ）" ;;
+    *)      CHAR_NAME="$AGENT_NAME"; DEPT_NAME="不明";              DEPT_FOLDER="" ;;
+esac
 
 # ログファイルが存在しなければ作成
 touch "$LOG_FILE"
