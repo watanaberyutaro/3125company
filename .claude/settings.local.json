@@ -2,7 +2,23 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(python3:*)",
+      "Bash(curl:*)",
+      "Bash(echo:*)",
+      "Bash(mv:*)",
+      "Bash(mkdir:*)",
+      "Bash(bash:*)",
+      "Bash(osascript:*)",
+      "Bash(touch:*)",
+      "Bash(chmod:*)",
+      "Bash(cd:*)",
+      "Bash(git:*)",
+      "Bash(sed:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(stat:*)"
     ]
   }
 }
