@@ -26,6 +26,9 @@ esac
 # ログファイルが存在しなければ作成
 touch "$LOG_FILE"
 
+# セッションタイトルを設定（per-pane title barに表示される）
+echo -ne "\033]0;${DEPT_NAME} | ${CHAR_NAME}\007"
+
 # 部署ステータスを表示する関数
 show_status() {
     clear
