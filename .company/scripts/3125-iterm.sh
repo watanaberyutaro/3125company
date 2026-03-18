@@ -78,40 +78,51 @@ tell application "iTerm2"
             end tell
 
             -- ==========================================
-            -- Step 2: 各セッションにモニターを割り当て
+            -- Step 2: 各セッションに名前とモニターを割り当て
             -- ==========================================
             -- s1 = フリーレン（対話ペイン、何も起動しない）
             -- s2 = ヒンメル（中央上）
             -- s3 = フェルン（右上）
-            -- s4 = CEO（左下）
+            -- s4 = フリーレン/CEO（左下）
             -- s5 = アイゼン（中央2段目）
             -- s6 = フランメ（中央3段目）
             -- s7 = ゼーリエ（中央4段目）
             -- s8 = ハイター（右2段目）
             -- s9 = シュタルク（右3段目）
 
+            tell s1
+                set name to "01_情報受付 | フリーレン"
+            end tell
             tell s2
+                set name to "03_市場調査 | ヒンメル"
                 write text "bash '$MONITOR' himmel '$VAULT'"
             end tell
             tell s3
+                set name to "02_経営日誌 | フェルン"
                 write text "bash '$MONITOR' fern '$VAULT'"
             end tell
             tell s4
+                set name to "CEO | フリーレン"
                 write text "bash '$MONITOR' ceo '$VAULT'"
             end tell
             tell s5
+                set name to "04_アイデア保管 | アイゼン"
                 write text "bash '$MONITOR' eisen '$VAULT'"
             end tell
             tell s6
+                set name to "06_マーケティング | フランメ"
                 write text "bash '$MONITOR' flamme '$VAULT'"
             end tell
             tell s7
+                set name to "09_制作・納品 | ゼーリエ"
                 write text "bash '$MONITOR' serie '$VAULT'"
             end tell
             tell s8
+                set name to "05_企画開発 | ハイター"
                 write text "bash '$MONITOR' heiter '$VAULT'"
             end tell
             tell s9
+                set name to "07_営業戦略 | シュタルク"
                 write text "bash '$MONITOR' stark '$VAULT'"
             end tell
         end tell
