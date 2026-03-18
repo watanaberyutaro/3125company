@@ -5,15 +5,14 @@
 # レイアウト（3列構成）:
 # ┌──────────────┬─────────┬─────────┐
 # │              │ヒンメル │フェルン │
-# │  フリーレン  ├─────────┼─────────┤
-# │  (対話)      │アイゼン │ハイター │
 # │              ├─────────┼─────────┤
-# ├──────────────┤フランメ │シュタルク│
-# │              ├─────────┤         │
-# │ フリーレン   │ゼーリエ │         │
-# │ (CEO)        │         │         │
+# │  フリーレン  │アイゼン │ハイター │
+# │  （対話）    ├─────────┼─────────┤
+# │              │フランメ │シュタルク│
+# │              ├─────────┼─────────┤
+# │              │ゼーリエ │  CEO    │
 # └──────────────┴─────────┴─────────┘
-# 分割戦略: 列を先に作り、各列を独立して水平分割する
+# 分割戦略: s1(対話)は左列全高。中央・右列を各4段に分割。
 
 VAULT="${1:-/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -37,45 +36,45 @@ tell application "iTerm2"
             -- ==========================================
             -- Step 1: ペインを全部作る（構造だけ先に作成）
             -- ==========================================
-            -- session 1 = フリーレン（対話、既存）
+            -- s1 = フリーレン（対話、既存・左列全高）
             set s1 to current session
 
-            -- 左→右に分割 → session 2（中央列トップ）
+            -- 左→右に分割 → s2（中央列トップ）
             tell s1
                 set s2 to (split vertically with default profile)
             end tell
 
-            -- 中央→右に分割 → session 3（右列トップ）
+            -- 中央→右に分割 → s3（右列トップ）
             tell s2
                 set s3 to (split vertically with default profile)
             end tell
 
-            -- 左列: フリーレンの下 → session 4（CEO）
-            tell s1
+            -- 中央列: s2の下 → s4
+            tell s2
                 set s4 to (split horizontally with default profile)
             end tell
 
-            -- 中央列: s2の下 → session 5
-            tell s2
+            -- 中央列: s4の下 → s5
+            tell s4
                 set s5 to (split horizontally with default profile)
             end tell
 
-            -- 中央列: s5の下 → session 6
+            -- 中央列: s5の下 → s6
             tell s5
                 set s6 to (split horizontally with default profile)
             end tell
 
-            -- 中央列: s6の下 → session 7
-            tell s6
+            -- 右列: s3の下 → s7
+            tell s3
                 set s7 to (split horizontally with default profile)
             end tell
 
-            -- 右列: s3の下 → session 8
-            tell s3
+            -- 右列: s7の下 → s8
+            tell s7
                 set s8 to (split horizontally with default profile)
             end tell
 
-            -- 右列: s8の下 → session 9
+            -- 右列: s8の下 → s9
             tell s8
                 set s9 to (split horizontally with default profile)
             end tell
@@ -83,15 +82,15 @@ tell application "iTerm2"
             -- ==========================================
             -- Step 2: 各セッションに名前とモニターを割り当て
             -- ==========================================
-            -- s1 = フリーレン（対話ペイン、何も起動しない）
-            -- s2 = ヒンメル（中央上）
-            -- s3 = フェルン（右上）
-            -- s4 = フリーレン/CEO（左下）
-            -- s5 = アイゼン（中央2段目）
-            -- s6 = フランメ（中央3段目）
-            -- s7 = ゼーリエ（中央4段目）
-            -- s8 = ハイター（右2段目）
-            -- s9 = シュタルク（右3段目）
+            -- s1 = フリーレン（対話ペイン、左列全高、何も起動しない）
+            -- s2 = ヒンメル（中央1段目）
+            -- s3 = フェルン（右1段目）
+            -- s4 = アイゼン（中央2段目）
+            -- s5 = フランメ（中央3段目）
+            -- s6 = ゼーリエ（中央4段目）
+            -- s7 = ハイター（右2段目）
+            -- s8 = シュタルク（右3段目）
+            -- s9 = CEO（右4段目）
 
             tell s1
                 set name to "01_情報受付 | フリーレン"
@@ -105,28 +104,28 @@ tell application "iTerm2"
                 write text "bash '$MONITOR' fern '$VAULT'"
             end tell
             tell s4
-                set name to "CEO | フリーレン"
-                write text "bash '$MONITOR' ceo '$VAULT'"
-            end tell
-            tell s5
                 set name to "04_アイデア保管 | アイゼン"
                 write text "bash '$MONITOR' eisen '$VAULT'"
             end tell
-            tell s6
+            tell s5
                 set name to "06_マーケティング | フランメ"
                 write text "bash '$MONITOR' flamme '$VAULT'"
             end tell
-            tell s7
+            tell s6
                 set name to "09_制作・納品 | ゼーリエ"
                 write text "bash '$MONITOR' serie '$VAULT'"
             end tell
-            tell s8
+            tell s7
                 set name to "05_企画開発 | ハイター"
                 write text "bash '$MONITOR' heiter '$VAULT'"
             end tell
-            tell s9
+            tell s8
                 set name to "07_営業戦略 | シュタルク"
                 write text "bash '$MONITOR' stark '$VAULT'"
+            end tell
+            tell s9
+                set name to "CEO | フリーレン"
+                write text "bash '$MONITOR' ceo '$VAULT'"
             end tell
         end tell
     end tell
