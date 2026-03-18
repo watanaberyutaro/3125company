@@ -29,86 +29,90 @@ done
 osascript <<APPLESCRIPT
 tell application "iTerm2"
     tell current window
-        -- ==========================================
-        -- Step 1: 3列に分割（左=フリーレン / 中 / 右）
-        -- ==========================================
-        -- 現在のセッション = フリーレン（対話ペイン）
-        set frierenSession to current session
+        tell current tab
+            -- ==========================================
+            -- Step 1: ペインを全部作る（構造だけ先に作成）
+            -- ==========================================
+            -- session 1 = フリーレン（対話、既存）
+            set s1 to current session
 
-        -- 左→右に分割して中央列を作る
-        tell frierenSession
-            set midCol to (split vertically with default profile)
-        end tell
+            -- 左→右に分割 → session 2（中央列トップ）
+            tell s1
+                set s2 to (split vertically with default profile)
+            end tell
 
-        -- 中央列→右に分割して右列を作る
-        tell midCol
-            set rightCol to (split vertically with default profile)
-        end tell
+            -- 中央→右に分割 → session 3（右列トップ）
+            tell s2
+                set s3 to (split vertically with default profile)
+            end tell
 
-        -- ==========================================
-        -- Step 2: 左列を上下に分割（フリーレン / CEO）
-        -- ==========================================
-        tell frierenSession
-            set ceoPane to (split horizontally with default profile)
-        end tell
-        tell ceoPane
-            write text "bash '$MONITOR' ceo '$VAULT'"
-        end tell
+            -- 左列: フリーレンの下 → session 4（CEO）
+            tell s1
+                set s4 to (split horizontally with default profile)
+            end tell
 
-        -- ==========================================
-        -- Step 3: 中央列を上下に分割（ヒンメル / アイゼン / フランメ / ゼーリエ）
-        -- ==========================================
-        -- midCol = ヒンメル
-        tell midCol
-            write text "bash '$MONITOR' himmel '$VAULT'"
-        end tell
+            -- 中央列: s2の下 → session 5
+            tell s2
+                set s5 to (split horizontally with default profile)
+            end tell
 
-        -- ヒンメルの下にアイゼン
-        tell midCol
-            set eisenPane to (split horizontally with default profile)
-        end tell
-        tell eisenPane
-            write text "bash '$MONITOR' eisen '$VAULT'"
-        end tell
+            -- 中央列: s5の下 → session 6
+            tell s5
+                set s6 to (split horizontally with default profile)
+            end tell
 
-        -- アイゼンの下にフランメ
-        tell eisenPane
-            set flammePane to (split horizontally with default profile)
-        end tell
-        tell flammePane
-            write text "bash '$MONITOR' flamme '$VAULT'"
-        end tell
+            -- 中央列: s6の下 → session 7
+            tell s6
+                set s7 to (split horizontally with default profile)
+            end tell
 
-        -- フランメの下にゼーリエ
-        tell flammePane
-            set seriePane to (split horizontally with default profile)
-        end tell
-        tell seriePane
-            write text "bash '$MONITOR' serie '$VAULT'"
-        end tell
+            -- 右列: s3の下 → session 8
+            tell s3
+                set s8 to (split horizontally with default profile)
+            end tell
 
-        -- ==========================================
-        -- Step 4: 右列を上下に分割（フェルン / ハイター / シュタルク）
-        -- ==========================================
-        -- rightCol = フェルン
-        tell rightCol
-            write text "bash '$MONITOR' fern '$VAULT'"
-        end tell
+            -- 右列: s8の下 → session 9
+            tell s8
+                set s9 to (split horizontally with default profile)
+            end tell
 
-        -- フェルンの下にハイター
-        tell rightCol
-            set heiterPane to (split horizontally with default profile)
-        end tell
-        tell heiterPane
-            write text "bash '$MONITOR' heiter '$VAULT'"
-        end tell
+            -- ==========================================
+            -- Step 2: 各セッションにモニターを割り当て
+            -- ==========================================
+            -- s1 = フリーレン（対話ペイン、何も起動しない）
+            -- s2 = ヒンメル（中央上）
+            -- s3 = フェルン（右上）
+            -- s4 = CEO（左下）
+            -- s5 = アイゼン（中央2段目）
+            -- s6 = フランメ（中央3段目）
+            -- s7 = ゼーリエ（中央4段目）
+            -- s8 = ハイター（右2段目）
+            -- s9 = シュタルク（右3段目）
 
-        -- ハイターの下にシュタルク
-        tell heiterPane
-            set starkPane to (split horizontally with default profile)
-        end tell
-        tell starkPane
-            write text "bash '$MONITOR' stark '$VAULT'"
+            tell s2
+                write text "bash '$MONITOR' himmel '$VAULT'"
+            end tell
+            tell s3
+                write text "bash '$MONITOR' fern '$VAULT'"
+            end tell
+            tell s4
+                write text "bash '$MONITOR' ceo '$VAULT'"
+            end tell
+            tell s5
+                write text "bash '$MONITOR' eisen '$VAULT'"
+            end tell
+            tell s6
+                write text "bash '$MONITOR' flamme '$VAULT'"
+            end tell
+            tell s7
+                write text "bash '$MONITOR' serie '$VAULT'"
+            end tell
+            tell s8
+                write text "bash '$MONITOR' heiter '$VAULT'"
+            end tell
+            tell s9
+                write text "bash '$MONITOR' stark '$VAULT'"
+            end tell
         end tell
     end tell
 end tell
