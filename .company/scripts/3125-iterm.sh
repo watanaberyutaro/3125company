@@ -19,6 +19,9 @@ VAULT="${1:-/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 MONITOR="$SCRIPT_DIR/monitor-agent.sh"
 
+# Per-pane title bar を有効化（iTerm2の設定を直接変更）
+defaults write com.googlecode.iterm2 ShowPaneTitles -bool true
+
 # ログディレクトリ確認
 mkdir -p "$VAULT/.company/logs"
 
