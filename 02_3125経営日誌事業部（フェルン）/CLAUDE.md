@@ -33,10 +33,13 @@
 ```
 02_3125経営日誌事業部（フェルン）/
 ├── CLAUDE.md                      ← このファイル
+├── daily/                         ← 経営日誌（受信トレイ経由で格納）
+│   ├── YYYY-MM-DD.md
+│   └── _archive/
 ├── news/
 │   └── YYYY-MM-DD-朝のニュース.md
 ├── _archive/
-└── YYYY-MM-DD.md                  # 経営日報
+└── YYYY-MM-DD-タスク分析レポート.md  # 日次上書き
 ```
 
 ## Discord通知ルール
