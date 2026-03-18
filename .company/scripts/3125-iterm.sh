@@ -29,6 +29,21 @@ done
 
 osascript <<APPLESCRIPT
 tell application "iTerm2"
+    -- Per-pane title bar を有効化
+    tell current window
+        tell current tab
+            -- メニュー操作で per-pane title bar をトグル
+        end tell
+    end tell
+
+    -- View > Show Per-Pane Title Bars を有効化
+    activate
+    tell application "System Events"
+        tell process "iTerm2"
+            click menu item "Show Per-Pane Title Bars" of menu "View" of menu bar 1
+        end tell
+    end tell
+
     tell current window
         tell current tab
             -- ==========================================
