@@ -12,7 +12,7 @@ LOG_FILE="$VAULT/.company/logs/${AGENT_NAME}.log"
 
 # エージェント名 → キャラ名・部署名のマッピング（bash 3.2互換）
 case "$AGENT_NAME" in
-    ceo)    CHAR_NAME="CEO";        DEPT_NAME="意思決定";           DEPT_FOLDER=".company/ceo" ;;
+    ceo)    CHAR_NAME="フリーレン"; DEPT_NAME="CEO・意思決定";       DEPT_FOLDER=".company/ceo" ;;
     himmel) CHAR_NAME="ヒンメル";   DEPT_NAME="03_市場調査";        DEPT_FOLDER="03_3125市場調査事業部（ヒンメル）" ;;
     fern)   CHAR_NAME="フェルン";   DEPT_NAME="02_経営日誌";        DEPT_FOLDER="02_3125経営日誌事業部（フェルン）" ;;
     eisen)  CHAR_NAME="アイゼン";   DEPT_NAME="04_アイデア保管";    DEPT_FOLDER="04_3125アイデア保管事業部（アイゼン）" ;;
