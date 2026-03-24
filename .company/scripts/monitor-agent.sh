@@ -7,15 +7,15 @@ VAULT="${2:-/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian
 LOG_FILE="$VAULT/.company/logs/${AGENT_NAME}.log"
 
 case "$AGENT_NAME" in
-    ceo)    CHAR_NAME="フリーレン"; DEPT_FOLDER=".company/ceo" ;;
-    himmel) CHAR_NAME="ヒンメル";   DEPT_FOLDER="03_3125市場調査事業部（ヒンメル）" ;;
-    fern)   CHAR_NAME="フェルン";   DEPT_FOLDER="02_3125経営日誌事業部（フェルン）" ;;
-    eisen)  CHAR_NAME="アイゼン";   DEPT_FOLDER="04_3125アイデア保管事業部（アイゼン）" ;;
-    heiter) CHAR_NAME="ハイター";   DEPT_FOLDER="05_3125企画開発事業部（ハイター）" ;;
-    flamme) CHAR_NAME="フランメ";   DEPT_FOLDER="06_3125マーケティング事業部（フランメ）" ;;
-    stark)  CHAR_NAME="シュタルク"; DEPT_FOLDER="07_3125営業戦略事業部（シュタルク）" ;;
-    serie)  CHAR_NAME="ゼーリエ";   DEPT_FOLDER="09_3125制作・納品事業部（ゼーリエ）" ;;
-    *)      CHAR_NAME="$AGENT_NAME"; DEPT_FOLDER="" ;;
+    ceo)    CHAR_NAME="フリーレン" ;;
+    himmel) CHAR_NAME="ヒンメル" ;;
+    fern)   CHAR_NAME="フェルン" ;;
+    eisen)  CHAR_NAME="アイゼン" ;;
+    heiter) CHAR_NAME="ハイター" ;;
+    flamme) CHAR_NAME="フランメ" ;;
+    stark)  CHAR_NAME="シュタルク" ;;
+    serie)  CHAR_NAME="ゼーリエ" ;;
+    *)      CHAR_NAME="$AGENT_NAME" ;;
 esac
 
 touch "$LOG_FILE"
@@ -35,45 +35,46 @@ render() {
     local ROWS=$(stty size 2>/dev/null | awk '{print $1}')
     [ -z "$ROWS" ] && ROWS=14
 
-    # バッファ構築
-    local buf=""
-    local DEPT_PATH="$VAULT/$DEPT_FOLDER"
-    local MAX_LOG=$((ROWS - 5))
-    [ "$MAX_LOG" -lt 2 ] && MAX_LOG=2
+    # ログ行数 = 画面高さ - 3行（区切り2本+ステータス1行）
+    local MAX_LOG=$((ROWS - 3))
+    [ "$MAX_LOG" -lt 1 ] && MAX_LOG=1
 
+    # ログ取得
+    local log_buf=""
     if [ "$STATE" = "idle" ]; then
-        local pend=$(ls "$DEPT_PATH/_pending/"*.md 2>/dev/null | wc -l | tr -d ' ')
-        local done_c=$(ls "$DEPT_PATH/_done/"*.md 2>/dev/null | wc -l | tr -d ' ')
-        buf+="  📥${pend} ✅${done_c}"$'\n'
-        while IFS= read -r line; do
-            buf+="  $line"$'\n'
-        done < <(tail -${MAX_LOG} "$LOG_FILE" 2>/dev/null)
+        log_buf=$(tail -${MAX_LOG} "$LOG_FILE" 2>/dev/null | sed 's/^/  /')
     else
         local start_line=$(grep -n "=== START" "$LOG_FILE" | tail -1 | cut -d: -f1)
         if [ -n "$start_line" ]; then
-            while IFS= read -r line; do
-                buf+="  $line"$'\n'
-            done < <(tail -n +"$start_line" "$LOG_FILE" | tail -${MAX_LOG})
+            log_buf=$(tail -n +"$start_line" "$LOG_FILE" | tail -${MAX_LOG} | sed 's/^/  /')
         fi
     fi
 
-    # 行数計算
-    local content_lines=$(printf '%s' "$buf" | wc -l | tr -d ' ')
-    local total=$((content_lines + 3))  # ヘッダー区切り+ステータス+区切り
+    # ログ行数
+    local log_lines=0
+    if [ -n "$log_buf" ]; then
+        log_lines=$(echo "$log_buf" | wc -l | tr -d ' ')
+    fi
+
+    # 開始行 = 画面下部に寄せる（ログ + 区切り2 + ステータス1 = log_lines+3）
+    local total=$((log_lines + 3))
     local start_row=$((ROWS - total))
     [ "$start_row" -lt 1 ] && start_row=1
 
-    # 描画
-    printf '\033[2J'
-    printf '\033[%d;1H' "$start_row"
-    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    # ステータス文字
+    local status_text=""
     case "$STATE" in
-        idle)     echo "  ⏳ $CHAR_NAME — 待機中" ;;
-        thinking) echo "  🧠 $CHAR_NAME — 思考中..." ;;
-        working)  echo "  🔥 $CHAR_NAME — 作業中" ;;
+        idle)     status_text="⏳ ${CHAR_NAME}: 待機中" ;;
+        thinking) status_text="🧠 ${CHAR_NAME}: 思考中..." ;;
+        working)  status_text="🔥 ${CHAR_NAME}: 作業中" ;;
     esac
+
+    # 描画
+    printf '\033[2J\033[%d;1H' "$start_row"
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    printf '%s' "$buf"
+    [ -n "$log_buf" ] && echo "$log_buf"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo "$status_text"
 }
 
 # メインループ
