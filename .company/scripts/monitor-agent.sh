@@ -35,49 +35,54 @@ render() {
     local STATE="$1"
     local LINES=$(tput lines 2>/dev/null || echo 24)
 
-    # コンテンツを一旦バッファに貯める
+    local DEPT_PATH="$VAULT/$DEPT_FOLDER"
+    local MAX_LOG=$((LINES - 7))  # ヘッダー3行+情報3行+フッター1行を引く
+    [ "$MAX_LOG" -lt 2 ] && MAX_LOG=2
+
+    # コンテンツをバッファに貯める
     local buf=""
-    buf+="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$'\n'
-    case "$STATE" in
-        idle)     buf+="  ⏳ $CHAR_NAME — $DEPT_NAME — 待機中"$'\n' ;;
-        thinking) buf+="  🧠 $CHAR_NAME — $DEPT_NAME — 思考中..."$'\n' ;;
-        working)  buf+="  🔥 $CHAR_NAME — $DEPT_NAME — 作業中"$'\n' ;;
-    esac
-    buf+="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$'\n'
-    buf+=""$'\n'
 
     if [ "$STATE" = "idle" ]; then
-        local DEPT_PATH="$VAULT/$DEPT_FOLDER"
-        if [ -d "$DEPT_PATH/_pending" ]; then
-            local pend=$(ls "$DEPT_PATH/_pending/"*.md 2>/dev/null | wc -l | tr -d ' ')
-            local done_c=$(ls "$DEPT_PATH/_done/"*.md 2>/dev/null | wc -l | tr -d ' ')
-            buf+="  📥 部署キュー: ${pend}件  ✅ 完了: ${done_c}件"$'\n'
-        fi
-        local gpend=$(ls "$VAULT/01_3125情報受付事業部（フリーレン）/_pending/"*.md 2>/dev/null | wc -l | tr -d ' ')
-        buf+="  📬 全体キュー: ${gpend}件"$'\n'
-        local latest=$(ls -t "$DEPT_PATH/"*.md 2>/dev/null | head -1)
-        if [ -n "$latest" ]; then
-            buf+="  📄 最新: $(basename "$latest")"$'\n'
-        fi
-        buf+=""$'\n'
-        buf+="  📋 最近のログ:"$'\n'
+        local pend=$(ls "$DEPT_PATH/_pending/"*.md 2>/dev/null | wc -l | tr -d ' ')
+        local done_c=$(ls "$DEPT_PATH/_done/"*.md 2>/dev/null | wc -l | tr -d ' ')
+        buf+="  📥 ${pend}件  ✅ ${done_c}件"$'\n'
         while IFS= read -r line; do
-            buf+="    $line"$'\n'
-        done < <(tail -5 "$LOG_FILE" 2>/dev/null)
+            buf+="  $line"$'\n'
+        done < <(tail -${MAX_LOG} "$LOG_FILE" 2>/dev/null)
     else
         local start_line=$(grep -n "=== START" "$LOG_FILE" | tail -1 | cut -d: -f1)
         if [ -n "$start_line" ]; then
             while IFS= read -r line; do
                 buf+="  $line"$'\n'
-            done < <(tail -n +"$start_line" "$LOG_FILE")
+            done < <(tail -n +"$start_line" "$LOG_FILE" | tail -${MAX_LOG})
         fi
         if [ "$STATE" = "thinking" ]; then
-            buf+=""$'\n'
-            buf+="  ⋯ エージェント起動・準備中"$'\n'
+            buf+="  ⋯ 準備中"$'\n'
         fi
     fi
-    buf+=""$'\n'
-    buf+="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+    local content_lines=$(echo "$buf" | wc -l | tr -d ' ')
+    local header_lines=3  # ステータス行+区切り2本
+    local total=$((header_lines + content_lines + 1))
+    local pad=$((LINES - total))
+
+    # 画面クリア+下寄せ
+    printf '\033[2J\033[H'
+    if [ "$pad" -gt 0 ]; then
+        printf "%0.s\n" $(seq 1 $pad)
+    fi
+
+    # ステータスヘッダー
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    case "$STATE" in
+        idle)     echo "  ⏳ $CHAR_NAME — 待機中" ;;
+        thinking) echo "  🧠 $CHAR_NAME — 思考中..." ;;
+        working)  echo "  🔥 $CHAR_NAME — 作業中" ;;
+    esac
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+    # コンテンツ
+    echo "$buf"
 
     # コンテンツの行数を数える
     local content_lines=$(echo "$buf" | wc -l | tr -d ' ')
