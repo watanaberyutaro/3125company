@@ -195,7 +195,7 @@ source: LINE
 - [ ] 閲覧済み
 
 ---
-target_folder: 04_3125アイデア保管事業部（アイゼン）/cases
+target_folder: 04_3125アイデア保管事業部（アイゼン）/案件
 date: "YYYY-MM-DD"
 type: case-log
 author: アイゼン
@@ -285,7 +285,7 @@ TABLE
   外国人 AS "外国人",
   投稿者 AS "投稿者",
   投稿日 AS "投稿日"
-FROM "04_3125アイデア保管事業部（アイゼン）/cases"
+FROM "04_3125アイデア保管事業部（アイゼン）/案件"
 WHERE type = "case-entry"
 SORT 投稿日 DESC
 ```
@@ -295,7 +295,7 @@ SORT 投稿日 DESC
 ```dataview
 TABLE
   業務内容, ブランド, 単価, エリア, 未経験, 投稿日
-FROM "04_3125アイデア保管事業部（アイゼン）/cases"
+FROM "04_3125アイデア保管事業部（アイゼン）/案件"
 WHERE type = "case-entry" AND 外国人 = "可"
 SORT 単価 DESC
 ```
@@ -305,7 +305,7 @@ SORT 単価 DESC
 ```dataview
 TABLE
   業務内容, ブランド, 単価, エリア, 外国人, 投稿日
-FROM "04_3125アイデア保管事業部（アイゼン）/cases"
+FROM "04_3125アイデア保管事業部（アイゼン）/案件"
 WHERE type = "case-entry" AND 未経験 = "可"
 SORT 単価 DESC
 ```
