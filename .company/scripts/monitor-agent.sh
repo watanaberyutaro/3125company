@@ -2,15 +2,14 @@
 # monitor-agent.sh — エージェント監視スクリプト
 # Usage: monitor-agent.sh <agent-name> <vault-path>
 #
-# 待機中: 部署ステータス表示（pending件数、最終タスク、最終更新時刻）
-# 稼働中: tail -f でログをリアルタイム表示
-# 30秒間隔でステータスリフレッシュ
+# 待機中: 部署ステータス表示
+# 稼働中: ログをリアルタイムストリーム表示
 
 AGENT_NAME="$1"
 VAULT="${2:-/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault}"
 LOG_FILE="$VAULT/.company/logs/${AGENT_NAME}.log"
 
-# エージェント名 → キャラ名・部署名のマッピング（bash 3.2互換）
+# エージェント名 → キャラ名・部署名のマッピング
 case "$AGENT_NAME" in
     ceo)    CHAR_NAME="フリーレン"; DEPT_NAME="CEO・意思決定";       DEPT_FOLDER=".company/ceo" ;;
     himmel) CHAR_NAME="ヒンメル";   DEPT_NAME="03_市場調査";        DEPT_FOLDER="03_3125市場調査事業部（ヒンメル）" ;;
@@ -23,13 +22,10 @@ case "$AGENT_NAME" in
     *)      CHAR_NAME="$AGENT_NAME"; DEPT_NAME="不明";              DEPT_FOLDER="" ;;
 esac
 
-# ログファイルが存在しなければ作成
 touch "$LOG_FILE"
-
-# セッションタイトルを設定（per-pane title barに表示される）
 echo -ne "\033]0;${DEPT_NAME} | ${CHAR_NAME}\007"
 
-# 部署ステータスを表示する関数
+# 待機中ステータス表示
 show_status() {
     clear
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -37,65 +33,88 @@ show_status() {
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo ""
 
-    # pending件数
     PENDING_DIR="$VAULT/01_3125情報受付事業部（フリーレン）/_pending"
     if [ -d "$PENDING_DIR" ]; then
         PENDING_COUNT=$(ls -1 "$PENDING_DIR"/*.md 2>/dev/null | wc -l | tr -d ' ')
         echo "  📥 全体 Pending: ${PENDING_COUNT}件"
     fi
 
-    # 部署フォルダの最終更新
     DEPT_PATH="$VAULT/$DEPT_FOLDER"
     if [ -d "$DEPT_PATH" ]; then
         LATEST=$(ls -t "$DEPT_PATH"/*.md 2>/dev/null | head -1)
         if [ -n "$LATEST" ]; then
-            LATEST_NAME=$(basename "$LATEST")
-            LATEST_TIME=$(stat -f "%Sm" -t "%Y-%m-%d %H:%M" "$LATEST" 2>/dev/null || echo "不明")
-            echo "  📄 最新: $LATEST_NAME"
-            echo "  🕐 更新: $LATEST_TIME"
-        else
-            echo "  📄 ファイルなし"
+            echo "  📄 最新: $(basename "$LATEST")"
+            echo "  🕐 更新: $(stat -f "%Sm" -t "%Y-%m-%d %H:%M" "$LATEST" 2>/dev/null || echo "不明")"
         fi
     fi
 
-    # ログの最終行
-    if [ -s "$LOG_FILE" ]; then
-        echo ""
-        echo "  📋 最終ログ:"
-        tail -3 "$LOG_FILE" | while IFS= read -r line; do
-            echo "    $line"
-        done
-    fi
+    echo ""
+    echo "  📋 最近のログ:"
+    tail -10 "$LOG_FILE" 2>/dev/null | while IFS= read -r line; do
+        echo "    $line"
+    done
 
     echo ""
     echo "  ⏳ 待機中..."
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 }
 
+# 稼働中表示（ヘッダー + tail -f）
+show_active() {
+    clear
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo "  🔥 $CHAR_NAME — $DEPT_NAME — ACTIVE"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo ""
+    # 最新のSTART以降のログを全部表示
+    local start_line=$(grep -n "=== START" "$LOG_FILE" | tail -1 | cut -d: -f1)
+    if [ -n "$start_line" ]; then
+        tail -n +"$start_line" "$LOG_FILE"
+    else
+        tail -20 "$LOG_FILE"
+    fi
+}
+
 # メインループ
 LAST_LOG_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null || echo 0)
+IS_ACTIVE=false
 
 while true; do
     CURRENT_LOG_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null || echo 0)
 
     if [ "$CURRENT_LOG_SIZE" -gt "$LAST_LOG_SIZE" ]; then
-        # ログに新しい内容がある → ストリーム表示
-        clear
-        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-        echo "  🔥 $CHAR_NAME — $DEPT_NAME — ACTIVE"
-        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-        echo ""
+        # ログに新しい内容 → アクティブ表示
+        IS_ACTIVE=true
+        show_active
 
-        # 新しい部分だけ表示してから tail -f
-        tail -c +$((LAST_LOG_SIZE + 1)) "$LOG_FILE"
+        # 2秒間隔で新しい行を監視（ENDが来たら待機に戻る）
+        while true; do
+            sleep 2
+            NEW_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null || echo 0)
+            if [ "$NEW_SIZE" -gt "$CURRENT_LOG_SIZE" ]; then
+                # 新しいログが追加された → 差分表示
+                tail -c +$((CURRENT_LOG_SIZE + 1)) "$LOG_FILE"
+                CURRENT_LOG_SIZE=$NEW_SIZE
 
-        # tail -f でリアルタイム監視（5秒タイムアウトで戻る）
-        timeout 30 tail -f "$LOG_FILE" 2>/dev/null
+                # ENDが含まれていたらループを抜ける
+                if tail -1 "$LOG_FILE" | grep -q "=== END"; then
+                    echo ""
+                    echo "  ✅ 処理完了"
+                    sleep 3
+                    break
+                fi
+            fi
+            # 60秒変化なしでも一旦抜ける
+            ELAPSED=$((ELAPSED + 2))
+            if [ "${ELAPSED:-0}" -ge 60 ]; then
+                break
+            fi
+        done
 
         LAST_LOG_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null || echo 0)
+        IS_ACTIVE=false
     else
-        # 変更なし → ステータス表示
         show_status
-        sleep 10
+        sleep 5
     fi
 done
