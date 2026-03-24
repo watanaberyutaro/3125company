@@ -1,16 +1,10 @@
 #!/bin/bash
 # monitor-agent.sh — エージェント監視スクリプト
 # Usage: monitor-agent.sh <agent-name> <vault-path>
-#
-# ステータス:
-#   ⏳ 待機中 — タスクなし
-#   🧠 思考中 — START後、進捗ログがまだない
-#   🔥 作業中 — [進捗] ログが流れている
 
 AGENT_NAME="$1"
 VAULT="${2:-/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault}"
 LOG_FILE="$VAULT/.company/logs/${AGENT_NAME}.log"
-MY_TTY=$(tty)
 
 case "$AGENT_NAME" in
     ceo)    CHAR_NAME="フリーレン"; DEPT_NAME="CEO・意思決定";       DEPT_FOLDER=".company/ceo" ;;
@@ -25,157 +19,85 @@ case "$AGENT_NAME" in
 esac
 
 touch "$LOG_FILE"
+printf '\033]0;%s | %s\007' "$DEPT_NAME" "$CHAR_NAME"
 
-# TTYに直接出力する関数（AppleScript write textの代わり）
-out() {
-    echo "$@" > "$MY_TTY"
-}
-
-cls() {
-    printf '\033[2J\033[H' > "$MY_TTY"
-}
-
-# ペインタイトル設定
-printf '\033]0;%s | %s\007' "$DEPT_NAME" "$CHAR_NAME" > "$MY_TTY"
-
-# 状態判定
 get_state() {
-    local last_start=$(grep -n "=== START" "$LOG_FILE" | tail -1 | cut -d: -f1)
-    local last_end=$(grep -n "=== END" "$LOG_FILE" | tail -1 | cut -d: -f1)
-
+    local last_start last_end progress_after
+    last_start=$(grep -n "=== START" "$LOG_FILE" | tail -1 | cut -d: -f1)
+    last_end=$(grep -n "=== END" "$LOG_FILE" | tail -1 | cut -d: -f1)
     if [ -z "$last_start" ]; then echo "idle"; return; fi
     if [ -n "$last_end" ] && [ "$last_end" -gt "$last_start" ]; then echo "idle"; return; fi
-
-    local progress_after=$(tail -n +"$last_start" "$LOG_FILE" | grep -c "\[進捗\]")
+    progress_after=$(tail -n +"$last_start" "$LOG_FILE" | grep -c "\[進捗\]")
     if [ "$progress_after" -gt 0 ]; then echo "working"; else echo "thinking"; fi
 }
 
-# 待機中表示
-show_idle() {
-    cls
-    out "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    out "  ⏳ $CHAR_NAME — $DEPT_NAME — 待機中"
-    out "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    out ""
+render() {
+    local STATE="$1"
+    printf '\033[2J\033[H'
 
-    local DEPT_PATH="$VAULT/$DEPT_FOLDER"
-    local DEPT_PENDING="$DEPT_PATH/_pending"
-    local DEPT_DONE="$DEPT_PATH/_done"
-    if [ -d "$DEPT_PENDING" ]; then
-        local MY_PENDING=$(ls "$DEPT_PENDING"/*.md 2>/dev/null | wc -l | tr -d ' ')
-        local MY_DONE=$(ls "$DEPT_DONE"/*.md 2>/dev/null | wc -l | tr -d ' ')
-        out "  📥 部署キュー: ${MY_PENDING}件  ✅ 完了: ${MY_DONE}件"
-    fi
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    case "$STATE" in
+        idle)     echo "  ⏳ $CHAR_NAME — $DEPT_NAME — 待機中" ;;
+        thinking) echo "  🧠 $CHAR_NAME — $DEPT_NAME — 思考中..." ;;
+        working)  echo "  🔥 $CHAR_NAME — $DEPT_NAME — 作業中" ;;
+    esac
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo ""
 
-    local GLOBAL_PENDING="$VAULT/01_3125情報受付事業部（フリーレン）/_pending"
-    if [ -d "$GLOBAL_PENDING" ]; then
-        local GLOBAL_COUNT=$(ls "$GLOBAL_PENDING"/*.md 2>/dev/null | wc -l | tr -d ' ')
-        out "  📬 全体キュー: ${GLOBAL_COUNT}件"
-    fi
+    if [ "$STATE" = "idle" ]; then
+        # キュー表示
+        local DEPT_PATH="$VAULT/$DEPT_FOLDER"
+        if [ -d "$DEPT_PATH/_pending" ]; then
+            local pend=$(ls "$DEPT_PATH/_pending/"*.md 2>/dev/null | wc -l | tr -d ' ')
+            local done=$(ls "$DEPT_PATH/_done/"*.md 2>/dev/null | wc -l | tr -d ' ')
+            echo "  📥 部署キュー: ${pend}件  ✅ 完了: ${done}件"
+        fi
+        local gpend=$(ls "$VAULT/01_3125情報受付事業部（フリーレン）/_pending/"*.md 2>/dev/null | wc -l | tr -d ' ')
+        echo "  📬 全体キュー: ${gpend}件"
 
-    if [ -d "$DEPT_PATH" ]; then
-        local LATEST=$(ls -t "$DEPT_PATH"/*.md 2>/dev/null | head -1)
-        if [ -n "$LATEST" ]; then
-            out "  📄 最新: $(basename "$LATEST")"
-            out "  🕐 更新: $(stat -f "%Sm" -t "%Y-%m-%d %H:%M" "$LATEST" 2>/dev/null || echo "不明")"
+        # 最新ファイル
+        local latest=$(ls -t "$DEPT_PATH/"*.md 2>/dev/null | head -1)
+        if [ -n "$latest" ]; then
+            echo "  📄 最新: $(basename "$latest")"
+        fi
+        echo ""
+
+        # 最近のログ
+        echo "  📋 最近のログ:"
+        tail -5 "$LOG_FILE" 2>/dev/null | sed 's/^/    /'
+    else
+        # 思考中・作業中: START以降のログ表示
+        local start_line=$(grep -n "=== START" "$LOG_FILE" | tail -1 | cut -d: -f1)
+        if [ -n "$start_line" ]; then
+            tail -n +"$start_line" "$LOG_FILE" | sed 's/^/  /'
+        fi
+        if [ "$STATE" = "thinking" ]; then
+            echo ""
+            echo "  ⋯ エージェント起動・準備中"
         fi
     fi
 
-    out ""
-    out "  📋 最近のログ:"
-    tail -5 "$LOG_FILE" 2>/dev/null | while IFS= read -r line; do
-        out "    $line"
-    done
-    out ""
-    out "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-}
-
-# 思考中表示
-show_thinking() {
-    cls
-    out "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    out "  🧠 $CHAR_NAME — $DEPT_NAME — 思考中..."
-    out "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    out ""
-
-    local start_line=$(grep -n "=== START" "$LOG_FILE" | tail -1 | cut -d: -f1)
-    if [ -n "$start_line" ]; then
-        tail -n +"$start_line" "$LOG_FILE" | while IFS= read -r line; do
-            out "  $line"
-        done
-    fi
-    out ""
-    out "  ⋯ エージェント起動・準備中"
-    out "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-}
-
-# 作業中表示
-show_working() {
-    cls
-    out "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    out "  🔥 $CHAR_NAME — $DEPT_NAME — 作業中"
-    out "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    out ""
-
-    local start_line=$(grep -n "=== START" "$LOG_FILE" | tail -1 | cut -d: -f1)
-    if [ -n "$start_line" ]; then
-        tail -n +"$start_line" "$LOG_FILE" | while IFS= read -r line; do
-            out "  $line"
-        done
-    else
-        tail -20 "$LOG_FILE" | while IFS= read -r line; do
-            out "  $line"
-        done
-    fi
-    out ""
-    out "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo ""
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 }
 
 # メインループ
-LAST_LOG_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null | tr -d ' ')
-PREV_STATE="idle"
+LAST_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null | tr -d ' ')
+LAST_STATE="none"
 
 while true; do
-    CURRENT_LOG_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null | tr -d ' ')
-    STATE=$(get_state)
+    CUR_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null | tr -d ' ')
+    CUR_STATE=$(get_state)
 
-    if [ "$CURRENT_LOG_SIZE" != "$LAST_LOG_SIZE" ] || [ "$STATE" != "$PREV_STATE" ]; then
-        # 変化あり → 即時描画
-        case "$STATE" in
-            idle)     show_idle ;;
-            thinking) show_thinking ;;
-            working)  show_working ;;
-        esac
-        LAST_LOG_SIZE="$CURRENT_LOG_SIZE"
-        PREV_STATE="$STATE"
-
-        # アクティブ中は2秒ポーリング
-        if [ "$STATE" != "idle" ]; then
-            while true; do
-                sleep 2
-                local_size=$(wc -c < "$LOG_FILE" 2>/dev/null | tr -d ' ')
-                local_state=$(get_state)
-                if [ "$local_size" != "$LAST_LOG_SIZE" ] || [ "$local_state" != "$STATE" ]; then
-                    STATE="$local_state"
-                    case "$STATE" in
-                        idle)
-                            show_working
-                            out ""; out "  ✅ 処理完了"
-                            sleep 3
-                            show_idle
-                            ;;
-                        thinking) show_thinking ;;
-                        working)  show_working ;;
-                    esac
-                    LAST_LOG_SIZE="$local_size"
-                    if [ "$STATE" = "idle" ]; then break; fi
-                fi
-            done
-            PREV_STATE="$STATE"
-        fi
-    else
-        # 変化なし → 待機表示リフレッシュ
-        show_idle
+    if [ "$CUR_SIZE" != "$LAST_SIZE" ] || [ "$CUR_STATE" != "$LAST_STATE" ]; then
+        render "$CUR_STATE"
+        LAST_SIZE="$CUR_SIZE"
+        LAST_STATE="$CUR_STATE"
     fi
-    sleep 5
+
+    if [ "$CUR_STATE" = "idle" ]; then
+        sleep 5
+    else
+        sleep 2
+    fi
 done
