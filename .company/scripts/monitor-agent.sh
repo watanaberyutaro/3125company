@@ -2,14 +2,15 @@
 # monitor-agent.sh — エージェント監視スクリプト
 # Usage: monitor-agent.sh <agent-name> <vault-path>
 #
-# 待機中: 部署ステータス表示
-# 稼働中: ログをリアルタイムストリーム表示
+# ステータス:
+#   ⏳ 待機中 — タスクなし
+#   🧠 思考中 — START後、進捗ログがまだない（エージェント初期化中）
+#   🔥 作業中 — [進捗] ログが流れている
 
 AGENT_NAME="$1"
 VAULT="${2:-/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault}"
 LOG_FILE="$VAULT/.company/logs/${AGENT_NAME}.log"
 
-# エージェント名 → キャラ名・部署名のマッピング
 case "$AGENT_NAME" in
     ceo)    CHAR_NAME="フリーレン"; DEPT_NAME="CEO・意思決定";       DEPT_FOLDER=".company/ceo" ;;
     himmel) CHAR_NAME="ヒンメル";   DEPT_NAME="03_市場調査";        DEPT_FOLDER="03_3125市場調査事業部（ヒンメル）" ;;
@@ -25,15 +26,47 @@ esac
 touch "$LOG_FILE"
 echo -ne "\033]0;${DEPT_NAME} | ${CHAR_NAME}\007"
 
-# 待機中ステータス表示
-show_status() {
-    clear
+# 現在の状態を判定: idle / thinking / working
+get_state() {
+    local last_start=$(grep -n "=== START" "$LOG_FILE" | tail -1 | cut -d: -f1)
+    local last_end=$(grep -n "=== END" "$LOG_FILE" | tail -1 | cut -d: -f1)
+
+    if [ -z "$last_start" ]; then
+        echo "idle"; return
+    fi
+
+    # ENDがSTARTより後ろ → 完了済み → 待機中
+    if [ -n "$last_end" ] && [ "$last_end" -gt "$last_start" ]; then
+        echo "idle"; return
+    fi
+
+    # START後に[進捗]があるか
+    local progress_after=$(tail -n +"$last_start" "$LOG_FILE" | grep -c "\[進捗\]")
+    if [ "$progress_after" -gt 0 ]; then
+        echo "working"
+    else
+        echo "thinking"
+    fi
+}
+
+# ヘッダー表示
+show_header() {
+    local state="$1"
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    echo "  $CHAR_NAME — $DEPT_NAME"
+    case "$state" in
+        idle)     echo "  ⏳ $CHAR_NAME — $DEPT_NAME — 待機中" ;;
+        thinking) echo "  🧠 $CHAR_NAME — $DEPT_NAME — 思考中..." ;;
+        working)  echo "  🔥 $CHAR_NAME — $DEPT_NAME — 作業中" ;;
+    esac
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo ""
+}
 
-    # 部署キュー表示
+# 待機中ステータス表示
+show_idle() {
+    clear
+    show_header "idle"
+
     DEPT_PATH="$VAULT/$DEPT_FOLDER"
     DEPT_PENDING="$DEPT_PATH/_pending"
     DEPT_DONE="$DEPT_PATH/_done"
@@ -43,14 +76,12 @@ show_status() {
         echo "  📥 部署キュー: ${MY_PENDING}件  ✅ 完了: ${MY_DONE}件"
     fi
 
-    # 全体キュー
     GLOBAL_PENDING="$VAULT/01_3125情報受付事業部（フリーレン）/_pending"
     if [ -d "$GLOBAL_PENDING" ]; then
         GLOBAL_COUNT=$(ls -1 "$GLOBAL_PENDING"/*.md 2>/dev/null | wc -l | tr -d ' ')
         echo "  📬 全体キュー: ${GLOBAL_COUNT}件"
     fi
 
-    # 部署最新ファイル
     if [ -d "$DEPT_PATH" ]; then
         LATEST=$(ls -t "$DEPT_PATH"/*.md 2>/dev/null | head -1)
         if [ -n "$LATEST" ]; then
@@ -58,8 +89,7 @@ show_status() {
             echo "  🕐 更新: $(stat -f "%Sm" -t "%Y-%m-%d %H:%M" "$LATEST" 2>/dev/null || echo "不明")"
         fi
 
-        # pending内のファイル名を表示
-        if [ "$MY_PENDING" -gt 0 ] 2>/dev/null; then
+        if [ "${MY_PENDING:-0}" -gt 0 ] 2>/dev/null; then
             echo ""
             echo "  📋 待ちタスク:"
             ls -1 "$DEPT_PENDING"/*.md 2>/dev/null | while read f; do
@@ -70,71 +100,96 @@ show_status() {
 
     echo ""
     echo "  📋 最近のログ:"
-    tail -10 "$LOG_FILE" 2>/dev/null | while IFS= read -r line; do
+    tail -5 "$LOG_FILE" 2>/dev/null | while IFS= read -r line; do
         echo "    $line"
     done
-
     echo ""
-    echo "  ⏳ 待機中..."
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 }
 
-# 稼働中表示（ヘッダー + tail -f）
-show_active() {
+# 思考中表示
+show_thinking() {
     clear
-    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    echo "  🔥 $CHAR_NAME — $DEPT_NAME — ACTIVE"
-    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    echo ""
-    # 最新のSTART以降のログを全部表示
+    show_header "thinking"
+
     local start_line=$(grep -n "=== START" "$LOG_FILE" | tail -1 | cut -d: -f1)
     if [ -n "$start_line" ]; then
-        tail -n +"$start_line" "$LOG_FILE"
-    else
-        tail -20 "$LOG_FILE"
+        tail -n +"$start_line" "$LOG_FILE" | while IFS= read -r line; do
+            echo "  $line"
+        done
     fi
+    echo ""
+    echo "  ⋯ エージェント起動・準備中"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+}
+
+# 作業中表示
+show_working() {
+    clear
+    show_header "working"
+
+    local start_line=$(grep -n "=== START" "$LOG_FILE" | tail -1 | cut -d: -f1)
+    if [ -n "$start_line" ]; then
+        tail -n +"$start_line" "$LOG_FILE" | while IFS= read -r line; do
+            echo "  $line"
+        done
+    else
+        tail -20 "$LOG_FILE" | while IFS= read -r line; do
+            echo "  $line"
+        done
+    fi
+    echo ""
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 }
 
 # メインループ
 LAST_LOG_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null || echo 0)
-IS_ACTIVE=false
 
 while true; do
     CURRENT_LOG_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null || echo 0)
+    STATE=$(get_state)
 
-    if [ "$CURRENT_LOG_SIZE" -gt "$LAST_LOG_SIZE" ]; then
-        # ログに新しい内容 → アクティブ表示
-        IS_ACTIVE=true
-        show_active
+    if [ "$CURRENT_LOG_SIZE" -gt "$LAST_LOG_SIZE" ] || [ "$STATE" != "idle" ]; then
+        # アクティブ状態（思考中 or 作業中）
+        case "$STATE" in
+            thinking) show_thinking ;;
+            working)  show_working ;;
+            idle)     show_idle ;;
+        esac
 
-        # 2秒間隔で新しい行を監視（ENDが来たら待機に戻る）
-        while true; do
+        # アクティブ中は2秒間隔でポーリング
+        IDLE_COUNT=0
+        while [ "$STATE" != "idle" ]; do
             sleep 2
             NEW_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null || echo 0)
-            if [ "$NEW_SIZE" -gt "$CURRENT_LOG_SIZE" ]; then
-                # 新しいログが追加された → 差分表示
-                tail -c +$((CURRENT_LOG_SIZE + 1)) "$LOG_FILE"
-                CURRENT_LOG_SIZE=$NEW_SIZE
+            STATE=$(get_state)
 
-                # ENDが含まれていたらループを抜ける
-                if tail -1 "$LOG_FILE" | grep -q "=== END"; then
-                    echo ""
-                    echo "  ✅ 処理完了"
-                    sleep 3
+            if [ "$NEW_SIZE" -gt "$CURRENT_LOG_SIZE" ] || [ "$STATE" != "$PREV_STATE" ]; then
+                case "$STATE" in
+                    thinking) show_thinking ;;
+                    working)  show_working ;;
+                    idle)
+                        show_working  # 最終ログを表示
+                        echo ""
+                        echo "  ✅ 処理完了"
+                        sleep 3
+                        ;;
+                esac
+                CURRENT_LOG_SIZE=$NEW_SIZE
+                IDLE_COUNT=0
+            else
+                IDLE_COUNT=$((IDLE_COUNT + 1))
+                # 90秒変化なしでリフレッシュ
+                if [ "$IDLE_COUNT" -ge 45 ]; then
                     break
                 fi
             fi
-            # 60秒変化なしでも一旦抜ける
-            ELAPSED=$((ELAPSED + 2))
-            if [ "${ELAPSED:-0}" -ge 60 ]; then
-                break
-            fi
+            PREV_STATE=$STATE
         done
 
         LAST_LOG_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null || echo 0)
-        IS_ACTIVE=false
     else
-        show_status
+        show_idle
         sleep 5
     fi
 done
