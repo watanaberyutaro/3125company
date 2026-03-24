@@ -110,7 +110,7 @@ author: アイゼン
 - LINE .txt の内容から営業に関連する情報を抽出し、日本語で構造化する
 - **保存先: `00_受信トレイ/アイゼンより_YYYY-MM-DD-LINE営業ログ.md`（受信トレイ経由・必須）**
   - ファイル先頭に `- [ ] 振り分け` / `- [ ] 閲覧済み` の2行を追加
-  - frontmatter に `target_folder: 04_3125アイデア保管事業部（アイゼン）/sales` を記載
+  - frontmatter に `target_folder: 04_3125アイデア保管事業部（アイゼン）/営業情報` を記載
   - 振り分けチェック後に `sales/YYYY-MM-DD-LINE営業ログ.md` として移動される
 - ファイルフォーマット:
 
@@ -119,7 +119,7 @@ author: アイゼン
 - [ ] 閲覧済み
 
 ---
-target_folder: 04_3125アイデア保管事業部（アイゼン）/sales
+target_folder: 04_3125アイデア保管事業部（アイゼン）/営業情報
 date: "YYYY-MM-DD"
 type: sales-log
 author: アイゼン
