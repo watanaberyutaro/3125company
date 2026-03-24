@@ -33,7 +33,8 @@ get_state() {
 
 render() {
     local STATE="$1"
-    local LINES=$(tput lines 2>/dev/null || echo 24)
+    local LINES=$(stty size 2>/dev/null | awk '{print $1}')
+    [ -z "$LINES" ] && LINES=24
 
     local DEPT_PATH="$VAULT/$DEPT_FOLDER"
     local MAX_LOG=$((LINES - 7))  # ヘッダー3行+情報3行+フッター1行を引く
