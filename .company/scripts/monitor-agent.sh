@@ -33,18 +33,38 @@ show_status() {
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo ""
 
-    PENDING_DIR="$VAULT/01_3125情報受付事業部（フリーレン）/_pending"
-    if [ -d "$PENDING_DIR" ]; then
-        PENDING_COUNT=$(ls -1 "$PENDING_DIR"/*.md 2>/dev/null | wc -l | tr -d ' ')
-        echo "  📥 全体 Pending: ${PENDING_COUNT}件"
+    # 部署キュー表示
+    DEPT_PATH="$VAULT/$DEPT_FOLDER"
+    DEPT_PENDING="$DEPT_PATH/_pending"
+    DEPT_DONE="$DEPT_PATH/_done"
+    if [ -d "$DEPT_PENDING" ]; then
+        MY_PENDING=$(ls -1 "$DEPT_PENDING"/*.md 2>/dev/null | wc -l | tr -d ' ')
+        MY_DONE=$(ls -1 "$DEPT_DONE"/*.md 2>/dev/null | wc -l | tr -d ' ')
+        echo "  📥 部署キュー: ${MY_PENDING}件  ✅ 完了: ${MY_DONE}件"
     fi
 
-    DEPT_PATH="$VAULT/$DEPT_FOLDER"
+    # 全体キュー
+    GLOBAL_PENDING="$VAULT/01_3125情報受付事業部（フリーレン）/_pending"
+    if [ -d "$GLOBAL_PENDING" ]; then
+        GLOBAL_COUNT=$(ls -1 "$GLOBAL_PENDING"/*.md 2>/dev/null | wc -l | tr -d ' ')
+        echo "  📬 全体キュー: ${GLOBAL_COUNT}件"
+    fi
+
+    # 部署最新ファイル
     if [ -d "$DEPT_PATH" ]; then
         LATEST=$(ls -t "$DEPT_PATH"/*.md 2>/dev/null | head -1)
         if [ -n "$LATEST" ]; then
             echo "  📄 最新: $(basename "$LATEST")"
             echo "  🕐 更新: $(stat -f "%Sm" -t "%Y-%m-%d %H:%M" "$LATEST" 2>/dev/null || echo "不明")"
+        fi
+
+        # pending内のファイル名を表示
+        if [ "$MY_PENDING" -gt 0 ] 2>/dev/null; then
+            echo ""
+            echo "  📋 待ちタスク:"
+            ls -1 "$DEPT_PENDING"/*.md 2>/dev/null | while read f; do
+                echo "    • $(basename "$f")"
+            done
         fi
     fi
 
