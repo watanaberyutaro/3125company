@@ -27,11 +27,12 @@ fi
 
 get_state() {
     local last_start last_end
-    last_start=$(grep -n "=== START" "$LOG_FILE" | tail -1 | cut -d: -f1)
-    last_end=$(grep -n "=== END" "$LOG_FILE" | tail -1 | cut -d: -f1)
+    last_start=$(grep -n ">>>" "$LOG_FILE" | tail -1 | cut -d: -f1)
+    last_end=$(grep -n "<<<" "$LOG_FILE" | tail -1 | cut -d: -f1)
     if [ -z "$last_start" ]; then echo "idle"; return; fi
     if [ -n "$last_end" ] && [ "$last_end" -gt "$last_start" ]; then echo "idle"; return; fi
-    if tail -n +"$last_start" "$LOG_FILE" | grep -q "\[進捗\]"; then echo "working"; else echo "thinking"; fi
+    local lines_after=$(tail -n +"$last_start" "$LOG_FILE" | wc -l | tr -d ' ')
+    if [ "$lines_after" -gt 1 ]; then echo "working"; else echo "thinking"; fi
 }
 
 render() {
