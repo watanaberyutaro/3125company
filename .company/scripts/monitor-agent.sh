@@ -19,7 +19,11 @@ case "$AGENT_NAME" in
 esac
 
 touch "$LOG_FILE"
-printf '\033]0;%s\007' "$CHAR_NAME"
+if [ "$AGENT_NAME" = "ceo" ]; then
+    printf '\033]0;CEO %s\007' "$CHAR_NAME"
+else
+    printf '\033]0;%s\007' "$CHAR_NAME"
+fi
 
 get_state() {
     local last_start last_end
