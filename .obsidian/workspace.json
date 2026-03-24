@@ -11,10 +11,14 @@
             "id": "16d35f88e41d0a5e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "00_受信トレイ/フェルンより_2026-03-23.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新規タブ"
+              "title": "フェルンより_2026-03-23"
             }
           }
         ]
