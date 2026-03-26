@@ -1,75 +1,12 @@
 {
-  "last_report": "2026-03-24",
-  "last_report_ts": 1774321385.452427,
-  "departments": {
-    "04_3125アイデア保管事業部（アイゼン）": {
-      "char": "アイゼン",
-      "summary": "ストック12件、確定1件。マグカップ・YouTube企画・cyteki自社構築を更新。LINE代替システムが確定済み。",
-      "ideas_count": 12,
-      "confirmed_count": 1,
-      "recent_count": 0,
-      "file_mtimes": {
-        "2026-03-22-マグカップ製作アイデア": "1774248705.5440118",
-        "2026-03-22-YouTubeアイデア tKntTaAlxlI 参考動画から面白いことを実現する": "1774248700.3250132",
-        "2026-03-20-cytekiと同じシステムを自社用に構築する": "1774248654.4247434",
-        "2026-03-20-Claudeディスパッチで自宅WindowsをMCPサーバー化する": "1774248651.9854085",
-        "2026-03-19-自宅PC-3125組織導入-自動化": "1774180956.5323405",
-        "2026-03-16-MacroDroid-LINE代替-トーク保存-要約システム": "1773674670.471264"
-      }
-    },
-    "06_3125マーケティング事業部（フランメ）": {
-      "char": "フランメ",
-      "summary": "3日連続SNS市場サマリー更新。Instagram視聴時間重視・X非Premiumリンク弱体化・TikTok米国売却完了。",
-      "ideas_count": 0,
-      "confirmed_count": 0,
-      "recent_count": 3,
-      "file_mtimes": {
-        "2026-03-24-SNS市場サマリー": "1774318476.6490612",
-        "2026-03-23-SNS市場サマリー": "1774213486.2243094",
-        "2026-03-22-SNS市場サマリー": "1774181223.6662178"
-      }
-    },
-    "07_3125営業戦略事業部（シュタルク）": {
-      "char": "シュタルク",
-      "summary": "ゲオモバイル販路メモ(3/22更新)が最後の動き。新規案件・提案書は停滞中。",
-      "ideas_count": 0,
-      "confirmed_count": 0,
-      "recent_count": 1,
-      "file_mtimes": {
-        "2026-03-19-ゲオモバイル販路メモ": "1774181058.1374612"
-      }
-    },
-    "05_3125企画開発事業部（ハイター）": {
-      "char": "ハイター",
-      "summary": "活動なし。アイデア確定待ち。",
-      "ideas_count": 0,
-      "confirmed_count": 0,
-      "recent_count": 0,
-      "file_mtimes": {}
-    },
-    "02_3125経営日誌事業部（フェルン）": {
-      "char": "フェルン",
-      "summary": "活動なし。業務再開指示待ち。",
-      "ideas_count": 0,
-      "confirmed_count": 0,
-      "recent_count": 0,
-      "file_mtimes": {}
-    },
-    "09_3125制作・納品事業部（ゼーリエ）": {
-      "char": "ゼーリエ",
-      "summary": "活動なし。案件待ち。",
-      "ideas_count": 0,
-      "confirmed_count": 0,
-      "recent_count": 0,
-      "file_mtimes": {}
-    },
-    "03_3125市場調査事業部（ヒンメル）": {
-      "char": "ヒンメル",
-      "summary": "活動なし。調査依頼待ち。",
-      "ideas_count": 0,
-      "confirmed_count": 0,
-      "recent_count": 0,
-      "file_mtimes": {}
-    }
-  }
+  "last_report_date": "2026-03-26",
+  "departments_reported": [
+    "eisen",
+    "fern",
+    "flamme",
+    "stark",
+    "heiter",
+    "serie",
+    "himmel"
+  ]
 }
