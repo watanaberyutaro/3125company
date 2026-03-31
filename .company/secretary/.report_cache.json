@@ -1,12 +1,14 @@
 {
-  "last_report_date": "2026-03-26",
+  "last_report_date": "2026-03-31",
   "departments_reported": [
-    "eisen",
-    "fern",
-    "flamme",
-    "stark",
-    "heiter",
-    "serie",
-    "himmel"
-  ]
+    "アイゼン",
+    "フランメ",
+    "フェルン",
+    "ヒンメル",
+    "シュタルク",
+    "ハイター",
+    "ゼーリエ"
+  ],
+  "last_report": "2026-03-31T10:11:57.251699",
+  "report_status": "completed"
 }
