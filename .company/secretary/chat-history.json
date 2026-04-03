@@ -1,16 +1,6 @@
 [
   {
     "role": "user",
-    "content": "アイデア Gemini in Chromeで手作業は「完全自動」へ。タブの往復も画像保存もゼロに | ライフハッカー・ジャパン https://share.google/rXvqTnjsBCi2fKTlS",
-    "ts": "2026-03-19T07:31:05.184Z"
-  },
-  {
-    "role": "assistant",
-    "content": "…アイデア保管部（アイゼン）に頼んでおいたわ。\nClaude Codeが起動したときに処理される。",
-    "ts": "2026-03-19T07:31:05.184Z"
-  },
-  {
-    "role": "user",
     "content": "アイデアを保存　Claudeディスパッチを使って、自宅のWindowsをサーバーにする",
     "ts": "2026-03-20T00:32:08.474Z"
   },
@@ -298,5 +288,15 @@
     "role": "assistant",
     "content": "…アイデア保管部（アイゼン）に頼んでおいたわ。\nClaude Codeが起動したときに処理される。",
     "ts": "2026-04-03T04:36:14.624Z"
+  },
+  {
+    "role": "user",
+    "content": "アイデア 資料などの共有を全てhtmlファイルの送受信で行う世界線",
+    "ts": "2026-04-03T04:43:38.396Z"
+  },
+  {
+    "role": "assistant",
+    "content": "…アイデア保管部（アイゼン）に頼んでおいたわ。\nClaude Codeが起動したときに処理される。",
+    "ts": "2026-04-03T04:43:38.396Z"
   }
 ]
