@@ -185,3 +185,97 @@ localStorage（クライアント）:
 3. **複数ルーム**：幹事ユースケースでの独自価値
 
 追記者: フランメ（3125マーケティング事業部）
+
+---
+
+## ✅ 最終 ClaudeCode 実装プロンプト（複数ルーム対応版）
+
+```
+以下の仕様で「一時的な位置情報共有アプリ（複数ルーム対応版）」を実装してください。
+
+## アプリ概要
+- 待ち合わせ専用の一時的な位置情報共有アプリ
+- ホストがルームを作成 → リンク共有 → リアルタイム地図表示 → 完了で全データ削除
+- 複数ルームをダッシュボードで一元管理
+
+## 技術スタック
+- Frontend: React (Next.js) + TypeScript
+- Backend: Node.js (Next.js API Routes)
+- リアルタイム通信: Socket.io
+- DB: Redis（ioredis、TTL付き揮発データ）
+- 地図: Google Maps API または Mapbox GL JS
+- デプロイ: Vercel + Railway（Redisホスト）
+
+## 機能要件
+
+### F-01 ルーム作成
+- ホームに「待ち合わせを始める」ボタン
+- ルーム名入力（任意、例：「北口の改札」）
+- UUID v4 でセッションID生成
+- 共有URL: https://example.com/meet/[sessionId]
+- URLコピー・LINEシェアボタン
+- localStorageに作成済みルームID保存（ダッシュボード用）
+
+### F-02 リアルタイム位置共有
+- Geolocation API で現在地取得
+- Socket.io で双方向リアルタイム送受信
+- Google Maps / Mapbox 上に参加者ピン表示
+- 相手との距離をメートル表示
+
+### F-03 完了操作
+- 「完了」ボタンでセッション終了
+- Redis上のデータ即時削除
+- 「待ち合わせ完了！位置情報を削除しました」画面へ遷移
+
+### F-04 自動失効
+- セッション作成から6時間でRedis TTL切れ → 自動無効化
+- 期限切れURLアクセス時「このリンクは有効期限切れです」表示
+
+### F-05 無登録利用
+- アカウント不要、セッションIDとHMACトークンのみで認証
+
+### F-06 ダッシュボード（複数ルーム）
+- /dashboard でホストの全ルームカード一覧
+- カード表示: ルーム名・参加者数・残り時間・状態（active/completed/expired）
+- 「全て完了」一括終了ボタン
+- ルーム上限: 1ホストあたり最大5ルーム
+
+## データモデル（Redis）
+- room:{id}:meta    → { name, createdAt, status, hostToken }
+- room:{id}:members → Set of userIds
+- room:{id}:users:{userId} → { lat, lng, updatedAt }
+- TTL: 6時間（各キー共通）
+
+## localStorage（クライアント）
+- myRooms → [ { id, name, createdAt } ]
+
+## 画面構成
+1. /              → ホーム（ルーム名入力 + 作成ボタン + ダッシュボードリンク）
+2. /dashboard     → 自分のルーム一覧
+3. /meet/[id]     → マップ画面（現在地 + 参加者ピン + 完了ボタン）
+4. /done          → 終了画面（削除完了メッセージ + シェアボタン）
+5. /expired       → 期限切れ画面
+
+## 実装手順
+1. Next.js + TypeScript プロジェクト作成
+2. Redis接続設定（ioredis）
+3. Socket.io サーバー設定（複数room対応）
+4. /api/rooms/create API（ルーム名・UUID生成・Redis保存）
+5. /api/rooms?ids=... 一括取得API
+6. /api/rooms/[id]/complete 完了・削除API
+7. Geolocation + Socket.io クライアント実装
+8. Google Maps / Mapbox 地図表示
+9. /dashboard ページ（localStorage連携）
+10. 完了画面 + SNSシェアボタン
+11. モバイルファーストUI仕上げ
+12. Vercelデプロイ設定
+
+## セキュリティ
+- HTTPS必須（Geolocation APIの要件）
+- セッションIDはUUID v4
+- HMACトークンでなりすまし防止
+- 位置情報のみ保存（個人情報ゼロ）
+- 完了後は全データ即時削除
+```
+
+最終化日: 2026-04-06（ハイター）
