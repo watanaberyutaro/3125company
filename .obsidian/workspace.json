@@ -11,10 +11,14 @@
             "id": "328c74c909f5c87e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "00_受信トレイ/ヒンメルより_2026-04-10-Webセキュリティ学習ロードマップ.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新規タブ"
+              "title": "ヒンメルより_2026-04-10-Webセキュリティ学習ロードマップ"
             }
           }
         ]
