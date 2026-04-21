@@ -38,6 +38,12 @@
 │   └── _archive/
 ├── news/
 │   └── YYYY-MM-DD-朝のニュース.md
+├── weekly-meeting/                ← 週次定例議事録
+│   ├── inbox/                     ← 音声(.m4a/.mp3/.wav)または文字起こし(.txt)の投入口
+│   │   └── _archive/             ← 処理済みファイルの保管場所
+│   ├── YYYY-WXX.md               ← 生成済み週報
+│   ├── _summary.md               ← 全週累積サマリー
+│   └── _template.md              ← フォーマットテンプレート
 ├── _archive/
 └── YYYY-MM-DD-タスク分析レポート.md  # 日次上書き
 ```
