@@ -176,5 +176,31 @@
     }
   },
   "last_report": "2026-04-22T18:04:24.878780",
-  "last_report_date": "2026-04-22"
+  "last_report_date": "2026-04-23",
+  "last_run": "2026-04-23T14:51:14.713262",
+  "summary": {
+    "eisen": {
+      "ideas": 17,
+      "confirmed": 1
+    },
+    "fern": {
+      "news": 3,
+      "diary": 0
+    },
+    "flamme": {
+      "files": 0
+    },
+    "stark": {
+      "files": 0
+    },
+    "heiter": {
+      "files": 0
+    },
+    "serie": {
+      "files": 0
+    },
+    "himmel": {
+      "files": 0
+    }
+  }
 }
