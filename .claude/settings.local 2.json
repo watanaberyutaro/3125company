@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(cat:*)",
+      "Bash(python3:*)",
+      "Bash(curl:*)",
+      "Bash(echo:*)",
+      "Bash(mv:*)",
+      "Bash(mkdir:*)",
+      "Bash(bash:*)",
+      "Bash(osascript:*)",
+      "Bash(touch:*)",
+      "Bash(chmod:*)",
+      "Bash(cd:*)",
+      "Bash(git:*)",
+      "Bash(sed:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(stat:*)",
+      "Bash(sed -i '' 's|Cardinal/Company|Cardinal/Cardinal|g' /Users/watanaberyuutarou/.claude/commands/yui.md)",
+      "Bash(sed -i '' 's|Cardinal/Company|Cardinal/Cardinal|g' '/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Cardinal/README.md')",
+      "Read(//Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Cardinal/**)"
+    ]
+  }
+}
