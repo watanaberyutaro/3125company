@@ -1,0 +1,50 @@
+{
+  "id": "npc_har_007",
+  "name": "リラ・ドーンチャイム",
+  "nation": "harmonia",
+  "age": 16,
+  "gender": "female",
+  "profession": "音楽学院 生徒 / 神童",
+  "traits": [
+    "天才",
+    "無邪気",
+    "感情に素直"
+  ],
+  "skills": {
+    "外交": 25,
+    "管理": 10,
+    "戦略": 15,
+    "制作": 88,
+    "研究": 30,
+    "商才": 10
+  },
+  "popularity": 50,
+  "wealth": 100000,
+  "history": "7歳で竪琴を始め、10歳でハーモニア音楽祭に出演。「100年に一度の才能」とカンタ・メロディ本人が太鼓判を押した神童。",
+  "current_position": "ハーモニア音楽院 特別クラス在籍",
+  "secret_organization": {
+    "name": null,
+    "role": "無所属。組織の存在を知らない",
+    "awareness": false
+  },
+  "relationships": {
+    "npc_har_001": {
+      "type": "star_student",
+      "value": 80,
+      "note": "カンタの最も期待する弟子"
+    },
+    "npc_har_004": {
+      "type": "senpai_admiration",
+      "value": 70,
+      "note": "ミア先輩の演奏が大好き"
+    },
+    "npc_arc_005": {
+      "type": "kindred_spirit",
+      "value": 45,
+      "note": "ハーモニア訪問中のフォスと話し、同じ「なぜ」を抱えていることを感じた"
+    }
+  },
+  "romance_status": "恋愛は音楽の歌詞の中だけのもの、と思っている",
+  "personality_deep": "演奏中は別人になる。普段は内気でぼんやりしているのに、舞台に立つと会場全体を支配する",
+  "last_updated": "2026-04-21"
+}

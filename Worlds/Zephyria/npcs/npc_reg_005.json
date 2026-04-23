@@ -1,0 +1,51 @@
+{
+  "id": "npc_reg_005",
+  "name": "ダリウス・クロムウェル",
+  "nation": "regalis",
+  "age": 58,
+  "gender": "男性",
+  "profession": "外交顧問",
+  "traits": [
+    "饒舌",
+    "人当たりが良い",
+    "計算高い",
+    "博識"
+  ],
+  "skills": {
+    "外交": 10,
+    "管理": 5,
+    "戦略": 7,
+    "制作": 2,
+    "研究": 7,
+    "商才": 8
+  },
+  "popularity": 71,
+  "wealth": 290000,
+  "current_position": null,
+  "history": "ゼフィリア中を旅した元冒険者。43歳で冒険を引退し外交の道へ。5カ国すべての王族・指導者と個人的な付き合いがある唯一の人物。情報通として知られ、知らないことはないと言われる。",
+  "secret_organization": {
+    "name": "黄金の鎖",
+    "role": "実質的なリーダー・会計部長",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_reg_001": {
+      "type": "facade_loyalty",
+      "value": 40,
+      "note": "表向きは忠臣。実際は王を利用している"
+    },
+    "npc_cor_001": {
+      "type": "secret_deal",
+      "value": 55,
+      "note": "裏で経済情報を売買している"
+    },
+    "npc_reg_003": {
+      "type": "fear",
+      "value": 15,
+      "note": "ボルドに自分の計画を気づかれることを恐れている"
+    }
+  },
+  "romance_status": "恋愛に興味なし。すべては権力のため",
+  "personality_deep": "表向きは温厚な会計部長。実際は組織の資金を管理し、密かに権力基盤を固めている",
+  "last_updated": "2026-04-21"
+}

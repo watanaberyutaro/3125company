@@ -1,0 +1,51 @@
+{
+  "id": "npc_arc_005",
+  "name": "フォス・ルーメン",
+  "nation": "arcanum",
+  "age": 19,
+  "gender": "male",
+  "profession": "魔法学院 一年生 / 天才候補",
+  "traits": [
+    "天真爛漫",
+    "天才肌",
+    "常識がない"
+  ],
+  "skills": {
+    "外交": 20,
+    "管理": 10,
+    "戦略": 30,
+    "制作": 25,
+    "研究": 90,
+    "商才": 10
+  },
+  "popularity": 40,
+  "wealth": 300000,
+  "history": "僻地の農村出身。幼少期から日用品に魔法をかけて壊し続けた問題児。しかし才能はオリウス六世が「過去50年で最高」と評価した。",
+  "current_position": "アルカナム魔法学院 一年生（特待生）",
+  "secret_organization": {
+    "name": null,
+    "role": "無所属。組織が何かすら知らない",
+    "awareness": false
+  },
+  "relationships": {
+    "npc_arc_001": {
+      "type": "overwhelmed_by",
+      "value": 55,
+      "note": "オリウスを敬っているが、会うたびにプレッシャーで固まる"
+    },
+    "npc_arc_003": {
+      "type": "admired_mentor",
+      "value": 70,
+      "note": "セロ先輩に魔法を教わっている"
+    },
+    "npc_reg_006": {
+      "type": "met_once",
+      "value": 35,
+      "note": "王都訪問中にアルバと話して刺激を受けた"
+    }
+  },
+  "romance_status": "恋愛より魔法。でも同学年の女子学生に毎回話しかけられると何も言えなくなる",
+  "personality_deep": "「なぜ」を無限に問いかける性格。授業中に教授の理論の穴を無邪気に指摘して気まずい空気にするのが得意",
+  "arcadia_belief": "アルカディアに行ったら全部の「なぜ」に答えが出ると思っている",
+  "last_updated": "2026-04-21"
+}

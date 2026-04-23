@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "62b0ef7f14496bd6",
+    "id": "90635d6467a44ba1",
     "type": "split",
     "children": [
       {
-        "id": "a99bc10f3e0b510a",
+        "id": "f96659113de20774",
         "type": "tabs",
         "children": [
           {
-            "id": "328c74c909f5c87e",
+            "id": "835a30f49491ca78",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_3125経営日誌事業部（フェルン）/weekly-meeting/2026-W16.md",
+                "file": "Worlds/Zephyria/docs/ゼフィリア世界_基本設計仕様書.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-W16"
+              "title": "ゼフィリア世界_基本設計仕様書"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "a6369f902e1a6ca5",
+    "id": "25db63d244041bc5",
     "type": "split",
     "children": [
       {
-        "id": "63622264215f9e12",
+        "id": "269ecaf2b31c649b",
         "type": "tabs",
         "children": [
           {
-            "id": "f9f12df0b3870cd4",
+            "id": "9cd0aa2a651131de",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "430656abb5b1a590",
+            "id": "6ea5fb7f4077bba2",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "f11bf585bbc9a508",
+            "id": "8d9afd70b7ad1982",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,19 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "e4c4f0db7567d30c",
+    "id": "48a71c9176284ddb",
     "type": "split",
     "children": [
       {
-        "id": "03629d8a65d71fa9",
+        "id": "db576f57855d8711",
         "type": "tabs",
         "children": [
           {
-            "id": "6fe78fccc5a9b0e6",
+            "id": "cd99df5e3fcba0ac",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Worlds/Zephyria/docs/ゼフィリア世界_基本設計仕様書.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,24 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "バックリンク"
+              "title": "ゼフィリア世界_基本設計仕様書へのバックリンク"
             }
           },
           {
-            "id": "e2b62dff7d04717b",
+            "id": "ea0bffea9ba6fdc4",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Worlds/Zephyria/docs/ゼフィリア世界_基本設計仕様書.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "アウトゴーイングリンク"
+              "title": "ゼフィリア世界_基本設計仕様書からのアウトゴーイングリンク"
             }
           },
           {
-            "id": "8d0a54e2d34d6983",
+            "id": "8583f15dc759f089",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -135,87 +137,89 @@
             }
           },
           {
-            "id": "704454dd4da8011a",
+            "id": "17b9cc1600540c18",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "すべてのプロパティ"
+            }
+          },
+          {
+            "id": "9642a0ab9a39fa2e",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "Worlds/Zephyria/docs/ゼフィリア世界_基本設計仕様書.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "アウトライン"
-            }
-          },
-          {
-            "id": "85367776133935ea",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "ゼフィリア世界_基本設計仕様書のアウトライン"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "bases:新規ベースを作成": false,
       "switcher:クイックスイッチャーを開く": false,
       "graph:グラフビューを開く": false,
       "canvas:新規キャンバスを作成": false,
       "daily-notes:今日のデイリーノートを開く": false,
       "templates:テンプレートを挿入": false,
       "command-palette:コマンドパレットを開く": false,
-      "templater-obsidian:Templater": false
+      "bases:新規ベースを作成": false
     }
   },
-  "active": "328c74c909f5c87e",
+  "active": "9cd0aa2a651131de",
   "lastOpenFiles": [
-    "01_3125情報受付事業部（フリーレン）/3125 朝礼（フリーレン）/2026-04-23.md",
-    "00_受信トレイ/フェルンより_2026-04-23-朝のニュース.md",
-    "01_3125情報受付事業部（フリーレン）/3125 タスク管理事業部（フリーレン）/2026-04-23.md",
-    "01_3125情報受付事業部（フリーレン）/3125 朝礼（フリーレン）/_archive/2026-04-22.md",
-    "01_3125情報受付事業部（フリーレン）/3125 タスク管理事業部（フリーレン）/_archive/2026-04-22.md",
-    "00_受信トレイ/フェルンより_2026-04-22.md",
-    "00_受信トレイ/フェルンより_2026-04-22-朝のニュース.md",
-    "01_3125情報受付事業部（フリーレン）/3125 朝礼（フリーレン）/2026-04-22.md",
-    "01_3125情報受付事業部（フリーレン）/3125 タスク管理事業部（フリーレン）/2026-04-22.md",
-    "01_3125情報受付事業部（フリーレン）/3125 朝礼（フリーレン）/_archive/2026-04-21.md",
-    "01_3125情報受付事業部（フリーレン）/3125 タスク管理事業部（フリーレン）/_archive/2026-04-21.md",
-    "00_受信トレイ/フェルンより_2026-04-21.md",
-    "02_3125経営日誌事業部（フェルン）/weekly-meeting/inbox/_archive",
-    "02_3125経営日誌事業部（フェルン）/weekly-meeting/inbox",
-    "02_3125経営日誌事業部（フェルン）/weekly-meeting/2026-W14.md",
-    "02_3125経営日誌事業部（フェルン）/weekly-meeting/2026-W16.md",
-    "02_3125経営日誌事業部（フェルン）/weekly-meeting/2026-W17.md",
-    "00_受信トレイ/フェルンより_2026-04-21-朝のニュース.md",
-    "01_3125情報受付事業部（フリーレン）/3125 朝礼（フリーレン）/2026-04-21.md",
-    "01_3125情報受付事業部（フリーレン）/3125 タスク管理事業部（フリーレン）/2026-04-21.md",
-    "01_3125情報受付事業部（フリーレン）/3125 朝礼（フリーレン）/_archive/2026-04-20.md",
-    "01_3125情報受付事業部（フリーレン）/3125 タスク管理事業部（フリーレン）/_archive/2026-04-20.md",
-    "00_受信トレイ/フェルンより_2026-04-20-経営日誌.md",
-    "00_受信トレイ/フェルンより_2026-04-20-朝のニュース.md",
-    "01_3125情報受付事業部（フリーレン）/3125 朝礼（フリーレン）/2026-04-20.md",
-    "$朝礼_DIR/2026-04-20.md",
-    "$朝礼_DIR",
-    "01_3125情報受付事業部（フリーレン）/3125 タスク管理事業部（フリーレン）/2026-04-20.md",
-    "01_3125情報受付事業部（フリーレン）/3125 朝礼（フリーレン）/_archive/2026-04-19.md",
-    "04_3125アイデア保管事業部（アイゼン）/Chat",
-    "04_3125アイデア保管事業部（アイゼン）/line-inbox/_archive/[LINE]営業Active 2.txt",
-    "04_3125アイデア保管事業部（アイゼン）/line-inbox/_archive/[LINE]営業Active 3.txt",
-    "04_3125アイデア保管事業部（アイゼン）/line-inbox/_archive/[LINE]営業Active.txt",
-    "04_3125アイデア保管事業部（アイゼン）/minutes/_archive",
-    "04_3125アイデア保管事業部（アイゼン）/minutes",
-    "04_3125アイデア保管事業部（アイゼン）/line-inbox/[LINE]営業Active.txt"
+    "Cardinal/個人メモ/💼 事業/進行中/コールセンターAI/計画書.md",
+    "Cardinal/個人メモ/💼 事業/進行中/コールセンターAI/現状の悩み、課題.md",
+    "Cardinal/個人メモ/💼 事業/進行中/コールセンターAI/要件定義.md",
+    "Cardinal/個人メモ/💼 事業/進行中/コールセンターAI/価格パッケージ.md",
+    "Cardinal/個人メモ/💼 事業/進行中/コールセンターAI/可能性、課題解決案.md",
+    "Cardinal/個人メモ/💼 事業/進行中/コールセンターAI/営業におけること.md",
+    "Cardinal/個人メモ/💼 事業/進行中/コールセンターAI/コールセンターの課題を解決するシステム.md",
+    "Cardinal/個人メモ/💼 事業/進行中/コールセンターAI",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-04-09-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-04-08-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-04-06-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-04-07-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-04-04-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-04-02-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-04-01-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-26-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-20-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-31-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-25-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-24-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-22-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-21-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-16-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-15-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-19-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-14-SNS市場サマリー.md",
+    "Cardinal/04_3125アイデア保管事業部（アイゼン）/役員トーク/_archive/2026-03-16-役員トーク要約.md",
+    "Cardinal/04_3125アイデア保管事業部（アイゼン）/line-inbox/_archive/[LINE]営業Active.txt",
+    "Cardinal/04_3125アイデア保管事業部（アイゼン）/line-inbox/_archive/[LINE]営業Active 2.txt",
+    "Cardinal/04_3125アイデア保管事業部（アイゼン）/exec-inbox/_archive/[LINE]佐藤一斗, 佐藤 拓也, 佐藤 晃太, Haruka_Osu.txt",
+    "Cardinal/04_3125アイデア保管事業部（アイゼン）/case-inbox/_archive/[LINE]【人材派遣・委託】パートナー様募集部屋.txt",
+    "Cardinal/02_3125経営日誌事業部（フェルン）/weekly-meeting/inbox/_archive",
+    "Cardinal/個人メモ/💼 事業/進行中",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive",
+    "Cardinal/04_3125アイデア保管事業部（アイゼン）/役員トーク/_archive",
+    "Cardinal/04_3125アイデア保管事業部（アイゼン）/議事録/_archive"
   ]
 }

@@ -1,0 +1,185 @@
+{
+  "description": "ゼフィリアの天候・自然災害システム。日本時間の季節と連動し、低頻度で発生する。",
+  "seasonal_weather": {
+    "spring": {
+      "months_jst": [
+        3,
+        4,
+        5
+      ],
+      "zephyria_months": [
+        "大地の月",
+        "風の月",
+        "水の月"
+      ],
+      "base_weather": [
+        "晴れ",
+        "薄曇り",
+        "春雨"
+      ],
+      "nation_notes": {
+        "regalis": "穏やかな春風。農業開始",
+        "grandsheim": "雪解け。山道が開く",
+        "corsalia": "航海シーズン開始",
+        "arcanum": "霧が晴れる。観測ベストシーズン",
+        "harmonia": "野外公演シーズン"
+      }
+    },
+    "summer": {
+      "months_jst": [
+        6,
+        7,
+        8
+      ],
+      "zephyria_months": [
+        "炎の月",
+        "光の月",
+        "影の月"
+      ],
+      "base_weather": [
+        "快晴",
+        "猛暑",
+        "嵐"
+      ],
+      "nation_notes": {
+        "regalis": "活発な交易シーズン",
+        "grandsheim": "鍛冶の繁忙期（熱波活用）",
+        "corsalia": "交易最盛期",
+        "arcanum": "魔法実験に適した安定した大気",
+        "harmonia": "年最大の「夏の大祭」開催"
+      }
+    },
+    "autumn": {
+      "months_jst": [
+        9,
+        10,
+        11
+      ],
+      "zephyria_months": [
+        "星の月",
+        "霧の月",
+        "嵐の月"
+      ],
+      "base_weather": [
+        "秋晴れ",
+        "霧",
+        "嵐"
+      ],
+      "nation_notes": {
+        "grandsheim": "収穫と備蓄",
+        "corsalia": "嵐の季節。航海リスク上昇",
+        "arcanum": "霧の季節。謎めいた事件が増える"
+      }
+    },
+    "winter": {
+      "months_jst": [
+        12,
+        1,
+        2
+      ],
+      "zephyria_months": [
+        "実りの月",
+        "霜の月",
+        "夢の月"
+      ],
+      "base_weather": [
+        "晴れ（寒冷）",
+        "雪",
+        "吹雪"
+      ],
+      "nation_notes": {
+        "regalis": "冬の宮廷イベント・外交シーズン",
+        "grandsheim": "鉱山閉鎖期間。室内作業中心",
+        "corsalia": "港の一部が凍結。内陸交易に切り替え",
+        "arcanum": "冬季魔法実験（低温活用）",
+        "harmonia": "冬の演劇祭"
+      }
+    }
+  },
+  "disaster_system": {
+    "description": "自然災害は低確率で発生。1イベントにつき数週間の影響が続く。",
+    "disaster_types": [
+      {
+        "id": "storm",
+        "name": "大嵐",
+        "probability_per_month": 0.08,
+        "affected_nations": [
+          "corsalia"
+        ],
+        "effects": {
+          "treasury_damage": -50000,
+          "trade_halt_days": 14,
+          "narrative": "嵐が港を閉鎖。交易が停止した"
+        }
+      },
+      {
+        "id": "earthquake",
+        "name": "地震（空中島の振動）",
+        "probability_per_month": 0.04,
+        "affected_nations": [
+          "grandsheim",
+          "arcanum"
+        ],
+        "effects": {
+          "building_damage": 0.1,
+          "treasury_damage": -80000,
+          "narrative": "島が揺れ、一部施設に亀裂が入った"
+        }
+      },
+      {
+        "id": "volcanic",
+        "name": "火山噴火（島端の火山）",
+        "probability_per_month": 0.02,
+        "affected_nations": [
+          "grandsheim"
+        ],
+        "effects": {
+          "treasury_damage": -200000,
+          "population_impact": -500,
+          "narrative": "島端の火山が噴火。避難が発生した"
+        },
+        "lore": "大溶鉱炉との共鳴現象とも言われる"
+      },
+      {
+        "id": "fog_anomaly",
+        "name": "魔法的濃霧",
+        "probability_per_month": 0.05,
+        "affected_nations": [
+          "arcanum"
+        ],
+        "effects": {
+          "research_halt_days": 7,
+          "narrative": "異常な霧がアルカナムを覆い、魔法観測が困難になった"
+        },
+        "lore": "アルカディア方向からの霧とも噂される"
+      },
+      {
+        "id": "drought",
+        "name": "旱魃",
+        "probability_per_month": 0.03,
+        "affected_nations": [
+          "regalis",
+          "harmonia"
+        ],
+        "effects": {
+          "treasury_damage": -100000,
+          "food_shortage": true,
+          "narrative": "旱魃により農業生産が低下した"
+        }
+      },
+      {
+        "id": "sky_whale",
+        "name": "空鯨の大移動（幸運イベント）",
+        "probability_per_month": 0.02,
+        "affected_nations": "all",
+        "effects": {
+          "treasury_bonus": 30000,
+          "narrative": "伝説の空鯨の群れがゼフィリア上空を通過した。縁起が良いとされ、祭りが開かれた"
+        },
+        "is_positive": true
+      }
+    ],
+    "active_disasters": [],
+    "disaster_history": []
+  }
+}

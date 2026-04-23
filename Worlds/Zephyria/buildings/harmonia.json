@@ -1,0 +1,51 @@
+{
+  "nation": "ハーモニア（文化都市）",
+  "description": "西の丘陵に広がる芸術と音楽の都市。色彩豊かで賑やかな雰囲気。",
+  "landmarks": [
+    {
+      "id": "harm_amphitheater",
+      "name": "ゼフィリア大劇場",
+      "type": "theater",
+      "symbol": "🎭",
+      "description": "5000人収容の野外劇場。年間300日以上の公演が行われる。",
+      "built_year": "約210年前",
+      "capacity": 5000,
+      "annual_performances": 350
+    },
+    {
+      "id": "harm_music_hall",
+      "name": "調和の宮殿",
+      "type": "concert_hall",
+      "symbol": "🎵",
+      "description": "カンタ・メロディが設計した世界最高の音響ホール。魔法的な残響設計が施されている。",
+      "built_year": "約60年前",
+      "capacity": 3000
+    },
+    {
+      "id": "harm_gallery",
+      "name": "万彩美術館",
+      "type": "museum",
+      "symbol": "🖼",
+      "description": "世界中の芸術作品を収集・展示する美術館。複製魔法で複製品も販売する。",
+      "built_year": "約160年前",
+      "artworks": 48000
+    },
+    {
+      "id": "harm_broadcast",
+      "name": "ゼフィリア通信社",
+      "type": "media",
+      "symbol": "📡",
+      "description": "世界に情報を発信するメディアの中枢。魔法通信で各国にニュースを届ける。",
+      "built_year": "約80年前"
+    },
+    {
+      "id": "harm_festival_square",
+      "name": "虹の広場",
+      "type": "public",
+      "symbol": "🌈",
+      "description": "ハーモニアの中心広場。毎月1回の「虹祭り」で世界中の観光客が訪れる。",
+      "built_year": "約190年前",
+      "area_sqm": 40000
+    }
+  ]
+}

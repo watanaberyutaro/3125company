@@ -1,0 +1,109 @@
+{
+  "id": "grandsheim",
+  "name": "グランズヘイム",
+  "symbol": "⛏️",
+  "treasury": 5000000,
+  "total_earned": 5000000,
+  "completed_quests": 0,
+  "active_quests": 0,
+  "citizens": [
+    "npc_grd_001",
+    "npc_grd_002",
+    "npc_grd_003",
+    "npc_grd_004"
+  ],
+  "specialties": [
+    "制作",
+    "品質",
+    "納品"
+  ],
+  "weaknesses": [
+    "コミュニケーション",
+    "スピード"
+  ],
+  "personality": "寡黙で頑固。でも仕事は本物。",
+  "status": "active",
+  "alliances": [],
+  "tensions": [],
+  "immigrants": [],
+  "last_updated": "2026-04-23",
+  "path": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/grandsheim",
+  "folders": {
+    "_inbox": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/grandsheim/_inbox",
+    "_workshop": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/grandsheim/_workshop",
+    "_done": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/grandsheim/_done",
+    "_archive": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/grandsheim/_archive",
+    "_materials": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/grandsheim/_materials"
+  },
+  "leader": {
+    "npc_id": "npc_grd_001",
+    "name": "ガルド・ストーンフィスト",
+    "title": "頭領",
+    "votes": 910,
+    "elected_at": "2026-04-23"
+  },
+  "deputy": {
+    "npc_id": "npc_grd_002",
+    "name": "ブリン・コッパーアーム",
+    "title": "副頭領",
+    "votes": 770,
+    "elected_at": "2026-04-23"
+  },
+  "election_history": [
+    {
+      "date": "2026-04-23",
+      "type": "建国選挙",
+      "turnout": 94.1
+    }
+  ],
+  "economy": {
+    "population": 85000,
+    "population_growth_rate": 0.005,
+    "gdp_annual": 3825000,
+    "gdp_per_capita": 45,
+    "tax_rate": 0.12,
+    "tax_revenue_annual": 459000,
+    "unemployment_rate": 0.011,
+    "happiness_index": 81,
+    "resources": {
+      "鋼鉄": {
+        "amount": "大",
+        "export": true,
+        "price_per_unit": 3000
+      },
+      "宝石": {
+        "amount": "大",
+        "export": true,
+        "price_per_unit": 8000
+      },
+      "精製金属": {
+        "amount": "中",
+        "export": true,
+        "price_per_unit": 5000
+      },
+      "建材石": {
+        "amount": "大",
+        "export": true,
+        "price_per_unit": 1500
+      },
+      "ミスリル": {
+        "amount": "極小（未解析）",
+        "export": false,
+        "price_per_unit": 0
+      }
+    },
+    "imports": [
+      "農作物",
+      "情報",
+      "魔法書"
+    ],
+    "exports": [
+      "鋼鉄",
+      "宝石",
+      "精製金属",
+      "建材石"
+    ],
+    "trade_balance_annual": 620000,
+    "last_calculated": "2026-04-23"
+  }
+}

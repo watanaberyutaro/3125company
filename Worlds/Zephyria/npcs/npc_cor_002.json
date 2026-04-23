@@ -1,0 +1,51 @@
+{
+  "id": "npc_cor_002",
+  "name": "テイラ・ウィンドサーフ",
+  "nation": "corsalia",
+  "age": 31,
+  "gender": "女性",
+  "profession": "情報商人",
+  "traits": [
+    "軽快",
+    "観察眼が鋭い",
+    "秘密主義",
+    "好奇心旺盛"
+  ],
+  "skills": {
+    "外交": 7,
+    "管理": 5,
+    "戦略": 7,
+    "制作": 4,
+    "研究": 8,
+    "商才": 9
+  },
+  "popularity": 72,
+  "wealth": 260000,
+  "current_position": null,
+  "history": "アルカナム出身の元魔法師見習い。研究よりも人と情報に興味を持ちコルサリアへ移住。現在はゼフィリア中の「生きた情報」を取引する。風のように現れ風のように去ると言われる。",
+  "secret_organization": {
+    "name": "影の手（外）+ 黄金の鎖（内通）",
+    "role": "二重スパイ",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_arc_003": {
+      "type": "romantic_interest",
+      "value": 30,
+      "note": "研究者として興味があるが、目的のための接触かもしれない"
+    },
+    "npc_reg_002": {
+      "type": "professional_tension",
+      "value": 25,
+      "note": "諜報で競合する相手"
+    },
+    "npc_cor_001": {
+      "type": "dangerous_secret",
+      "value": 50,
+      "note": "マリスへの二重スパイがバレたら命はない"
+    }
+  },
+  "romance_status": "恋愛は職業上のツールとして使ってきたが、本当の感情を持てるか自問している",
+  "personality_deep": "完璧な演技者だが、一人のときに仮面が外れて疲れた顔をする",
+  "last_updated": "2026-04-21"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "npc_cor_008",
+  "name": "セシ・ペールムーン",
+  "nation": "corsalia",
+  "age": 19,
+  "gender": "female",
+  "profession": "酒場 給仕 / 歌手見習い",
+  "traits": [
+    "明るい",
+    "人懐こい",
+    "うっかりしている"
+  ],
+  "skills": {
+    "外交": 60,
+    "管理": 20,
+    "戦略": 15,
+    "制作": 55,
+    "研究": 20,
+    "商才": 45
+  },
+  "popularity": 70,
+  "wealth": 200000,
+  "history": "港の酒場で生まれ育った少女。物心ついたときから情報が飛び交う環境にいた。歌の才能があるがまだ自覚していない。",
+  "current_position": "月影酒場 給仕 兼 歌手（不定期）",
+  "secret_organization": {
+    "name": null,
+    "role": "無所属。でも酒場で無数の秘密を聞いている",
+    "awareness": false
+  },
+  "relationships": {
+    "npc_cor_006": {
+      "type": "mysterious_regular",
+      "value": 40,
+      "note": "ダークが常連。怖いけど礼儀正しいので嫌いじゃない"
+    },
+    "npc_cor_003": {
+      "type": "uncle_figure",
+      "value": 65,
+      "note": "ゼフをおじさんのように思っている"
+    },
+    "npc_har_004": {
+      "type": "music_inspiration",
+      "value": 55,
+      "note": "ハーモニアから来たミアの演奏を聴いて歌手を目指すようになった"
+    }
+  },
+  "romance_status": "恋愛とかよくわからないが、毎週来る帽子をかぶった青年が気になっている",
+  "personality_deep": "気づかないうちに各組織の重要な情報を聞いている危険な存在。でも本人は全く気づいていない",
+  "last_updated": "2026-04-21"
+}

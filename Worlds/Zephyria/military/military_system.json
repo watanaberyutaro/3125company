@@ -1,0 +1,215 @@
+{
+  "overview": {
+    "description": "各国の軍事力・兵種・指揮系統・戦争メカニズムの定義",
+    "war_declaration_cost": 500000,
+    "war_declaration_cooldown_days": 90,
+    "alliance_military_pact": "同盟国が攻撃された場合、72時間以内に支援義務が発生する",
+    "arcadia_expedition_rules": "アルカディア攻略は単独不可。最低2カ国の合意が必要。"
+  },
+  "nations": {
+    "regalis": {
+      "army_name": "王都守護軍（ロイヤルガード）",
+      "total_force": 45000,
+      "divisions": [
+        {
+          "name": "王城守護騎士団",
+          "size": 3000,
+          "type": "elite_cavalry",
+          "power": 95,
+          "role": "王城防衛・国王護衛"
+        },
+        {
+          "name": "王都歩兵師団",
+          "size": 20000,
+          "type": "infantry",
+          "power": 70,
+          "role": "城壁防衛・市街警備"
+        },
+        {
+          "name": "王立弓兵隊",
+          "size": 8000,
+          "type": "ranged",
+          "power": 75,
+          "role": "遠距離支援"
+        },
+        {
+          "name": "王立魔導師団",
+          "size": 2000,
+          "type": "mage",
+          "power": 85,
+          "role": "魔法支援・結界展開"
+        },
+        {
+          "name": "外征騎兵隊",
+          "size": 12000,
+          "type": "cavalry",
+          "power": 80,
+          "role": "遠征・侵攻"
+        }
+      ],
+      "commander": "ボルド・カスティール（王都防衛司令官）",
+      "military_budget": 2000000,
+      "special_ability": "「王の令状」: 緊急時に他国から傭兵を雇い入れる外交的権限",
+      "weakness": "山岳戦・海戦には不向き"
+    },
+    "grandsheim": {
+      "army_name": "岩盾山岳軍",
+      "total_force": 18000,
+      "divisions": [
+        {
+          "name": "岩砦守備隊",
+          "size": 5000,
+          "type": "fortress_guard",
+          "power": 95,
+          "role": "山岳防衛（最強の守り）"
+        },
+        {
+          "name": "ドワーフ重装歩兵",
+          "size": 8000,
+          "type": "heavy_infantry",
+          "power": 90,
+          "role": "正面突破"
+        },
+        {
+          "name": "投石・大砲部隊",
+          "size": 3000,
+          "type": "artillery",
+          "power": 80,
+          "role": "遠距離破壊"
+        },
+        {
+          "name": "鉱山突撃隊",
+          "size": 2000,
+          "type": "skirmisher",
+          "power": 75,
+          "role": "地下戦・奇襲"
+        }
+      ],
+      "commander": "ガルド・ストーンフィスト（族長・軍事指導者）",
+      "military_budget": 1000000,
+      "special_ability": "「鉄壁の防衛」: 山岳地形でのすべての戦闘で防御力+50%",
+      "weakness": "野戦・平地戦が苦手。機動力が低い"
+    },
+    "corsalia": {
+      "army_name": "海風傭兵連合",
+      "total_force": 22000,
+      "divisions": [
+        {
+          "name": "コルサリア海賊艦隊",
+          "size": 5000,
+          "type": "naval",
+          "power": 95,
+          "role": "海上制圧・封鎖"
+        },
+        {
+          "name": "飛空艇奇襲部隊",
+          "size": 3000,
+          "type": "aerial",
+          "power": 85,
+          "role": "空中奇襲・輸送"
+        },
+        {
+          "name": "傭兵歩兵団",
+          "size": 10000,
+          "type": "mercenary",
+          "power": 70,
+          "role": "陸上戦闘（可変）"
+        },
+        {
+          "name": "情報工作員（影の手）",
+          "size": 4000,
+          "type": "spy",
+          "power": 90,
+          "role": "諜報・暗殺・撹乱"
+        }
+      ],
+      "commander": "マリス・コルレオン（総督・艦隊司令）",
+      "military_budget": 1200000,
+      "special_ability": "「情報戦」: 開戦前に相手国の作戦を事前に入手できる可能性30%",
+      "weakness": "長期陸戦、補給線の維持が苦手"
+    },
+    "arcanum": {
+      "army_name": "賢者の守護隊",
+      "total_force": 5000,
+      "divisions": [
+        {
+          "name": "上位魔導師護衛団",
+          "size": 500,
+          "type": "archmage",
+          "power": 100,
+          "role": "魔法最高戦力"
+        },
+        {
+          "name": "魔法守護騎士団",
+          "size": 2000,
+          "type": "magic_knight",
+          "power": 85,
+          "role": "拠点防衛"
+        },
+        {
+          "name": "召喚獣部隊",
+          "size": 1000,
+          "type": "summoner",
+          "power": 90,
+          "role": "大型魔物召喚"
+        },
+        {
+          "name": "封印術師団",
+          "size": 500,
+          "type": "sealer",
+          "power": 95,
+          "role": "敵魔法無効化"
+        },
+        {
+          "name": "研究警備隊",
+          "size": 1000,
+          "type": "security",
+          "power": 60,
+          "role": "内部警備"
+        }
+      ],
+      "commander": "オリウス・ルーメン六世（塔長）",
+      "military_budget": 800000,
+      "special_ability": "「魔法障壁」: アルカナム上空に強力な結界を展開。外部からの攻撃を自動防御",
+      "weakness": "兵員数が圧倒的に少ない。持久戦に不向き"
+    },
+    "harmonia": {
+      "army_name": "調和防衛団",
+      "total_force": 12000,
+      "divisions": [
+        {
+          "name": "芸術家護衛騎士団",
+          "size": 2000,
+          "type": "cavalry",
+          "power": 75,
+          "role": "国土防衛"
+        },
+        {
+          "name": "民間義勇軍",
+          "size": 8000,
+          "type": "militia",
+          "power": 55,
+          "role": "市民軍（愛国心高）"
+        },
+        {
+          "name": "音楽魔法師団",
+          "size": 2000,
+          "type": "bard_mage",
+          "power": 80,
+          "role": "士気向上・敵撹乱（特殊）"
+        }
+      ],
+      "commander": "カンタ・メロディ（総督・名誉総司令）",
+      "military_budget": 600000,
+      "special_ability": "「調和の歌」: 戦場で使用すると味方全軍の士気を最大化し、戦闘力+20%",
+      "weakness": "攻撃力が低い。戦争より外交・文化を優先"
+    }
+  },
+  "world_military_balance": {
+    "strongest_defense": "グランズヘイム（山岳）",
+    "strongest_offense": "レガリス",
+    "strongest_naval": "コルサリア",
+    "strongest_magic": "アルカナム",
+    "last_updated": "2026-04-21"
+  }
+}

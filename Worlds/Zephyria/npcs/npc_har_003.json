@@ -1,0 +1,56 @@
+{
+  "id": "npc_har_003",
+  "name": "ソル・ハーモン",
+  "nation": "harmonia",
+  "age": 46,
+  "gender": "男性",
+  "profession": "作曲家・詩人",
+  "traits": [
+    "情熱的",
+    "ロマンチスト",
+    "社交的",
+    "飽き性"
+  ],
+  "skills": {
+    "外交": 7,
+    "管理": 5,
+    "戦略": 5,
+    "制作": 9,
+    "研究": 6,
+    "商才": 4
+  },
+  "popularity": 79,
+  "wealth": 240000,
+  "current_position": "副詩人王",
+  "history": "ゼフィリア五カ国を旅した経験を持つ唯一のハーモニア人芸術家。各国の音楽を融合させた「ゼフィリア交響曲」を作曲し、世界中で演奏される。カンタを敬愛し副詩人王への出馬を決意している。",
+  "secret_organization": {
+    "name": "虹の仮面",
+    "role": "外部渉外担当",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_reg_001": {
+      "type": "artistic_admiration",
+      "value": 25,
+      "note": "王として尊敬するが、詩人としての一面を感じ取っている"
+    },
+    "npc_cor_003": {
+      "type": "old_acquaintance",
+      "value": 40,
+      "note": "旅人時代に港で出会った旧友"
+    },
+    "npc_har_001": {
+      "type": "co_leader",
+      "value": 80,
+      "note": "ハーモニアを共に運営するパートナー"
+    },
+    "npc_har_004": {
+      "type": "protective_senpai",
+      "value": 70,
+      "note": "才能ある後輩を見守っている"
+    }
+  },
+  "romance_status": "旅の詩人時代に出会った人物を今も探している。すでに何年も経つ",
+  "personality_deep": "即興演奏の名手。どんな場の雰囲気も音楽一つで変えられる",
+  "last_updated": "2026-04-21"
+}

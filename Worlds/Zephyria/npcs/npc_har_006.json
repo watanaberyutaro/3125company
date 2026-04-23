@@ -1,0 +1,50 @@
+{
+  "id": "npc_har_006",
+  "name": "エイル・ホワイトソング",
+  "nation": "harmonia",
+  "age": 45,
+  "gender": "male",
+  "profession": "大劇場 舞台監督",
+  "traits": [
+    "完璧主義",
+    "カリスマ的",
+    "プレッシャーに強い"
+  ],
+  "skills": {
+    "外交": 65,
+    "管理": 85,
+    "戦略": 60,
+    "制作": 80,
+    "研究": 40,
+    "商才": 55
+  },
+  "popularity": 72,
+  "wealth": 6000000,
+  "history": "ゼフィリア大劇場を30年運営してきた名舞台監督。彼が手掛けた公演はほぼ全て満席になる伝説的な演出家。",
+  "current_position": "ゼフィリア大劇場 総監督",
+  "secret_organization": {
+    "name": "虹の仮面",
+    "role": "外部支援者（資金提供）",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_har_001": {
+      "type": "longtime_partner",
+      "value": 80,
+      "note": "カンタと30年のコンビ。互いを最も理解している"
+    },
+    "npc_har_003": {
+      "type": "director_performer",
+      "value": 70,
+      "note": "ソルの即興演奏を最も活かせる演出を考え続けている"
+    },
+    "npc_reg_001": {
+      "type": "royal_patron",
+      "value": 55,
+      "note": "エルドリン国王からの年間観劇スポンサーを受けている"
+    }
+  },
+  "romance_status": "舞台に全てを注ぎ込んでいる。かつて共に働いた女優との別れが今の完璧主義の原点",
+  "personality_deep": "幕が開く瞬間だけは緊張する。30年経った今も。その緊張を誰にも見せない",
+  "last_updated": "2026-04-21"
+}

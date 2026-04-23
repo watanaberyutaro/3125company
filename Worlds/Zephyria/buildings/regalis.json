@@ -1,0 +1,72 @@
+{
+  "nation": "レガリス（王都）",
+  "description": "政治と文化の中心地。中世ヨーロッパ風の壮大な都市。",
+  "landmarks": [
+    {
+      "id": "regalis_castle",
+      "name": "ソルヴェイン王城",
+      "type": "castle",
+      "symbol": "🏰",
+      "description": "エルドリン国王の居城。白と金の尖塔が天空に聳え立つ。謁見の間、秘密の地下図書館、王家の宝物庫を持つ。",
+      "built_year": "ゼフィリア暦以前・約320年前",
+      "floors": 7,
+      "capacity": 500,
+      "notable": "王位継承の儀式はここで行われる"
+    },
+    {
+      "id": "regalis_parliament",
+      "name": "黄金議事堂",
+      "type": "government",
+      "symbol": "🏛",
+      "description": "5カ国代表が集う円形議場。天井はステンドグラスで彩られている。",
+      "built_year": "約180年前",
+      "floors": 3,
+      "capacity": 2000
+    },
+    {
+      "id": "regalis_cathedral",
+      "name": "光の大聖堂",
+      "type": "religious",
+      "symbol": "⛪",
+      "description": "ゼフィル神を祀る最大の聖堂。毎朝礼拝の鐘が王都に響き渡る。",
+      "built_year": "約250年前",
+      "floors": 4,
+      "capacity": 5000
+    },
+    {
+      "id": "regalis_market",
+      "name": "王都大市場",
+      "type": "commerce",
+      "symbol": "🏪",
+      "description": "世界最大の交易市場。5カ国の商人が集まり、あらゆる物品が取引される。",
+      "built_year": "約150年前",
+      "area_sqm": 80000
+    },
+    {
+      "id": "regalis_academy",
+      "name": "レガリス王立学院",
+      "type": "education",
+      "symbol": "🎓",
+      "description": "政治・外交・軍事を教える最高学府。エルドリン国王も卒業生。",
+      "built_year": "約200年前",
+      "students": 3000
+    },
+    {
+      "id": "regalis_guard_tower",
+      "name": "天守の塔（警備本部）",
+      "type": "military",
+      "symbol": "🗼",
+      "description": "王都を360度監視する最高の見張り塔。王都守備隊の司令部でもある。",
+      "built_year": "約290年前",
+      "height_m": 120
+    },
+    {
+      "id": "regalis_noble_district",
+      "name": "貴族街",
+      "type": "residential",
+      "symbol": "🏠",
+      "description": "上位貴族の邸宅が並ぶ閑静な区画。秘密結社の集会所が隠されている噂もある。",
+      "built_year": "約200年前"
+    }
+  ]
+}

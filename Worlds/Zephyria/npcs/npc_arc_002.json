@@ -1,0 +1,51 @@
+{
+  "id": "npc_arc_002",
+  "name": "ヴィラ・アーカナ",
+  "nation": "arcanum",
+  "age": 43,
+  "gender": "女性",
+  "profession": "魔法研究者・第三塔主任",
+  "traits": [
+    "論理的",
+    "完璧主義",
+    "無口",
+    "実は優しい"
+  ],
+  "skills": {
+    "外交": 4,
+    "管理": 6,
+    "戦略": 7,
+    "制作": 5,
+    "研究": 9,
+    "商才": 3
+  },
+  "popularity": 78,
+  "wealth": 290000,
+  "current_position": "副賢者",
+  "history": "レガリスの貴族家出身。家の期待を裏切りアルカナムへ。魔法式の解析を専門とし、古代の封印魔法を現代語訳した学者。研究室からほとんど出ないが、年に一度だけ外の世界を旅する習慣を持つ。",
+  "secret_organization": {
+    "name": "禁書の番人",
+    "role": "主任司書・実務リーダー",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_arc_001": {
+      "type": "trusted_confidant",
+      "value": 80,
+      "note": "最も信頼する師匠"
+    },
+    "npc_har_002": {
+      "type": "knowledge_admiration",
+      "value": 60,
+      "note": "古詩の中にアルカディアの手がかりを見つけたルーンに驚きを感じている"
+    },
+    "npc_reg_002": {
+      "type": "cautious_observation",
+      "value": 35,
+      "note": "黄金の鎖の情報収集員だと推測している"
+    }
+  },
+  "romance_status": "本と魔法書が恋人と言い張っている。本気かどうか不明",
+  "personality_deep": "禁書の内容を全て暗記している。夢でその内容を再生することがある",
+  "last_updated": "2026-04-21"
+}

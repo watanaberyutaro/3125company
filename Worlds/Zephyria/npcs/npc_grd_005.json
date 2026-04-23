@@ -1,0 +1,50 @@
+{
+  "id": "npc_grd_005",
+  "name": "イルダ・ストーンフィスト",
+  "nation": "grandsheim",
+  "age": 24,
+  "gender": "female",
+  "profession": "族長の娘 / 見習い鍛冶師",
+  "traits": [
+    "誇り高い",
+    "頑固",
+    "内面は繊細"
+  ],
+  "skills": {
+    "外交": 40,
+    "管理": 35,
+    "戦略": 50,
+    "制作": 70,
+    "研究": 45,
+    "商才": 30
+  },
+  "popularity": 55,
+  "wealth": 2000000,
+  "history": "ガルド族長の一人娘。「女が鍛冶をするな」という保守的な文化への反発から独学で技術を習得。今は父も認める腕前になった。",
+  "current_position": "グランズヘイム職人ギルド 見習いマスター候補",
+  "secret_organization": {
+    "name": "深鉱の誓い",
+    "role": "正式会員（入会したばかり）",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_grd_001": {
+      "type": "complex_family",
+      "value": 65,
+      "note": "父への愛情と反発が混在。認めてもらいたい"
+    },
+    "npc_grd_002": {
+      "type": "admired_senpai",
+      "value": 75,
+      "note": "ブリンの腕前を尊敬している"
+    },
+    "npc_har_004": {
+      "type": "pen_pal",
+      "value": 60,
+      "note": "芸術祭で出会ったミアと文通中。正反対な性格が合う"
+    }
+  },
+  "romance_status": "今は鍛冶一筋。ただしハーモニアのミアへの友情が恋愛感情に変わりつつあることに気づいていない",
+  "personality_deep": "鎧の試作品を夜中に一人で作っては壊す。完璧主義者。初めて「よし」と思える作品ができたとき、人知れず泣いた",
+  "last_updated": "2026-04-21"
+}

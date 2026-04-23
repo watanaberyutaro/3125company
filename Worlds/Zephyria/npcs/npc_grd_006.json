@@ -1,0 +1,50 @@
+{
+  "id": "npc_grd_006",
+  "name": "ボルン・クラッグ",
+  "nation": "grandsheim",
+  "age": 45,
+  "gender": "male",
+  "profession": "岩砦 副司令官",
+  "traits": [
+    "冷静",
+    "戦術眼がある",
+    "口数が少ない"
+  ],
+  "skills": {
+    "外交": 30,
+    "管理": 60,
+    "戦略": 85,
+    "制作": 40,
+    "研究": 30,
+    "商才": 25
+  },
+  "popularity": 50,
+  "wealth": 3500000,
+  "history": "山岳部族の出身。傭兵として各国を渡り歩いた後、グランズヘイムに定住。その戦術眼を買われ岩砦の副司令に抜擢された。",
+  "current_position": "岩砦ガルドリム 副司令官",
+  "secret_organization": {
+    "name": "深鉱の誓い",
+    "role": "軍事顧問",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_grd_001": {
+      "type": "trusted_general",
+      "value": 80,
+      "note": "ガルドの戦術判断を支える参謀役"
+    },
+    "npc_reg_003": {
+      "type": "old_rival",
+      "value": 60,
+      "note": "傭兵時代に同じ戦場で戦ったことがある。互いに実力を認める"
+    },
+    "npc_cor_003": {
+      "type": "suspicious",
+      "value": 20,
+      "note": "ゼフが鉱山の情報を聞きすぎると感じている"
+    }
+  },
+  "romance_status": "かつて傭兵時代の戦友と深い関係があったが、戦場で亡くなった。今は特定の感情を持っていない",
+  "personality_deep": "言葉を使わず状況を読む能力が高い。会議中にほぼ発言しないが、最後の一言で全員の意見をまとめる",
+  "last_updated": "2026-04-21"
+}

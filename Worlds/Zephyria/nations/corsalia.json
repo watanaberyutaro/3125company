@@ -1,0 +1,105 @@
+{
+  "id": "corsalia",
+  "name": "コルサリア",
+  "symbol": "⚓",
+  "treasury": 4500000,
+  "total_earned": 4500000,
+  "completed_quests": 0,
+  "active_quests": 0,
+  "citizens": [
+    "npc_cor_001",
+    "npc_cor_003",
+    "npc_cor_002",
+    "npc_cor_004"
+  ],
+  "specialties": [
+    "情報収集",
+    "貿易",
+    "外交"
+  ],
+  "weaknesses": [
+    "記録",
+    "継続的管理"
+  ],
+  "personality": "陽気で好奇心旺盛。飽きっぽい。",
+  "status": "active",
+  "alliances": [],
+  "tensions": [],
+  "immigrants": [],
+  "last_updated": "2026-04-23",
+  "path": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/corsalia",
+  "folders": {
+    "_inbox": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/corsalia/_inbox",
+    "_intel": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/corsalia/_intel",
+    "_done": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/corsalia/_done",
+    "_archive": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/corsalia/_archive",
+    "_trade": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/corsalia/_trade"
+  },
+  "leader": {
+    "npc_id": "npc_cor_001",
+    "name": "マリス・コルレオン",
+    "title": "ギルドマスター",
+    "votes": 880,
+    "elected_at": "2026-04-23"
+  },
+  "deputy": {
+    "npc_id": "npc_cor_003",
+    "name": "ゼフ・タイドウォーカー",
+    "title": "副官",
+    "votes": 790,
+    "elected_at": "2026-04-23"
+  },
+  "election_history": [
+    {
+      "date": "2026-04-23",
+      "type": "建国選挙",
+      "turnout": 82.7
+    }
+  ],
+  "economy": {
+    "population": 230000,
+    "population_growth_rate": 0.018,
+    "gdp_annual": 9200000,
+    "gdp_per_capita": 40,
+    "tax_rate": 0.18,
+    "tax_revenue_annual": 1656000,
+    "unemployment_rate": 0.028,
+    "happiness_index": 77,
+    "resources": {
+      "海産物": {
+        "amount": "大",
+        "export": true,
+        "price_per_unit": 1200
+      },
+      "香辛料": {
+        "amount": "中",
+        "export": true,
+        "price_per_unit": 4000
+      },
+      "外国珍品": {
+        "amount": "中",
+        "export": true,
+        "price_per_unit": 6000
+      },
+      "情報": {
+        "amount": "大",
+        "export": true,
+        "price_per_unit": 3000
+      }
+    },
+    "imports": [
+      "鋼鉄",
+      "魔法道具",
+      "農作物",
+      "芸術品"
+    ],
+    "exports": [
+      "海産物",
+      "香辛料",
+      "外国珍品",
+      "情報"
+    ],
+    "trade_balance_annual": 410000,
+    "last_calculated": "2026-04-23"
+  }
+}

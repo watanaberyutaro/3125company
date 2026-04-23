@@ -1,0 +1,51 @@
+{
+  "id": "npc_reg_009",
+  "name": "ハンス・ライナー",
+  "nation": "regalis",
+  "age": 52,
+  "gender": "male",
+  "profession": "大聖堂 司教",
+  "traits": [
+    "温厚",
+    "信仰心が篤い",
+    "政治的に中立"
+  ],
+  "skills": {
+    "外交": 75,
+    "管理": 60,
+    "戦略": 30,
+    "制作": 20,
+    "研究": 55,
+    "商才": 30
+  },
+  "popularity": 85,
+  "wealth": 3000000,
+  "history": "若い頃に流行病で家族を失い、信仰に救われた経験からゼフィル教の道へ。30年間聖職者として民衆に寄り添ってきた。",
+  "current_position": "光の大聖堂 主任司教。王都市民の精神的支柱",
+  "secret_organization": {
+    "name": null,
+    "role": "無所属。宗教の中立を守る",
+    "awareness": false
+  },
+  "relationships": {
+    "npc_reg_001": {
+      "type": "spiritual_advisor",
+      "value": 65,
+      "note": "国王の精神的相談役。政治には口出しをしない"
+    },
+    "npc_reg_005": {
+      "type": "moral_opposition",
+      "value": 15,
+      "note": "ダリウスの不正を感じ取っている。証拠はない"
+    },
+    "npc_har_001": {
+      "type": "cultural_respect",
+      "value": 70,
+      "note": "音楽を通じた宗教観の共鳴"
+    }
+  },
+  "romance_status": "聖職者として独身を誓っている。ただし若い頃の初恋相手の面影を持つ人物を見ると動揺する",
+  "personality_deep": "政治や陰謀から意識的に距離を置くが、民衆の声には誰より敏感。告解室で聞いた秘密を誰にも話したことがない（無数の秘密を知っている）",
+  "arcadia_belief": "アルカディアとは死後に行く楽園だと教義上は語るが、実際に存在すると信じている",
+  "last_updated": "2026-04-21"
+}

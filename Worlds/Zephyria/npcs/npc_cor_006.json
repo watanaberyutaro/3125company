@@ -1,0 +1,45 @@
+{
+  "id": "npc_cor_006",
+  "name": "ダーク・シャドウレイン",
+  "nation": "corsalia",
+  "age": 40,
+  "gender": "male",
+  "profession": "暗殺者 / 情報ブローカー",
+  "traits": [
+    "無感情に見える",
+    "職業倫理がある",
+    "実は話好き"
+  ],
+  "skills": {
+    "外交": 25,
+    "管理": 40,
+    "戦略": 80,
+    "制作": 30,
+    "研究": 50,
+    "商才": 75
+  },
+  "popularity": 10,
+  "wealth": 12000000,
+  "history": "出身地不明。10代から暗殺業に従事。「依頼は守るが無関係の者は傷つけない」という独自の職業倫理を持ち、業界では珍しく信頼が高い。",
+  "current_position": "フリーランス 暗殺者・情報ブローカー（コルサリア拠点）",
+  "secret_organization": {
+    "name": "影の手（外部契約者）",
+    "role": "高額依頼専門の外部委託",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_cor_001": {
+      "type": "contractor_employer",
+      "value": 40,
+      "note": "マリスの仕事を受けるが対等な取引関係"
+    },
+    "npc_reg_005": {
+      "type": "past_encounter",
+      "value": 20,
+      "note": "かつてダリウスに依頼された仕事を途中でキャンセルした（依頼内容に問題があった）"
+    }
+  },
+  "romance_status": "過去に依頼対象の護衛と恋仲になり、依頼を断ったことがある。それ以来、感情を持たないようにしている",
+  "personality_deep": "本名も出身地も誰も知らないが、実は読書家。特に詩集を好む",
+  "last_updated": "2026-04-21"
+}

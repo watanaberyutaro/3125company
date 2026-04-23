@@ -1,0 +1,50 @@
+{
+  "id": "npc_cor_009",
+  "name": "アクラ・ブレイズシップ",
+  "nation": "corsalia",
+  "age": 48,
+  "gender": "male",
+  "profession": "海賊艦隊 元副艦長 / 今は海運業",
+  "traits": [
+    "豪快",
+    "義侠心がある",
+    "過去を引きずっている"
+  ],
+  "skills": {
+    "外交": 50,
+    "管理": 55,
+    "戦略": 70,
+    "制作": 35,
+    "研究": 20,
+    "商才": 65
+  },
+  "popularity": 45,
+  "wealth": 5000000,
+  "history": "かつてコルサリアの裏海賊艦隊の副艦長だったが、「無関係の民間船への略奪」に加担したことを悔い、引退。今は合法の海運業を営む。",
+  "current_position": "ブレイズシップ海運 社長",
+  "secret_organization": {
+    "name": "影の手（元会員・離脱済み）",
+    "role": "元部隊長。今は干渉されない代わりに情報を流さない約束",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_cor_001": {
+      "type": "uneasy_truce",
+      "value": 30,
+      "note": "マリスとは過去の縁で繋がっているが、今は別々の道"
+    },
+    "npc_cor_005": {
+      "type": "mentor_pilot",
+      "value": 70,
+      "note": "ナミに飛空艇の初歩を教えた師匠筋"
+    },
+    "npc_grd_001": {
+      "type": "begrudging_respect",
+      "value": 55,
+      "note": "昔、ガルドの岩砦に攻撃を仕掛けて完封されたことがある"
+    }
+  },
+  "romance_status": "略奪した船に乗っていた女性に長年の贖罪をしている。彼女は今も許していないが、アクラは届け物を続けている",
+  "personality_deep": "過去の罪を消すことはできないと知っている。でもできることをやり続けることが贖罪と信じている",
+  "last_updated": "2026-04-21"
+}

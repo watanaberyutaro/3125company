@@ -1,0 +1,15 @@
+{
+  "name": "ゼフィリア",
+  "version": "1.0",
+  "founded": "2026-04-23",
+  "currency": "El",
+  "arcadia": {
+    "residents": [
+      "パパ",
+      "ユイ"
+    ]
+  },
+  "total_quests": 0,
+  "total_el_circulated": 0,
+  "lore": "かつてアルカディアという楽園があったと言われている。ゼフィリアはその記憶を胸に、今日も風が吹く。"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "npc_har_008",
+  "name": "オルン・クレイソング",
+  "nation": "harmonia",
+  "age": 50,
+  "gender": "male",
+  "profession": "ゼフィリア通信社 編集長",
+  "traits": [
+    "正義感が強い",
+    "頑固",
+    "言葉に重きを置く"
+  ],
+  "skills": {
+    "外交": 70,
+    "管理": 65,
+    "戦略": 55,
+    "制作": 75,
+    "研究": 60,
+    "商才": 50
+  },
+  "popularity": 65,
+  "wealth": 3000000,
+  "history": "若い頃に権力者による情報操作事件を暴露した経験から、「真実を伝える」ことを人生の使命とした。その後ゼフィリア通信社の編集長に就任。",
+  "current_position": "ゼフィリア通信社 編集長",
+  "secret_organization": {
+    "name": "虹の仮面（精神的共鳴）",
+    "role": "非公式支持者（会員ではないが思想的に近い）",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_har_002": {
+      "type": "media_collaborator",
+      "value": 65,
+      "note": "ルーンの詩を定期コラムとして掲載している"
+    },
+    "npc_reg_005": {
+      "type": "watchdog",
+      "value": 10,
+      "note": "ダリウスの不正を調査中。決定的な証拠を探している"
+    },
+    "npc_cor_001": {
+      "type": "information_tension",
+      "value": 30,
+      "note": "マリスの影の手を記事にしようとしたことがある。釘を刺された"
+    }
+  },
+  "romance_status": "真実を追いかけることに人生を捧げているため、家庭を持つことを諦めている。後悔はしていないが、夜は少し寂しい",
+  "personality_deep": "ダリウスの不正を示す文書を一枚だけ持っているが、まだ公開していない。「確実な証拠が揃うまで」と自分に言い聞かせている",
+  "last_updated": "2026-04-21"
+}

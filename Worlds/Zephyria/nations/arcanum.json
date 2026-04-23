@@ -1,0 +1,106 @@
+{
+  "id": "arcanum",
+  "name": "アルカナム",
+  "symbol": "🔮",
+  "treasury": 3000000,
+  "total_earned": 3000000,
+  "completed_quests": 0,
+  "active_quests": 0,
+  "citizens": [
+    "npc_arc_001",
+    "npc_arc_002",
+    "npc_arc_003",
+    "npc_arc_004"
+  ],
+  "specialties": [
+    "分析",
+    "設計",
+    "研究"
+  ],
+  "weaknesses": [
+    "実行",
+    "締め切り",
+    "感情的判断"
+  ],
+  "personality": "論理的で慎重。動くのが遅い。",
+  "status": "active",
+  "alliances": [],
+  "tensions": [],
+  "immigrants": [],
+  "last_updated": "2026-04-23",
+  "path": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/arcanum",
+  "folders": {
+    "_inbox": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/arcanum/_inbox",
+    "_research": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/arcanum/_research",
+    "_done": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/arcanum/_done",
+    "_archive": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/arcanum/_archive",
+    "_library": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/arcanum/_library"
+  },
+  "leader": {
+    "npc_id": "npc_arc_001",
+    "name": "オリウス・ルーメン六世",
+    "title": "大賢者",
+    "votes": 950,
+    "elected_at": "2026-04-23"
+  },
+  "deputy": {
+    "npc_id": "npc_arc_002",
+    "name": "ヴィラ・アーカナ",
+    "title": "副賢者",
+    "votes": 780,
+    "elected_at": "2026-04-23"
+  },
+  "election_history": [
+    {
+      "date": "2026-04-23",
+      "type": "建国選挙",
+      "turnout": 76.3
+    }
+  ],
+  "economy": {
+    "population": 32000,
+    "population_growth_rate": 0.003,
+    "gdp_annual": 1920000,
+    "gdp_per_capita": 60,
+    "tax_rate": 0.08,
+    "tax_revenue_annual": 153600,
+    "unemployment_rate": 0.005,
+    "happiness_index": 88,
+    "resources": {
+      "魔法書": {
+        "amount": "大",
+        "export": true,
+        "price_per_unit": 10000
+      },
+      "水晶": {
+        "amount": "中",
+        "export": true,
+        "price_per_unit": 7000
+      },
+      "錬金薬": {
+        "amount": "中",
+        "export": true,
+        "price_per_unit": 8000
+      },
+      "魔法道具": {
+        "amount": "中",
+        "export": true,
+        "price_per_unit": 12000
+      }
+    },
+    "imports": [
+      "農作物",
+      "海産物",
+      "建材石",
+      "芸術品"
+    ],
+    "exports": [
+      "魔法書",
+      "水晶",
+      "錬金薬",
+      "魔法道具"
+    ],
+    "trade_balance_annual": 890000,
+    "last_calculated": "2026-04-23"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "nation": "アルカナム（賢者の塔）",
+  "description": "東の孤島に建つ魔法と知識の聖域。近寄りがたい神秘の都市。",
+  "landmarks": [
+    {
+      "id": "arc_grand_tower",
+      "name": "アルカナム大尖塔",
+      "type": "research",
+      "symbol": "🔮",
+      "description": "地上高さ350mに及ぶ世界最高の建造物。上層ほど強力な魔法実験が行われる。",
+      "built_year": "約600年前",
+      "height_m": 350,
+      "floors": 77,
+      "restricted_floors": "40F以上は許可制"
+    },
+    {
+      "id": "arc_library",
+      "name": "万象図書館",
+      "type": "library",
+      "symbol": "📚",
+      "description": "世界中の知識を収集した最大の図書館。魔法文書・古代語・禁書が揃う。",
+      "built_year": "約580年前",
+      "volumes": 2200000,
+      "forbidden_section": true
+    },
+    {
+      "id": "arc_observatory",
+      "name": "星詠み観測所",
+      "type": "observatory",
+      "symbol": "🔭",
+      "description": "天体観測と未来予測の施設。アルカディアの方角を観測し続けている。",
+      "built_year": "約400年前"
+    },
+    {
+      "id": "arc_lab",
+      "name": "禁忌研究院",
+      "type": "research",
+      "symbol": "⚗️",
+      "description": "倫理委員会が設立した特殊研究機関。アルカディアの空間魔法を研究中。",
+      "built_year": "約50年前",
+      "access": "オリウス・ルーメン六世 直轄"
+    },
+    {
+      "id": "arc_seal",
+      "name": "封印の間",
+      "type": "vault",
+      "symbol": "🔒",
+      "description": "世界の危険な魔法道具・禁書が封印されている地下室。現存する最古の封印。",
+      "built_year": "約700年前",
+      "depth_m": 80
+    }
+  ]
+}
