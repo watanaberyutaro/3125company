@@ -1,0 +1,197 @@
+{
+  "main": {
+    "id": "62b0ef7f14496bd6",
+    "type": "split",
+    "children": [
+      {
+        "id": "e66e2e67a94d77fb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "258d5e98b55669e5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新規タブ"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a6369f902e1a6ca5",
+    "type": "split",
+    "children": [
+      {
+        "id": "63622264215f9e12",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f9f12df0b3870cd4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "430656abb5b1a590",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "f11bf585bbc9a508",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e4c4f0db7567d30c",
+    "type": "split",
+    "children": [
+      {
+        "id": "03629d8a65d71fa9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6fe78fccc5a9b0e6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "バックリンク"
+            }
+          },
+          {
+            "id": "e2b62dff7d04717b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "アウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "8d0a54e2d34d6983",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "704454dd4da8011a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "アウトライン"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false,
+      "bases:Create new base": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "copilot:Open Copilot Chat": false
+    }
+  },
+  "active": "258d5e98b55669e5",
+  "lastOpenFiles": [
+    "claude codeでアプリ量産.md",
+    "AI秘書を作る.md",
+    "AI秘書、AIエージェント.md",
+    "AIによる営業の半自動化.md",
+    "30歳までの目標.md",
+    "WEBメディアを作って売却.md",
+    "コールセンターの課題を解決するシステム.md",
+    "要件定義.md",
+    "価格パッケージ.md",
+    "計画書.md",
+    "営業におけること.md",
+    "未来/アイデア.md",
+    "可能性、課題解決案.md",
+    "可能性.md",
+    "現状の悩み、課題.md",
+    "税理士打合せ.md",
+    "SHARE LIBERTY合併にあたっての資料内容.md",
+    "お金をたくさん稼ぐ (1).md",
+    "お金をたくさん稼ぐ.md",
+    "お金に縛られず、自由に生きる.md",
+    "インスタアフィリエイトによる収益化.md",
+    "イベントの実績を逐一まとめる.md",
+    "アフィリエイトブログの自動投稿.md",
+    "YouTubeチャンネル、インスタなどの自動化.md",
+    "Xで情報商材の販売.md",
+    "WEB関連における収益化できるものをデータ収集.md"
+  ]
+}
