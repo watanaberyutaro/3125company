@@ -11,10 +11,12 @@
             "id": "0a4ff904d944047e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新規タブ"
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.10"
             }
           }
         ]
@@ -163,9 +165,9 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "bases:新規ベースを作成": false,
       "switcher:クイックスイッチャーを開く": false,
       "graph:グラフビューを開く": false,
       "canvas:新規キャンバスを作成": false,
@@ -175,7 +177,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f9f12df0b3870cd4",
+  "active": "0a4ff904d944047e",
   "lastOpenFiles": [
     "01_3125情報受付事業部（フリーレン）/3125 朝礼（フリーレン）/2026-04-23.md",
     "00_受信トレイ/フェルンより_2026-04-23-朝のニュース.md",

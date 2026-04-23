@@ -18,7 +18,10 @@
       "Bash(tail:*)",
       "Bash(wc:*)",
       "Bash(ls:*)",
-      "Bash(stat:*)"
+      "Bash(stat:*)",
+      "Bash(sed -i '' 's|Cardinal/Company|Cardinal/Cardinal|g' /Users/watanaberyuutarou/.claude/commands/yui.md)",
+      "Bash(sed -i '' 's|Cardinal/Company|Cardinal/Cardinal|g' '/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Cardinal/README.md')",
+      "Read(//Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Cardinal/**)"
     ]
   }
 }
