@@ -1,0 +1,56 @@
+{
+  "id": "npc_grd_002",
+  "name": "ブリン・コッパーアーム",
+  "nation": "grandsheim",
+  "age": 45,
+  "gender": "女性",
+  "profession": "採掘師組合長",
+  "traits": [
+    "豪快",
+    "義侠心",
+    "現実的",
+    "面倒見がいい"
+  ],
+  "skills": {
+    "外交": 4,
+    "管理": 8,
+    "戦略": 5,
+    "制作": 7,
+    "研究": 6,
+    "商才": 5
+  },
+  "popularity": 77,
+  "wealth": 310000,
+  "current_position": "副頭領",
+  "history": "幼少期に落盤事故で右腕を失い、銅の義手を装着。その後さらに強くなり、採掘師たちの組合長に。山の地図をすべて頭に入れており、誰よりも早く新鉱脈を発見できる。",
+  "secret_organization": {
+    "name": "深鉱の誓い",
+    "role": "技術部門リーダー",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_reg_002": {
+      "type": "old_friend",
+      "value": 70,
+      "note": "若い頃の旅仲間。今も文通"
+    },
+    "npc_grd_001": {
+      "type": "respect_care",
+      "value": 80,
+      "note": "父親のように慕っている"
+    },
+    "npc_arc_003": {
+      "type": "romantic_interest",
+      "value": 65,
+      "note": "研究目的でアルカナムを訪問した際に出会い、魅かれている。遠距離で文通中"
+    },
+    "npc_grd_004": {
+      "type": "friendly_rivalry",
+      "value": 60,
+      "note": "技術を競い合う良きライバル"
+    }
+  },
+  "romance_status": "アルカナムのセロ・クリスタルと文通中。直接会えないが、手紙で気持ちを育んでいる",
+  "personality_deep": "職人として完璧を目指すが、自分の作品に対する評価に人一倍敏感",
+  "last_updated": "2026-04-21"
+}

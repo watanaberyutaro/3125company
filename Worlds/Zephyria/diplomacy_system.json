@@ -1,0 +1,77 @@
+{
+  "auto_generation": true,
+  "description": "各国NPC市民のやり取り・利害関係から自動的に外交イベントが生成される",
+  "triggers": [
+    {
+      "condition": "同一2国間のクエスト取引が10件以上累計",
+      "event": "同盟締結提案",
+      "probability": 0.7,
+      "effect": "貿易コスト-10%, 相互クエスト報酬+5%"
+    },
+    {
+      "condition": "ある国の人口が5%以上急増",
+      "event": "移民の波",
+      "probability": 0.5,
+      "effect": "隣接国に移民流入。受入国の人口+2%, 文化多様性+1"
+    },
+    {
+      "condition": "貿易黒字国と貿易赤字国が3期連続",
+      "event": "通商摩擦の兆し",
+      "probability": 0.6,
+      "effect": "緊張度+1。放置すると関税引き上げイベントへ"
+    },
+    {
+      "condition": "共通の資源不足が2カ国以上で発生",
+      "event": "資源同盟の提案",
+      "probability": 0.4,
+      "effect": "2カ国が協定を結び共同採掘・共同開発を行う"
+    },
+    {
+      "condition": "NPC間の結婚・友情イベント発生",
+      "event": "民間外交の進展",
+      "probability": 0.3,
+      "effect": "両国間の好感度+2, 次の外交交渉が成功しやすくなる"
+    },
+    {
+      "condition": "国庫が全体平均の20%以下に低下",
+      "event": "経済危機警報",
+      "probability": 0.9,
+      "effect": "他国から支援の申し出 or 資源を担保にした借款提案"
+    },
+    {
+      "condition": "詩人王・大賢者など長期政権が30クエスト以上継続",
+      "event": "次期選挙の機運",
+      "probability": 0.5,
+      "effect": "NPC間で後継者議論が活発化。新勢力が台頭する"
+    }
+  ],
+  "npc_relationships": {
+    "description": "NPCはやり取りを通じて関係値（-100〜+100）を持つ。関係値が外交に影響する",
+    "initial_relationships": [
+      {
+        "from": "npc_cor_002",
+        "to": "npc_arc_003",
+        "value": 30,
+        "reason": "元同じ国（コルサリア→アルカナム移住）の縁"
+      },
+      {
+        "from": "npc_reg_003",
+        "to": "npc_grd_001",
+        "value": 20,
+        "reason": "グランズヘイム移民2世として敬意"
+      },
+      {
+        "from": "npc_har_002",
+        "to": "npc_arc_004",
+        "value": 15,
+        "reason": "密かに恋心"
+      },
+      {
+        "from": "npc_har_003",
+        "to": "npc_reg_001",
+        "value": 25,
+        "reason": "旅の途中で出会い意気投合"
+      }
+    ]
+  }
+}

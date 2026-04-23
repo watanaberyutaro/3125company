@@ -1,0 +1,50 @@
+{
+  "id": "npc_reg_007",
+  "name": "クレム・ヴァーデン",
+  "nation": "regalis",
+  "age": 29,
+  "gender": "male",
+  "profession": "王立騎士団 中尉",
+  "traits": [
+    "誠実",
+    "お人よし",
+    "少し不器用"
+  ],
+  "skills": {
+    "外交": 45,
+    "管理": 50,
+    "戦略": 65,
+    "制作": 20,
+    "研究": 25,
+    "商才": 35
+  },
+  "popularity": 58,
+  "wealth": 2200000,
+  "history": "中級貴族の次男。兄が家を継いだため軍に志願。真面目な性格と体力で騎士団の中尉まで昇進した。",
+  "current_position": "王都市街警備の中隊指揮官",
+  "secret_organization": {
+    "name": null,
+    "role": "無所属",
+    "awareness": false
+  },
+  "relationships": {
+    "npc_reg_006": {
+      "type": "close_friend",
+      "value": 80,
+      "note": "アルバとは学院時代からの親友。気持ちには気づいているが言い出せない"
+    },
+    "npc_reg_003": {
+      "type": "respected_superior",
+      "value": 75,
+      "note": "ボルド将軍を尊敬しお手本にしている"
+    },
+    "npc_reg_008": {
+      "type": "childhood_acquaintance",
+      "value": 40,
+      "note": "幼なじみ。今は疎遠になっている"
+    }
+  },
+  "romance_status": "アルバへの気持ちを自覚しているが、自分は彼女には釣り合わないと思っている",
+  "personality_deep": "不器用だが、部下への配慮が細かく人望が厚い。日課の剣の稽古を誰より早く始め、最後まで残る",
+  "last_updated": "2026-04-21"
+}

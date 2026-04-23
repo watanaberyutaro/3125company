@@ -1,0 +1,51 @@
+{
+  "id": "npc_har_001",
+  "name": "カンタ・メロディ",
+  "nation": "harmonia",
+  "age": 54,
+  "gender": "女性",
+  "profession": "詩人王（現国家元首）",
+  "traits": [
+    "カリスマ",
+    "感性豊か",
+    "包容力",
+    "時々予測不能"
+  ],
+  "skills": {
+    "外交": 8,
+    "管理": 6,
+    "戦略": 6,
+    "制作": 10,
+    "研究": 5,
+    "商才": 5
+  },
+  "popularity": 91,
+  "wealth": 460000,
+  "current_position": "詩人王",
+  "history": "30年前に詩一篇でハーモニア全土を泣かせた伝説の詩人。詩人王選挙では史上最多得票で当選し、以来3期連続で国を治める。政治より芸術を愛するが、その感性で外交を成功させてきた。",
+  "secret_organization": {
+    "name": "虹の仮面",
+    "role": "精神的支柱（創設者の師匠筋）",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_reg_004": {
+      "type": "cultural_friendship",
+      "value": 65,
+      "note": "芸術と政治の交差点での関係"
+    },
+    "npc_har_002": {
+      "type": "mentor",
+      "value": 75,
+      "note": "ルーンの才能を最初に見出した"
+    },
+    "npc_har_003": {
+      "type": "co_leader",
+      "value": 80,
+      "note": "ハーモニアの双璧として国を運営"
+    }
+  },
+  "romance_status": "過去の恋愛が芸術に昇華されている。名曲「失われた春」は失恋曲と言われている",
+  "personality_deep": "音楽の神に選ばれた才能と言われるが、本人は「ただの練習の積み重ね」と謙遜する",
+  "last_updated": "2026-04-21"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "npc_cor_001",
+  "name": "マリス・コルレオン",
+  "nation": "corsalia",
+  "age": 49,
+  "gender": "女性",
+  "profession": "海商ギルド長",
+  "traits": [
+    "カリスマ",
+    "大胆",
+    "情報通",
+    "義理と人情"
+  ],
+  "skills": {
+    "外交": 8,
+    "管理": 7,
+    "戦略": 9,
+    "制作": 3,
+    "研究": 5,
+    "商才": 10
+  },
+  "popularity": 88,
+  "wealth": 890000,
+  "current_position": "ギルドマスター",
+  "history": "コルサリア最大の海商ギルドを一代で築いた女傑。25歳で小舟一隻から始め、今や100隻以上の船団を持つ。「情報を制する者が世界を制す」が信条。ゼフィリア中に情報網を持つ。",
+  "secret_organization": {
+    "name": "影の手",
+    "role": "最高顧問（表向きは無関係を装う）",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_reg_005": {
+      "type": "secret_deal",
+      "value": 55,
+      "note": "裏で情報と金を交換"
+    },
+    "npc_cor_002": {
+      "type": "complex_master_servant",
+      "value": 50,
+      "note": "テイラが二重スパイであることを半分知っている"
+    },
+    "npc_cor_004": {
+      "type": "distrust",
+      "value": 30,
+      "note": "ソラの正直さが組織に向かないと思っている"
+    },
+    "npc_grd_001": {
+      "type": "business_respect",
+      "value": 45,
+      "note": "商人として最大の市場だが、扱いにくい相手"
+    }
+  },
+  "romance_status": "過去に組織内で恋愛関係があり、それが失敗してから恋愛を避けている",
+  "personality_deep": "すべての会話に意図があり、「雑談」をしない。常に情報を収集している",
+  "last_updated": "2026-04-21"
+}

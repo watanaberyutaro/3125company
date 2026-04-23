@@ -1,0 +1,46 @@
+{
+  "id": "npc_grd_008",
+  "name": "ルーク・アイアンボーン",
+  "nation": "grandsheim",
+  "age": 17,
+  "gender": "male",
+  "profession": "鉱山 見習い採掘師",
+  "traits": [
+    "純粋",
+    "正義感が強い",
+    "力持ち"
+  ],
+  "skills": {
+    "外交": 20,
+    "管理": 15,
+    "戦略": 25,
+    "制作": 40,
+    "研究": 20,
+    "商才": 20
+  },
+  "popularity": 35,
+  "wealth": 150000,
+  "history": "鉱夫の家系。父・祖父・曾祖父全員が鉱山で働いてきた。自分もその道を歩み始めたばかり。",
+  "current_position": "黒脈鉱山 最年少採掘師",
+  "secret_organization": {
+    "name": null,
+    "role": "無所属。組織の存在を知らない",
+    "awareness": false
+  },
+  "relationships": {
+    "npc_grd_004": {
+      "type": "idol",
+      "value": 80,
+      "note": "トルンを職人の理想として仰ぎ見ている"
+    },
+    "npc_grd_007": {
+      "type": "rescue_gratitude",
+      "value": 70,
+      "note": "初めての採掘で道に迷ったところをゼルダに救われた"
+    }
+  },
+  "romance_status": "同じ鉱山で働く年上の先輩女性に憧れている。まだ何も言えていない",
+  "personality_deep": "まだ世界を知らない少年だが、鉱山の奥深さに「宇宙のようなものを感じる」と語る。将来は誰も掘ったことのない深さまで到達したいという夢を持つ",
+  "arcadia_belief": "アルカディアは地面の奥底にあると思っている（独自の解釈）",
+  "last_updated": "2026-04-21"
+}

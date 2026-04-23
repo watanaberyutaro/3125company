@@ -1,0 +1,57 @@
+{
+  "id": "npc_arc_001",
+  "name": "オリウス・ルーメン六世",
+  "nation": "arcanum",
+  "age": 91,
+  "gender": "男性",
+  "profession": "大賢者（第六代）",
+  "traits": [
+    "超然",
+    "博識",
+    "厳格",
+    "孤高"
+  ],
+  "skills": {
+    "外交": 6,
+    "管理": 8,
+    "戦略": 9,
+    "制作": 4,
+    "研究": 10,
+    "商才": 5
+  },
+  "popularity": 95,
+  "wealth": 720000,
+  "current_position": "大賢者",
+  "history": "アルカナムを600年前に建国した大魔法師「初代オリウス」の名を継ぐ第六代目。初代との血縁はないが、試練を突破した者が名を継ぐ伝統がある。91歳にして現役。死の直前まで研究すると宣言している。",
+  "secret_organization": {
+    "name": "禁書の番人",
+    "role": "最高顧問（創設者）",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_reg_001": {
+      "type": "alliance_partner",
+      "value": 55,
+      "note": "政治と知識の補完関係"
+    },
+    "npc_arc_002": {
+      "type": "trusted_confidant",
+      "value": 80,
+      "note": "カーディナル研究の唯一の共有者"
+    },
+    "npc_arc_003": {
+      "type": "student_pride",
+      "value": 65,
+      "note": "最も才能ある弟子と思っている"
+    },
+    "npc_arc_004": {
+      "type": "concern",
+      "value": 50,
+      "note": "ネアの野心的な研究が危険な方向へ向かわないか心配"
+    }
+  },
+  "romance_status": "1000年（誇張）単位の研究人生で恋愛の機会を逃し続けた。今更とも思っている",
+  "personality_deep": "全知に見えるが、実は日常の小さなことに弱い（炊事・洗濯が一人でできない）",
+  "arcadia_secret": "アルカディアの座標を特定済み。カーディナルと何らかの繋がりがあると確信している",
+  "last_updated": "2026-04-21"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "npc_har_002",
+  "name": "ルーン・エコー",
+  "nation": "harmonia",
+  "age": 28,
+  "gender": "男性",
+  "profession": "壁画師・彫刻家",
+  "traits": [
+    "内向的",
+    "観察眼が鋭い",
+    "繊細",
+    "芸術一筋"
+  ],
+  "skills": {
+    "外交": 3,
+    "管理": 4,
+    "戦略": 3,
+    "制作": 9,
+    "研究": 7,
+    "商才": 5
+  },
+  "popularity": 63,
+  "wealth": 110000,
+  "current_position": null,
+  "history": "グランズヘイム出身の職人の息子。石の彫刻に魅了されハーモニアへ移住。街中の壁画のほとんどが彼の作品。無口で人付き合いが苦手だが、作品に込める感情は誰よりも豊か。密かにネアに恋している。",
+  "secret_organization": {
+    "name": "虹の仮面",
+    "role": "創設者・リーダー",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_har_001": {
+      "type": "student_mentor",
+      "value": 75,
+      "note": "人生を変えた恩人"
+    },
+    "npc_grd_003": {
+      "type": "knowledge_exchange",
+      "value": 55,
+      "note": "古代の歌と伝承の交換"
+    },
+    "npc_arc_004": {
+      "type": "secret_correspondence",
+      "value": 55,
+      "note": "素性を隠した文通相手。お互い惹かれている"
+    },
+    "npc_har_003": {
+      "type": "close_friendship",
+      "value": 70,
+      "note": "最も近い友人"
+    }
+  },
+  "romance_status": "ネア・ソルシアとの文通に心が動いている。顔も知らない相手への感情に戸惑っている",
+  "personality_deep": "詩の中にアルカディアへのヒントを見つけた事実を一人で抱えている。恐怖と興奮が混在",
+  "last_updated": "2026-04-21"
+}

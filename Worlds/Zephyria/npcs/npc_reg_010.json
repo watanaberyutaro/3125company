@@ -1,0 +1,50 @@
+{
+  "id": "npc_reg_010",
+  "name": "テオ・スモーク",
+  "nation": "regalis",
+  "age": 22,
+  "gender": "male",
+  "profession": "スリ・路上芸人（裏稼業: 情報屋）",
+  "traits": [
+    "機転が利く",
+    "お調子者",
+    "義理堅い"
+  ],
+  "skills": {
+    "外交": 35,
+    "管理": 20,
+    "戦略": 45,
+    "制作": 60,
+    "研究": 20,
+    "商才": 70
+  },
+  "popularity": 30,
+  "wealth": 500000,
+  "history": "王都下町生まれの孤児。ストリートで生き抜くために芸と情報収集を覚えた。今は複数の組織に情報を売って生計を立てている。",
+  "current_position": "王都下町の情報屋。どの組織にも正式所属していない自由人",
+  "secret_organization": {
+    "name": "影の手（外部情報提供者）",
+    "role": "非公式情報屋",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_cor_003": {
+      "type": "business_contact",
+      "value": 55,
+      "note": "ゼフと情報を売買する関係"
+    },
+    "npc_reg_007": {
+      "type": "friendly_acquaintance",
+      "value": 50,
+      "note": "クレムにたまに取り締まられるが不思議と仲がいい"
+    },
+    "npc_reg_009": {
+      "type": "one_sided_respect",
+      "value": 60,
+      "note": "ハンス司教に食事をもらった恩がある。密かに尊敬"
+    }
+  },
+  "romance_status": "市場で見かけた花屋の娘が好きだが、自分のような身分では無理だと思っている",
+  "personality_deep": "表向きは軽薄だが、孤児院の後輩たちへの面倒見が異常にいい。稼ぎの3割を孤児院に渡している（アルバの知らないところで同じことをしている）",
+  "last_updated": "2026-04-21"
+}

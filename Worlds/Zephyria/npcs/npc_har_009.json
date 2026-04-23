@@ -1,0 +1,50 @@
+{
+  "id": "npc_har_009",
+  "name": "ベル・スウィートローズ",
+  "nation": "harmonia",
+  "age": 30,
+  "gender": "female",
+  "profession": "花師 / 香り魔法師",
+  "traits": [
+    "穏やか",
+    "癒し系",
+    "芯が強い"
+  ],
+  "skills": {
+    "外交": 55,
+    "管理": 40,
+    "戦略": 30,
+    "制作": 80,
+    "研究": 55,
+    "商才": 60
+  },
+  "popularity": 75,
+  "wealth": 2500000,
+  "history": "花と香りを使った魔法（アロマ魔法）という珍しい分野の第一人者。傷の治癒・精神安定・記憶呼び起こしに効果があるとされる香りを調合できる。",
+  "current_position": "ハーモニア 「スウィートローズ」花魔法工房 経営者",
+  "secret_organization": {
+    "name": null,
+    "role": "無所属",
+    "awareness": false
+  },
+  "relationships": {
+    "npc_reg_010": {
+      "type": "one_sided_admiration",
+      "value": 60,
+      "note": "テオが好意を持っている花屋の娘がベル本人。ベルはテオの存在に気づいていない"
+    },
+    "npc_har_007": {
+      "type": "gentle_care",
+      "value": 65,
+      "note": "リラが緊張を訴えた際にアロマを提供している"
+    },
+    "npc_grd_007": {
+      "type": "herb_trade",
+      "value": 60,
+      "note": "ゼルダから山岳の薬草を仕入れている"
+    }
+  },
+  "romance_status": "誰かに好意を向けられると気づかないタイプ。テオが毎週花を買いに来ている理由をただの常連客だと思っている",
+  "personality_deep": "香りで感情を読む能力があるため、嘘をついた人の「罪悪感の香り」がわかる。でもそれを言わない優しさがある",
+  "last_updated": "2026-04-21"
+}

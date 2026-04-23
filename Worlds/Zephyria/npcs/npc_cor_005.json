@@ -1,0 +1,50 @@
+{
+  "id": "npc_cor_005",
+  "name": "ナミ・タイドクレスト",
+  "nation": "corsalia",
+  "age": 26,
+  "gender": "female",
+  "profession": "飛空艇 パイロット",
+  "traits": [
+    "豪快",
+    "自由奔放",
+    "根は真面目"
+  ],
+  "skills": {
+    "外交": 40,
+    "管理": 35,
+    "戦略": 55,
+    "制作": 65,
+    "研究": 30,
+    "商才": 50
+  },
+  "popularity": 65,
+  "wealth": 1800000,
+  "history": "コルサリア出身の天才パイロット。17歳で免許取得、20歳で最難関の嵐ルートを単独制覇した伝説の記録保持者。",
+  "current_position": "コルサリア飛空艇組合 エース。各国間の特急便を担当",
+  "secret_organization": {
+    "name": null,
+    "role": "無所属",
+    "awareness": false
+  },
+  "relationships": {
+    "npc_cor_001": {
+      "type": "employer_respect",
+      "value": 55,
+      "note": "マリスの仕事は受けるが、個人としての距離は保つ"
+    },
+    "npc_grd_007": {
+      "type": "outdoor_comrade",
+      "value": 60,
+      "note": "荒野サバイバル仲間。互いに極限の仕事をする者同士"
+    },
+    "npc_arc_001": {
+      "type": "charter_client",
+      "value": 45,
+      "note": "オリウスの秘密チャーター便を何度か担当。行先を絶対に話さない"
+    }
+  },
+  "romance_status": "空が恋人。でも同じパイロット仲間の男性に少しだけ揺れている",
+  "personality_deep": "命がけの飛行を繰り返しながら、実は「いつか落ちる」という恐怖を常に抱えている。それでも飛ぶことをやめない",
+  "last_updated": "2026-04-21"
+}

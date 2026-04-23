@@ -1,0 +1,46 @@
+{
+  "id": "npc_arc_003",
+  "name": "セロ・クリスタル",
+  "nation": "arcanum",
+  "age": 35,
+  "gender": "男性",
+  "profession": "錬金術師",
+  "traits": [
+    "好奇心旺盛",
+    "実験好き",
+    "失敗を恐れない",
+    "楽観的"
+  ],
+  "skills": {
+    "外交": 5,
+    "管理": 4,
+    "戦略": 5,
+    "制作": 7,
+    "研究": 8,
+    "商才": 6
+  },
+  "popularity": 66,
+  "wealth": 180000,
+  "current_position": null,
+  "history": "コルサリアの商人の息子。情報商人として旅する中でアルカナムの錬金術に魅了され移住。実験のたびに爆発させる問題児だが、その成功率と革新性は認められている。研究室が爆発した回数は37回。",
+  "secret_organization": {
+    "name": "禁書の番人",
+    "role": "見習い会員",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_grd_002": {
+      "type": "romantic_interest",
+      "value": 65,
+      "note": "グランズヘイム訪問中に出会った鍛冶師。文通中"
+    },
+    "npc_cor_002": {
+      "type": "cautious_interest",
+      "value": 30,
+      "note": "テイラの接近の目的が掴めない。魅力は感じる"
+    }
+  },
+  "romance_status": "ブリン・コッパーアームと文通中。次の直接面会の機会を待っている",
+  "personality_deep": "晶石魔法の天才だが、人との距離感が掴めない社交下手",
+  "last_updated": "2026-04-21"
+}

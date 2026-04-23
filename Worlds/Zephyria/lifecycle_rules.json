@@ -1,0 +1,113 @@
+{
+  "description": "現実の日本時間に完全準拠。1現実日 = 1ゼフィリア日。",
+  "time_sync": "JST (UTC+9)",
+  "aging": {
+    "unit": "現実の1年 = ゼフィリア1年",
+    "age_stages": [
+      {
+        "stage": "幼少期",
+        "range": "0-12",
+        "effects": "統計値なし。家族NPC依存"
+      },
+      {
+        "stage": "青年期",
+        "range": "13-25",
+        "effects": "スキル習得速度+20%。恋愛イベント発生開始"
+      },
+      {
+        "stage": "壮年期",
+        "range": "26-50",
+        "effects": "スキル最大値。政治的影響力ピーク"
+      },
+      {
+        "stage": "中年期",
+        "range": "51-70",
+        "effects": "スキル-5%/年。人脈・知恵ボーナス+10%"
+      },
+      {
+        "stage": "老年期",
+        "range": "71-85",
+        "effects": "行動制限増加。後継者指名イベント発生"
+      },
+      {
+        "stage": "余生",
+        "range": "86+",
+        "effects": "活動範囲縮小。歴史的助言役として機能"
+      }
+    ],
+    "annual_aging_event": "毎年4月21日（ゼフィリア暦元日）に全NPCが1歳加齢。誕生日は個別設定"
+  },
+  "marriage": {
+    "eligible_age": 18,
+    "trigger_conditions": [
+      "関係値が75以上になった場合、プロポーズイベントが発生（月1回チェック）",
+      "両NPC共に未婚・婚姻障壁なし",
+      "国籍が違う場合は追加の外交イベントが発生する場合あり"
+    ],
+    "marriage_effects": {
+      "treasury": "結婚したNPCの資産が統合される（平均値）",
+      "relationship_network": "配偶者の関係値ネットワークが一部共有される",
+      "political": "異国間婚姻は外交ボーナス+10"
+    },
+    "current_couples": [],
+    "pending_romances": [
+      {
+        "npc_a": "npc_reg_001",
+        "npc_b": "npc_reg_002",
+        "status": "秘めた想い・未発展"
+      },
+      {
+        "npc_a": "npc_reg_006",
+        "npc_b": "npc_reg_007",
+        "status": "気持ちはあるが言い出せない"
+      },
+      {
+        "npc_a": "npc_grd_002",
+        "npc_b": "npc_arc_003",
+        "status": "遠距離文通・進展中"
+      },
+      {
+        "npc_a": "npc_har_002",
+        "npc_b": "npc_arc_004",
+        "status": "素性を隠した文通"
+      },
+      {
+        "npc_a": "npc_cor_004",
+        "npc_b": "npc_har_004",
+        "status": "友情から恋へ移行中"
+      },
+      {
+        "npc_a": "npc_reg_010",
+        "npc_b": "npc_har_009",
+        "status": "片想い・相手は未認識"
+      },
+      {
+        "npc_a": "npc_grd_005",
+        "npc_b": "npc_har_004",
+        "status": "友情・感情未自覚"
+      }
+    ]
+  },
+  "childbirth": {
+    "conditions": "結婚から6ヶ月以上経過後、月1回の確率判定（確率25%）",
+    "child_npc_generation": {
+      "name": "両親の名前を参考に自動生成",
+      "age": 0,
+      "nation": "母親の国籍（異国婚は選択制）",
+      "skills": "両親のスキル平均値×0.6（成長で上昇）",
+      "traits": "両親のtraitsから2つをランダム継承"
+    },
+    "max_children_per_couple": 4
+  },
+  "death": {
+    "natural_death_check": "年齢80歳以上のNPCに月1回の死亡チェック（確率: 年齢-79 × 2%）",
+    "combat_death": "遠征参加NPCは戦闘で死亡する可能性あり（ボス戦は特に高リスク）",
+    "accident_death": "自然災害・特定イベント時に確率発生",
+    "on_death_effects": {
+      "successor": "リーダーNPCが死亡した場合、選挙または任命で後継者が選ばれる",
+      "inheritance": "資産の70%が指定後継者または子供に引き継がれる。30%は国庫へ",
+      "relationship_impact": "関係値70以上のNPCに悲嘆イベントが発生"
+    }
+  },
+  "last_updated": "2026-04-23"
+}

@@ -1,0 +1,493 @@
+{
+  "description": "NPCが日常の仕事・研究・交流を通じて自然に習得する技術体系。魔法なし。試行錯誤・観察・交流が源泉。",
+  "learning_rules": {
+    "organic_learning": "NPCは自分の職業・興味・関係値に基づき自律的に技術を習得する。強制的な割り当てはしない。",
+    "interest_driven": "NPCのskills値が高いカテゴリを中心に研究が進む。例: 研究値80以上のNPCは分析系技術を自然に追求",
+    "cross_nation_spread": "交流イベント・貿易・移民を通じて技術が他国に伝播する。伝播には関係値30以上が必要",
+    "discovery_trigger": "同分野の技術を2つ以上習得した国で確率的にブレークスルーが発生する",
+    "npc_to_nation": "NPCの個人研究が国の公式技術になるには承認プロセスが必要（族長・総督・塔長の承認）"
+  },
+  "categories": {
+    "engineering": {
+      "name": "工学・建築",
+      "nodes": [
+        {
+          "id": "eng_1",
+          "name": "石積み技術",
+          "unlocked_by": "grandsheim（初期解放）",
+          "effect": "建物耐久度+20%",
+          "prerequisite": []
+        },
+        {
+          "id": "eng_2",
+          "name": "空中島補強工法",
+          "prerequisite": [
+            "eng_1"
+          ],
+          "effect": "島の安定性+15%、建設コスト-10%"
+        },
+        {
+          "id": "eng_3",
+          "name": "飛空艇設計学",
+          "prerequisite": [
+            "eng_1"
+          ],
+          "effect": "輸送コスト-20%",
+          "spread_from": "corsalia"
+        },
+        {
+          "id": "eng_4",
+          "name": "大型炉技術",
+          "prerequisite": [
+            "eng_1"
+          ],
+          "effect": "鉄生産量+30%",
+          "unlocked_by": "grandsheim"
+        },
+        {
+          "id": "eng_5",
+          "name": "精密機械工学",
+          "prerequisite": [
+            "eng_3",
+            "eng_4"
+          ],
+          "effect": "武器品質+25%、生産速度+15%"
+        },
+        {
+          "id": "eng_6",
+          "name": "通信塔建設",
+          "prerequisite": [
+            "eng_2"
+          ],
+          "effect": "国家間情報伝達速度+50%"
+        },
+        {
+          "id": "eng_7",
+          "name": "要塞設計学",
+          "prerequisite": [
+            "eng_2"
+          ],
+          "effect": "防衛力+30%",
+          "spread_from": "grandsheim"
+        }
+      ]
+    },
+    "navigation": {
+      "name": "航海・航空",
+      "nodes": [
+        {
+          "id": "nav_1",
+          "name": "海図作成術",
+          "unlocked_by": "corsalia（初期解放）",
+          "effect": "交易ルート開拓速度+30%"
+        },
+        {
+          "id": "nav_2",
+          "name": "嵐ルート開拓",
+          "prerequisite": [
+            "nav_1"
+          ],
+          "effect": "悪天候時の輸送維持率+40%"
+        },
+        {
+          "id": "nav_3",
+          "name": "空図作成術",
+          "prerequisite": [
+            "nav_1"
+          ],
+          "effect": "新島発見確率+25%"
+        },
+        {
+          "id": "nav_4",
+          "name": "高高度飛行技術",
+          "prerequisite": [
+            "nav_3"
+          ],
+          "effect": "アルカディア攻略ルートアクセス+2フロア"
+        },
+        {
+          "id": "nav_5",
+          "name": "気流予測学",
+          "prerequisite": [
+            "nav_2",
+            "nav_3"
+          ],
+          "effect": "輸送コスト-15%、天候被害-20%"
+        },
+        {
+          "id": "nav_6",
+          "name": "大型飛空艇建造",
+          "prerequisite": [
+            "nav_4",
+            "eng_3"
+          ],
+          "effect": "遠征部隊輸送力+100%"
+        }
+      ]
+    },
+    "agriculture": {
+      "name": "農業・食料",
+      "nodes": [
+        {
+          "id": "agr_1",
+          "name": "高空農業技術",
+          "unlocked_by": "regalis（初期解放）",
+          "effect": "食料生産+20%"
+        },
+        {
+          "id": "agr_2",
+          "name": "水循環農法",
+          "prerequisite": [
+            "agr_1"
+          ],
+          "effect": "旱魃被害-40%"
+        },
+        {
+          "id": "agr_3",
+          "name": "高山農法",
+          "prerequisite": [
+            "agr_1"
+          ],
+          "effect": "グランズヘイム食料自給率+30%",
+          "spread_from": "grandsheim"
+        },
+        {
+          "id": "agr_4",
+          "name": "保存食製造",
+          "prerequisite": [
+            "agr_1"
+          ],
+          "effect": "遠征時食料消費-25%"
+        },
+        {
+          "id": "agr_5",
+          "name": "交配育種学",
+          "prerequisite": [
+            "agr_2",
+            "agr_3"
+          ],
+          "effect": "食料生産+35%、疾病耐性+20%"
+        }
+      ]
+    },
+    "medicine": {
+      "name": "医療・衛生",
+      "nodes": [
+        {
+          "id": "med_1",
+          "name": "薬草学",
+          "unlocked_by": "harmonia・grandsheim（初期解放）",
+          "effect": "戦傷回復速度+30%"
+        },
+        {
+          "id": "med_2",
+          "name": "外科術",
+          "prerequisite": [
+            "med_1"
+          ],
+          "effect": "戦死率-15%"
+        },
+        {
+          "id": "med_3",
+          "name": "疫病予防学",
+          "prerequisite": [
+            "med_1"
+          ],
+          "effect": "疫病発生率-50%、人口減少リスク-30%"
+        },
+        {
+          "id": "med_4",
+          "name": "精神医療",
+          "prerequisite": [
+            "med_2"
+          ],
+          "effect": "遠征後の士気回復速度+40%",
+          "関連NPC": "npc_grd_007"
+        },
+        {
+          "id": "med_5",
+          "name": "栄養学",
+          "prerequisite": [
+            "med_1",
+            "agr_1"
+          ],
+          "effect": "人口成長率+10%、兵士の持久力+15%"
+        }
+      ]
+    },
+    "commerce": {
+      "name": "商業・経済",
+      "nodes": [
+        {
+          "id": "com_1",
+          "name": "複式簿記",
+          "unlocked_by": "corsalia（初期解放）",
+          "effect": "国庫管理効率+20%"
+        },
+        {
+          "id": "com_2",
+          "name": "信用取引制度",
+          "prerequisite": [
+            "com_1"
+          ],
+          "effect": "貿易量+25%"
+        },
+        {
+          "id": "com_3",
+          "name": "保険制度",
+          "prerequisite": [
+            "com_2"
+          ],
+          "effect": "天災・戦争による経済損失-30%"
+        },
+        {
+          "id": "com_4",
+          "name": "先物取引",
+          "prerequisite": [
+            "com_2"
+          ],
+          "effect": "資源価格の安定化、投機リスク管理"
+        },
+        {
+          "id": "com_5",
+          "name": "中央銀行制度",
+          "prerequisite": [
+            "com_3",
+            "com_4"
+          ],
+          "effect": "インフレ抑制、経済危機発生率-40%"
+        }
+      ]
+    },
+    "military": {
+      "name": "軍事・戦術",
+      "nodes": [
+        {
+          "id": "mil_1",
+          "name": "陣形戦術",
+          "unlocked_by": "regalis（初期解放）",
+          "effect": "戦闘効率+15%"
+        },
+        {
+          "id": "mil_2",
+          "name": "山岳戦術",
+          "unlocked_by": "grandsheim（初期解放）",
+          "effect": "険地での防衛力+40%"
+        },
+        {
+          "id": "mil_3",
+          "name": "海上戦術",
+          "unlocked_by": "corsalia（初期解放）",
+          "effect": "海戦・空戦効率+30%"
+        },
+        {
+          "id": "mil_4",
+          "name": "諜報・情報戦",
+          "prerequisite": [
+            "mil_1"
+          ],
+          "effect": "奇襲成功率+25%、被奇襲率-20%"
+        },
+        {
+          "id": "mil_5",
+          "name": "連合作戦指揮",
+          "prerequisite": [
+            "mil_1",
+            "mil_2"
+          ],
+          "effect": "同盟軍との連携ボーナス+30%",
+          "required": "同盟締結済み"
+        },
+        {
+          "id": "mil_6",
+          "name": "包囲戦術",
+          "prerequisite": [
+            "mil_1",
+            "eng_7"
+          ],
+          "effect": "要塞攻略速度+35%"
+        },
+        {
+          "id": "mil_7",
+          "name": "高高度戦闘術",
+          "prerequisite": [
+            "mil_1",
+            "nav_4"
+          ],
+          "effect": "アルカディア攻略時の戦闘力+20%"
+        }
+      ]
+    },
+    "research": {
+      "name": "学術・調査",
+      "nodes": [
+        {
+          "id": "res_1",
+          "name": "体系的記録術",
+          "unlocked_by": "arcanum（初期解放）",
+          "effect": "技術習得速度+15%"
+        },
+        {
+          "id": "res_2",
+          "name": "天体観測学",
+          "prerequisite": [
+            "res_1"
+          ],
+          "effect": "天候予測精度+40%",
+          "関連NPC": "npc_arc_008"
+        },
+        {
+          "id": "res_3",
+          "name": "地質調査学",
+          "prerequisite": [
+            "res_1"
+          ],
+          "effect": "資源発見確率+30%",
+          "関連NPC": "npc_grd_007"
+        },
+        {
+          "id": "res_4",
+          "name": "民俗・言語学",
+          "prerequisite": [
+            "res_1"
+          ],
+          "effect": "外交効果+15%、NPC関係値上昇速度+10%",
+          "関連NPC": "npc_grd_009"
+        },
+        {
+          "id": "res_5",
+          "name": "空島地理学",
+          "prerequisite": [
+            "res_2",
+            "nav_3"
+          ],
+          "effect": "未探索フロア情報取得確率+25%"
+        },
+        {
+          "id": "res_6",
+          "name": "古代文明解析",
+          "prerequisite": [
+            "res_1",
+            "res_4"
+          ],
+          "effect": "アルカディア関連情報断片を取得できる"
+        },
+        {
+          "id": "res_7",
+          "name": "アルカディア座標学",
+          "prerequisite": [
+            "res_5",
+            "res_6"
+          ],
+          "effect": "攻略ルートの効率化+10%",
+          "関連NPC": "npc_arc_001 解禁条件"
+        }
+      ]
+    },
+    "culture": {
+      "name": "文化・芸術",
+      "nodes": [
+        {
+          "id": "cul_1",
+          "name": "印刷・出版技術",
+          "unlocked_by": "harmonia（初期解放）",
+          "effect": "情報伝播速度+30%"
+        },
+        {
+          "id": "cul_2",
+          "name": "外交芸術",
+          "prerequisite": [
+            "cul_1"
+          ],
+          "effect": "交渉成功率+20%"
+        },
+        {
+          "id": "cul_3",
+          "name": "民心掌握術",
+          "prerequisite": [
+            "cul_1"
+          ],
+          "effect": "国内支持率+15%、徴兵効率+10%"
+        },
+        {
+          "id": "cul_4",
+          "name": "国際博覧会制度",
+          "prerequisite": [
+            "cul_2",
+            "com_2"
+          ],
+          "effect": "5カ国間の貿易量+20%、技術伝播速度+25%"
+        }
+      ]
+    }
+  },
+  "npc_research_interests": {
+    "npc_arc_001": [
+      "res_5",
+      "res_6",
+      "res_7"
+    ],
+    "npc_arc_003": [
+      "res_1",
+      "res_3"
+    ],
+    "npc_arc_005": [
+      "res_6",
+      "res_7"
+    ],
+    "npc_arc_007": [
+      "res_5",
+      "res_6"
+    ],
+    "npc_arc_008": [
+      "res_2",
+      "res_5"
+    ],
+    "npc_arc_009": [
+      "eng_5"
+    ],
+    "npc_grd_001": [
+      "mil_2",
+      "mil_5"
+    ],
+    "npc_grd_002": [
+      "eng_4",
+      "eng_5"
+    ],
+    "npc_grd_007": [
+      "med_1",
+      "res_3"
+    ],
+    "npc_grd_009": [
+      "res_4",
+      "cul_1"
+    ],
+    "npc_cor_001": [
+      "com_2",
+      "com_4"
+    ],
+    "npc_cor_007": [
+      "nav_1",
+      "nav_3",
+      "res_5"
+    ],
+    "npc_cor_005": [
+      "nav_4",
+      "nav_5"
+    ],
+    "npc_reg_006": [
+      "res_1",
+      "res_6"
+    ],
+    "npc_har_002": [
+      "res_4",
+      "cul_1",
+      "res_6"
+    ],
+    "npc_har_008": [
+      "cul_1",
+      "cul_3"
+    ]
+  },
+  "last_updated": "2026-04-23"
+}

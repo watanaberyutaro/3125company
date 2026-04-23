@@ -1,0 +1,53 @@
+{
+  "nation": "グランズヘイム（山岳国）",
+  "description": "険しい山岳地帯の石造り都市。職人と鍛冶師の国。",
+  "landmarks": [
+    {
+      "id": "grand_forge",
+      "name": "大溶鉱炉「灼岩の心臓」",
+      "type": "industrial",
+      "symbol": "⚙️",
+      "description": "グランズヘイム最古の巨大炉。世界最高品質の金属を産出する。常に赤々と燃え続けている。",
+      "built_year": "約450年前",
+      "output_tons_per_year": 12000,
+      "notable": "神話では「大地の心臓の火」とも呼ばれる"
+    },
+    {
+      "id": "grand_citadel",
+      "name": "岩砦ガルドリム",
+      "type": "castle",
+      "symbol": "🏯",
+      "description": "山頂に建つ石造りの要塞城。外敵が侵入した記録はゼフィリア史上ゼロ。",
+      "built_year": "約400年前",
+      "walls_thickness_m": 8,
+      "garrison": 5000
+    },
+    {
+      "id": "grand_mine",
+      "name": "深掘り鉱山「黒脈」",
+      "type": "resource",
+      "symbol": "⛏️",
+      "description": "地下500m以上に及ぶ複合鉱山。ミスリル・鉄・銅が採掘される。",
+      "built_year": "約380年前",
+      "depth_m": 580,
+      "workers": 8000
+    },
+    {
+      "id": "grand_guild",
+      "name": "職人ギルド総本部",
+      "type": "guild",
+      "symbol": "🔨",
+      "description": "全職人の格付けと資格認定を行う機関。マスター職人はここで認定される。",
+      "built_year": "約300年前"
+    },
+    {
+      "id": "grand_armory",
+      "name": "秘蔵武器庫「ドワーフの宝」",
+      "type": "military",
+      "symbol": "⚔️",
+      "description": "歴代の名工が製作した伝説の武具が保管される。一般公開されていない。",
+      "built_year": "約350年前",
+      "items": 4200
+    }
+  ]
+}

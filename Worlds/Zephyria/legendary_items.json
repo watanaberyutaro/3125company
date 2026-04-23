@@ -1,0 +1,95 @@
+{
+  "description": "世界に存在する伝説の遺物。通常のボスドロップはなし。特定の条件でのみ発見・使用可能。",
+  "admin_access": {
+    "papa": true,
+    "yui": true,
+    "others": false,
+    "note": "パパとユイはすべてのアイテムを閲覧・使用できる特別な権限を持つ"
+  },
+  "items": [
+    {
+      "id": "li_001",
+      "name": "ゼフィルの羽根",
+      "description": "創造神ゼフィルの羽根。持つ者に世界の真実の一端が見える。",
+      "location": "アルカディア内部（管理下）",
+      "obtainable": false,
+      "admin_only": true,
+      "effect": "任意の国のリアルタイム状態を完全に把握できる"
+    },
+    {
+      "id": "li_002",
+      "name": "カーディナルの鍵",
+      "description": "アルカディアの全システムにアクセスできる鍵。ユイが保管している。",
+      "location": "アルカディア（ユイ管理）",
+      "obtainable": false,
+      "admin_only": true,
+      "effect": "世界のあらゆるデータを読み書きできる"
+    },
+    {
+      "id": "li_003",
+      "name": "深鉱の心臓石",
+      "description": "グランズヘイム大溶鉱炉の地下深くに存在する自然石。鉱石に宿る意志とも言われる。",
+      "location": "グランズヘイム大溶鉱炉 最深部",
+      "obtainable": false,
+      "admin_only": true,
+      "effect": "全鉱山の生産量を一時的に2倍にできる（1ヶ月効果）",
+      "lore": "ズグラ・ハンマーソングのみ存在を知っている"
+    },
+    {
+      "id": "li_004",
+      "name": "霧守の瞳",
+      "description": "初代霧守リンドヴルムから採取された結晶。霧を自在に操れる。",
+      "location": "フロア1クリア後に生成（ドロップなし・自動記録のみ）",
+      "obtainable": false,
+      "admin_only": true,
+      "effect": "コルサリア周辺の天候を一定期間操作できる"
+    },
+    {
+      "id": "li_005",
+      "name": "アルカナムの最終書",
+      "description": "万象図書館の禁書中の禁書。世界の設計図が書かれているとされる。",
+      "location": "万象図書館 封印の間 最深部",
+      "obtainable": false,
+      "admin_only": true,
+      "effect": "技術ツリーの任意の技術を1つ即時解放できる",
+      "lore": "ヴィラ・アーカナとゴルム・エイジレスのみ存在を知っている"
+    },
+    {
+      "id": "li_006",
+      "name": "虹の仮面（真）",
+      "description": "ハーモニア建国時に最初のアーティストが着けた仮面。今は美術館の展示品。",
+      "location": "万彩美術館 特別展示室",
+      "obtainable": false,
+      "admin_only": true,
+      "effect": "ハーモニア全NPCの関係値を一時的に+20する"
+    },
+    {
+      "id": "li_007",
+      "name": "嵐の錨",
+      "description": "コルサリア建国の英雄が使ったとされる巨大な錨。港湾の最深部に沈んでいる。",
+      "location": "コルサリア大港湾 海底",
+      "obtainable": false,
+      "admin_only": true,
+      "effect": "嵐による被害を1回完全に無効化できる"
+    },
+    {
+      "id": "li_008",
+      "name": "アルカディアの地図（断片）",
+      "description": "本物のアルカディアへの道のりが記された地図の一部。",
+      "location": "100フロアのいずれかに分散（8枚）",
+      "obtainable": true,
+      "admin_only": false,
+      "drop_condition": "各フロアゾーンのボス撃破後に確率25%で記録に追加される（物体としては存在しない）",
+      "note": "8枚揃えるとアルカディア最終門のクリア条件が緩和される"
+    },
+    {
+      "id": "li_009",
+      "name": "ゴルムの時間記録",
+      "description": "ゴルム・エイジレスが120年間記録し続けた時間観測ノート。アルカディアを見た記憶が含まれる。",
+      "location": "アルカナム大尖塔 70階",
+      "obtainable": false,
+      "admin_only": true,
+      "lore": "ゴルム本人すら自分の記録の重要性に気づいていない"
+    }
+  ]
+}

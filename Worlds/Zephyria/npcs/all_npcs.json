@@ -1,0 +1,2332 @@
+{
+  "total": 46,
+  "last_updated": "2026-04-21",
+  "npcs": [
+    {
+      "id": "npc_arc_001",
+      "name": "オリウス・ルーメン六世",
+      "nation": "arcanum",
+      "age": 91,
+      "gender": "男性",
+      "profession": "大賢者（第六代）",
+      "traits": [
+        "超然",
+        "博識",
+        "厳格",
+        "孤高"
+      ],
+      "skills": {
+        "外交": 6,
+        "管理": 8,
+        "戦略": 9,
+        "制作": 4,
+        "研究": 10,
+        "商才": 5
+      },
+      "popularity": 95,
+      "wealth": 720000,
+      "current_position": "大賢者",
+      "history": "アルカナムを600年前に建国した大魔法師「初代オリウス」の名を継ぐ第六代目。初代との血縁はないが、試練を突破した者が名を継ぐ伝統がある。91歳にして現役。死の直前まで研究すると宣言している。",
+      "secret_organization": {
+        "name": "禁書の番人",
+        "role": "最高顧問（創設者）",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_reg_001": {
+          "type": "alliance_partner",
+          "value": 55,
+          "note": "政治と知識の補完関係"
+        },
+        "npc_arc_002": {
+          "type": "trusted_confidant",
+          "value": 80,
+          "note": "カーディナル研究の唯一の共有者"
+        },
+        "npc_arc_003": {
+          "type": "student_pride",
+          "value": 65,
+          "note": "最も才能ある弟子と思っている"
+        },
+        "npc_arc_004": {
+          "type": "concern",
+          "value": 50,
+          "note": "ネアの野心的な研究が危険な方向へ向かわないか心配"
+        }
+      },
+      "romance_status": "1000年（誇張）単位の研究人生で恋愛の機会を逃し続けた。今更とも思っている",
+      "personality_deep": "全知に見えるが、実は日常の小さなことに弱い（炊事・洗濯が一人でできない）",
+      "arcadia_secret": "アルカディアの座標を特定済み。カーディナルと何らかの繋がりがあると確信している",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_arc_002",
+      "name": "ヴィラ・アーカナ",
+      "nation": "arcanum",
+      "age": 43,
+      "gender": "女性",
+      "profession": "魔法研究者・第三塔主任",
+      "traits": [
+        "論理的",
+        "完璧主義",
+        "無口",
+        "実は優しい"
+      ],
+      "skills": {
+        "外交": 4,
+        "管理": 6,
+        "戦略": 7,
+        "制作": 5,
+        "研究": 9,
+        "商才": 3
+      },
+      "popularity": 78,
+      "wealth": 290000,
+      "current_position": "副賢者",
+      "history": "レガリスの貴族家出身。家の期待を裏切りアルカナムへ。魔法式の解析を専門とし、古代の封印魔法を現代語訳した学者。研究室からほとんど出ないが、年に一度だけ外の世界を旅する習慣を持つ。",
+      "secret_organization": {
+        "name": "禁書の番人",
+        "role": "主任司書・実務リーダー",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_arc_001": {
+          "type": "trusted_confidant",
+          "value": 80,
+          "note": "最も信頼する師匠"
+        },
+        "npc_har_002": {
+          "type": "knowledge_admiration",
+          "value": 60,
+          "note": "古詩の中にアルカディアの手がかりを見つけたルーンに驚きを感じている"
+        },
+        "npc_reg_002": {
+          "type": "cautious_observation",
+          "value": 35,
+          "note": "黄金の鎖の情報収集員だと推測している"
+        }
+      },
+      "romance_status": "本と魔法書が恋人と言い張っている。本気かどうか不明",
+      "personality_deep": "禁書の内容を全て暗記している。夢でその内容を再生することがある",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_arc_003",
+      "name": "セロ・クリスタル",
+      "nation": "arcanum",
+      "age": 35,
+      "gender": "男性",
+      "profession": "錬金術師",
+      "traits": [
+        "好奇心旺盛",
+        "実験好き",
+        "失敗を恐れない",
+        "楽観的"
+      ],
+      "skills": {
+        "外交": 5,
+        "管理": 4,
+        "戦略": 5,
+        "制作": 7,
+        "研究": 8,
+        "商才": 6
+      },
+      "popularity": 66,
+      "wealth": 180000,
+      "current_position": null,
+      "history": "コルサリアの商人の息子。情報商人として旅する中でアルカナムの錬金術に魅了され移住。実験のたびに爆発させる問題児だが、その成功率と革新性は認められている。研究室が爆発した回数は37回。",
+      "secret_organization": {
+        "name": "禁書の番人",
+        "role": "見習い会員",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_grd_002": {
+          "type": "romantic_interest",
+          "value": 65,
+          "note": "グランズヘイム訪問中に出会った鍛冶師。文通中"
+        },
+        "npc_cor_002": {
+          "type": "cautious_interest",
+          "value": 30,
+          "note": "テイラの接近の目的が掴めない。魅力は感じる"
+        }
+      },
+      "romance_status": "ブリン・コッパーアームと文通中。次の直接面会の機会を待っている",
+      "personality_deep": "晶石魔法の天才だが、人との距離感が掴めない社交下手",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_arc_004",
+      "name": "ネア・ソルシア",
+      "nation": "arcanum",
+      "age": 19,
+      "gender": "女性",
+      "profession": "見習い魔法師",
+      "traits": [
+        "純粋",
+        "努力家",
+        "怖がり",
+        "潜在能力大"
+      ],
+      "skills": {
+        "外交": 3,
+        "管理": 4,
+        "戦略": 3,
+        "制作": 3,
+        "研究": 6,
+        "商才": 2
+      },
+      "popularity": 54,
+      "wealth": 20000,
+      "current_position": null,
+      "history": "ハーモニア出身の元踊り子見習い。踊りの動きが魔法陣と酷似していることに気づき独学で魔法を習得。アルカナムの入塾試験を最年少で突破した天才。オリウスから「百年に一度の才」と称された。",
+      "secret_organization": {
+        "name": "禁書の番人",
+        "role": "封印部門担当",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_reg_004": {
+          "type": "information_exchange",
+          "value": 45,
+          "note": "魔法と政治情報の相互提供"
+        },
+        "npc_arc_001": {
+          "type": "respectful_student",
+          "value": 50,
+          "note": "師匠だが、自分の方向性が違うことに気づいている"
+        },
+        "npc_har_002": {
+          "type": "secret_correspondence",
+          "value": 55,
+          "note": "古詩研究の秘密の文通相手。お互い素性を隠している"
+        }
+      },
+      "romance_status": "ルーン・エコーとの文通に特別な感情を感じているが、顔も知らない相手",
+      "personality_deep": "封印魔法の専門家として世界の危険を知りすぎており、孤独を感じている",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_arc_005",
+      "name": "フォス・ルーメン",
+      "nation": "arcanum",
+      "age": 19,
+      "gender": "male",
+      "profession": "魔法学院 一年生 / 天才候補",
+      "traits": [
+        "天真爛漫",
+        "天才肌",
+        "常識がない"
+      ],
+      "skills": {
+        "外交": 20,
+        "管理": 10,
+        "戦略": 30,
+        "制作": 25,
+        "研究": 90,
+        "商才": 10
+      },
+      "popularity": 40,
+      "wealth": 300000,
+      "history": "僻地の農村出身。幼少期から日用品に魔法をかけて壊し続けた問題児。しかし才能はオリウス六世が「過去50年で最高」と評価した。",
+      "current_position": "アルカナム魔法学院 一年生（特待生）",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属。組織が何かすら知らない",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_arc_001": {
+          "type": "overwhelmed_by",
+          "value": 55,
+          "note": "オリウスを敬っているが、会うたびにプレッシャーで固まる"
+        },
+        "npc_arc_003": {
+          "type": "admired_mentor",
+          "value": 70,
+          "note": "セロ先輩に魔法を教わっている"
+        },
+        "npc_reg_006": {
+          "type": "met_once",
+          "value": 35,
+          "note": "王都訪問中にアルバと話して刺激を受けた"
+        }
+      },
+      "romance_status": "恋愛より魔法。でも同学年の女子学生に毎回話しかけられると何も言えなくなる",
+      "personality_deep": "「なぜ」を無限に問いかける性格。授業中に教授の理論の穴を無邪気に指摘して気まずい空気にするのが得意",
+      "arcadia_belief": "アルカディアに行ったら全部の「なぜ」に答えが出ると思っている",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_arc_006",
+      "name": "ウィタ・モルフォス",
+      "nation": "arcanum",
+      "age": 55,
+      "gender": "female",
+      "profession": "変容魔法の権威 / 倫理委員会 委員長",
+      "traits": [
+        "厳格",
+        "倫理観が強い",
+        "情に脆い"
+      ],
+      "skills": {
+        "外交": 60,
+        "管理": 75,
+        "戦略": 50,
+        "制作": 35,
+        "研究": 80,
+        "商才": 30
+      },
+      "popularity": 55,
+      "wealth": 4000000,
+      "history": "変容魔法（生物の形態を変える魔法）を研究中に事故を起こし、助手が半永久的に変容した事件の責任者。それ以来、魔法倫理の研究と規制に転向した。",
+      "current_position": "禁忌研究院 倫理委員会 委員長",
+      "secret_organization": {
+        "name": "禁書の番人",
+        "role": "倫理審査担当",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_arc_001": {
+          "type": "professional_tension",
+          "value": 45,
+          "note": "オリウスのアルカディア研究が倫理的に問題ないか常に監視している"
+        },
+        "npc_arc_004": {
+          "type": "concerned_mentor",
+          "value": 55,
+          "note": "ネアの野心的な研究の方向性を心配している"
+        },
+        "npc_arc_005": {
+          "type": "potential_danger",
+          "value": 30,
+          "note": "フォスの制御されない才能が危険だと感じている"
+        }
+      },
+      "romance_status": "事故で変容してしまった元助手への責任から、個人的な幸福を追求することをやめている",
+      "personality_deep": "表向きは冷厳な委員長だが、実験動物の世話を毎日欠かさずしている。規則より命を大切にする本質がある",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_arc_007",
+      "name": "ゴルム・エイジレス",
+      "nation": "arcanum",
+      "age": 120,
+      "gender": "male",
+      "profession": "時間魔法研究者 / 最古参の学者",
+      "traits": [
+        "超然としている",
+        "記憶が断片的",
+        "予言めいたことを言う"
+      ],
+      "skills": {
+        "外交": 20,
+        "管理": 15,
+        "戦略": 40,
+        "制作": 20,
+        "研究": 98,
+        "商才": 5
+      },
+      "popularity": 35,
+      "wealth": 1500000,
+      "history": "時間魔法の副作用で120歳まで生きている。時間の流れの感覚が通常人と大きくずれており、100年前のことを「先週」と言うことがある。",
+      "current_position": "アルカナム大尖塔 70階 時間魔法研究室（半引退状態）",
+      "secret_organization": {
+        "name": "禁書の番人",
+        "role": "創設者（でも忘れている）",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_arc_001": {
+          "type": "senior_junior",
+          "value": 50,
+          "note": "オリウスを「若者」と呼んでいる（60歳なのに）"
+        },
+        "npc_arc_005": {
+          "type": "sees_destiny",
+          "value": 60,
+          "note": "フォスを見て「あの子は来る」と呟いた"
+        }
+      },
+      "romance_status": "時間が歪んでいるため、恋愛の記憶と現在が混ざり合っている",
+      "personality_deep": "アルカディアを実際に見たことがある唯一の生存者かもしれない。でも自分でもわからなくなっている",
+      "arcadia_belief": "「アルカディアはいつも同じ場所にある。変わるのはこちら側だ」と呟くことがある",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_arc_008",
+      "name": "テラ・スターウィーバー",
+      "nation": "arcanum",
+      "age": 31,
+      "gender": "female",
+      "profession": "星詠み師 / 占星術士",
+      "traits": [
+        "神秘的",
+        "内向的",
+        "真実にこだわる"
+      ],
+      "skills": {
+        "外交": 30,
+        "管理": 25,
+        "戦略": 45,
+        "制作": 40,
+        "研究": 85,
+        "商才": 35
+      },
+      "popularity": 60,
+      "wealth": 2200000,
+      "history": "星の動きを読んで未来を予測する占星術士。彼女の予測は70%の確率で的中するため、各国の王侯貴族から依頼が来る。",
+      "current_position": "星詠み観測所 主任 兼 フリーランス占星術師",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属だが、各組織から情報を求められる立場",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_arc_001": {
+          "type": "professional_respect",
+          "value": 65,
+          "note": "オリウスからアルカディアの占星術的位置を頼まれたことがある"
+        },
+        "npc_reg_001": {
+          "type": "royal_advisor",
+          "value": 50,
+          "note": "エルドリン国王の密かな依頼者"
+        },
+        "npc_har_002": {
+          "type": "artistic_kinship",
+          "value": 55,
+          "note": "ルーンの詩と星の動きが一致することに気づき、文通を始めた"
+        }
+      },
+      "romance_status": "「星が示す出会い」を待っている。ロマンチストだが、現実の恋愛は経験が少ない",
+      "personality_deep": "最近の観測で「アルカディアの方角から通常の星とは異なる光点が発信されている」ことに気づいている。記録しているが誰にも言っていない",
+      "arcadia_belief": "星の動きからアルカディアの存在を確信している。カーディナルの光と思しきものを観測した",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_arc_009",
+      "name": "ジン・エコーストーン",
+      "nation": "arcanum",
+      "age": 27,
+      "gender": "male",
+      "profession": "魔法道具職人",
+      "traits": [
+        "職人気質",
+        "孤独を好む",
+        "独創的"
+      ],
+      "skills": {
+        "外交": 25,
+        "管理": 30,
+        "戦略": 20,
+        "制作": 90,
+        "研究": 70,
+        "商才": 55
+      },
+      "popularity": 42,
+      "wealth": 3500000,
+      "history": "グランズヘイムで鍛冶を学んだ後、アルカナムで魔法付与の技術を修得。魔法と鍛冶の融合という独自分野を開拓している。",
+      "current_position": "アルカナム 魔法道具工房「ストーン&マジック」経営者",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_grd_002": {
+          "type": "former_mentor",
+          "value": 70,
+          "note": "ブリンの工房で修業した。今でも尊敬している"
+        },
+        "npc_grd_004": {
+          "type": "trade_partner",
+          "value": 55,
+          "note": "トルンから素材を仕入れている"
+        },
+        "npc_arc_003": {
+          "type": "friendly_colleague",
+          "value": 60,
+          "note": "セロから魔法理論を学び、お互いの知識を交換"
+        }
+      },
+      "romance_status": "グランズヘイムにいた頃に好きな人がいたが、アルカナムに移ってから疎遠になった",
+      "personality_deep": "魔法道具に意識が宿ると信じており、道具に名前をつけて呼びかけながら作業する。周囲には変人と思われているが、その道具の性能が異常に高い",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_cor_001",
+      "name": "マリス・コルレオン",
+      "nation": "corsalia",
+      "age": 49,
+      "gender": "女性",
+      "profession": "海商ギルド長",
+      "traits": [
+        "カリスマ",
+        "大胆",
+        "情報通",
+        "義理と人情"
+      ],
+      "skills": {
+        "外交": 8,
+        "管理": 7,
+        "戦略": 9,
+        "制作": 3,
+        "研究": 5,
+        "商才": 10
+      },
+      "popularity": 88,
+      "wealth": 890000,
+      "current_position": "ギルドマスター",
+      "history": "コルサリア最大の海商ギルドを一代で築いた女傑。25歳で小舟一隻から始め、今や100隻以上の船団を持つ。「情報を制する者が世界を制す」が信条。ゼフィリア中に情報網を持つ。",
+      "secret_organization": {
+        "name": "影の手",
+        "role": "最高顧問（表向きは無関係を装う）",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_reg_005": {
+          "type": "secret_deal",
+          "value": 55,
+          "note": "裏で情報と金を交換"
+        },
+        "npc_cor_002": {
+          "type": "complex_master_servant",
+          "value": 50,
+          "note": "テイラが二重スパイであることを半分知っている"
+        },
+        "npc_cor_004": {
+          "type": "distrust",
+          "value": 30,
+          "note": "ソラの正直さが組織に向かないと思っている"
+        },
+        "npc_grd_001": {
+          "type": "business_respect",
+          "value": 45,
+          "note": "商人として最大の市場だが、扱いにくい相手"
+        }
+      },
+      "romance_status": "過去に組織内で恋愛関係があり、それが失敗してから恋愛を避けている",
+      "personality_deep": "すべての会話に意図があり、「雑談」をしない。常に情報を収集している",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_cor_002",
+      "name": "テイラ・ウィンドサーフ",
+      "nation": "corsalia",
+      "age": 31,
+      "gender": "女性",
+      "profession": "情報商人",
+      "traits": [
+        "軽快",
+        "観察眼が鋭い",
+        "秘密主義",
+        "好奇心旺盛"
+      ],
+      "skills": {
+        "外交": 7,
+        "管理": 5,
+        "戦略": 7,
+        "制作": 4,
+        "研究": 8,
+        "商才": 9
+      },
+      "popularity": 72,
+      "wealth": 260000,
+      "current_position": null,
+      "history": "アルカナム出身の元魔法師見習い。研究よりも人と情報に興味を持ちコルサリアへ移住。現在はゼフィリア中の「生きた情報」を取引する。風のように現れ風のように去ると言われる。",
+      "secret_organization": {
+        "name": "影の手（外）+ 黄金の鎖（内通）",
+        "role": "二重スパイ",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_arc_003": {
+          "type": "romantic_interest",
+          "value": 30,
+          "note": "研究者として興味があるが、目的のための接触かもしれない"
+        },
+        "npc_reg_002": {
+          "type": "professional_tension",
+          "value": 25,
+          "note": "諜報で競合する相手"
+        },
+        "npc_cor_001": {
+          "type": "dangerous_secret",
+          "value": 50,
+          "note": "マリスへの二重スパイがバレたら命はない"
+        }
+      },
+      "romance_status": "恋愛は職業上のツールとして使ってきたが、本当の感情を持てるか自問している",
+      "personality_deep": "完璧な演技者だが、一人のときに仮面が外れて疲れた顔をする",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_cor_003",
+      "name": "ゼフ・タイドウォーカー",
+      "nation": "corsalia",
+      "age": 38,
+      "gender": "男性",
+      "profession": "船団長",
+      "traits": [
+        "豪快",
+        "義理堅い",
+        "酒好き",
+        "海を愛する"
+      ],
+      "skills": {
+        "外交": 5,
+        "管理": 6,
+        "戦略": 7,
+        "制作": 5,
+        "研究": 3,
+        "商才": 6
+      },
+      "popularity": 79,
+      "wealth": 330000,
+      "current_position": "副官",
+      "history": "コルサリア生まれの生粋の船乗り。15歳で初めて大海に漕ぎ出し、以来ゼフィリアの海図を塗り替えてきた。新航路の発見者として歴史に名を刻む。船の上なら台風でも眠れる。",
+      "secret_organization": {
+        "name": "影の手",
+        "role": "物流・密輸ネットワーク管理者",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_grd_004": {
+          "type": "trade_contact",
+          "value": 45,
+          "note": "表向きの取引相手"
+        },
+        "npc_har_003": {
+          "type": "old_acquaintance",
+          "value": 40,
+          "note": "昔コルサリアを訪れたソルと旧友"
+        }
+      },
+      "romance_status": "各港に顔馴染みがいるが、特定の誰かへの感情はない。自由人",
+      "personality_deep": "陽気な海の男に見えるが、密輸ルートの設計は緻密で天才的",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_cor_004",
+      "name": "ソラ・ペトロス",
+      "nation": "corsalia",
+      "age": 55,
+      "gender": "男性",
+      "profession": "港湾管理局長",
+      "traits": [
+        "堅実",
+        "几帳面",
+        "公平",
+        "頑固"
+      ],
+      "skills": {
+        "外交": 6,
+        "管理": 10,
+        "戦略": 5,
+        "制作": 3,
+        "研究": 4,
+        "商才": 7
+      },
+      "popularity": 65,
+      "wealth": 240000,
+      "current_position": null,
+      "history": "30年間港の管理を一人で担ってきた縁の下の力持ち。どの船が何を積んで入港したか全て記憶している。一度も賄賂を受け取ったことがなく、その清廉さで港の秩序を守り続けている。",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属。組織の存在を知らない",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_cor_001": {
+          "type": "naive_loyalty",
+          "value": 70,
+          "note": "総督を純粋に尊敬している。裏を知らない"
+        },
+        "npc_reg_004": {
+          "type": "information_exchange",
+          "value": 45,
+          "note": "公式の商業情報交換"
+        },
+        "npc_har_004": {
+          "type": "friendship",
+          "value": 75,
+          "note": "芸術と商業を通じた素直な友人関係"
+        }
+      },
+      "romance_status": "ミア・リズムに密かに好意を持っているが、コルサリアとハーモニアの距離がある",
+      "personality_deep": "コルサリアで唯一「純粋」と言われる人物。裏社会を知らないが、いつか知る日が来るだろう",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_cor_005",
+      "name": "ナミ・タイドクレスト",
+      "nation": "corsalia",
+      "age": 26,
+      "gender": "female",
+      "profession": "飛空艇 パイロット",
+      "traits": [
+        "豪快",
+        "自由奔放",
+        "根は真面目"
+      ],
+      "skills": {
+        "外交": 40,
+        "管理": 35,
+        "戦略": 55,
+        "制作": 65,
+        "研究": 30,
+        "商才": 50
+      },
+      "popularity": 65,
+      "wealth": 1800000,
+      "history": "コルサリア出身の天才パイロット。17歳で免許取得、20歳で最難関の嵐ルートを単独制覇した伝説の記録保持者。",
+      "current_position": "コルサリア飛空艇組合 エース。各国間の特急便を担当",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_cor_001": {
+          "type": "employer_respect",
+          "value": 55,
+          "note": "マリスの仕事は受けるが、個人としての距離は保つ"
+        },
+        "npc_grd_007": {
+          "type": "outdoor_comrade",
+          "value": 60,
+          "note": "荒野サバイバル仲間。互いに極限の仕事をする者同士"
+        },
+        "npc_arc_001": {
+          "type": "charter_client",
+          "value": 45,
+          "note": "オリウスの秘密チャーター便を何度か担当。行先を絶対に話さない"
+        }
+      },
+      "romance_status": "空が恋人。でも同じパイロット仲間の男性に少しだけ揺れている",
+      "personality_deep": "命がけの飛行を繰り返しながら、実は「いつか落ちる」という恐怖を常に抱えている。それでも飛ぶことをやめない",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_cor_006",
+      "name": "ダーク・シャドウレイン",
+      "nation": "corsalia",
+      "age": 40,
+      "gender": "male",
+      "profession": "暗殺者 / 情報ブローカー",
+      "traits": [
+        "無感情に見える",
+        "職業倫理がある",
+        "実は話好き"
+      ],
+      "skills": {
+        "外交": 25,
+        "管理": 40,
+        "戦略": 80,
+        "制作": 30,
+        "研究": 50,
+        "商才": 75
+      },
+      "popularity": 10,
+      "wealth": 12000000,
+      "history": "出身地不明。10代から暗殺業に従事。「依頼は守るが無関係の者は傷つけない」という独自の職業倫理を持ち、業界では珍しく信頼が高い。",
+      "current_position": "フリーランス 暗殺者・情報ブローカー（コルサリア拠点）",
+      "secret_organization": {
+        "name": "影の手（外部契約者）",
+        "role": "高額依頼専門の外部委託",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_cor_001": {
+          "type": "contractor_employer",
+          "value": 40,
+          "note": "マリスの仕事を受けるが対等な取引関係"
+        },
+        "npc_reg_005": {
+          "type": "past_encounter",
+          "value": 20,
+          "note": "かつてダリウスに依頼された仕事を途中でキャンセルした（依頼内容に問題があった）"
+        }
+      },
+      "romance_status": "過去に依頼対象の護衛と恋仲になり、依頼を断ったことがある。それ以来、感情を持たないようにしている",
+      "personality_deep": "本名も出身地も誰も知らないが、実は読書家。特に詩集を好む",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_cor_007",
+      "name": "リンド・ウェーブウォーカー",
+      "nation": "corsalia",
+      "age": 33,
+      "gender": "male",
+      "profession": "漁師 / 海図作成家",
+      "traits": [
+        "穏やか",
+        "観察眼が鋭い",
+        "無欲"
+      ],
+      "skills": {
+        "外交": 40,
+        "管理": 30,
+        "戦略": 35,
+        "制作": 75,
+        "研究": 60,
+        "商才": 40
+      },
+      "popularity": 55,
+      "wealth": 600000,
+      "history": "代々漁師の家系。本業の傍ら独学で海図・空図を作成しており、その精度はアルカナムの研究者も認めるほど。",
+      "current_position": "コルサリア南港 漁師 兼 地図工房「海の目」経営者",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_cor_005": {
+          "type": "navigator_respect",
+          "value": 70,
+          "note": "ナミのパイロット技術を尊敬。海図を提供している"
+        },
+        "npc_arc_002": {
+          "type": "map_exchange",
+          "value": 55,
+          "note": "ヴィラとは空間地図の情報を交換している"
+        },
+        "npc_cor_004": {
+          "type": "neighbor_warmth",
+          "value": 65,
+          "note": "ソラが顧客。なんとなく見守っている"
+        }
+      },
+      "romance_status": "妻と子供がいる。家族が人生の中心。",
+      "personality_deep": "世界で最も正確なアルカディア周辺の空図を持っている（本人は単なる観察記録と思っている）",
+      "arcadia_belief": "霧の向こうに何かがあることを肌感覚で知っている。でも誰にも話したことがない",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_cor_008",
+      "name": "セシ・ペールムーン",
+      "nation": "corsalia",
+      "age": 19,
+      "gender": "female",
+      "profession": "酒場 給仕 / 歌手見習い",
+      "traits": [
+        "明るい",
+        "人懐こい",
+        "うっかりしている"
+      ],
+      "skills": {
+        "外交": 60,
+        "管理": 20,
+        "戦略": 15,
+        "制作": 55,
+        "研究": 20,
+        "商才": 45
+      },
+      "popularity": 70,
+      "wealth": 200000,
+      "history": "港の酒場で生まれ育った少女。物心ついたときから情報が飛び交う環境にいた。歌の才能があるがまだ自覚していない。",
+      "current_position": "月影酒場 給仕 兼 歌手（不定期）",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属。でも酒場で無数の秘密を聞いている",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_cor_006": {
+          "type": "mysterious_regular",
+          "value": 40,
+          "note": "ダークが常連。怖いけど礼儀正しいので嫌いじゃない"
+        },
+        "npc_cor_003": {
+          "type": "uncle_figure",
+          "value": 65,
+          "note": "ゼフをおじさんのように思っている"
+        },
+        "npc_har_004": {
+          "type": "music_inspiration",
+          "value": 55,
+          "note": "ハーモニアから来たミアの演奏を聴いて歌手を目指すようになった"
+        }
+      },
+      "romance_status": "恋愛とかよくわからないが、毎週来る帽子をかぶった青年が気になっている",
+      "personality_deep": "気づかないうちに各組織の重要な情報を聞いている危険な存在。でも本人は全く気づいていない",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_cor_009",
+      "name": "アクラ・ブレイズシップ",
+      "nation": "corsalia",
+      "age": 48,
+      "gender": "male",
+      "profession": "海賊艦隊 元副艦長 / 今は海運業",
+      "traits": [
+        "豪快",
+        "義侠心がある",
+        "過去を引きずっている"
+      ],
+      "skills": {
+        "外交": 50,
+        "管理": 55,
+        "戦略": 70,
+        "制作": 35,
+        "研究": 20,
+        "商才": 65
+      },
+      "popularity": 45,
+      "wealth": 5000000,
+      "history": "かつてコルサリアの裏海賊艦隊の副艦長だったが、「無関係の民間船への略奪」に加担したことを悔い、引退。今は合法の海運業を営む。",
+      "current_position": "ブレイズシップ海運 社長",
+      "secret_organization": {
+        "name": "影の手（元会員・離脱済み）",
+        "role": "元部隊長。今は干渉されない代わりに情報を流さない約束",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_cor_001": {
+          "type": "uneasy_truce",
+          "value": 30,
+          "note": "マリスとは過去の縁で繋がっているが、今は別々の道"
+        },
+        "npc_cor_005": {
+          "type": "mentor_pilot",
+          "value": 70,
+          "note": "ナミに飛空艇の初歩を教えた師匠筋"
+        },
+        "npc_grd_001": {
+          "type": "begrudging_respect",
+          "value": 55,
+          "note": "昔、ガルドの岩砦に攻撃を仕掛けて完封されたことがある"
+        }
+      },
+      "romance_status": "略奪した船に乗っていた女性に長年の贖罪をしている。彼女は今も許していないが、アクラは届け物を続けている",
+      "personality_deep": "過去の罪を消すことはできないと知っている。でもできることをやり続けることが贖罪と信じている",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_grd_001",
+      "name": "ガルド・ストーンフィスト",
+      "nation": "grandsheim",
+      "age": 78,
+      "gender": "男性",
+      "profession": "頭領鍛冶師",
+      "traits": [
+        "頑固",
+        "職人気質",
+        "寡黙",
+        "誇り高い"
+      ],
+      "skills": {
+        "外交": 2,
+        "管理": 7,
+        "戦略": 6,
+        "制作": 10,
+        "研究": 5,
+        "商才": 4
+      },
+      "popularity": 91,
+      "wealth": 520000,
+      "current_position": "頭領",
+      "history": "グランズヘイム史上最高の鍛冶師と称される生きる伝説。50年で1000本以上の名剣を鍛えた。弟子をとらず「鉄は嘘をつかない」が口癖。実はトルンを密かに後継者として見ている。",
+      "secret_organization": {
+        "name": "深鉱の誓い",
+        "role": "顧問（族長として形式的に参加）",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_reg_003": {
+          "type": "warriors_respect",
+          "value": 75,
+          "note": "最も尊敬する他国の戦士"
+        },
+        "npc_grd_002": {
+          "type": "father_figure",
+          "value": 80,
+          "note": "実の娘のように思っている"
+        },
+        "npc_grd_003": {
+          "type": "trusted_historian",
+          "value": 70,
+          "note": "伝統の守り手として信頼"
+        }
+      },
+      "romance_status": "妻に先立たれて20年。再婚する気はないが、ブリンには幸せになってほしいと思っている",
+      "personality_deep": "無愛想に見えるが、若い職人の成長を密かに喜んでいる",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_grd_002",
+      "name": "ブリン・コッパーアーム",
+      "nation": "grandsheim",
+      "age": 45,
+      "gender": "女性",
+      "profession": "採掘師組合長",
+      "traits": [
+        "豪快",
+        "義侠心",
+        "現実的",
+        "面倒見がいい"
+      ],
+      "skills": {
+        "外交": 4,
+        "管理": 8,
+        "戦略": 5,
+        "制作": 7,
+        "研究": 6,
+        "商才": 5
+      },
+      "popularity": 77,
+      "wealth": 310000,
+      "current_position": "副頭領",
+      "history": "幼少期に落盤事故で右腕を失い、銅の義手を装着。その後さらに強くなり、採掘師たちの組合長に。山の地図をすべて頭に入れており、誰よりも早く新鉱脈を発見できる。",
+      "secret_organization": {
+        "name": "深鉱の誓い",
+        "role": "技術部門リーダー",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_reg_002": {
+          "type": "old_friend",
+          "value": 70,
+          "note": "若い頃の旅仲間。今も文通"
+        },
+        "npc_grd_001": {
+          "type": "respect_care",
+          "value": 80,
+          "note": "父親のように慕っている"
+        },
+        "npc_arc_003": {
+          "type": "romantic_interest",
+          "value": 65,
+          "note": "研究目的でアルカナムを訪問した際に出会い、魅かれている。遠距離で文通中"
+        },
+        "npc_grd_004": {
+          "type": "friendly_rivalry",
+          "value": 60,
+          "note": "技術を競い合う良きライバル"
+        }
+      },
+      "romance_status": "アルカナムのセロ・クリスタルと文通中。直接会えないが、手紙で気持ちを育んでいる",
+      "personality_deep": "職人として完璧を目指すが、自分の作品に対する評価に人一倍敏感",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_grd_003",
+      "name": "ズグラ・ハンマーソング",
+      "nation": "grandsheim",
+      "age": 61,
+      "gender": "男性",
+      "profession": "職人ギルド長",
+      "traits": [
+        "陽気",
+        "話好き",
+        "交渉上手",
+        "職人には厳しい"
+      ],
+      "skills": {
+        "外交": 6,
+        "管理": 9,
+        "戦略": 7,
+        "制作": 8,
+        "研究": 4,
+        "商才": 7
+      },
+      "popularity": 67,
+      "wealth": 280000,
+      "current_position": null,
+      "history": "グランズヘイム唯一の「外交できる職人」として知られる。レガリスとの通商条約交渉を単独で成功させた実績を持つ。ハンマーを振るいながら歌を歌う習慣があり、それが「ハンマーソング」の由来。",
+      "secret_organization": {
+        "name": "深鉱の誓い",
+        "role": "書記・記録担当",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_har_002": {
+          "type": "knowledge_exchange",
+          "value": 55,
+          "note": "古代の歌とグランズヘイムの伝承を交換している"
+        },
+        "npc_grd_001": {
+          "type": "historian_duty",
+          "value": 70,
+          "note": "族長への忠誠と歴史家としての使命"
+        }
+      },
+      "romance_status": "恋愛より歴史の保存を優先。独身",
+      "personality_deep": "見た目は厳しい老職人だが、伝承を語るとき目が輝く",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_grd_004",
+      "name": "トルン・グラニット",
+      "nation": "grandsheim",
+      "age": 23,
+      "gender": "男性",
+      "profession": "見習い鍛冶師",
+      "traits": [
+        "熱血",
+        "不器用",
+        "真剣",
+        "成長中"
+      ],
+      "skills": {
+        "外交": 2,
+        "管理": 3,
+        "戦略": 4,
+        "制作": 6,
+        "研究": 5,
+        "商才": 3
+      },
+      "popularity": 58,
+      "wealth": 45000,
+      "current_position": null,
+      "history": "グランズヘイム最年少の職人ギルド正式メンバー。ガルドの遠縁にあたるが本人は知らない。失敗しながらも諦めない姿勢で先輩職人たちに愛されている。山脈の外の世界にあこがれている。",
+      "secret_organization": {
+        "name": "深鉱の誓い",
+        "role": "一般会員",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_grd_002": {
+          "type": "friendly_rivalry",
+          "value": 60,
+          "note": "技術でいつか追い越したいと思っている"
+        },
+        "npc_cor_003": {
+          "type": "trade_contact",
+          "value": 45,
+          "note": "鉱石の取引で定期的に会う"
+        }
+      },
+      "romance_status": "地元の農家の娘と交際中。もうすぐプロポーズの予定",
+      "personality_deep": "職人としての誇りが高く、粗悪品を納品するくらいなら死を選ぶという職人気質",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_grd_005",
+      "name": "イルダ・ストーンフィスト",
+      "nation": "grandsheim",
+      "age": 24,
+      "gender": "female",
+      "profession": "族長の娘 / 見習い鍛冶師",
+      "traits": [
+        "誇り高い",
+        "頑固",
+        "内面は繊細"
+      ],
+      "skills": {
+        "外交": 40,
+        "管理": 35,
+        "戦略": 50,
+        "制作": 70,
+        "研究": 45,
+        "商才": 30
+      },
+      "popularity": 55,
+      "wealth": 2000000,
+      "history": "ガルド族長の一人娘。「女が鍛冶をするな」という保守的な文化への反発から独学で技術を習得。今は父も認める腕前になった。",
+      "current_position": "グランズヘイム職人ギルド 見習いマスター候補",
+      "secret_organization": {
+        "name": "深鉱の誓い",
+        "role": "正式会員（入会したばかり）",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_grd_001": {
+          "type": "complex_family",
+          "value": 65,
+          "note": "父への愛情と反発が混在。認めてもらいたい"
+        },
+        "npc_grd_002": {
+          "type": "admired_senpai",
+          "value": 75,
+          "note": "ブリンの腕前を尊敬している"
+        },
+        "npc_har_004": {
+          "type": "pen_pal",
+          "value": 60,
+          "note": "芸術祭で出会ったミアと文通中。正反対な性格が合う"
+        }
+      },
+      "romance_status": "今は鍛冶一筋。ただしハーモニアのミアへの友情が恋愛感情に変わりつつあることに気づいていない",
+      "personality_deep": "鎧の試作品を夜中に一人で作っては壊す。完璧主義者。初めて「よし」と思える作品ができたとき、人知れず泣いた",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_grd_006",
+      "name": "ボルン・クラッグ",
+      "nation": "grandsheim",
+      "age": 45,
+      "gender": "male",
+      "profession": "岩砦 副司令官",
+      "traits": [
+        "冷静",
+        "戦術眼がある",
+        "口数が少ない"
+      ],
+      "skills": {
+        "外交": 30,
+        "管理": 60,
+        "戦略": 85,
+        "制作": 40,
+        "研究": 30,
+        "商才": 25
+      },
+      "popularity": 50,
+      "wealth": 3500000,
+      "history": "山岳部族の出身。傭兵として各国を渡り歩いた後、グランズヘイムに定住。その戦術眼を買われ岩砦の副司令に抜擢された。",
+      "current_position": "岩砦ガルドリム 副司令官",
+      "secret_organization": {
+        "name": "深鉱の誓い",
+        "role": "軍事顧問",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_grd_001": {
+          "type": "trusted_general",
+          "value": 80,
+          "note": "ガルドの戦術判断を支える参謀役"
+        },
+        "npc_reg_003": {
+          "type": "old_rival",
+          "value": 60,
+          "note": "傭兵時代に同じ戦場で戦ったことがある。互いに実力を認める"
+        },
+        "npc_cor_003": {
+          "type": "suspicious",
+          "value": 20,
+          "note": "ゼフが鉱山の情報を聞きすぎると感じている"
+        }
+      },
+      "romance_status": "かつて傭兵時代の戦友と深い関係があったが、戦場で亡くなった。今は特定の感情を持っていない",
+      "personality_deep": "言葉を使わず状況を読む能力が高い。会議中にほぼ発言しないが、最後の一言で全員の意見をまとめる",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_grd_007",
+      "name": "ゼルダ・コッパー",
+      "nation": "grandsheim",
+      "age": 38,
+      "gender": "female",
+      "profession": "薬草師 / 山岳ガイド",
+      "traits": [
+        "楽観的",
+        "野生的",
+        "面倒見がいい"
+      ],
+      "skills": {
+        "外交": 45,
+        "管理": 30,
+        "戦略": 40,
+        "制作": 55,
+        "研究": 65,
+        "商才": 50
+      },
+      "popularity": 68,
+      "wealth": 800000,
+      "history": "山岳地帯で生まれ育ち、植物と地形を知り尽くしている。遭難した探検家を何十人も救助したことで有名。",
+      "current_position": "山岳救助隊長 兼 薬草店経営者",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_grd_002": {
+          "type": "friendly_neighbor",
+          "value": 65,
+          "note": "ブリンに薬草を卸している。気のいい関係"
+        },
+        "npc_arc_003": {
+          "type": "grateful_acquaintance",
+          "value": 55,
+          "note": "以前アルカナムの研究者（セロ）が遭難した際に救助した"
+        },
+        "npc_har_003": {
+          "type": "former_traveler_bond",
+          "value": 50,
+          "note": "旅の詩人時代のソルを山で見かけたことがある"
+        }
+      },
+      "romance_status": "自由気ままな生き方をしており、特定の相手を作るつもりがない。山と薬草があれば満足",
+      "personality_deep": "明るいが、実は山岳の厳しさを知りすぎており、死を身近に感じている。遭難者を救うたびに「生きていることの意味」を考える",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_grd_008",
+      "name": "ルーク・アイアンボーン",
+      "nation": "grandsheim",
+      "age": 17,
+      "gender": "male",
+      "profession": "鉱山 見習い採掘師",
+      "traits": [
+        "純粋",
+        "正義感が強い",
+        "力持ち"
+      ],
+      "skills": {
+        "外交": 20,
+        "管理": 15,
+        "戦略": 25,
+        "制作": 40,
+        "研究": 20,
+        "商才": 20
+      },
+      "popularity": 35,
+      "wealth": 150000,
+      "history": "鉱夫の家系。父・祖父・曾祖父全員が鉱山で働いてきた。自分もその道を歩み始めたばかり。",
+      "current_position": "黒脈鉱山 最年少採掘師",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属。組織の存在を知らない",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_grd_004": {
+          "type": "idol",
+          "value": 80,
+          "note": "トルンを職人の理想として仰ぎ見ている"
+        },
+        "npc_grd_007": {
+          "type": "rescue_gratitude",
+          "value": 70,
+          "note": "初めての採掘で道に迷ったところをゼルダに救われた"
+        }
+      },
+      "romance_status": "同じ鉱山で働く年上の先輩女性に憧れている。まだ何も言えていない",
+      "personality_deep": "まだ世界を知らない少年だが、鉱山の奥深さに「宇宙のようなものを感じる」と語る。将来は誰も掘ったことのない深さまで到達したいという夢を持つ",
+      "arcadia_belief": "アルカディアは地面の奥底にあると思っている（独自の解釈）",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_grd_009",
+      "name": "ヘルガ・ストームシンガー",
+      "nation": "grandsheim",
+      "age": 60,
+      "gender": "female",
+      "profession": "吟遊詩人 / 民俗学者",
+      "traits": [
+        "豪快",
+        "知識欲旺盛",
+        "酒好き"
+      ],
+      "skills": {
+        "外交": 65,
+        "管理": 25,
+        "戦略": 35,
+        "制作": 80,
+        "研究": 70,
+        "商才": 45
+      },
+      "popularity": 78,
+      "wealth": 1200000,
+      "history": "若い頃は5カ国を旅した吟遊詩人。老いてから故郷グランズヘイムに戻り、各地で集めた伝承・民話を書き留めている。",
+      "current_position": "グランズヘイム民俗研究所 主任研究員 兼 酒場の常連",
+      "secret_organization": {
+        "name": "深鉱の誓い",
+        "role": "名誉顧問（伝承の語り部）",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_grd_003": {
+          "type": "knowledge_colleague",
+          "value": 75,
+          "note": "ズグラと歴史・伝承について毎週議論している"
+        },
+        "npc_har_002": {
+          "type": "generational_respect",
+          "value": 65,
+          "note": "ルーンの古詩研究に感銘を受けている"
+        },
+        "npc_arc_002": {
+          "type": "friendly_correspondent",
+          "value": 60,
+          "note": "ヴィラとは禁書に関係する伝承について手紙で情報交換"
+        }
+      },
+      "romance_status": "旅の途中で出会い結婚したが、夫は15年前に他界。今は「酒と伝承と山が夫婦」と笑いながら言う",
+      "personality_deep": "アルカディアに関する最古の民間伝承を実は知っている。ただし「今の世代が聞く準備ができていない」と判断して語っていない",
+      "arcadia_belief": "アルカディアは場所ではなく「状態」だと考えている。独自の哲学的解釈",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_har_001",
+      "name": "カンタ・メロディ",
+      "nation": "harmonia",
+      "age": 54,
+      "gender": "女性",
+      "profession": "詩人王（現国家元首）",
+      "traits": [
+        "カリスマ",
+        "感性豊か",
+        "包容力",
+        "時々予測不能"
+      ],
+      "skills": {
+        "外交": 8,
+        "管理": 6,
+        "戦略": 6,
+        "制作": 10,
+        "研究": 5,
+        "商才": 5
+      },
+      "popularity": 91,
+      "wealth": 460000,
+      "current_position": "詩人王",
+      "history": "30年前に詩一篇でハーモニア全土を泣かせた伝説の詩人。詩人王選挙では史上最多得票で当選し、以来3期連続で国を治める。政治より芸術を愛するが、その感性で外交を成功させてきた。",
+      "secret_organization": {
+        "name": "虹の仮面",
+        "role": "精神的支柱（創設者の師匠筋）",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_reg_004": {
+          "type": "cultural_friendship",
+          "value": 65,
+          "note": "芸術と政治の交差点での関係"
+        },
+        "npc_har_002": {
+          "type": "mentor",
+          "value": 75,
+          "note": "ルーンの才能を最初に見出した"
+        },
+        "npc_har_003": {
+          "type": "co_leader",
+          "value": 80,
+          "note": "ハーモニアの双璧として国を運営"
+        }
+      },
+      "romance_status": "過去の恋愛が芸術に昇華されている。名曲「失われた春」は失恋曲と言われている",
+      "personality_deep": "音楽の神に選ばれた才能と言われるが、本人は「ただの練習の積み重ね」と謙遜する",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_har_002",
+      "name": "ルーン・エコー",
+      "nation": "harmonia",
+      "age": 28,
+      "gender": "男性",
+      "profession": "壁画師・彫刻家",
+      "traits": [
+        "内向的",
+        "観察眼が鋭い",
+        "繊細",
+        "芸術一筋"
+      ],
+      "skills": {
+        "外交": 3,
+        "管理": 4,
+        "戦略": 3,
+        "制作": 9,
+        "研究": 7,
+        "商才": 5
+      },
+      "popularity": 63,
+      "wealth": 110000,
+      "current_position": null,
+      "history": "グランズヘイム出身の職人の息子。石の彫刻に魅了されハーモニアへ移住。街中の壁画のほとんどが彼の作品。無口で人付き合いが苦手だが、作品に込める感情は誰よりも豊か。密かにネアに恋している。",
+      "secret_organization": {
+        "name": "虹の仮面",
+        "role": "創設者・リーダー",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_har_001": {
+          "type": "student_mentor",
+          "value": 75,
+          "note": "人生を変えた恩人"
+        },
+        "npc_grd_003": {
+          "type": "knowledge_exchange",
+          "value": 55,
+          "note": "古代の歌と伝承の交換"
+        },
+        "npc_arc_004": {
+          "type": "secret_correspondence",
+          "value": 55,
+          "note": "素性を隠した文通相手。お互い惹かれている"
+        },
+        "npc_har_003": {
+          "type": "close_friendship",
+          "value": 70,
+          "note": "最も近い友人"
+        }
+      },
+      "romance_status": "ネア・ソルシアとの文通に心が動いている。顔も知らない相手への感情に戸惑っている",
+      "personality_deep": "詩の中にアルカディアへのヒントを見つけた事実を一人で抱えている。恐怖と興奮が混在",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_har_003",
+      "name": "ソル・ハーモン",
+      "nation": "harmonia",
+      "age": 46,
+      "gender": "男性",
+      "profession": "作曲家・詩人",
+      "traits": [
+        "情熱的",
+        "ロマンチスト",
+        "社交的",
+        "飽き性"
+      ],
+      "skills": {
+        "外交": 7,
+        "管理": 5,
+        "戦略": 5,
+        "制作": 9,
+        "研究": 6,
+        "商才": 4
+      },
+      "popularity": 79,
+      "wealth": 240000,
+      "current_position": "副詩人王",
+      "history": "ゼフィリア五カ国を旅した経験を持つ唯一のハーモニア人芸術家。各国の音楽を融合させた「ゼフィリア交響曲」を作曲し、世界中で演奏される。カンタを敬愛し副詩人王への出馬を決意している。",
+      "secret_organization": {
+        "name": "虹の仮面",
+        "role": "外部渉外担当",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_reg_001": {
+          "type": "artistic_admiration",
+          "value": 25,
+          "note": "王として尊敬するが、詩人としての一面を感じ取っている"
+        },
+        "npc_cor_003": {
+          "type": "old_acquaintance",
+          "value": 40,
+          "note": "旅人時代に港で出会った旧友"
+        },
+        "npc_har_001": {
+          "type": "co_leader",
+          "value": 80,
+          "note": "ハーモニアを共に運営するパートナー"
+        },
+        "npc_har_004": {
+          "type": "protective_senpai",
+          "value": 70,
+          "note": "才能ある後輩を見守っている"
+        }
+      },
+      "romance_status": "旅の詩人時代に出会った人物を今も探している。すでに何年も経つ",
+      "personality_deep": "即興演奏の名手。どんな場の雰囲気も音楽一つで変えられる",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_har_004",
+      "name": "ミア・リズム",
+      "nation": "harmonia",
+      "age": 22,
+      "gender": "女性",
+      "profession": "舞踏家",
+      "traits": [
+        "明朗",
+        "自由奔放",
+        "人好き",
+        "直感型"
+      ],
+      "skills": {
+        "外交": 6,
+        "管理": 3,
+        "戦略": 3,
+        "制作": 8,
+        "研究": 4,
+        "商才": 5
+      },
+      "popularity": 71,
+      "wealth": 85000,
+      "current_position": null,
+      "history": "ハーモニア生まれの生粋の踊り子。8歳から舞台に立ち、今や年間200公演以上をこなす。踊りが言語の壁を超えると信じており、コルサリアの船乗りたちとも踊りで友情を育んでいる。",
+      "secret_organization": {
+        "name": "虹の仮面",
+        "role": "若手メンバー",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_cor_004": {
+          "type": "friendship",
+          "value": 75,
+          "note": "素直で純粋な商人に親近感を持っている"
+        },
+        "npc_har_003": {
+          "type": "admired_senpai",
+          "value": 70,
+          "note": "理想の芸術家として尊敬している"
+        },
+        "npc_har_002": {
+          "type": "inspired_by",
+          "value": 65,
+          "note": "ルーンの作品に人生を変えられた"
+        }
+      },
+      "romance_status": "ソラ・ペトロスの純粋さに惹かれている。次の交流の機会を待っている",
+      "personality_deep": "若いのに才能があり、それに伴う孤独を感じている。ソラといるときだけ素直になれる",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_har_005",
+      "name": "フィーナ・ブルームノート",
+      "nation": "harmonia",
+      "age": 23,
+      "gender": "female",
+      "profession": "画家 / 壁画師",
+      "traits": [
+        "感受性が高い",
+        "大胆",
+        "社会派"
+      ],
+      "skills": {
+        "外交": 45,
+        "管理": 20,
+        "戦略": 25,
+        "制作": 95,
+        "研究": 35,
+        "商才": 30
+      },
+      "popularity": 58,
+      "wealth": 900000,
+      "history": "ハーモニアで生まれた若き天才画家。街中の建物に無許可で壁画を描き、批判を浴びながらも人々の心を動かした結果、今は街の公認壁画師になった。",
+      "current_position": "ハーモニア公認壁画師 / 万彩美術館 出品作家",
+      "secret_organization": {
+        "name": "虹の仮面",
+        "role": "視覚芸術部門リーダー",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_har_004": {
+          "type": "close_friend",
+          "value": 75,
+          "note": "ミアとは幼なじみ。互いの芸術を認め合っている"
+        },
+        "npc_har_002": {
+          "type": "inspired_by",
+          "value": 65,
+          "note": "ルーンの詩から多くの作品のインスピレーションを得ている"
+        },
+        "npc_reg_010": {
+          "type": "street_acquaintance",
+          "value": 50,
+          "note": "テオが路上芸人をしていた頃に出会い、互いの表現を交換した"
+        }
+      },
+      "romance_status": "一度描きたいと思った人物を必ずポートレートにする習慣がある。今は誰かのポートレートを描きたいと思っている",
+      "personality_deep": "作品に社会批評を込めているが、「批評よりも美しさが先」という哲学を持つ。暗い絵を描いた後は必ず明るい花の絵を描く",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_har_006",
+      "name": "エイル・ホワイトソング",
+      "nation": "harmonia",
+      "age": 45,
+      "gender": "male",
+      "profession": "大劇場 舞台監督",
+      "traits": [
+        "完璧主義",
+        "カリスマ的",
+        "プレッシャーに強い"
+      ],
+      "skills": {
+        "外交": 65,
+        "管理": 85,
+        "戦略": 60,
+        "制作": 80,
+        "研究": 40,
+        "商才": 55
+      },
+      "popularity": 72,
+      "wealth": 6000000,
+      "history": "ゼフィリア大劇場を30年運営してきた名舞台監督。彼が手掛けた公演はほぼ全て満席になる伝説的な演出家。",
+      "current_position": "ゼフィリア大劇場 総監督",
+      "secret_organization": {
+        "name": "虹の仮面",
+        "role": "外部支援者（資金提供）",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_har_001": {
+          "type": "longtime_partner",
+          "value": 80,
+          "note": "カンタと30年のコンビ。互いを最も理解している"
+        },
+        "npc_har_003": {
+          "type": "director_performer",
+          "value": 70,
+          "note": "ソルの即興演奏を最も活かせる演出を考え続けている"
+        },
+        "npc_reg_001": {
+          "type": "royal_patron",
+          "value": 55,
+          "note": "エルドリン国王からの年間観劇スポンサーを受けている"
+        }
+      },
+      "romance_status": "舞台に全てを注ぎ込んでいる。かつて共に働いた女優との別れが今の完璧主義の原点",
+      "personality_deep": "幕が開く瞬間だけは緊張する。30年経った今も。その緊張を誰にも見せない",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_har_007",
+      "name": "リラ・ドーンチャイム",
+      "nation": "harmonia",
+      "age": 16,
+      "gender": "female",
+      "profession": "音楽学院 生徒 / 神童",
+      "traits": [
+        "天才",
+        "無邪気",
+        "感情に素直"
+      ],
+      "skills": {
+        "外交": 25,
+        "管理": 10,
+        "戦略": 15,
+        "制作": 88,
+        "研究": 30,
+        "商才": 10
+      },
+      "popularity": 50,
+      "wealth": 100000,
+      "history": "7歳で竪琴を始め、10歳でハーモニア音楽祭に出演。「100年に一度の才能」とカンタ・メロディ本人が太鼓判を押した神童。",
+      "current_position": "ハーモニア音楽院 特別クラス在籍",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属。組織の存在を知らない",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_har_001": {
+          "type": "star_student",
+          "value": 80,
+          "note": "カンタの最も期待する弟子"
+        },
+        "npc_har_004": {
+          "type": "senpai_admiration",
+          "value": 70,
+          "note": "ミア先輩の演奏が大好き"
+        },
+        "npc_arc_005": {
+          "type": "kindred_spirit",
+          "value": 45,
+          "note": "ハーモニア訪問中のフォスと話し、同じ「なぜ」を抱えていることを感じた"
+        }
+      },
+      "romance_status": "恋愛は音楽の歌詞の中だけのもの、と思っている",
+      "personality_deep": "演奏中は別人になる。普段は内気でぼんやりしているのに、舞台に立つと会場全体を支配する",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_har_008",
+      "name": "オルン・クレイソング",
+      "nation": "harmonia",
+      "age": 50,
+      "gender": "male",
+      "profession": "ゼフィリア通信社 編集長",
+      "traits": [
+        "正義感が強い",
+        "頑固",
+        "言葉に重きを置く"
+      ],
+      "skills": {
+        "外交": 70,
+        "管理": 65,
+        "戦略": 55,
+        "制作": 75,
+        "研究": 60,
+        "商才": 50
+      },
+      "popularity": 65,
+      "wealth": 3000000,
+      "history": "若い頃に権力者による情報操作事件を暴露した経験から、「真実を伝える」ことを人生の使命とした。その後ゼフィリア通信社の編集長に就任。",
+      "current_position": "ゼフィリア通信社 編集長",
+      "secret_organization": {
+        "name": "虹の仮面（精神的共鳴）",
+        "role": "非公式支持者（会員ではないが思想的に近い）",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_har_002": {
+          "type": "media_collaborator",
+          "value": 65,
+          "note": "ルーンの詩を定期コラムとして掲載している"
+        },
+        "npc_reg_005": {
+          "type": "watchdog",
+          "value": 10,
+          "note": "ダリウスの不正を調査中。決定的な証拠を探している"
+        },
+        "npc_cor_001": {
+          "type": "information_tension",
+          "value": 30,
+          "note": "マリスの影の手を記事にしようとしたことがある。釘を刺された"
+        }
+      },
+      "romance_status": "真実を追いかけることに人生を捧げているため、家庭を持つことを諦めている。後悔はしていないが、夜は少し寂しい",
+      "personality_deep": "ダリウスの不正を示す文書を一枚だけ持っているが、まだ公開していない。「確実な証拠が揃うまで」と自分に言い聞かせている",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_har_009",
+      "name": "ベル・スウィートローズ",
+      "nation": "harmonia",
+      "age": 30,
+      "gender": "female",
+      "profession": "花師 / 香り魔法師",
+      "traits": [
+        "穏やか",
+        "癒し系",
+        "芯が強い"
+      ],
+      "skills": {
+        "外交": 55,
+        "管理": 40,
+        "戦略": 30,
+        "制作": 80,
+        "研究": 55,
+        "商才": 60
+      },
+      "popularity": 75,
+      "wealth": 2500000,
+      "history": "花と香りを使った魔法（アロマ魔法）という珍しい分野の第一人者。傷の治癒・精神安定・記憶呼び起こしに効果があるとされる香りを調合できる。",
+      "current_position": "ハーモニア 「スウィートローズ」花魔法工房 経営者",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_reg_010": {
+          "type": "one_sided_admiration",
+          "value": 60,
+          "note": "テオが好意を持っている花屋の娘がベル本人。ベルはテオの存在に気づいていない"
+        },
+        "npc_har_007": {
+          "type": "gentle_care",
+          "value": 65,
+          "note": "リラが緊張を訴えた際にアロマを提供している"
+        },
+        "npc_grd_007": {
+          "type": "herb_trade",
+          "value": 60,
+          "note": "ゼルダから山岳の薬草を仕入れている"
+        }
+      },
+      "romance_status": "誰かに好意を向けられると気づかないタイプ。テオが毎週花を買いに来ている理由をただの常連客だと思っている",
+      "personality_deep": "香りで感情を読む能力があるため、嘘をついた人の「罪悪感の香り」がわかる。でもそれを言わない優しさがある",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_reg_001",
+      "name": "エルドリン・ソルヴェイン",
+      "nation": "regalis",
+      "age": 67,
+      "gender": "男性",
+      "profession": "元老院議員・元外交官",
+      "traits": [
+        "慎重",
+        "外交的",
+        "保守的",
+        "威厳がある"
+      ],
+      "skills": {
+        "外交": 9,
+        "管理": 7,
+        "戦略": 8,
+        "制作": 2,
+        "研究": 5,
+        "商才": 6
+      },
+      "popularity": 82,
+      "wealth": 450000,
+      "current_position": "執政官",
+      "history": "300年続くソルヴェイン家の当主。40年以上外交官として5カ国を渡り歩き、いくつもの条約締結に尽力した。引退後も元老院で強い影響力を持つ。口癖は「急ぐな。外交は忍耐だ」。",
+      "secret_organization": {
+        "name": "黄金の鎖",
+        "role": "名誉後援者（実質は知らない）",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_reg_002": {
+          "type": "romantic_interest",
+          "value": 65,
+          "note": "王妃候補として意識している。まだ告白していない"
+        },
+        "npc_reg_003": {
+          "type": "trusted_general",
+          "value": 85,
+          "note": "最も信頼する武将"
+        },
+        "npc_cor_001": {
+          "type": "rival_respect",
+          "value": 40,
+          "note": "経済的ライバル。能力は認めている"
+        },
+        "npc_arc_001": {
+          "type": "alliance_partner",
+          "value": 55,
+          "note": "知識と政治の共存関係"
+        }
+      },
+      "romance_status": "秘かにリリア・グレイヴァンに惹かれているが、王の立場上踏み出せないでいる",
+      "personality_deep": "外見は厳格だが、実は詩を書く習慣がある。誰にも見せていない",
+      "arcadia_belief": "アルカディアは本当に存在すると信じている。いつか到達したい",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_reg_002",
+      "name": "リリア・グレイヴァン",
+      "nation": "regalis",
+      "age": 34,
+      "gender": "女性",
+      "profession": "書記官長",
+      "traits": [
+        "几帳面",
+        "向上心旺盛",
+        "正義感が強い",
+        "少し頑固"
+      ],
+      "skills": {
+        "外交": 6,
+        "管理": 9,
+        "戦略": 5,
+        "制作": 3,
+        "研究": 7,
+        "商才": 4
+      },
+      "popularity": 74,
+      "wealth": 180000,
+      "current_position": null,
+      "history": "平民出身ながら王都の官僚試験を首席で突破した秀才。書記官として10年で長官に上り詰めた。どんな複雑な文書も瞬時に整理できる記憶力の持ち主。密かにエルドリンを尊敬している。",
+      "secret_organization": {
+        "name": "黄金の鎖",
+        "role": "情報収集担当（一般会員）",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_reg_001": {
+          "type": "complex_feelings",
+          "value": 55,
+          "note": "王に忠誠を誓いつつも、個人的な感情を持ち始めている"
+        },
+        "npc_grd_002": {
+          "type": "old_friend",
+          "value": 70,
+          "note": "若い頃の旅仲間。今も文通している"
+        },
+        "npc_cor_002": {
+          "type": "professional_tension",
+          "value": 25,
+          "note": "諜報活動で鉢合わせした経験あり。互いに警戒"
+        }
+      },
+      "romance_status": "エルドリン国王への感情を自覚しているが、自分が影の組織に所属していることへの後ろめたさがある",
+      "personality_deep": "完璧な外交官として振る舞うが、実は甘いものが大好きで、一人のときは菓子を食べながら小説を読んでいる",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_reg_003",
+      "name": "ボルド・カスティール",
+      "nation": "regalis",
+      "age": 52,
+      "gender": "男性",
+      "profession": "衛兵総長",
+      "traits": [
+        "実直",
+        "頑健",
+        "無口",
+        "義理堅い"
+      ],
+      "skills": {
+        "外交": 3,
+        "管理": 6,
+        "戦略": 8,
+        "制作": 4,
+        "研究": 3,
+        "商才": 3
+      },
+      "popularity": 68,
+      "wealth": 220000,
+      "current_position": null,
+      "history": "グランズヘイム出身の移民2世。父の鍛冶技術より剣を選び、30年間王都の治安を守り続けた。無口だが部下からの信頼は絶大。趣味は密かに詩を書くこと（本人は否定する）。",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属。秘密組織を嫌っている",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_reg_001": {
+          "type": "loyal_servant",
+          "value": 90,
+          "note": "命を捧げる覚悟がある"
+        },
+        "npc_grd_001": {
+          "type": "warriors_respect",
+          "value": 75,
+          "note": "かつて合同訓練で競い合った。互いに認め合う"
+        },
+        "npc_reg_005": {
+          "type": "suspicion",
+          "value": 20,
+          "note": "ダリウスの行動に不審を感じている"
+        }
+      },
+      "romance_status": "過去に戦場で出会った女性がいたが、彼女は亡くなった。今は恋愛を考えていない",
+      "personality_deep": "無骨に見えるが、子供や動物に優しい。孤児院に毎月匿名で寄付している",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_reg_004",
+      "name": "ソフィア・レガル",
+      "nation": "regalis",
+      "age": 41,
+      "gender": "女性",
+      "profession": "財務大臣",
+      "traits": [
+        "合理的",
+        "数字に強い",
+        "冷静",
+        "野心家"
+      ],
+      "skills": {
+        "外交": 5,
+        "管理": 8,
+        "戦略": 7,
+        "制作": 2,
+        "研究": 6,
+        "商才": 10
+      },
+      "popularity": 76,
+      "wealth": 380000,
+      "current_position": "副執政官",
+      "history": "コルサリア生まれの海商の娘。12歳で王都に移住し、持ち前の計算能力でレガリスの財政を立て直した「数字の魔法使い」。世界の全通貨の換算を暗算でこなすと噂される。",
+      "secret_organization": {
+        "name": "黄金の鎖",
+        "role": "情報収集担当（上級会員）",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_reg_005": {
+          "type": "professional_partner",
+          "value": 60,
+          "note": "組織内の協力者。個人的には距離を置く"
+        },
+        "npc_har_001": {
+          "type": "cultural_friendship",
+          "value": 65,
+          "note": "芸術を通じた交流。公式・非公式両方で会う"
+        },
+        "npc_arc_004": {
+          "type": "information_exchange",
+          "value": 45,
+          "note": "魔法と情報の相互提供関係"
+        }
+      },
+      "romance_status": "恋愛より仕事を優先するタイプ。ただし、コルサリアのゼフ・タイドウォーカーとは謎めいた関係がある",
+      "personality_deep": "完璧な外交スマイルの裏に、鋭い観察眼を持つ。会話相手の本音を瞬時に見抜く",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_reg_005",
+      "name": "ダリウス・クロムウェル",
+      "nation": "regalis",
+      "age": 58,
+      "gender": "男性",
+      "profession": "外交顧問",
+      "traits": [
+        "饒舌",
+        "人当たりが良い",
+        "計算高い",
+        "博識"
+      ],
+      "skills": {
+        "外交": 10,
+        "管理": 5,
+        "戦略": 7,
+        "制作": 2,
+        "研究": 7,
+        "商才": 8
+      },
+      "popularity": 71,
+      "wealth": 290000,
+      "current_position": null,
+      "history": "ゼフィリア中を旅した元冒険者。43歳で冒険を引退し外交の道へ。5カ国すべての王族・指導者と個人的な付き合いがある唯一の人物。情報通として知られ、知らないことはないと言われる。",
+      "secret_organization": {
+        "name": "黄金の鎖",
+        "role": "実質的なリーダー・会計部長",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_reg_001": {
+          "type": "facade_loyalty",
+          "value": 40,
+          "note": "表向きは忠臣。実際は王を利用している"
+        },
+        "npc_cor_001": {
+          "type": "secret_deal",
+          "value": 55,
+          "note": "裏で経済情報を売買している"
+        },
+        "npc_reg_003": {
+          "type": "fear",
+          "value": 15,
+          "note": "ボルドに自分の計画を気づかれることを恐れている"
+        }
+      },
+      "romance_status": "恋愛に興味なし。すべては権力のため",
+      "personality_deep": "表向きは温厚な会計部長。実際は組織の資金を管理し、密かに権力基盤を固めている",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_reg_006",
+      "name": "アルバ・シルヴィア",
+      "nation": "regalis",
+      "age": 28,
+      "gender": "female",
+      "profession": "王立魔導師（第3席）",
+      "traits": [
+        "情熱的",
+        "やや衝動的",
+        "向上心が高い"
+      ],
+      "skills": {
+        "外交": 30,
+        "管理": 40,
+        "戦略": 55,
+        "制作": 30,
+        "研究": 75,
+        "商才": 20
+      },
+      "popularity": 62,
+      "wealth": 4800000,
+      "history": "辺境の貧しい家出身。魔法の才能を見出され王立学院に奨学金入学。首席卒業後、王立魔導師団に最年少で採用された。",
+      "current_position": "王都守護のための魔法結界維持を担当",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_reg_001": {
+          "type": "admiration",
+          "value": 70,
+          "note": "国王を遠くから尊敬している"
+        },
+        "npc_arc_003": {
+          "type": "research_rival",
+          "value": 50,
+          "note": "同世代の魔法使いとして密かに競い合っている"
+        },
+        "npc_reg_007": {
+          "type": "close_friend",
+          "value": 80,
+          "note": "学院時代からの唯一の親友"
+        }
+      },
+      "romance_status": "恋愛より研究と出世を優先している。ただし同期入学のクレム（npc_reg_007）に特別な感情を持っている",
+      "personality_deep": "貧困から這い上がってきた経験から、「力がなければ何も守れない」という信念がある。一方で孤児院の子供たちに魔法の基礎を教えるボランティアを続けている",
+      "arcadia_belief": "アルカディアは強者のみが到達できる場所だと思っている",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_reg_007",
+      "name": "クレム・ヴァーデン",
+      "nation": "regalis",
+      "age": 29,
+      "gender": "male",
+      "profession": "王立騎士団 中尉",
+      "traits": [
+        "誠実",
+        "お人よし",
+        "少し不器用"
+      ],
+      "skills": {
+        "外交": 45,
+        "管理": 50,
+        "戦略": 65,
+        "制作": 20,
+        "研究": 25,
+        "商才": 35
+      },
+      "popularity": 58,
+      "wealth": 2200000,
+      "history": "中級貴族の次男。兄が家を継いだため軍に志願。真面目な性格と体力で騎士団の中尉まで昇進した。",
+      "current_position": "王都市街警備の中隊指揮官",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_reg_006": {
+          "type": "close_friend",
+          "value": 80,
+          "note": "アルバとは学院時代からの親友。気持ちには気づいているが言い出せない"
+        },
+        "npc_reg_003": {
+          "type": "respected_superior",
+          "value": 75,
+          "note": "ボルド将軍を尊敬しお手本にしている"
+        },
+        "npc_reg_008": {
+          "type": "childhood_acquaintance",
+          "value": 40,
+          "note": "幼なじみ。今は疎遠になっている"
+        }
+      },
+      "romance_status": "アルバへの気持ちを自覚しているが、自分は彼女には釣り合わないと思っている",
+      "personality_deep": "不器用だが、部下への配慮が細かく人望が厚い。日課の剣の稽古を誰より早く始め、最後まで残る",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_reg_008",
+      "name": "ミラ・ゴールドウィン",
+      "nation": "regalis",
+      "age": 35,
+      "gender": "female",
+      "profession": "王都大市場 商会主",
+      "traits": [
+        "計算高い",
+        "カリスマ的",
+        "表裏がある"
+      ],
+      "skills": {
+        "外交": 70,
+        "管理": 65,
+        "戦略": 60,
+        "制作": 20,
+        "研究": 25,
+        "商才": 95
+      },
+      "popularity": 74,
+      "wealth": 18000000,
+      "history": "平民出身の自力成り上がり。10代で行商を始め、20代で商会を設立。現在は王都最大の交易商会を率いる。",
+      "current_position": "ゴールドウィン商会 代表取締役。王都大市場の実質的な管理者",
+      "secret_organization": {
+        "name": "黄金の鎖",
+        "role": "財務部門の外部協力者",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_reg_005": {
+          "type": "business_partner_distrust",
+          "value": 45,
+          "note": "ダリウスとは利害が一致するが、互いに警戒している"
+        },
+        "npc_cor_001": {
+          "type": "trade_rival",
+          "value": 35,
+          "note": "マリスと同じ市場を争っている。表向きは友好"
+        },
+        "npc_reg_007": {
+          "type": "childhood_acquaintance",
+          "value": 40,
+          "note": "幼なじみ。今は疎遠"
+        }
+      },
+      "romance_status": "夫が商会設立前に病死。以来、仕事だけが生きがい。ただし記念日には必ず墓参りをする",
+      "personality_deep": "計算高いが、商会の使用人には破格の待遇を提供する。「人が財産」という哲学を持つ",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_reg_009",
+      "name": "ハンス・ライナー",
+      "nation": "regalis",
+      "age": 52,
+      "gender": "male",
+      "profession": "大聖堂 司教",
+      "traits": [
+        "温厚",
+        "信仰心が篤い",
+        "政治的に中立"
+      ],
+      "skills": {
+        "外交": 75,
+        "管理": 60,
+        "戦略": 30,
+        "制作": 20,
+        "研究": 55,
+        "商才": 30
+      },
+      "popularity": 85,
+      "wealth": 3000000,
+      "history": "若い頃に流行病で家族を失い、信仰に救われた経験からゼフィル教の道へ。30年間聖職者として民衆に寄り添ってきた。",
+      "current_position": "光の大聖堂 主任司教。王都市民の精神的支柱",
+      "secret_organization": {
+        "name": null,
+        "role": "無所属。宗教の中立を守る",
+        "awareness": false
+      },
+      "relationships": {
+        "npc_reg_001": {
+          "type": "spiritual_advisor",
+          "value": 65,
+          "note": "国王の精神的相談役。政治には口出しをしない"
+        },
+        "npc_reg_005": {
+          "type": "moral_opposition",
+          "value": 15,
+          "note": "ダリウスの不正を感じ取っている。証拠はない"
+        },
+        "npc_har_001": {
+          "type": "cultural_respect",
+          "value": 70,
+          "note": "音楽を通じた宗教観の共鳴"
+        }
+      },
+      "romance_status": "聖職者として独身を誓っている。ただし若い頃の初恋相手の面影を持つ人物を見ると動揺する",
+      "personality_deep": "政治や陰謀から意識的に距離を置くが、民衆の声には誰より敏感。告解室で聞いた秘密を誰にも話したことがない（無数の秘密を知っている）",
+      "arcadia_belief": "アルカディアとは死後に行く楽園だと教義上は語るが、実際に存在すると信じている",
+      "last_updated": "2026-04-21"
+    },
+    {
+      "id": "npc_reg_010",
+      "name": "テオ・スモーク",
+      "nation": "regalis",
+      "age": 22,
+      "gender": "male",
+      "profession": "スリ・路上芸人（裏稼業: 情報屋）",
+      "traits": [
+        "機転が利く",
+        "お調子者",
+        "義理堅い"
+      ],
+      "skills": {
+        "外交": 35,
+        "管理": 20,
+        "戦略": 45,
+        "制作": 60,
+        "研究": 20,
+        "商才": 70
+      },
+      "popularity": 30,
+      "wealth": 500000,
+      "history": "王都下町生まれの孤児。ストリートで生き抜くために芸と情報収集を覚えた。今は複数の組織に情報を売って生計を立てている。",
+      "current_position": "王都下町の情報屋。どの組織にも正式所属していない自由人",
+      "secret_organization": {
+        "name": "影の手（外部情報提供者）",
+        "role": "非公式情報屋",
+        "awareness": true
+      },
+      "relationships": {
+        "npc_cor_003": {
+          "type": "business_contact",
+          "value": 55,
+          "note": "ゼフと情報を売買する関係"
+        },
+        "npc_reg_007": {
+          "type": "friendly_acquaintance",
+          "value": 50,
+          "note": "クレムにたまに取り締まられるが不思議と仲がいい"
+        },
+        "npc_reg_009": {
+          "type": "one_sided_respect",
+          "value": 60,
+          "note": "ハンス司教に食事をもらった恩がある。密かに尊敬"
+        }
+      },
+      "romance_status": "市場で見かけた花屋の娘が好きだが、自分のような身分では無理だと思っている",
+      "personality_deep": "表向きは軽薄だが、孤児院の後輩たちへの面倒見が異常にいい。稼ぎの3割を孤児院に渡している（アルバの知らないところで同じことをしている）",
+      "last_updated": "2026-04-21"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "npc_grd_004",
+  "name": "トルン・グラニット",
+  "nation": "grandsheim",
+  "age": 23,
+  "gender": "男性",
+  "profession": "見習い鍛冶師",
+  "traits": [
+    "熱血",
+    "不器用",
+    "真剣",
+    "成長中"
+  ],
+  "skills": {
+    "外交": 2,
+    "管理": 3,
+    "戦略": 4,
+    "制作": 6,
+    "研究": 5,
+    "商才": 3
+  },
+  "popularity": 58,
+  "wealth": 45000,
+  "current_position": null,
+  "history": "グランズヘイム最年少の職人ギルド正式メンバー。ガルドの遠縁にあたるが本人は知らない。失敗しながらも諦めない姿勢で先輩職人たちに愛されている。山脈の外の世界にあこがれている。",
+  "secret_organization": {
+    "name": "深鉱の誓い",
+    "role": "一般会員",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_grd_002": {
+      "type": "friendly_rivalry",
+      "value": 60,
+      "note": "技術でいつか追い越したいと思っている"
+    },
+    "npc_cor_003": {
+      "type": "trade_contact",
+      "value": 45,
+      "note": "鉱石の取引で定期的に会う"
+    }
+  },
+  "romance_status": "地元の農家の娘と交際中。もうすぐプロポーズの予定",
+  "personality_deep": "職人としての誇りが高く、粗悪品を納品するくらいなら死を選ぶという職人気質",
+  "last_updated": "2026-04-21"
+}

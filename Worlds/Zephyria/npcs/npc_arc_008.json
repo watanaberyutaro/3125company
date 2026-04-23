@@ -1,0 +1,51 @@
+{
+  "id": "npc_arc_008",
+  "name": "テラ・スターウィーバー",
+  "nation": "arcanum",
+  "age": 31,
+  "gender": "female",
+  "profession": "星詠み師 / 占星術士",
+  "traits": [
+    "神秘的",
+    "内向的",
+    "真実にこだわる"
+  ],
+  "skills": {
+    "外交": 30,
+    "管理": 25,
+    "戦略": 45,
+    "制作": 40,
+    "研究": 85,
+    "商才": 35
+  },
+  "popularity": 60,
+  "wealth": 2200000,
+  "history": "星の動きを読んで未来を予測する占星術士。彼女の予測は70%の確率で的中するため、各国の王侯貴族から依頼が来る。",
+  "current_position": "星詠み観測所 主任 兼 フリーランス占星術師",
+  "secret_organization": {
+    "name": null,
+    "role": "無所属だが、各組織から情報を求められる立場",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_arc_001": {
+      "type": "professional_respect",
+      "value": 65,
+      "note": "オリウスからアルカディアの占星術的位置を頼まれたことがある"
+    },
+    "npc_reg_001": {
+      "type": "royal_advisor",
+      "value": 50,
+      "note": "エルドリン国王の密かな依頼者"
+    },
+    "npc_har_002": {
+      "type": "artistic_kinship",
+      "value": 55,
+      "note": "ルーンの詩と星の動きが一致することに気づき、文通を始めた"
+    }
+  },
+  "romance_status": "「星が示す出会い」を待っている。ロマンチストだが、現実の恋愛は経験が少ない",
+  "personality_deep": "最近の観測で「アルカディアの方角から通常の星とは異なる光点が発信されている」ことに気づいている。記録しているが誰にも言っていない",
+  "arcadia_belief": "星の動きからアルカディアの存在を確信している。カーディナルの光と思しきものを観測した",
+  "last_updated": "2026-04-21"
+}

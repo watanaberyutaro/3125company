@@ -1,0 +1,50 @@
+{
+  "id": "npc_har_005",
+  "name": "フィーナ・ブルームノート",
+  "nation": "harmonia",
+  "age": 23,
+  "gender": "female",
+  "profession": "画家 / 壁画師",
+  "traits": [
+    "感受性が高い",
+    "大胆",
+    "社会派"
+  ],
+  "skills": {
+    "外交": 45,
+    "管理": 20,
+    "戦略": 25,
+    "制作": 95,
+    "研究": 35,
+    "商才": 30
+  },
+  "popularity": 58,
+  "wealth": 900000,
+  "history": "ハーモニアで生まれた若き天才画家。街中の建物に無許可で壁画を描き、批判を浴びながらも人々の心を動かした結果、今は街の公認壁画師になった。",
+  "current_position": "ハーモニア公認壁画師 / 万彩美術館 出品作家",
+  "secret_organization": {
+    "name": "虹の仮面",
+    "role": "視覚芸術部門リーダー",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_har_004": {
+      "type": "close_friend",
+      "value": 75,
+      "note": "ミアとは幼なじみ。互いの芸術を認め合っている"
+    },
+    "npc_har_002": {
+      "type": "inspired_by",
+      "value": 65,
+      "note": "ルーンの詩から多くの作品のインスピレーションを得ている"
+    },
+    "npc_reg_010": {
+      "type": "street_acquaintance",
+      "value": 50,
+      "note": "テオが路上芸人をしていた頃に出会い、互いの表現を交換した"
+    }
+  },
+  "romance_status": "一度描きたいと思った人物を必ずポートレートにする習慣がある。今は誰かのポートレートを描きたいと思っている",
+  "personality_deep": "作品に社会批評を込めているが、「批評よりも美しさが先」という哲学を持つ。暗い絵を描いた後は必ず明るい花の絵を描く",
+  "last_updated": "2026-04-21"
+}

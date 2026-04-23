@@ -1,0 +1,106 @@
+{
+  "id": "harmonia",
+  "name": "ハーモニア",
+  "symbol": "🎭",
+  "treasury": 2000000,
+  "total_earned": 2000000,
+  "completed_quests": 0,
+  "active_quests": 0,
+  "citizens": [
+    "npc_har_001",
+    "npc_har_003",
+    "npc_har_004",
+    "npc_har_002"
+  ],
+  "specialties": [
+    "発信",
+    "文化",
+    "創造"
+  ],
+  "weaknesses": [
+    "数字",
+    "論理",
+    "継続性"
+  ],
+  "personality": "自由で感性豊か。気まぐれ。",
+  "status": "active",
+  "alliances": [],
+  "tensions": [],
+  "immigrants": [],
+  "last_updated": "2026-04-23",
+  "path": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/harmonia",
+  "folders": {
+    "_inbox": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/harmonia/_inbox",
+    "_studio": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/harmonia/_studio",
+    "_done": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/harmonia/_done",
+    "_archive": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/harmonia/_archive",
+    "_publish": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/harmonia/_publish"
+  },
+  "leader": {
+    "npc_id": "npc_har_001",
+    "name": "カンタ・メロディ",
+    "title": "詩人王",
+    "votes": 910,
+    "elected_at": "2026-04-23"
+  },
+  "deputy": {
+    "npc_id": "npc_har_003",
+    "name": "ソル・ハーモン",
+    "title": "副詩人王",
+    "votes": 790,
+    "elected_at": "2026-04-23"
+  },
+  "election_history": [
+    {
+      "date": "2026-04-23",
+      "type": "建国選挙",
+      "turnout": 88.2
+    }
+  ],
+  "economy": {
+    "population": 175000,
+    "population_growth_rate": 0.014,
+    "gdp_annual": 4375000,
+    "gdp_per_capita": 25,
+    "tax_rate": 0.1,
+    "tax_revenue_annual": 437500,
+    "unemployment_rate": 0.042,
+    "happiness_index": 92,
+    "resources": {
+      "芸術品": {
+        "amount": "大",
+        "export": true,
+        "price_per_unit": 5000
+      },
+      "染料": {
+        "amount": "大",
+        "export": true,
+        "price_per_unit": 2000
+      },
+      "楽器": {
+        "amount": "中",
+        "export": true,
+        "price_per_unit": 4000
+      },
+      "農作物": {
+        "amount": "中",
+        "export": true,
+        "price_per_unit": 800
+      }
+    },
+    "imports": [
+      "鋼鉄",
+      "魔法書",
+      "海産物",
+      "精製金属"
+    ],
+    "exports": [
+      "芸術品",
+      "染料",
+      "楽器",
+      "農作物"
+    ],
+    "trade_balance_annual": 195000,
+    "last_calculated": "2026-04-23"
+  }
+}
