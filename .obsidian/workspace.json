@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "f96659113de20774",
+        "id": "f7ff91432f74c7cb",
         "type": "tabs",
         "children": [
           {
-            "id": "835a30f49491ca78",
+            "id": "0a4ff904d944047e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "Worlds/Zephyria/docs/ゼフィリア世界_ゲームシステム仕様書.md",
-                "mode": "source",
-                "source": false
+                "currentVersion": "1.9.10"
               },
-              "icon": "lucide-file",
-              "title": "ゼフィリア世界_ゲームシステム仕様書"
+              "icon": "lucide-book-up",
+              "title": "リリースノート 1.9.10"
             }
           }
         ]
@@ -94,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Worlds/Zephyria/docs/ゼフィリア世界_ゲームシステム仕様書.md",
+                "file": "Worlds/Zephyria/docs/ゼフィリア世界_基本設計仕様書.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +102,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "ゼフィリア世界_ゲームシステム仕様書へのバックリンク"
+              "title": "ゼフィリア世界_基本設計仕様書へのバックリンク"
             }
           },
           {
@@ -113,12 +111,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Worlds/Zephyria/docs/ゼフィリア世界_ゲームシステム仕様書.md",
+                "file": "Worlds/Zephyria/docs/ゼフィリア世界_基本設計仕様書.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "ゼフィリア世界_ゲームシステム仕様書からのアウトゴーイングリンク"
+              "title": "ゼフィリア世界_基本設計仕様書からのアウトゴーイングリンク"
             }
           },
           {
@@ -156,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Worlds/Zephyria/docs/ゼフィリア世界_ゲームシステム仕様書.md",
+                "file": "Worlds/Zephyria/docs/ゼフィリア世界_基本設計仕様書.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "ゼフィリア世界_ゲームシステム仕様書のアウトライン"
+              "title": "ゼフィリア世界_基本設計仕様書のアウトライン"
             }
           }
         ]
@@ -183,15 +181,8 @@
       "bases:新規ベースを作成": false
     }
   },
-  "active": "835a30f49491ca78",
+  "active": "0a4ff904d944047e",
   "lastOpenFiles": [
-    "Worlds/Zephyria/sync_to_supabase.py",
-    "Worlds/Zephyria/docs/ゼフィリア世界_アルカディア攻略仕様書.md",
-    "Worlds/Zephyria/docs/ゼフィリア世界_Webアプリ設計仕様書.md",
-    "Worlds/Zephyria/docs/ゼフィリア世界_NPC設計仕様書.md",
-    "Worlds/Zephyria/docs/ゼフィリア世界_基本設計仕様書.md",
-    "System/scripts/sync_to_supabase.py",
-    "System/scripts",
     "test-sync.txt",
     "Cardinal/個人メモ/💼 事業/進行中/コールセンターAI/計画書.md",
     "Cardinal/個人メモ/💼 事業/進行中/コールセンターAI/現状の悩み、課題.md",
@@ -215,11 +206,18 @@
     "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-24-SNS市場サマリー.md",
     "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-22-SNS市場サマリー.md",
     "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-21-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-16-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-15-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-19-SNS市場サマリー.md",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-14-SNS市場サマリー.md",
     "Cardinal/04_3125アイデア保管事業部（アイゼン）/line-inbox/_archive/[LINE]営業Active.txt",
     "Cardinal/04_3125アイデア保管事業部（アイゼン）/line-inbox/_archive/[LINE]営業Active 2.txt",
     "Cardinal/04_3125アイデア保管事業部（アイゼン）/exec-inbox/_archive/[LINE]佐藤一斗, 佐藤 拓也, 佐藤 晃太, Haruka_Osu.txt",
     "Cardinal/04_3125アイデア保管事業部（アイゼン）/case-inbox/_archive/[LINE]【人材派遣・委託】パートナー様募集部屋.txt",
     "Cardinal/02_3125経営日誌事業部（フェルン）/weekly-meeting/inbox/_archive",
-    "Cardinal/個人メモ/💼 事業/進行中"
+    "Cardinal/個人メモ/💼 事業/進行中",
+    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive",
+    "Cardinal/04_3125アイデア保管事業部（アイゼン）/役員トーク/_archive",
+    "Cardinal/04_3125アイデア保管事業部（アイゼン）/議事録/_archive"
   ]
 }
