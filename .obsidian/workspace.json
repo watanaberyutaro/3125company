@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f7ff91432f74c7cb",
+        "id": "66074f509a80d472",
         "type": "tabs",
         "children": [
           {
-            "id": "0a4ff904d944047e",
+            "id": "25130afe3a3c7991",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.10"
-              },
-              "icon": "lucide-book-up",
-              "title": "リリースノート 1.9.10"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新規タブ"
             }
           }
         ]
@@ -181,7 +179,7 @@
       "bases:新規ベースを作成": false
     }
   },
-  "active": "0a4ff904d944047e",
+  "active": "25130afe3a3c7991",
   "lastOpenFiles": [
     "test-sync.txt",
     "Cardinal/個人メモ/💼 事業/進行中/コールセンターAI/計画書.md",
