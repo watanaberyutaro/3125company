@@ -11,10 +11,14 @@
             "id": "25130afe3a3c7991",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "04_3125アイデア保管事業部（アイゼン）/_ideas/私のブラック企業.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新規タブ"
+              "title": "私のブラック企業"
             }
           }
         ]
@@ -179,8 +183,13 @@
       "bases:新規ベースを作成": false
     }
   },
-  "active": "25130afe3a3c7991",
+  "active": "9cd0aa2a651131de",
   "lastOpenFiles": [
+    "01_3125情報受付事業部（フリーレン）/3125 タスク管理事業部（フリーレン）/2026-05-22.md",
+    "01_3125情報受付事業部（フリーレン）/3125 朝礼（フリーレン）/_archive/2026-05-17.md",
+    "01_3125情報受付事業部（フリーレン）/3125 タスク管理事業部（フリーレン）/_archive/2026-05-17.md",
+    "00_受信トレイ/アイゼンより_2026-04-30-ゲームと現実の融合を他システムに転用.md",
+    "00_受信トレイ/アイゼンより_2026-04-30-ゲーミフィケーション仕事とゲームの融合.md",
     "test-sync.txt",
     "Cardinal/個人メモ/💼 事業/進行中/コールセンターAI/計画書.md",
     "Cardinal/個人メモ/💼 事業/進行中/コールセンターAI/現状の悩み、課題.md",
@@ -204,10 +213,6 @@
     "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-24-SNS市場サマリー.md",
     "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-22-SNS市場サマリー.md",
     "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-21-SNS市場サマリー.md",
-    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-16-SNS市場サマリー.md",
-    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-15-SNS市場サマリー.md",
-    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-19-SNS市場サマリー.md",
-    "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive/2026-03-14-SNS市場サマリー.md",
     "Cardinal/04_3125アイデア保管事業部（アイゼン）/line-inbox/_archive/[LINE]営業Active.txt",
     "Cardinal/04_3125アイデア保管事業部（アイゼン）/line-inbox/_archive/[LINE]営業Active 2.txt",
     "Cardinal/04_3125アイデア保管事業部（アイゼン）/exec-inbox/_archive/[LINE]佐藤一斗, 佐藤 拓也, 佐藤 晃太, Haruka_Osu.txt",
@@ -215,7 +220,6 @@
     "Cardinal/02_3125経営日誌事業部（フェルン）/weekly-meeting/inbox/_archive",
     "Cardinal/個人メモ/💼 事業/進行中",
     "Cardinal/06_3125マーケティング事業部（フランメ）/SNSマーケティング事業部/_archive",
-    "Cardinal/04_3125アイデア保管事業部（アイゼン）/役員トーク/_archive",
-    "Cardinal/04_3125アイデア保管事業部（アイゼン）/議事録/_archive"
+    "Cardinal/04_3125アイデア保管事業部（アイゼン）/役員トーク/_archive"
   ]
 }
