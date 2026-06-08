@@ -1,0 +1,51 @@
+{
+  "id": "npc_grd_001",
+  "name": "ガルド・ストーンフィスト",
+  "nation": "grandsheim",
+  "age": 78,
+  "gender": "男性",
+  "profession": "頭領鍛冶師",
+  "traits": [
+    "頑固",
+    "職人気質",
+    "寡黙",
+    "誇り高い"
+  ],
+  "skills": {
+    "外交": 2,
+    "管理": 7,
+    "戦略": 6,
+    "制作": 10,
+    "研究": 5,
+    "商才": 4
+  },
+  "popularity": 91,
+  "wealth": 520000,
+  "current_position": "頭領",
+  "history": "グランズヘイム史上最高の鍛冶師と称される生きる伝説。50年で1000本以上の名剣を鍛えた。弟子をとらず「鉄は嘘をつかない」が口癖。実はトルンを密かに後継者として見ている。",
+  "secret_organization": {
+    "name": "深鉱の誓い",
+    "role": "顧問（族長として形式的に参加）",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_reg_003": {
+      "type": "warriors_respect",
+      "value": 75,
+      "note": "最も尊敬する他国の戦士"
+    },
+    "npc_grd_002": {
+      "type": "father_figure",
+      "value": 80,
+      "note": "実の娘のように思っている"
+    },
+    "npc_grd_003": {
+      "type": "trusted_historian",
+      "value": 70,
+      "note": "伝統の守り手として信頼"
+    }
+  },
+  "romance_status": "妻に先立たれて20年。再婚する気はないが、ブリンには幸せになってほしいと思っている",
+  "personality_deep": "無愛想に見えるが、若い職人の成長を密かに喜んでいる",
+  "last_updated": "2026-04-21"
+}

@@ -1,0 +1,52 @@
+{
+  "nation": "コルサリア（港湾都市）",
+  "description": "海と空に囲まれた賑やかな港町。情報と貿易の十字路。",
+  "landmarks": [
+    {
+      "id": "corsa_harbor",
+      "name": "コルサリア大港湾",
+      "type": "port",
+      "symbol": "⚓",
+      "description": "空中を行き来する飛空艇の発着場と海上交易の両方が存在する巨大港湾。",
+      "built_year": "約280年前",
+      "berths": 500,
+      "annual_trade_el": 15000000
+    },
+    {
+      "id": "corsa_lighthouse",
+      "name": "霧の灯台「コルサの目」",
+      "type": "landmark",
+      "symbol": "🗼",
+      "description": "霧深い航路を照らす魔法の灯台。魔法石で動き、300km先まで光が届く。",
+      "built_year": "約220年前",
+      "height_m": 200,
+      "range_km": 300
+    },
+    {
+      "id": "corsa_intel",
+      "name": "情報商人ギルド「影の取引所」",
+      "type": "guild",
+      "symbol": "🕵️",
+      "description": "世界中の情報が集まる秘密の取引所。表向きは商業ギルド。",
+      "built_year": "約170年前",
+      "members": 3000
+    },
+    {
+      "id": "corsa_palace",
+      "name": "コルレオン邸宅",
+      "type": "government",
+      "symbol": "🏛",
+      "description": "マリス・コルレオンの官邸。海に面したテラスから貿易船を監視できる。",
+      "built_year": "約90年前"
+    },
+    {
+      "id": "corsa_black_market",
+      "name": "夜市「月影通り」",
+      "type": "commerce",
+      "symbol": "🌙",
+      "description": "夜になると賑わう裏市場。禁制品・情報・傭兵依頼が流通する。",
+      "built_year": "不明（自然発生）",
+      "active_hours": "20:00-04:00"
+    }
+  ]
+}

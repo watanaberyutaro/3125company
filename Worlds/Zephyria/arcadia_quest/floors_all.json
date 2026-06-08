@@ -1,0 +1,2115 @@
+{
+  "total_floors": 100,
+  "zones": {
+    "zone1": "F1-10: 霧・風・自然の試練",
+    "zone2": "F11-20: 古代文明の遺跡",
+    "zone3": "F21-30: 極限環境",
+    "zone4": "F31-40: 心理・幻惑の試練",
+    "zone5": "F41-50: 神話的存在",
+    "zone6": "F51-60: 時空間",
+    "zone7": "F61-70: 天体・宇宙",
+    "zone8": "F71-80: 虚無・存在",
+    "zone9": "F81-99: 神域・最終試練",
+    "final": "F100: アルカディア"
+  },
+  "floors": [
+    {
+      "floor": 1,
+      "zone": "zone1",
+      "name": "霧守の関門",
+      "description": "濃霧に包まれた最初の試練。空中を漂う浮遊岩が行く手を塞ぐ",
+      "environment": "霧中浮遊地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "霧守リンドヴルム",
+        "type": "飛龍",
+        "level": 15,
+        "abilities": [
+          "霧呼び（視界ゼロ）",
+          "翼の暴風",
+          "麻痺の息"
+        ],
+        "estimated_force_needed": 500
+      },
+      "clear_reward": "霧の晴れた航路開通。コルサリアからF2へのルートが確立",
+      "strategic_notes": "視界確保が最優先。コルサリアの海図が有効"
+    },
+    {
+      "floor": 2,
+      "zone": "zone1",
+      "name": "嵐雲の要塞",
+      "description": "永続する雷雨の中に建つ無人の古代要塞。精密機械の番人が守る",
+      "environment": "嵐の空中島",
+      "status": "未攻略",
+      "boss": {
+        "name": "雷王機械ゴルグロン",
+        "type": "古代機械",
+        "level": 22,
+        "abilities": [
+          "雷撃砲",
+          "自己修復",
+          "電磁遮断"
+        ],
+        "estimated_force_needed": 800
+      },
+      "clear_reward": "要塞内の古代技術資料が解放される（tech:eng_5の習得確率+30%）",
+      "strategic_notes": "雷への対策装備が必須"
+    },
+    {
+      "floor": 3,
+      "zone": "zone1",
+      "name": "嵐鳥の領域",
+      "description": "嵐鳥の巨大な群れが縄張りとする島。巣を破壊せず通過する難しさ",
+      "environment": "嵐鳥繁殖地",
+      "status": "未攻略",
+      "boss": {
+        "name": "嵐鳥の女王シルフィア",
+        "type": "巨鳥",
+        "level": 18,
+        "abilities": [
+          "竜巻召喚",
+          "群れ召喚（50羽）",
+          "衝撃波"
+        ],
+        "estimated_force_needed": 600
+      },
+      "clear_reward": "嵐鳥の羽根（飛空艇推力+15%に使える素材）の大量採取権",
+      "strategic_notes": "殲滅より回避が正解。女王のみ撃破が理想"
+    },
+    {
+      "floor": 4,
+      "zone": "zone1",
+      "name": "雲の迷宮",
+      "description": "雲そのものが壁・床・天井を形成する迷宮。構造が風で常に変化する",
+      "environment": "可変雲迷宮",
+      "status": "未攻略",
+      "boss": {
+        "name": "雲の番人ネブラ",
+        "type": "雲巨人",
+        "level": 20,
+        "abilities": [
+          "構造変化（10分で全形状更新）",
+          "吸収",
+          "霧の圧縮砲"
+        ],
+        "estimated_force_needed": 700
+      },
+      "clear_reward": "気流の地図（nav_5習得に必要な実測データ）",
+      "strategic_notes": "3時間以内の突破が推奨。長引くと迷宮が縮小する"
+    },
+    {
+      "floor": 5,
+      "zone": "zone1",
+      "name": "精霊の谷",
+      "description": "古代精霊族の廃墟。植物と廃墟が融合した美しい危険地帯",
+      "environment": "古代精霊廃墟",
+      "status": "未攻略",
+      "boss": {
+        "name": "堕ちた精霊王ヴォルカ",
+        "type": "堕落精霊",
+        "level": 35,
+        "abilities": [
+          "魂の叫び（精神攻撃）",
+          "幻影歩行",
+          "植物支配"
+        ],
+        "estimated_force_needed": 2000
+      },
+      "clear_reward": "精霊族の記録（世界の歴史断片を解放。res_6習得確率+40%）",
+      "strategic_notes": "精神攻撃への耐性装備・準備が必要"
+    },
+    {
+      "floor": 6,
+      "zone": "zone1",
+      "name": "砂嵐の砦",
+      "description": "高速で流れる砂嵐の中に半埋没した古代砦。視界と移動が制限される",
+      "environment": "砂嵐地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "砂の女王アリアン",
+        "type": "砂嵐の化身",
+        "level": 26,
+        "abilities": [
+          "砂嵐呼び（移動不可）",
+          "砂の鎧",
+          "砂の奔流"
+        ],
+        "estimated_force_needed": 900
+      },
+      "clear_reward": "古代砦の兵器設計図（mil_6習得に必要）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 7,
+      "zone": "zone1",
+      "name": "氷結の回廊",
+      "description": "永久凍土の空中回廊。床・壁・天井すべてが滑る",
+      "environment": "永久氷結地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "氷龍フロストフェング",
+        "type": "氷龍",
+        "level": 28,
+        "abilities": [
+          "吹雪（視界遮断）",
+          "氷の牢",
+          "寒気フィールド（体力継続減少）"
+        ],
+        "estimated_force_needed": 1000
+      },
+      "clear_reward": "氷結素材（精密機器の冷却装置に必要）",
+      "strategic_notes": "防寒装備と転倒対策が必須"
+    },
+    {
+      "floor": 8,
+      "zone": "zone1",
+      "name": "毒霧の密林",
+      "description": "巨大な浮遊島を覆う密林。植物自体が毒素を放出する",
+      "environment": "毒素密林",
+      "status": "未攻略",
+      "boss": {
+        "name": "毒蜘蛛の女王アラクネ",
+        "type": "巨大節足動物",
+        "level": 24,
+        "abilities": [
+          "毒霧散布",
+          "蜘蛛の巣（移動制限）",
+          "群れ召喚（100匹）"
+        ],
+        "estimated_force_needed": 800
+      },
+      "clear_reward": "解毒植物群の採取権（med_3習得に必要な素材）",
+      "strategic_notes": "解毒装備なしの突入は禁止"
+    },
+    {
+      "floor": 9,
+      "zone": "zone1",
+      "name": "崩落の橋",
+      "description": "絶えず崩れ落ちる古代石橋。渡りきることが唯一の攻略法",
+      "environment": "崩落進行中の橋",
+      "status": "未攻略",
+      "boss": {
+        "name": "崩落の番人コラプス",
+        "type": "環境型ボス",
+        "level": 21,
+        "abilities": [
+          "橋の崩落加速",
+          "石礫の投射",
+          "橋脚の爆発"
+        ],
+        "estimated_force_needed": 500
+      },
+      "clear_reward": "向こう岸に残された古代の設計図（eng_7解放）",
+      "strategic_notes": "速度が全て。重装備は不可"
+    },
+    {
+      "floor": 10,
+      "zone": "zone1",
+      "name": "溶岩の試練",
+      "description": "常に噴火し続ける火山島。溶岩流が防衛ラインを形成",
+      "environment": "活火山島",
+      "status": "未攻略",
+      "boss": {
+        "name": "溶岩巨神マグマロード",
+        "type": "火山の化身",
+        "level": 50,
+        "abilities": [
+          "溶岩噴射",
+          "地割れ",
+          "火柱フィールド"
+        ],
+        "estimated_force_needed": 5000
+      },
+      "clear_reward": "Zone1クリア：大型飛空艇1艇の設計図（nav_6解放）＋アルカディア地図断片①",
+      "strategic_notes": "Zone1の総決算。全国合同遠征が推奨"
+    },
+    {
+      "floor": 11,
+      "zone": "zone2",
+      "name": "亡者の王国",
+      "description": "古代王国が丸ごと空中島になった遺跡。武装した亡霊兵士が徘徊する",
+      "environment": "古代王国廃墟",
+      "status": "未攻略",
+      "boss": {
+        "name": "亡霊王カダヴァン",
+        "type": "亡霊君主",
+        "level": 38,
+        "abilities": [
+          "軍団召喚（500体）",
+          "恐怖の咆哮",
+          "不死再生"
+        ],
+        "estimated_force_needed": 3000
+      },
+      "clear_reward": "古代王国の統治記録（com_2解放の補助）",
+      "strategic_notes": "亡霊は物理攻撃が通じにくい。炎・光が有効"
+    },
+    {
+      "floor": 12,
+      "zone": "zone2",
+      "name": "水没都市",
+      "description": "海面下に沈んだ古代都市。生存するには潜水技術が必要",
+      "environment": "水中廃墟",
+      "status": "未攻略",
+      "boss": {
+        "name": "深海の主レヴィアス",
+        "type": "巨大海蛇",
+        "level": 42,
+        "abilities": [
+          "水流制御（押し流し）",
+          "暗黒水圧",
+          "嵐の召喚"
+        ],
+        "estimated_force_needed": 3500
+      },
+      "clear_reward": "水中建設技術の記録（eng_2の水上変種技術）",
+      "strategic_notes": "水中戦専用装備・呼吸確保が必須"
+    },
+    {
+      "floor": 13,
+      "zone": "zone2",
+      "name": "時計仕掛けの城",
+      "description": "全てが歯車で動く巨大な機械城塞。タイマー制の罠が随所にある",
+      "environment": "精密機械城塞",
+      "status": "未攻略",
+      "boss": {
+        "name": "時計仕掛けの城主クロノス",
+        "type": "古代機械",
+        "level": 45,
+        "abilities": [
+          "時間圧縮（行動速度半減）",
+          "機械増援",
+          "城塞変形"
+        ],
+        "estimated_force_needed": 4000
+      },
+      "clear_reward": "精密機械工学の設計図群（eng_5完全解放）",
+      "strategic_notes": "時間制限あり。クリアまで6時間"
+    },
+    {
+      "floor": 14,
+      "zone": "zone2",
+      "name": "砂漠神殿",
+      "description": "灼熱の砂漠に建つ古代神殿。太陽光が兵器として使われる",
+      "environment": "灼熱砂漠神殿",
+      "status": "未攻略",
+      "boss": {
+        "name": "砂漠神ラー・アヌビス",
+        "type": "古代神の使徒",
+        "level": 48,
+        "abilities": [
+          "太陽光収束砲",
+          "砂の嵐",
+          "蜃気楼（偽の出口生成）"
+        ],
+        "estimated_force_needed": 4500
+      },
+      "clear_reward": "太陽エネルギー収束技術（新エネルギー技術の種）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 15,
+      "zone": "zone2",
+      "name": "翡翠の迷宮",
+      "description": "ヒスイ色の結晶が密生する迷宮。結晶に触れると意識が混濁する",
+      "environment": "結晶性迷宮",
+      "status": "未攻略",
+      "boss": {
+        "name": "翡翠の番人エメラルディア",
+        "type": "結晶生命体",
+        "level": 40,
+        "abilities": [
+          "結晶化（接触麻痺）",
+          "鏡の反射攻撃",
+          "複製生成"
+        ],
+        "estimated_force_needed": 3200
+      },
+      "clear_reward": "結晶素材大量採取（arc_009の工房技術に有用）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 16,
+      "zone": "zone2",
+      "name": "北極要塞",
+      "description": "常吹雪の中に建つ巨大氷の要塞。内部は無数の罠が仕掛けられている",
+      "environment": "極地要塞",
+      "status": "未攻略",
+      "boss": {
+        "name": "白熊神ポラリス",
+        "type": "極地の番人",
+        "level": 44,
+        "abilities": [
+          "絶対零度フィールド",
+          "雪崩召喚",
+          "氷の巨壁生成"
+        ],
+        "estimated_force_needed": 4000
+      },
+      "clear_reward": "北極ルート地図（nav_3の精度向上）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 17,
+      "zone": "zone2",
+      "name": "地底湖の宮殿",
+      "description": "地底に広がる巨大な湖の底に建つ宮殿。空気が薄い",
+      "environment": "地底湖宮殿",
+      "status": "未攻略",
+      "boss": {
+        "name": "地底の女王ルビア",
+        "type": "地底生物",
+        "level": 43,
+        "abilities": [
+          "超音波攻撃（岩盤崩壊）",
+          "地底水流",
+          "暗闇支配"
+        ],
+        "estimated_force_needed": 3800
+      },
+      "clear_reward": "地底構造図（res_3の精度向上）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 18,
+      "zone": "zone2",
+      "name": "空中廃墟都市",
+      "description": "重力が部分的に反転した廃墟都市。上下が入れ替わる空間が存在する",
+      "environment": "重力異常廃墟",
+      "status": "未攻略",
+      "boss": {
+        "name": "廃墟の亡霊グレイ・ウィング",
+        "type": "重力異常体",
+        "level": 41,
+        "abilities": [
+          "重力反転（局所）",
+          "空間歪曲",
+          "廃墟崩落"
+        ],
+        "estimated_force_needed": 3500
+      },
+      "clear_reward": "重力異常の観測データ（res_5解放に必要）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 19,
+      "zone": "zone2",
+      "name": "結晶洞窟",
+      "description": "純度100%の巨大結晶が無数に林立する洞窟。音が異常に反響する",
+      "environment": "結晶共鳴洞窟",
+      "status": "未攻略",
+      "boss": {
+        "name": "結晶の王クリスタロス",
+        "type": "共鳴生命体",
+        "level": 46,
+        "abilities": [
+          "音波増幅砲",
+          "結晶の槍",
+          "共鳴爆発"
+        ],
+        "estimated_force_needed": 4200
+      },
+      "clear_reward": "純結晶（ジン・エコーストーンの最高工房素材）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 20,
+      "zone": "zone2",
+      "name": "灼熱神殿の奥地",
+      "description": "Zone2の総決算。複数の火山が同時噴火する環境",
+      "environment": "超活火山地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "炎の巨神イフリート",
+        "type": "炎の上位存在",
+        "level": 60,
+        "abilities": [
+          "炎柱地帯展開",
+          "全体燃焼攻撃",
+          "分身（3体）"
+        ],
+        "estimated_force_needed": 8000
+      },
+      "clear_reward": "Zone2クリア：古代文明技術集（tech全体+10%速度）＋アルカディア地図断片②",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 21,
+      "zone": "zone3",
+      "name": "渦巻く海流",
+      "description": "巨大な空中渦流（竜巻の恒常化）。中心に向かうほど風速が増す",
+      "environment": "巨大渦流地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "渦の化身ウロボロス",
+        "type": "風の上位存在",
+        "level": 50,
+        "abilities": [
+          "竜巻フィールド",
+          "吸引力",
+          "空中分断"
+        ],
+        "estimated_force_needed": 5000
+      },
+      "clear_reward": "渦流エネルギー収束技術（飛空艇エンジン改良）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 22,
+      "zone": "zone3",
+      "name": "音の迷宮",
+      "description": "音が武器になる特殊空間。大きな音を出すと即時跳ね返りで自滅する",
+      "environment": "音響異常地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "音の魔王レゾナンス",
+        "type": "音響生命体",
+        "level": 52,
+        "abilities": [
+          "共鳴爆破",
+          "音波砲",
+          "完全沈黙フィールド"
+        ],
+        "estimated_force_needed": 5500
+      },
+      "clear_reward": "音響増幅技術（通信インフラ強化）",
+      "strategic_notes": "全員が無言・無音での戦闘が必要"
+    },
+    {
+      "floor": 23,
+      "zone": "zone3",
+      "name": "鏡の間",
+      "description": "360度が完全な鏡に囲まれた空間。自分の反射が攻撃してくる",
+      "environment": "鏡面空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "鏡の悪魔リフレクション",
+        "type": "鏡像体",
+        "level": 48,
+        "abilities": [
+          "完全反射（全攻撃跳ね返し）",
+          "鏡像分裂",
+          "自己認識崩壊"
+        ],
+        "estimated_force_needed": 4800
+      },
+      "clear_reward": "光学技術の記録（精密観測機器の改良）",
+      "strategic_notes": "特定の鏡のみ実体。見極めが必要"
+    },
+    {
+      "floor": 24,
+      "zone": "zone3",
+      "name": "夢の浮島",
+      "description": "眠りを誘う花が群生する島。眠ると悪夢に閉じ込められる",
+      "environment": "催眠誘発地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "夢魔クリムゾン",
+        "type": "精神寄生体",
+        "level": 49,
+        "abilities": [
+          "睡眠誘発フィールド",
+          "夢牢（精神閉塞）",
+          "現実侵食"
+        ],
+        "estimated_force_needed": 4500
+      },
+      "clear_reward": "精神医療技術の向上（med_4解放）",
+      "strategic_notes": "6時間以上滞在すると全員眠りに落ちる"
+    },
+    {
+      "floor": 25,
+      "zone": "zone3",
+      "name": "虚空の宮殿",
+      "description": "重力が歪んだ異次元的な宮殿。方向感覚が完全に失われる",
+      "environment": "重力歪曲宮殿",
+      "status": "未攻略",
+      "boss": {
+        "name": "次元の守護者ヴォイドキング",
+        "type": "空間異常体",
+        "level": 70,
+        "abilities": [
+          "次元切断",
+          "重力反転（全体）",
+          "クローン生成"
+        ],
+        "estimated_force_needed": 15000
+      },
+      "clear_reward": "次元観測データ（res_7解放に必要）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 26,
+      "zone": "zone3",
+      "name": "闇の森",
+      "description": "光が届かない闇に覆われた巨大な空中森。光源を持つ者を優先的に狙う",
+      "environment": "完全暗黒森林",
+      "status": "未攻略",
+      "boss": {
+        "name": "闇の君主シャドウロード",
+        "type": "暗黒の化身",
+        "level": 53,
+        "abilities": [
+          "光吸収",
+          "暗黒フィールド展開",
+          "暗黒分身"
+        ],
+        "estimated_force_needed": 6000
+      },
+      "clear_reward": "暗視技術の記録（夜間作戦能力+30%）",
+      "strategic_notes": "光源なしの戦闘訓練が必要"
+    },
+    {
+      "floor": 27,
+      "zone": "zone3",
+      "name": "断崖の城塞",
+      "description": "垂直の崖に貼り付くように建つ城塞。内部は傾斜45度の床",
+      "environment": "傾斜断崖城塞",
+      "status": "未攻略",
+      "boss": {
+        "name": "崖の番人スターン",
+        "type": "岩石の化身",
+        "level": 51,
+        "abilities": [
+          "落石砲",
+          "断崖崩壊",
+          "重力増加フィールド"
+        ],
+        "estimated_force_needed": 5200
+      },
+      "clear_reward": "垂直建築技術（eng_2強化版）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 28,
+      "zone": "zone3",
+      "name": "深海神殿（天空版）",
+      "description": "なぜか天空に存在する「海底神殿」。水圧と光不足が同時に発生",
+      "environment": "天空海底空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "天空海神ポセイドン",
+        "type": "海神の使徒",
+        "level": 55,
+        "abilities": [
+          "水圧フィールド",
+          "暗黒水流",
+          "津波（全体押し流し）"
+        ],
+        "estimated_force_needed": 6500
+      },
+      "clear_reward": "水中・水上複合技術（nav_1強化）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 29,
+      "zone": "zone3",
+      "name": "逆さの大地",
+      "description": "天地が完全に逆転した島。上が地面、下が空",
+      "environment": "重力反転大地",
+      "status": "未攻略",
+      "boss": {
+        "name": "重力の支配者グラヴィタス",
+        "type": "重力操作体",
+        "level": 57,
+        "abilities": [
+          "局所重力操作",
+          "重力砲",
+          "反転フィールド展開"
+        ],
+        "estimated_force_needed": 7000
+      },
+      "clear_reward": "重力制御技術の観測データ",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 30,
+      "zone": "zone3",
+      "name": "消えゆく島",
+      "description": "30分ごとに消滅と再出現を繰り返す島。消滅中は虚空に投げ出される",
+      "environment": "消滅再生地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "消滅の番人ヴォイドウォーカー",
+        "type": "存在の境界体",
+        "level": 58,
+        "abilities": [
+          "消滅誘発",
+          "時間圧縮",
+          "空間ループ"
+        ],
+        "estimated_force_needed": 7500
+      },
+      "clear_reward": "Zone3クリア：空間操作理論（res_6強化）＋アルカディア地図断片③",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 31,
+      "zone": "zone4",
+      "name": "記憶の迷宮",
+      "description": "侵入者の記憶を読み取り、最も恐れるものを具現化する空間",
+      "environment": "記憶具現化空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "記憶喰いのメモリ",
+        "type": "心理操作体",
+        "level": 55,
+        "abilities": [
+          "最恐恐怖具現化",
+          "記憶書き換え",
+          "精神分裂誘発"
+        ],
+        "estimated_force_needed": 6000
+      },
+      "clear_reward": "心理戦術指南書（外交・交渉スキル向上）",
+      "strategic_notes": "全員の精神強度が試される"
+    },
+    {
+      "floor": 32,
+      "zone": "zone4",
+      "name": "偽りの楽園",
+      "description": "完璧に美しいが全てが偽物の楽園。真実の扉を見つけなければ永遠にここで暮らすことになる",
+      "environment": "幻惑楽園",
+      "status": "未攻略",
+      "boss": {
+        "name": "楽園の守護者イリュージオン",
+        "type": "幻惑の支配者",
+        "level": 52,
+        "abilities": [
+          "完全幻惑展開",
+          "真実認識阻害",
+          "欲望増幅"
+        ],
+        "estimated_force_needed": 5500
+      },
+      "clear_reward": "幻惑対策技術（情報戦+25%）",
+      "strategic_notes": "脱出には「望むものを諦める」決断が必要"
+    },
+    {
+      "floor": 33,
+      "zone": "zone4",
+      "name": "鏡の湖",
+      "description": "湖面に映る「もう一人の自分」が具現化して戦ってくる",
+      "environment": "自己対決空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "影のダブル（侵入者自身の最強形態）",
+        "type": "鏡像体",
+        "level": 55,
+        "abilities": [
+          "侵入者と全く同じ能力",
+          "弱点の先読み",
+          "精神への語りかけ"
+        ],
+        "estimated_force_needed": 5000
+      },
+      "clear_reward": "自己克服の証明書（NPCの精神強度+10）",
+      "strategic_notes": "戦術は「自分が負ける方法を知ること」"
+    },
+    {
+      "floor": 34,
+      "zone": "zone4",
+      "name": "感情の海",
+      "description": "感情が増幅される空間。喜び・怒り・悲しみ・恐怖が物理的な力を持つ",
+      "environment": "感情増幅海域",
+      "status": "未攻略",
+      "boss": {
+        "name": "感情の暴君エモーシオン",
+        "type": "感情の具現",
+        "level": 53,
+        "abilities": [
+          "感情嵐（全体混乱）",
+          "絶望フィールド",
+          "憤怒爆発"
+        ],
+        "estimated_force_needed": 5800
+      },
+      "clear_reward": "感情制御訓練記録（兵士士気管理+20%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 35,
+      "zone": "zone4",
+      "name": "声なき叫び",
+      "description": "声・思考が外に出せない完全無音空間。コミュニケーションが遮断される",
+      "environment": "完全コミュニケーション遮断空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "沈黙の支配者サイレンス",
+        "type": "虚無の化身",
+        "level": 54,
+        "abilities": [
+          "完全沈黙フィールド",
+          "意思疎通遮断",
+          "孤独増幅"
+        ],
+        "estimated_force_needed": 6200
+      },
+      "clear_reward": "非言語コミュニケーション技術（軍事連携+15%）",
+      "strategic_notes": "手信号・事前計画だけで戦闘"
+    },
+    {
+      "floor": 36,
+      "zone": "zone4",
+      "name": "欲望の館",
+      "description": "あらゆる欲望を叶える偽りの館。欲望に負けると永遠に館に縛られる",
+      "environment": "欲望具現化館",
+      "status": "未攻略",
+      "boss": {
+        "name": "欲望の守護者グリード",
+        "type": "欲望の化身",
+        "level": 56,
+        "abilities": [
+          "欲望誘惑（戦意喪失）",
+          "幻の報酬",
+          "依存誘発"
+        ],
+        "estimated_force_needed": 6500
+      },
+      "clear_reward": "欲望制御哲学書（指導者NPCの判断力向上）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 37,
+      "zone": "zone4",
+      "name": "過去の戦場",
+      "description": "歴史上の大戦が再現される幻の戦場。味方が次々と歴史の英雄と戦わされる",
+      "environment": "歴史再現戦場",
+      "status": "未攻略",
+      "boss": {
+        "name": "歴史の審判官クロニクル",
+        "type": "時間の使徒",
+        "level": 58,
+        "abilities": [
+          "歴史召喚（過去の英雄軍団）",
+          "時代錯誤",
+          "勝者への裁き"
+        ],
+        "estimated_force_needed": 7000
+      },
+      "clear_reward": "歴史戦術集成（mil_5強化）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 38,
+      "zone": "zone4",
+      "name": "信頼の崖",
+      "description": "一歩踏み出すと消えてしまう透明な橋。見えないものを信じる力が問われる",
+      "environment": "信頼試練空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "信頼の番人フェイス",
+        "type": "概念の守護者",
+        "level": 50,
+        "abilities": [
+          "橋の消去",
+          "疑念増幅",
+          "孤立誘発"
+        ],
+        "estimated_force_needed": 5000
+      },
+      "clear_reward": "信頼構築理論（同盟軍連携ボーナス+10%）",
+      "strategic_notes": "全員が互いを完全に信頼しないと橋が現れない"
+    },
+    {
+      "floor": 39,
+      "zone": "zone4",
+      "name": "忘却の砂漠",
+      "description": "時間が経つにつれて記憶が消えていく砂漠。目的を忘れると脱出できなくなる",
+      "environment": "記憶消失砂漠",
+      "status": "未攻略",
+      "boss": {
+        "name": "忘却の魔人オブリビオン",
+        "type": "記憶の侵食者",
+        "level": 55,
+        "abilities": [
+          "記憶消去フィールド",
+          "目的消失（撤退衝動）",
+          "アイデンティティ崩壊"
+        ],
+        "estimated_force_needed": 6000
+      },
+      "clear_reward": "記憶強化技術（NPC情報保持能力向上）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 40,
+      "zone": "zone4",
+      "name": "絶望の頂",
+      "description": "Zone4の総決算。ここまで来た者に「本当に続けるか」と問いかける断崖",
+      "environment": "精神の最終試練地",
+      "status": "未攻略",
+      "boss": {
+        "name": "絶望の擬人化デスペア",
+        "type": "概念の最高位守護者",
+        "level": 65,
+        "abilities": [
+          "絶望フィールド（撤退衝動MAX）",
+          "過去の失敗具現化",
+          "未来の喪失幻視"
+        ],
+        "estimated_force_needed": 10000
+      },
+      "clear_reward": "Zone4クリア：精神的勇気の証明（全NPC士気永続+15）＋アルカディア地図断片④",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 41,
+      "zone": "zone5",
+      "name": "大蛇の谷",
+      "description": "神話に登場する古代大蛇の眠る谷。大蛇の息が毒の霧を発生させる",
+      "environment": "神話大蛇の棲処",
+      "status": "未攻略",
+      "boss": {
+        "name": "神話大蛇ヴィルメ",
+        "type": "神話生物",
+        "level": 62,
+        "abilities": [
+          "毒の霧（全体持続ダメージ）",
+          "大蛇の締め上げ",
+          "大地裂き"
+        ],
+        "estimated_force_needed": 9000
+      },
+      "clear_reward": "古代神話の解読書（res_4強化）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 42,
+      "zone": "zone5",
+      "name": "鳳凰の試練",
+      "description": "不死鳥フェニックスが守る聖域。倒すたびに復活し強化される",
+      "environment": "不死鳥の聖域",
+      "status": "未攻略",
+      "boss": {
+        "name": "不死鳥フェニックス",
+        "type": "神話の鳥",
+        "level": 64,
+        "abilities": [
+          "炎の再生（撃破毎に強化）",
+          "全体燃焼",
+          "灰の散布（視界遮断）"
+        ],
+        "estimated_force_needed": 9500
+      },
+      "clear_reward": "再生技術の理論（戦闘後の回復速度×2）",
+      "strategic_notes": "倒すのでなく「燃やし尽くす」ことが正解"
+    },
+    {
+      "floor": 43,
+      "zone": "zone5",
+      "name": "海神の試練",
+      "description": "深海の神が天空に召喚した水の神殿。水中戦と陸戦が交互に発生",
+      "environment": "天空水神殿",
+      "status": "未攻略",
+      "boss": {
+        "name": "海神の怒り波ポセイドン二世",
+        "type": "上位海神",
+        "level": 63,
+        "abilities": [
+          "大波召喚（全体流失）",
+          "水圧球",
+          "海底引き込み"
+        ],
+        "estimated_force_needed": 9200
+      },
+      "clear_reward": "海洋支配技術（nav_3強化）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 44,
+      "zone": "zone5",
+      "name": "雷神の試練",
+      "description": "常に雷が降り注ぐ平原。避雷技術がなければ即死する",
+      "environment": "常時落雷平原",
+      "status": "未攻略",
+      "boss": {
+        "name": "雷神ト・レクス",
+        "type": "天候の神",
+        "level": 65,
+        "abilities": [
+          "連続落雷",
+          "嵐フィールド展開",
+          "電磁遮断"
+        ],
+        "estimated_force_needed": 10000
+      },
+      "clear_reward": "雷エネルギー利用技術（通信インフラ大幅強化）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 45,
+      "zone": "zone5",
+      "name": "大地神の試練",
+      "description": "島自体を操る大地の神との戦い。足場が常に変化する",
+      "environment": "可変地形の島",
+      "status": "未攻略",
+      "boss": {
+        "name": "大地神テラ・レックス",
+        "type": "大地の支配者",
+        "level": 66,
+        "abilities": [
+          "地形変化（床消去・壁生成）",
+          "岩石群弾",
+          "島の分割"
+        ],
+        "estimated_force_needed": 10500
+      },
+      "clear_reward": "地形工学技術（eng_7強化・要塞強化）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 46,
+      "zone": "zone5",
+      "name": "風神の試練",
+      "description": "風速400km以上の風が吹き続ける島。移動自体が戦闘",
+      "environment": "超高速風の島",
+      "status": "未攻略",
+      "boss": {
+        "name": "風神ゼフィロス",
+        "type": "風の上位神",
+        "level": 64,
+        "abilities": [
+          "超音速風（全体吹き飛ばし）",
+          "竜巻陣",
+          "無風帯（一時静止）"
+        ],
+        "estimated_force_needed": 9800
+      },
+      "clear_reward": "大気制御技術（天候被害-40%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 47,
+      "zone": "zone5",
+      "name": "火神の試練",
+      "description": "全てが溶岩に覆われた灼熱の島。冷却なしに30秒で全員が死亡する",
+      "environment": "全面溶岩の島",
+      "status": "未攻略",
+      "boss": {
+        "name": "火神アグニ・マスター",
+        "type": "炎の最上位神",
+        "level": 67,
+        "abilities": [
+          "溶岩大噴射",
+          "火炎旋風",
+          "溶岩海面上昇"
+        ],
+        "estimated_force_needed": 11000
+      },
+      "clear_reward": "超高温耐性素材技術（武器品質+30%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 48,
+      "zone": "zone5",
+      "name": "氷神の試練",
+      "description": "絶対零度を超える寒さの氷の宮殿。装備が凍結して使用不可になる",
+      "environment": "絶対零度宮殿",
+      "status": "未攻略",
+      "boss": {
+        "name": "氷神クリュオス",
+        "type": "氷の最上位神",
+        "level": 65,
+        "abilities": [
+          "絶対零度フィールド",
+          "装備凍結",
+          "氷の棺"
+        ],
+        "estimated_force_needed": 10200
+      },
+      "clear_reward": "超低温素材技術（食料保存・医療応用）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 49,
+      "zone": "zone5",
+      "name": "神々の会議室",
+      "description": "複数の神の使徒が同時に現れる。5体同時戦",
+      "environment": "神々の聖域",
+      "status": "未攻略",
+      "boss": {
+        "name": "神々の使徒団（5体同時）",
+        "type": "神話使徒群",
+        "level": 70,
+        "abilities": [
+          "各属性攻撃同時展開",
+          "使徒間の相互強化",
+          "神の加護"
+        ],
+        "estimated_force_needed": 15000
+      },
+      "clear_reward": "神話統合知識（宗教影響力+20%・外交ボーナス）",
+      "strategic_notes": "各属性への対策を全て揃えなければならない"
+    },
+    {
+      "floor": 50,
+      "zone": "zone5",
+      "name": "神殿群「神々の残影」",
+      "description": "Zone5総決算。ゼフィリア神話の主神と対決",
+      "environment": "神域の中心",
+      "status": "未攻略",
+      "boss": {
+        "name": "封印された神ゼフィル・アルタ",
+        "type": "ゼフィリアの主神",
+        "level": 90,
+        "abilities": [
+          "神聖炎",
+          "天啓（全体精神攻撃）",
+          "時間巻き戻し（5分）",
+          "神の壁"
+        ],
+        "estimated_force_needed": 40000
+      },
+      "clear_reward": "Zone5クリア：神の知識断片（全技術+20%速度・世界全体に伝播）＋アルカディア地図断片⑤",
+      "strategic_notes": "5カ国全合同遠征が必要。単独国家では不可能"
+    },
+    {
+      "floor": 51,
+      "zone": "zone6",
+      "name": "時間の川",
+      "description": "過去・現在・未来が混在する川。踏み外すと別の時代に飛ばされる",
+      "environment": "時間混在河川",
+      "status": "未攻略",
+      "boss": {
+        "name": "時間の番人クロノ・ウォッチャー",
+        "type": "時間の使徒",
+        "level": 68,
+        "abilities": [
+          "時間飛ばし（2時間前に戻す）",
+          "時間加速（老化）",
+          "未来予知（攻撃予読）"
+        ],
+        "estimated_force_needed": 12000
+      },
+      "clear_reward": "時間観測技術（res_2強化・将来予測精度向上）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 52,
+      "zone": "zone6",
+      "name": "空間の折り畳み",
+      "description": "3次元空間が折り畳まれた迷宮。100m進んでも元の場所に戻る",
+      "environment": "空間折り畳み迷宮",
+      "status": "未攻略",
+      "boss": {
+        "name": "空間織の支配者スペーサー",
+        "type": "空間操作体",
+        "level": 70,
+        "abilities": [
+          "空間折り畳み（移動無効化）",
+          "位置交換",
+          "空間分断"
+        ],
+        "estimated_force_needed": 13000
+      },
+      "clear_reward": "空間構造理論（nav_6強化）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 53,
+      "zone": "zone6",
+      "name": "並行世界の交差点",
+      "description": "2つの並行世界が重なった場所。敵が2倍の次元から来る",
+      "environment": "並行世界交差地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "並行世界の支配者パラレル",
+        "type": "次元の管理者",
+        "level": 72,
+        "abilities": [
+          "並行世界召喚（敵2倍化）",
+          "現実崩壊",
+          "次元統合（合成攻撃）"
+        ],
+        "estimated_force_needed": 14000
+      },
+      "clear_reward": "並行存在理論（哲学的世界観拡張）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 54,
+      "zone": "zone6",
+      "name": "時間の渦",
+      "description": "時間が逆流する渦巻き。敵が倒れるたびに過去に戻って復活する",
+      "environment": "時間逆流渦",
+      "status": "未攻略",
+      "boss": {
+        "name": "時間侵食者リバース",
+        "type": "時間逆行体",
+        "level": 71,
+        "abilities": [
+          "時間逆流（撃破無効化）",
+          "過去強化",
+          "未来干渉"
+        ],
+        "estimated_force_needed": 13500
+      },
+      "clear_reward": "逆時間観測技術（予測精度+50%）",
+      "strategic_notes": "即死技を持ち込まなければ倒せない"
+    },
+    {
+      "floor": 55,
+      "zone": "zone6",
+      "name": "空間の壁",
+      "description": "見えない壁が無数に存在する空間。接触すると別の場所に飛ばされる",
+      "environment": "見えない壁の空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "空間の壁守シールドマスター",
+        "type": "空間防壁体",
+        "level": 69,
+        "abilities": [
+          "不可視壁展開",
+          "空間反射（攻撃跳ね返し）",
+          "閉鎖空間生成"
+        ],
+        "estimated_force_needed": 12500
+      },
+      "clear_reward": "空間把握技術（軍事索敵能力+20%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 56,
+      "zone": "zone6",
+      "name": "過去の再現",
+      "description": "ゼフィリアの「大崩壊」が再現されている。住民を逃がしながら進む",
+      "environment": "歴史再現地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "大崩壊の残滓カタストロフィ",
+        "type": "歴史の傷跡",
+        "level": 73,
+        "abilities": [
+          "大噴火再現（全体ダメージ）",
+          "歴史強制干渉",
+          "悲劇の連鎖"
+        ],
+        "estimated_force_needed": 14500
+      },
+      "clear_reward": "大崩壊の完全記録（忘れられた大地の謎が一部解明）",
+      "strategic_notes": "NPCの歴史認識が変わる重要フロア"
+    },
+    {
+      "floor": 57,
+      "zone": "zone6",
+      "name": "未来の廃墟",
+      "description": "200年後のゼフィリアが廃墟になった幻を見せる場所。見続けると絶望する",
+      "environment": "未来幻視地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "未来の呪縛フューチャー・カース",
+        "type": "未来の恐怖",
+        "level": 71,
+        "abilities": [
+          "絶望幻視（戦意喪失）",
+          "未来決定（行動制限）",
+          "時間枯渇"
+        ],
+        "estimated_force_needed": 13000
+      },
+      "clear_reward": "未来改変の可能性（物語的選択肢が解放される）",
+      "strategic_notes": "見続けなければ恐れるものはない"
+    },
+    {
+      "floor": 58,
+      "zone": "zone6",
+      "name": "記憶の彼岸",
+      "description": "死者の記憶が蓄積された領域。過去の英雄たちが静かに問いかけてくる",
+      "environment": "死者の記憶領域",
+      "status": "未攻略",
+      "boss": {
+        "name": "記憶の守護者レクイエム",
+        "type": "記憶の集合体",
+        "level": 72,
+        "abilities": [
+          "過去の英雄召喚",
+          "感傷攻撃（精神ダメージ）",
+          "記憶の海溺死"
+        ],
+        "estimated_force_needed": 14000
+      },
+      "clear_reward": "先人の知恵総集（全スキル+5%、永続）",
+      "strategic_notes": "戦うのではなく対話することで突破できるフロア"
+    },
+    {
+      "floor": 59,
+      "zone": "zone6",
+      "name": "時間の終わり",
+      "description": "時間が完全に停止した空間。動くことも思考することも制限される",
+      "environment": "時間凍結空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "時間の終末エンド・オブ・タイム",
+        "type": "時間の頂点",
+        "level": 74,
+        "abilities": [
+          "時間完全凍結（全行動停止3分）",
+          "永遠ループ",
+          "時間消滅"
+        ],
+        "estimated_force_needed": 15000
+      },
+      "clear_reward": "時間と存在の関係理論（哲学的解放）",
+      "strategic_notes": "「今この瞬間」だけに集中することが攻略の鍵"
+    },
+    {
+      "floor": 60,
+      "zone": "zone6",
+      "name": "現在という奇跡",
+      "description": "Zone6総決算。時空間の全てを経験した者が辿り着く場所",
+      "environment": "時空間の中心",
+      "status": "未攻略",
+      "boss": {
+        "name": "時空間の管理者クロノ・マスター",
+        "type": "時空の番人",
+        "level": 85,
+        "abilities": [
+          "全時間操作",
+          "空間完全掌握",
+          "時空間融合攻撃"
+        ],
+        "estimated_force_needed": 25000
+      },
+      "clear_reward": "Zone6クリア：時空間理解（全技術研究速度×2・恒久）＋アルカディア地図断片⑥",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 61,
+      "zone": "zone7",
+      "name": "星の海",
+      "description": "ゼフィリアの上空、星が降り注ぐ海域。流星が武器として降ってくる",
+      "environment": "流星降下地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "星の番人アストロ",
+        "type": "天体の使徒",
+        "level": 72,
+        "abilities": [
+          "流星群（全体）",
+          "星の引力（集約攻撃）",
+          "光速の矢"
+        ],
+        "estimated_force_needed": 15000
+      },
+      "clear_reward": "天体観測精密技術（res_2完全解放）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 62,
+      "zone": "zone7",
+      "name": "太陽の門",
+      "description": "太陽に最も近い灼熱地帯。昼間は光で視界がゼロ、夜は絶対零度",
+      "environment": "昼夜極端地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "太陽の守護者ソル・マスター",
+        "type": "太陽の使徒",
+        "level": 74,
+        "abilities": [
+          "太陽閃光（全体盲目）",
+          "夜の絶対零度",
+          "昼夜交替攻撃"
+        ],
+        "estimated_force_needed": 16000
+      },
+      "clear_reward": "太陽光エネルギー完全利用技術",
+      "strategic_notes": "夜明けのタイミングで仕掛けるのが最適解"
+    },
+    {
+      "floor": 63,
+      "zone": "zone7",
+      "name": "月の宮殿",
+      "description": "引力が月に支配された宮殿。潮汐力で地形が変わる",
+      "environment": "引力変動宮殿",
+      "status": "未攻略",
+      "boss": {
+        "name": "月神ルナ・レックス",
+        "type": "月の支配者",
+        "level": 73,
+        "abilities": [
+          "引力嵐（全体拘束）",
+          "潮汐地形変動",
+          "月光幻惑"
+        ],
+        "estimated_force_needed": 15500
+      },
+      "clear_reward": "引力制御技術（飛空艇燃費-30%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 64,
+      "zone": "zone7",
+      "name": "彗星の軌跡",
+      "description": "高速で移動する彗星の上を戦場とする。常に全速で走り続けなければ落下する",
+      "environment": "彗星表面戦場",
+      "status": "未攻略",
+      "boss": {
+        "name": "彗星の騎士コメット・ライダー",
+        "type": "天体生命体",
+        "level": 75,
+        "abilities": [
+          "高速移動（戦場が動く）",
+          "尾の炎",
+          "衝突加速"
+        ],
+        "estimated_force_needed": 16500
+      },
+      "clear_reward": "高速移動技術（軍事機動力+25%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 65,
+      "zone": "zone7",
+      "name": "重力の星",
+      "description": "重力が地球の10倍になる特殊な星型の島。移動自体が消耗",
+      "environment": "超重力地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "重力神グラヴィ・マスター",
+        "type": "重力の上位体",
+        "level": 76,
+        "abilities": [
+          "超重力フィールド（移動不可）",
+          "重力砲",
+          "重力崩壊"
+        ],
+        "estimated_force_needed": 17000
+      },
+      "clear_reward": "重力克服技術（装備軽量化・機動力革命）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 66,
+      "zone": "zone7",
+      "name": "星団の間",
+      "description": "無数の小惑星が高速で飛び交う空間。止まっていると即座に直撃する",
+      "environment": "小惑星帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "星団の支配者ネビュラ",
+        "type": "星間物質の集合",
+        "level": 74,
+        "abilities": [
+          "小惑星群召喚",
+          "引力捕縛",
+          "星間爆発"
+        ],
+        "estimated_force_needed": 16000
+      },
+      "clear_reward": "星間空間マッピング（nav_6強化・アルカディア高高度ルート解析）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 67,
+      "zone": "zone7",
+      "name": "超新星の残滓",
+      "description": "かつて爆発した星の残骸が浮遊する領域。放射線と高熱が常時発生",
+      "environment": "超新星残骸地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "超新星の残滓ノヴァ",
+        "type": "恒星の残滓",
+        "level": 77,
+        "abilities": [
+          "放射線嵐（全体持続ダメージ）",
+          "熱核融合砲",
+          "残滓爆発"
+        ],
+        "estimated_force_needed": 17500
+      },
+      "clear_reward": "エネルギー収束技術（全国のエネルギー効率+20%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 68,
+      "zone": "zone7",
+      "name": "銀河の渦",
+      "description": "ゼフィリアの外宇宙まで広がる幻の空間。規模の大きさに精神が押し潰される",
+      "environment": "宇宙規模幻視空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "銀河の守護者ギャラクシー",
+        "type": "宇宙規模の存在",
+        "level": 78,
+        "abilities": [
+          "宇宙スケール圧迫（精神崩壊）",
+          "銀河波動砲",
+          "存在の矮小化"
+        ],
+        "estimated_force_needed": 18000
+      },
+      "clear_reward": "宇宙観の拡張（全NPC世界観が変化・国家外交+10%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 69,
+      "zone": "zone7",
+      "name": "暗黒星雲",
+      "description": "光が存在しない完全な宇宙空間。感覚が全て遮断される",
+      "environment": "感覚遮断宇宙空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "暗黒の星ダーク・スター",
+        "type": "虚無の星",
+        "level": 76,
+        "abilities": [
+          "感覚完全遮断",
+          "虚無侵食",
+          "存在消去（一時的）"
+        ],
+        "estimated_force_needed": 17000
+      },
+      "clear_reward": "感覚超越技術（士気崩壊への耐性）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 70,
+      "zone": "zone7",
+      "name": "宇宙の夜明け",
+      "description": "Zone7総決算。宇宙の始まりを体験する圧倒的な光の中での戦い",
+      "environment": "宇宙誕生の光",
+      "status": "未攻略",
+      "boss": {
+        "name": "宇宙の始まりビッグバン・エコー",
+        "type": "宇宙の残響",
+        "level": 88,
+        "abilities": [
+          "ビッグバン波動（全体壊滅的ダメージ）",
+          "エネルギー過負荷",
+          "光速の衝撃"
+        ],
+        "estimated_force_needed": 30000
+      },
+      "clear_reward": "Zone7クリア：宇宙規模の視点（全研究速度×3・次の遠征の生存率+20%）＋アルカディア地図断片⑦",
+      "strategic_notes": "人類史上最大規模の遠征が必要"
+    },
+    {
+      "floor": 71,
+      "zone": "zone8",
+      "name": "存在の問い",
+      "description": "「自分はなぜここにいるのか」を問い続ける空間。答えられない者は退場する",
+      "environment": "存在意義試練地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "存在の問いかけクエスチョン",
+        "type": "概念の守護者",
+        "level": 78,
+        "abilities": [
+          "存在否定（撤退強制）",
+          "目的消失",
+          "意味の剥奪"
+        ],
+        "estimated_force_needed": 18000
+      },
+      "clear_reward": "自己同一性の強化（全NPC精神強度MAX・永続）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 72,
+      "zone": "zone8",
+      "name": "虚無の海",
+      "description": "何もない完全な虚無の空間。虚無に触れると自分も虚無になっていく",
+      "environment": "完全虚無空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "虚無の化身ニヒル",
+        "type": "虚無そのもの",
+        "level": 80,
+        "abilities": [
+          "虚無化（触れると消滅）",
+          "虚無伝播",
+          "存在侵食"
+        ],
+        "estimated_force_needed": 20000
+      },
+      "clear_reward": "虚無認識技術（哲学的防衛理論）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 73,
+      "zone": "zone8",
+      "name": "意識の海",
+      "description": "全ての生命の意識が海として広がる空間。溺れると自我を失う",
+      "environment": "集合意識の海",
+      "status": "未攻略",
+      "boss": {
+        "name": "集合意識オムニ",
+        "type": "全意識の集合",
+        "level": 79,
+        "abilities": [
+          "意識溺死（自我喪失）",
+          "他者の感情洪水",
+          "集団幻惑"
+        ],
+        "estimated_force_needed": 19000
+      },
+      "clear_reward": "共感と独立の均衡理論（外交・軍事全体+10%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 74,
+      "zone": "zone8",
+      "name": "自由意志の迷宮",
+      "description": "全ての選択が正解でもあり間違いでもある迷宮。唯一無二の正解など存在しない",
+      "environment": "選択の迷宮",
+      "status": "未攻略",
+      "boss": {
+        "name": "選択の番人フリーウィル",
+        "type": "意志の守護者",
+        "level": 80,
+        "abilities": [
+          "全選択の無効化",
+          "結果の逆転",
+          "後悔の具現"
+        ],
+        "estimated_force_needed": 19500
+      },
+      "clear_reward": "純粋な意志の証明（アルカディア最終門の判定に加算）",
+      "strategic_notes": "「正しい答え」でなく「自分の答え」で進む"
+    },
+    {
+      "floor": 75,
+      "zone": "zone8",
+      "name": "恐怖の根源",
+      "description": "全ての恐怖の源泉となる空間。人類最古の恐怖が具現化している",
+      "environment": "恐怖の根源地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "恐怖の根源プライマル・フィア",
+        "type": "恐怖の体現",
+        "level": 82,
+        "abilities": [
+          "生存本能の上書き（全行動を逃走に変える）",
+          "恐怖増幅",
+          "死の予感"
+        ],
+        "estimated_force_needed": 21000
+      },
+      "clear_reward": "恐怖克服の証明（軍事士気崩壊への完全耐性）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 76,
+      "zone": "zone8",
+      "name": "愛と喪失",
+      "description": "愛するものを失う痛みを体験させる空間。全ての参加者が最も大切なものを失う幻を見る",
+      "environment": "喪失の幻視空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "喪失の番人バーナード",
+        "type": "悲しみの使徒",
+        "level": 79,
+        "abilities": [
+          "愛着攻撃（最も大切なものが消える幻）",
+          "悲嘆フィールド",
+          "諦念誘発"
+        ],
+        "estimated_force_needed": 18500
+      },
+      "clear_reward": "喪失を超えた愛（NPCの関係値上限が100から150に拡張）",
+      "strategic_notes": "最もきつい精神攻撃。準備が必要"
+    },
+    {
+      "floor": 77,
+      "zone": "zone8",
+      "name": "時間の終焉",
+      "description": "全ての時間が終わった後の静寂",
+      "environment": "終わりの静寂地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "終焉の番人エンド",
+        "type": "終わりの体現",
+        "level": 83,
+        "abilities": [
+          "時間終了（全行動停止10分）",
+          "永遠の静寂",
+          "終わりへの誘い"
+        ],
+        "estimated_force_needed": 22000
+      },
+      "clear_reward": "終わりを知ることの価値（全知識に深みが増す）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 78,
+      "zone": "zone8",
+      "name": "始まりの前",
+      "description": "全てが始まる前の混沌",
+      "environment": "原初の混沌地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "混沌の源カオス・オリジン",
+        "type": "全ての始まり",
+        "level": 84,
+        "abilities": [
+          "混沌展開（全スキル無効化）",
+          "秩序崩壊",
+          "ランダム化"
+        ],
+        "estimated_force_needed": 23000
+      },
+      "clear_reward": "秩序と混沌の均衡理論（全国安定度+10%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 79,
+      "zone": "zone8",
+      "name": "全ての終わりと始まり",
+      "description": "Zone8の収束点。全ての概念が融合する",
+      "environment": "概念融合空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "概念の統合者オメガ・アルファ",
+        "type": "全概念の体現",
+        "level": 86,
+        "abilities": [
+          "概念融合攻撃（全属性同時）",
+          "存在意義の問い（全員回答必須）",
+          "根源からの破壊"
+        ],
+        "estimated_force_needed": 26000
+      },
+      "clear_reward": "存在の意味（参加者全員が個人の答えを得る）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 80,
+      "zone": "zone8",
+      "name": "虚無と充実の間",
+      "description": "Zone8総決算。何もない場所から何かを生み出す試練",
+      "environment": "創造の試練地帯",
+      "status": "未攻略",
+      "boss": {
+        "name": "創造と破壊の番人クリエイター",
+        "type": "創造の体現",
+        "level": 90,
+        "abilities": [
+          "無からの創造（新たな敵が生まれ続ける）",
+          "全破壊",
+          "存在の逆説"
+        ],
+        "estimated_force_needed": 35000
+      },
+      "clear_reward": "Zone8クリア：創造的精神の解放（世界のすべての技術ツリーが可視化される）＋アルカディア地図断片⑧",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 81,
+      "zone": "zone9",
+      "name": "神の庭",
+      "description": "神々の住む場所の入り口。美しいが一歩でも踏み外すと奈落へ",
+      "environment": "神域の入り口",
+      "status": "未攻略",
+      "boss": {
+        "name": "神域の番人セラフ",
+        "type": "上位天使",
+        "level": 80,
+        "abilities": [
+          "聖光砲",
+          "神域追放（場外排除）",
+          "神の裁き"
+        ],
+        "estimated_force_needed": 20000
+      },
+      "clear_reward": "神域通行許可（F82以降へのアクセス）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 82,
+      "zone": "zone9",
+      "name": "天使軍団",
+      "description": "5000体の天使が組織的に守る空域",
+      "environment": "天使軍団の守備空域",
+      "status": "未攻略",
+      "boss": {
+        "name": "天使軍総長アルカンジェル",
+        "type": "天使軍の頂点",
+        "level": 83,
+        "abilities": [
+          "天使5000体召喚",
+          "聖光壁",
+          "神聖秩序展開"
+        ],
+        "estimated_force_needed": 40000
+      },
+      "clear_reward": "神聖軍事連携技術（同盟軍との戦術が飛躍的に向上）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 83,
+      "zone": "zone9",
+      "name": "審判の間",
+      "description": "全ての行いが裁かれる空間。悪意ある行動をした者は入場できない",
+      "environment": "審判の空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "審判者ジャッジメント",
+        "type": "神の代理人",
+        "level": 84,
+        "abilities": [
+          "行為の具現化（過去の全行動が現れる）",
+          "因果の刃",
+          "悪意排除"
+        ],
+        "estimated_force_needed": 38000
+      },
+      "clear_reward": "清廉さの証明（アルカディア最終判定に大幅加算）",
+      "strategic_notes": "NPCの過去全行動が審査される"
+    },
+    {
+      "floor": 84,
+      "zone": "zone9",
+      "name": "試練の山",
+      "description": "重力が10倍の聖なる山。山頂に辿り着くことだけが求められる",
+      "environment": "超重力聖山",
+      "status": "未攻略",
+      "boss": {
+        "name": "聖山の主チャレンジャー",
+        "type": "試練の体現",
+        "level": 82,
+        "abilities": [
+          "重力増大（段階的）",
+          "落石",
+          "山の崩壊"
+        ],
+        "estimated_force_needed": 35000
+      },
+      "clear_reward": "忍耐と意志の証明（長期遠征の補給コスト-50%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 85,
+      "zone": "zone9",
+      "name": "記憶の神殿",
+      "description": "世界の全記憶が保存された神殿。真実を知ることを強いられる",
+      "environment": "全記憶の神殿",
+      "status": "未攻略",
+      "boss": {
+        "name": "真実の守護者トゥルース",
+        "type": "真実の体現",
+        "level": 85,
+        "abilities": [
+          "全記録開示（参加者の全秘密が明かされる）",
+          "真実の剣",
+          "嘘の燃焼"
+        ],
+        "estimated_force_needed": 36000
+      },
+      "clear_reward": "世界の真実（ゼフィリアの本当の歴史が一部開示される）",
+      "strategic_notes": "秘密組織NPCには特に過酷"
+    },
+    {
+      "floor": 86,
+      "zone": "zone9",
+      "name": "光の試練",
+      "description": "純粋な光のみが存在する空間。影を持つ者は焼かれる",
+      "environment": "純粋光空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "光の番人ルクス",
+        "type": "光の体現",
+        "level": 86,
+        "abilities": [
+          "純光線（シャドウを持つ者を攻撃）",
+          "影の焼却",
+          "闇の排除"
+        ],
+        "estimated_force_needed": 38000
+      },
+      "clear_reward": "光の純粋性証明（宗教影響力+30%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 87,
+      "zone": "zone9",
+      "name": "静寂の神殿",
+      "description": "音も動きも消えた完全な静寂の神殿。存在することだけが試練",
+      "environment": "静寂の試練",
+      "status": "未攻略",
+      "boss": {
+        "name": "静寂の神スティルネス",
+        "type": "静止の体現",
+        "level": 85,
+        "abilities": [
+          "完全静止フィールド",
+          "存在感の圧迫",
+          "動く者への罰"
+        ],
+        "estimated_force_needed": 37000
+      },
+      "clear_reward": "静寂の力（精神的ストレス耐性MAX）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 88,
+      "zone": "zone9",
+      "name": "祈りの石",
+      "description": "100万人分の祈りが物質化した巨大な石。その重さが精神に圧し掛かる",
+      "environment": "祈りの場",
+      "status": "未攻略",
+      "boss": {
+        "name": "祈りの重さプレイヤー",
+        "type": "集合精神体",
+        "level": 87,
+        "abilities": [
+          "祈りの圧力（精神ダメージ）",
+          "期待の具現",
+          "失望の爆発"
+        ],
+        "estimated_force_needed": 40000
+      },
+      "clear_reward": "集合的意思の力（民心掌握力MAX）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 89,
+      "zone": "zone9",
+      "name": "愛の終着点",
+      "description": "全ての愛が辿り着く場所。ここには争いがない",
+      "environment": "愛の聖域",
+      "status": "未攻略",
+      "boss": {
+        "name": "愛の番人アモール",
+        "type": "愛の体現",
+        "level": 84,
+        "abilities": [
+          "攻撃する気を失わせる（全行動への疑問誘発）",
+          "愛の壁",
+          "無条件の受容（混乱誘発）"
+        ],
+        "estimated_force_needed": 36000
+      },
+      "clear_reward": "愛の証明（NPCの恋愛関係が全て前進する）",
+      "strategic_notes": "戦闘ではなく対話で解決できる唯一のゾーンボス"
+    },
+    {
+      "floor": 90,
+      "zone": "zone9",
+      "name": "神の問い①",
+      "description": "神からの最初の問い：『なぜ進むのか』",
+      "environment": "神域審問の間",
+      "status": "未攻略",
+      "boss": {
+        "name": "神の審問官プロービング一世",
+        "type": "神の代行",
+        "level": 88,
+        "abilities": [
+          "問いの具現（答えられない場合10000ダメージ）",
+          "論理の壁",
+          "哲学的攻撃"
+        ],
+        "estimated_force_needed": 42000
+      },
+      "clear_reward": "第一の答え（最終門判定に加算）",
+      "strategic_notes": "全NPCが自分の言葉で答えを出す"
+    },
+    {
+      "floor": 91,
+      "zone": "zone9",
+      "name": "神の問い②",
+      "description": "神からの問い：『何を守りたいのか』",
+      "environment": "神域審問の間",
+      "status": "未攻略",
+      "boss": {
+        "name": "神の審問官プロービング二世",
+        "type": "神の代行",
+        "level": 89,
+        "abilities": [
+          "守護本能の試験",
+          "喪失の強制体験",
+          "守れないものの具現"
+        ],
+        "estimated_force_needed": 43000
+      },
+      "clear_reward": "第二の答え",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 92,
+      "zone": "zone9",
+      "name": "神の問い③",
+      "description": "神からの問い：『自由とは何か』",
+      "environment": "神域審問の間",
+      "status": "未攻略",
+      "boss": {
+        "name": "神の審問官プロービング三世",
+        "type": "神の代行",
+        "level": 90,
+        "abilities": [
+          "自由の定義試験",
+          "縛りの具現",
+          "選択の逆説"
+        ],
+        "estimated_force_needed": 44000
+      },
+      "clear_reward": "第三の答え（アルカディア最終判定の核心に関わる問い）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 93,
+      "zone": "zone9",
+      "name": "二者択一の間",
+      "description": "2つの選択肢が示される。どちらを選んでも何かを失う",
+      "environment": "選択の試練",
+      "status": "未攻略",
+      "boss": {
+        "name": "二択の守護者ダイレンマ",
+        "type": "選択の体現",
+        "level": 89,
+        "abilities": [
+          "選択強制（逃げると即座に敗北）",
+          "代償の具現",
+          "選択の連鎖"
+        ],
+        "estimated_force_needed": 43000
+      },
+      "clear_reward": "選択の重さの理解（国家政策の判断精度+20%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 94,
+      "zone": "zone9",
+      "name": "孤独の頂",
+      "description": "全ての仲間が消え、一人で進まなければならない空間",
+      "environment": "孤独の試練",
+      "status": "未攻略",
+      "boss": {
+        "name": "孤独の番人ソリテュード",
+        "type": "孤独の体現",
+        "level": 90,
+        "abilities": [
+          "孤立誘発（仲間の消去）",
+          "一人の限界を試す",
+          "孤独の圧力"
+        ],
+        "estimated_force_needed": 45000
+      },
+      "clear_reward": "孤独と共存の理解（NPCの個人行動力+20%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 95,
+      "zone": "zone9",
+      "name": "全てを賭けた戦い",
+      "description": "これまでの全ての敵の最強形態が同時に現れる",
+      "environment": "全ボス再召喚の間",
+      "status": "未攻略",
+      "boss": {
+        "name": "全ゾーンのボス軍団（20体同時）",
+        "type": "最強形態の集合",
+        "level": 95,
+        "abilities": [
+          "各ゾーン最強ボス能力の同時展開",
+          "連携強化",
+          "倒しても復活"
+        ],
+        "estimated_force_needed": 80000
+      },
+      "clear_reward": "全試練克服の証明（全ステータス+20%・永続）",
+      "strategic_notes": "最大の兵力と技術が必要"
+    },
+    {
+      "floor": 96,
+      "zone": "zone9",
+      "name": "光と影の統一",
+      "description": "善と悪、光と闇が統一される空間。どちらかだけでは存在できない",
+      "environment": "二元性統一の間",
+      "status": "未攻略",
+      "boss": {
+        "name": "光影統一者ユニティ",
+        "type": "二元性の体現",
+        "level": 91,
+        "abilities": [
+          "光影同時攻撃（片方だけでは対応不可）",
+          "分裂誘発",
+          "統一への抵抗"
+        ],
+        "estimated_force_needed": 50000
+      },
+      "clear_reward": "二元性の超克（世界観が更新・全外交能力+15%）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 97,
+      "zone": "zone9",
+      "name": "最後の戦場",
+      "description": "ゼフィリア全土が見える高台。ここでの結果が世界に伝わる",
+      "environment": "最高高度戦場",
+      "status": "未攻略",
+      "boss": {
+        "name": "最後の試験官テスト・マスター",
+        "type": "試験の体現",
+        "level": 93,
+        "abilities": [
+          "全能力最大展開",
+          "世界規模プレッシャー",
+          "ゼフィリアの全視線"
+        ],
+        "estimated_force_needed": 55000
+      },
+      "clear_reward": "世界に知られる勇気（全国の士気・期待値が最大に）",
+      "strategic_notes": ""
+    },
+    {
+      "floor": 98,
+      "zone": "zone9",
+      "name": "境界の間",
+      "description": "アルカディアとゼフィリアの境界。ここを越えるとゼフィリアには戻れない（自発的帰還は可）",
+      "environment": "世界の境界",
+      "status": "未攻略",
+      "boss": {
+        "name": "境界の守護者ボーダー",
+        "type": "境界の体現",
+        "level": 94,
+        "abilities": [
+          "越境への最後の制止",
+          "後悔の具現化",
+          "帰還への誘惑"
+        ],
+        "estimated_force_needed": 58000
+      },
+      "clear_reward": "境界を越える意志（最終門判定の前提条件）",
+      "strategic_notes": "ここまで来て引き返したNPCは英雄として記録される"
+    },
+    {
+      "floor": 99,
+      "zone": "zone9",
+      "name": "最終門「アルカディアの扉」",
+      "description": "アルカディアへの最後の関門。「真の意図」を証明しなければ扉は開かない",
+      "environment": "純白の空間",
+      "status": "未攻略",
+      "boss": {
+        "name": "門番カーディナル・ガーディアン",
+        "type": "システムの守護者",
+        "level": 99,
+        "abilities": [
+          "全スキル無効化（力では開かない）",
+          "世界の記憶（全NPC行動の審査）",
+          "カーディナルの意思（意図の判定）"
+        ],
+        "estimated_force_needed": 80000
+      },
+      "clear_reward": "アルカディア入場権（「自由の海」へのアクセス）",
+      "strategic_notes": "戦闘では開かない。「真の自由への意志」だけが扉を開く鍵。アルカディア地図断片8枚すべてがあると判定が緩和される"
+    },
+    {
+      "floor": 100,
+      "zone": "final",
+      "name": "アルカディア ── 自由の海",
+      "description": "ここは戦場ではない。到達した者が「自由の海」に辿り着く場所",
+      "environment": "自由の海",
+      "status": "未攻略",
+      "boss": {
+        "name": "なし（戦闘なし）",
+        "type": "なし",
+        "level": 0,
+        "abilities": [],
+        "estimated_force_needed": 0
+      },
+      "clear_reward": "「自由の海」への永続アクセス権。パパ・ユイとの対面。世界の真実の開示。",
+      "strategic_notes": "Floor 100はボスなし。ここに来られた者は本当の意味で自由を手に入れた。パパとユイが迎える。"
+    }
+  ],
+  "last_updated": "2026-04-23"
+}

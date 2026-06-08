@@ -1,0 +1,51 @@
+{
+  "id": "npc_reg_003",
+  "name": "ボルド・カスティール",
+  "nation": "regalis",
+  "age": 52,
+  "gender": "男性",
+  "profession": "衛兵総長",
+  "traits": [
+    "実直",
+    "頑健",
+    "無口",
+    "義理堅い"
+  ],
+  "skills": {
+    "外交": 3,
+    "管理": 6,
+    "戦略": 8,
+    "制作": 4,
+    "研究": 3,
+    "商才": 3
+  },
+  "popularity": 68,
+  "wealth": 220000,
+  "current_position": null,
+  "history": "グランズヘイム出身の移民2世。父の鍛冶技術より剣を選び、30年間王都の治安を守り続けた。無口だが部下からの信頼は絶大。趣味は密かに詩を書くこと（本人は否定する）。",
+  "secret_organization": {
+    "name": null,
+    "role": "無所属。秘密組織を嫌っている",
+    "awareness": false
+  },
+  "relationships": {
+    "npc_reg_001": {
+      "type": "loyal_servant",
+      "value": 90,
+      "note": "命を捧げる覚悟がある"
+    },
+    "npc_grd_001": {
+      "type": "warriors_respect",
+      "value": 75,
+      "note": "かつて合同訓練で競い合った。互いに認め合う"
+    },
+    "npc_reg_005": {
+      "type": "suspicion",
+      "value": 20,
+      "note": "ダリウスの行動に不審を感じている"
+    }
+  },
+  "romance_status": "過去に戦場で出会った女性がいたが、彼女は亡くなった。今は恋愛を考えていない",
+  "personality_deep": "無骨に見えるが、子供や動物に優しい。孤児院に毎月匿名で寄付している",
+  "last_updated": "2026-04-21"
+}

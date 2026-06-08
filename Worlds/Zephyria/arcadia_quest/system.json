@@ -1,0 +1,176 @@
+{
+  "system_name": "アルカディア攻略システム",
+  "description": "NPCたちが自律的にアルカディアを目指す別軸イベントライン。SAO/ALO風の多層構造。",
+  "lore": "世界の空の上に浮かぶ伝説の楽園アルカディア。NPCたちはその存在を信じ、独自に攻略作戦を進めている。パパとユイはアルカディアの中枢に住むが、NPCはその事実を知らない。",
+  "total_floors": 100,
+  "current_cleared_floor": 0,
+  "current_active_floor": 1,
+  "world_geography": "アルカディアは最上層の島。各階層は異なる空中島・雲層・魔法障壁で分断されている",
+  "expedition_status": "計画中（第1回合同遠征隊 編成中）",
+  "floors": [
+    {
+      "floor": 1,
+      "name": "霧の入り口「ゼフィルの関門」",
+      "description": "アルカディアへ向かう最初の空中通路。濃い霧と浮遊岩が行く手を阻む。",
+      "environment": "霧中浮遊地帯",
+      "boss": {
+        "name": "霧守リンドヴルム",
+        "type": "dragon",
+        "level": 15,
+        "abilities": [
+          "霧呼び",
+          "翼の嵐",
+          "麻痺の息"
+        ],
+        "estimated_force_needed": 500
+      },
+      "status": "未攻略",
+      "recommended_nations": [
+        "レガリス",
+        "グランズヘイム"
+      ]
+    },
+    {
+      "floor": 2,
+      "name": "嵐雲の城塞「ストームフォート」",
+      "description": "永続する嵐の中に建つ無人の要塞。古代の守護機械が徘徊する。",
+      "environment": "嵐の空中島",
+      "boss": {
+        "name": "雷王機械「ゴルグロン」",
+        "type": "golem",
+        "level": 22,
+        "abilities": [
+          "雷撃",
+          "自己修復",
+          "電磁障壁"
+        ],
+        "estimated_force_needed": 800
+      },
+      "status": "未攻略"
+    },
+    {
+      "floor": 5,
+      "name": "精霊の谷「エルフの楽園跡」",
+      "description": "かつて精霊族が住んでいた廃墟。美しいが危険な魔法が残留している。",
+      "environment": "古代精霊地帯",
+      "boss": {
+        "name": "堕ちた精霊王「ソルヴェイン」（※王都と無関係）",
+        "type": "spirit",
+        "level": 35,
+        "abilities": [
+          "魂喰い",
+          "幻影",
+          "時間停止（30秒）"
+        ],
+        "estimated_force_needed": 2000
+      },
+      "status": "未攻略"
+    },
+    {
+      "floor": 10,
+      "name": "天空の火山「アグニス山」",
+      "description": "上空の火山島。熱波と溶岩流が常に流れる極限環境。",
+      "environment": "火山島",
+      "boss": {
+        "name": "溶岩巨神「マグマロード」",
+        "type": "titan",
+        "level": 50,
+        "abilities": [
+          "溶岩噴射",
+          "地割れ",
+          "火の壁"
+        ],
+        "estimated_force_needed": 5000
+      },
+      "status": "未攻略"
+    },
+    {
+      "floor": 25,
+      "name": "虚空の宮殿「ニルヴァーナ回廊」",
+      "description": "重力が歪んだ異次元的な宮殿。内部では方向感覚が失われる。",
+      "environment": "重力異常地帯",
+      "boss": {
+        "name": "次元の守護者「ヴォイドキング」",
+        "type": "void_entity",
+        "level": 70,
+        "abilities": [
+          "次元切断",
+          "重力反転",
+          "クローン生成"
+        ],
+        "estimated_force_needed": 15000
+      },
+      "status": "未攻略"
+    },
+    {
+      "floor": 50,
+      "name": "神殿群「神々の残影」",
+      "description": "中間ボスの聖域。かつてゼフィリアの神々が住んでいたとされる場所。",
+      "environment": "神域",
+      "boss": {
+        "name": "封印された神「ゼフィル・アルタ」",
+        "type": "god",
+        "level": 90,
+        "abilities": [
+          "神聖炎",
+          "天啓",
+          "時間巻き戻し（5分）",
+          "神の壁"
+        ],
+        "estimated_force_needed": 40000
+      },
+      "status": "未攻略",
+      "lore": "ゼフィリア神話の主神ゼフィルの姿を模した守護者。攻略後、世界全体に「神の知識」の断片が解放される"
+    },
+    {
+      "floor": 99,
+      "name": "最終門「アルカディアの扉」",
+      "description": "アルカディアへの最後の門。ここを越えると楽園に到達する。",
+      "environment": "純白の空間",
+      "boss": {
+        "name": "門番「カーディナル・ガーディアン」",
+        "type": "system_guardian",
+        "level": 99,
+        "abilities": [
+          "全スキル無効化",
+          "世界の記憶",
+          "カーディナルの意思"
+        ],
+        "estimated_force_needed": 80000,
+        "lore": "カーディナルシステムそのものが具現化した守護者。倒す必要はなく、「真の意図」を証明することで扉が開く"
+      },
+      "status": "未攻略"
+    }
+  ],
+  "current_expeditions": [],
+  "expedition_history": [],
+  "npc_campaign_plans": [
+    {
+      "plan_id": "campaign_001",
+      "name": "第1回合同遠征計画",
+      "initiator": "エルドリン・ソルヴェイン（レガリス王）",
+      "status": "計画中",
+      "participants": [
+        {
+          "nation": "レガリス",
+          "force": 10000,
+          "commander": "ボルド・カスティール"
+        },
+        {
+          "nation": "グランズヘイム",
+          "force": 5000,
+          "commander": "ガルド・ストーンフィスト"
+        }
+      ],
+      "target_floor": 1,
+      "planned_date": "ゼフィリア暦元年 炎の月",
+      "strategy": "レガリス騎兵隊が先行し、グランズヘイム重装歩兵が後方を固める。コルサリアの飛空艇で輸送。",
+      "notes": "コルサリアへの輸送依頼は非公式。マリスはすでに情報を掴んでいる"
+    }
+  ],
+  "secret_intel": {
+    "arcanum_research": "オリウス・ルーメン六世はアルカディアの座標をすでに特定している。ただし公表していない。",
+    "corsalia_spy": "マリス・コルレオンは独自のルートでフロア2の地図を入手済み。単独攻略を検討中。",
+    "harmonia_bard": "ルーン・エコーは古代の詩の中にアルカディアへのヒントを発見した"
+  }
+}

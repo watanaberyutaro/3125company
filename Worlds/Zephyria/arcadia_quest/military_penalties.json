@@ -1,0 +1,105 @@
+{
+  "description": "遠征における損失・心的ダメージ・士気低下のルール",
+  "soldier_loss": {
+    "per_floor_normal": "遠征参加兵力の1-5%（フロアのボスレベルに比例）",
+    "boss_defeated": "2-8%の損失",
+    "boss_not_defeated_retreat": "10-20%の損失（混乱撤退）",
+    "wipe_out": "参加兵力の30-60%の損失（全滅に近い状態）",
+    "recovery_time": "損失した兵力の回復に「損失数÷100」ヶ月かかる",
+    "treasury_cost": "兵士1人の補充コスト: 50,000 El"
+  },
+  "morale_system": {
+    "base_morale": 100,
+    "loss_triggers": [
+      {
+        "event": "フロアクリア失敗",
+        "morale_change": -15
+      },
+      {
+        "event": "仲間の死亡",
+        "morale_change": -5
+      },
+      {
+        "event": "指揮官NPC戦死",
+        "morale_change": -30
+      },
+      {
+        "event": "連続失敗（3回）",
+        "morale_change": -25
+      },
+      {
+        "event": "長期遠征（30日以上）",
+        "morale_change": -10
+      },
+      {
+        "event": "食料・補給不足",
+        "morale_change": -20
+      }
+    ],
+    "gain_triggers": [
+      {
+        "event": "フロアクリア",
+        "morale_change": 20
+      },
+      {
+        "event": "ボス初撃破",
+        "morale_change": 30
+      },
+      {
+        "event": "ゾーンクリア",
+        "morale_change": 50
+      },
+      {
+        "event": "補給到着",
+        "morale_change": 10
+      },
+      {
+        "event": "ハーモニア音楽魔法士の演奏",
+        "morale_change": 25
+      }
+    ],
+    "morale_thresholds": [
+      {
+        "threshold": 80,
+        "status": "高士気",
+        "effect": "戦闘力+10%"
+      },
+      {
+        "threshold": 50,
+        "status": "通常",
+        "effect": "効果なし"
+      },
+      {
+        "threshold": 30,
+        "status": "低士気",
+        "effect": "戦闘力-15%・撤退判断が優先される"
+      },
+      {
+        "threshold": 10,
+        "status": "崩壊寸前",
+        "effect": "指揮系統崩壊・撤退不可避"
+      }
+    ]
+  },
+  "trauma_system": {
+    "description": "死亡率が高い戦闘や精神攻撃フロアを体験したNPCに心的外傷（トラウマ）が発生する",
+    "trauma_triggers": [
+      "Zone4・Zone8のフロアに参加したNPC（50%確率）",
+      "仲間の死を目の当たりにしたNPC",
+      "ボス戦で単独行動を強いられたNPC"
+    ],
+    "trauma_effects": {
+      "short_term": "1ヶ月間のスキル低下（-20%）",
+      "long_term": "未治療の場合3ヶ月後に「戦闘PTSD」状態になり永続スキル低下",
+      "recovery": "med_4（精神医療）の技術を持つ国での治療で回復（治療期間: 1-3ヶ月）",
+      "growth": "回復したNPCには「逆境を乗り越えた」ボーナス（精神強度+20・永続）"
+    }
+  },
+  "strategic_retreat": {
+    "description": "撤退は恥ではない。適切な撤退が長期的な勝利につながる",
+    "retreat_conditions": "士気30以下、またはNPC指揮官の判断",
+    "retreat_penalty": "士気-10、撤退後の再挑戦まで14日間のクールダウン",
+    "heroic_retreat": "F98で自発的に帰還した者は「境界の勇者」として世界史に記録され全NPCの尊敬を集める"
+  },
+  "last_updated": "2026-04-23"
+}

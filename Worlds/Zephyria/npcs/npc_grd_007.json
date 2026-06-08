@@ -1,0 +1,50 @@
+{
+  "id": "npc_grd_007",
+  "name": "ゼルダ・コッパー",
+  "nation": "grandsheim",
+  "age": 38,
+  "gender": "female",
+  "profession": "薬草師 / 山岳ガイド",
+  "traits": [
+    "楽観的",
+    "野生的",
+    "面倒見がいい"
+  ],
+  "skills": {
+    "外交": 45,
+    "管理": 30,
+    "戦略": 40,
+    "制作": 55,
+    "研究": 65,
+    "商才": 50
+  },
+  "popularity": 68,
+  "wealth": 800000,
+  "history": "山岳地帯で生まれ育ち、植物と地形を知り尽くしている。遭難した探検家を何十人も救助したことで有名。",
+  "current_position": "山岳救助隊長 兼 薬草店経営者",
+  "secret_organization": {
+    "name": null,
+    "role": "無所属",
+    "awareness": false
+  },
+  "relationships": {
+    "npc_grd_002": {
+      "type": "friendly_neighbor",
+      "value": 65,
+      "note": "ブリンに薬草を卸している。気のいい関係"
+    },
+    "npc_arc_003": {
+      "type": "grateful_acquaintance",
+      "value": 55,
+      "note": "以前アルカナムの研究者（セロ）が遭難した際に救助した"
+    },
+    "npc_har_003": {
+      "type": "former_traveler_bond",
+      "value": 50,
+      "note": "旅の詩人時代のソルを山で見かけたことがある"
+    }
+  },
+  "romance_status": "自由気ままな生き方をしており、特定の相手を作るつもりがない。山と薬草があれば満足",
+  "personality_deep": "明るいが、実は山岳の厳しさを知りすぎており、死を身近に感じている。遭難者を救うたびに「生きていることの意味」を考える",
+  "last_updated": "2026-04-21"
+}

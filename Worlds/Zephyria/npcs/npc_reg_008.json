@@ -1,0 +1,50 @@
+{
+  "id": "npc_reg_008",
+  "name": "ミラ・ゴールドウィン",
+  "nation": "regalis",
+  "age": 35,
+  "gender": "female",
+  "profession": "王都大市場 商会主",
+  "traits": [
+    "計算高い",
+    "カリスマ的",
+    "表裏がある"
+  ],
+  "skills": {
+    "外交": 70,
+    "管理": 65,
+    "戦略": 60,
+    "制作": 20,
+    "研究": 25,
+    "商才": 95
+  },
+  "popularity": 74,
+  "wealth": 18000000,
+  "history": "平民出身の自力成り上がり。10代で行商を始め、20代で商会を設立。現在は王都最大の交易商会を率いる。",
+  "current_position": "ゴールドウィン商会 代表取締役。王都大市場の実質的な管理者",
+  "secret_organization": {
+    "name": "黄金の鎖",
+    "role": "財務部門の外部協力者",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_reg_005": {
+      "type": "business_partner_distrust",
+      "value": 45,
+      "note": "ダリウスとは利害が一致するが、互いに警戒している"
+    },
+    "npc_cor_001": {
+      "type": "trade_rival",
+      "value": 35,
+      "note": "マリスと同じ市場を争っている。表向きは友好"
+    },
+    "npc_reg_007": {
+      "type": "childhood_acquaintance",
+      "value": 40,
+      "note": "幼なじみ。今は疎遠"
+    }
+  },
+  "romance_status": "夫が商会設立前に病死。以来、仕事だけが生きがい。ただし記念日には必ず墓参りをする",
+  "personality_deep": "計算高いが、商会の使用人には破格の待遇を提供する。「人が財産」という哲学を持つ",
+  "last_updated": "2026-04-21"
+}

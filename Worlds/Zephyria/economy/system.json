@@ -1,0 +1,309 @@
+{
+  "tax_system": {
+    "description": "各国の税制。クエスト報酬以外の国庫収入源。",
+    "tax_types": [
+      {
+        "id": "income_tax",
+        "name": "所得税",
+        "rate": 0.15,
+        "applies_to": "全住民の年収",
+        "collector": "各国政府",
+        "notes": "富裕NPCほど多く納税する累進制"
+      },
+      {
+        "id": "trade_tariff",
+        "name": "関税",
+        "rate": 0.08,
+        "applies_to": "他国からの輸入品",
+        "collector": "各国政府",
+        "notes": "コルサリアは自由貿易協定により関税を0.04に優遇"
+      },
+      {
+        "id": "land_tax",
+        "name": "土地・施設税",
+        "rate": 0.02,
+        "applies_to": "施設の評価額",
+        "per": "年",
+        "notes": "グランズヘイムの鉱山・施設が最大の課税基盤"
+      },
+      {
+        "id": "transit_fee",
+        "name": "空路通行料",
+        "rate": 5000,
+        "unit": "El/艇",
+        "applies_to": "他国領空通過"
+      },
+      {
+        "id": "guild_fee",
+        "name": "ギルド登録料",
+        "rate": 10000,
+        "unit": "El/年",
+        "applies_to": "ギルド加盟事業者"
+      }
+    ],
+    "tax_revenue_estimate": {
+      "regalis": 4500000,
+      "grandsheim": 2000000,
+      "corsalia": 3500000,
+      "arcanum": 800000,
+      "harmonia": 1500000
+    }
+  },
+  "price_table": {
+    "description": "日常取引価格の基準テーブル（El単位）",
+    "daily_goods": [
+      {
+        "item": "パン（1日分）",
+        "price": 50
+      },
+      {
+        "item": "宿泊（安宿）",
+        "price": 300
+      },
+      {
+        "item": "宿泊（高級）",
+        "price": 3000
+      },
+      {
+        "item": "食事（普通）",
+        "price": 150
+      },
+      {
+        "item": "食事（高級）",
+        "price": 2000
+      },
+      {
+        "item": "馬・騎乗獣",
+        "price": 80000
+      },
+      {
+        "item": "飛空艇チケット（国内）",
+        "price": 5000
+      },
+      {
+        "item": "飛空艇チケット（国際）",
+        "price": 30000
+      }
+    ],
+    "services": [
+      {
+        "item": "傭兵（1日）",
+        "price": 5000
+      },
+      {
+        "item": "治療（軽傷）",
+        "price": 2000
+      },
+      {
+        "item": "治療（重傷）",
+        "price": 30000
+      },
+      {
+        "item": "情報1件",
+        "price": 10000
+      },
+      {
+        "item": "暗殺依頼（基本）",
+        "price": 500000
+      },
+      {
+        "item": "弁護士・交渉代行",
+        "price": 50000
+      }
+    ],
+    "real_estate": [
+      {
+        "item": "都市部の家（小）",
+        "price": 500000
+      },
+      {
+        "item": "都市部の家（大）",
+        "price": 3000000
+      },
+      {
+        "item": "商店舗",
+        "price": 1500000
+      },
+      {
+        "item": "工房",
+        "price": 800000
+      }
+    ]
+  },
+  "economic_cycles": {
+    "description": "世界経済は4段階のサイクルで変動する。自然発生・イベント駆動・政策介入で遷移。",
+    "phases": [
+      {
+        "phase": "好況",
+        "duration_months": "6-18",
+        "triggers": [
+          "大型貿易条約締結",
+          "豊作",
+          "クエスト大量完了",
+          "新技術解放"
+        ],
+        "effects": {
+          "trade_volume": "+20%",
+          "treasury_income": "+15%",
+          "npc_happiness": "+10"
+        }
+      },
+      {
+        "phase": "過熱",
+        "duration_months": "3-6",
+        "triggers": [
+          "好況が長期継続",
+          "投機的取引増加"
+        ],
+        "effects": {
+          "price_inflation": "+15%",
+          "trade_risk": "+10%"
+        },
+        "warning": "放置するとバブル崩壊"
+      },
+      {
+        "phase": "不況",
+        "duration_months": "6-12",
+        "triggers": [
+          "自然災害",
+          "戦争",
+          "バブル崩壊",
+          "疫病"
+        ],
+        "effects": {
+          "trade_volume": "-20%",
+          "treasury_income": "-15%",
+          "unemployment": "+10%"
+        }
+      },
+      {
+        "phase": "回復",
+        "duration_months": "4-8",
+        "triggers": [
+          "不況終了後自動",
+          "政策介入",
+          "外部支援"
+        ],
+        "effects": {
+          "trade_volume": "+5%",
+          "徐々に好況へ": "遷移"
+        }
+      }
+    ],
+    "current_phase": "好況",
+    "stabilization_policies": [
+      {
+        "policy": "中央銀行介入",
+        "effect": "過熱・不況を1フェーズ短縮",
+        "requires": "tech:com_5"
+      },
+      {
+        "policy": "国際支援協定",
+        "effect": "不況中の他国支援で関係値+15"
+      },
+      {
+        "policy": "緊急関税",
+        "effect": "輸入超過による国庫流出を一時抑制",
+        "side_effect": "外交摩擦リスク"
+      }
+    ]
+  },
+  "trade_routes": {
+    "active_routes": [
+      {
+        "id": "rt_01",
+        "from": "regalis",
+        "to": "grandsheim",
+        "goods": [
+          "wheat",
+          "oil"
+        ],
+        "returns": [
+          "iron",
+          "weapon"
+        ],
+        "volume_el": 3000000
+      },
+      {
+        "id": "rt_02",
+        "from": "regalis",
+        "to": "corsalia",
+        "goods": [
+          "wheat",
+          "art"
+        ],
+        "returns": [
+          "fish",
+          "salt",
+          "info"
+        ],
+        "volume_el": 4500000
+      },
+      {
+        "id": "rt_03",
+        "from": "corsalia",
+        "to": "harmonia",
+        "goods": [
+          "salt",
+          "fish"
+        ],
+        "returns": [
+          "dye",
+          "art",
+          "timber"
+        ],
+        "volume_el": 2000000
+      },
+      {
+        "id": "rt_04",
+        "from": "grandsheim",
+        "to": "corsalia",
+        "goods": [
+          "iron",
+          "weapon",
+          "tool"
+        ],
+        "returns": [
+          "ship",
+          "timber",
+          "salt"
+        ],
+        "volume_el": 3500000
+      },
+      {
+        "id": "rt_05",
+        "from": "arcanum",
+        "to": "regalis",
+        "goods": [
+          "glass",
+          "ancient_relics"
+        ],
+        "returns": [
+          "paper",
+          "food_luxury"
+        ],
+        "volume_el": 1500000
+      },
+      {
+        "id": "rt_06",
+        "from": "harmonia",
+        "to": "regalis",
+        "goods": [
+          "art",
+          "dye",
+          "herbs"
+        ],
+        "returns": [
+          "wheat",
+          "wool"
+        ],
+        "volume_el": 2500000
+      }
+    ]
+  },
+  "gdp_calculation": {
+    "formula": "国庫初期値 + 税収 + 交易利益 + クエスト報酬 - 軍事費 - 行政費 - 輸入コスト",
+    "note": "国庫が50万El以下になると「財政危機」フラグが立つ。1万El以下で国家崩壊リスク（ただし他国から支援が入る仕組みにより実際の崩壊は極めて稀）"
+  },
+  "last_updated": "2026-04-23"
+}

@@ -1,0 +1,110 @@
+{
+  "description": "NPCは可能な範囲で自律的に行動する。パパからの指示なしでも世界が動く。",
+  "daily_routine": {
+    "description": "各NPCは職業・性格・現在の目標に基づいた日常行動を持つ",
+    "routine_template": {
+      "morning": "職業固有の始業行動（会議・訓練・採掘・創作など）",
+      "afternoon": "メイン業務・交流イベント",
+      "evening": "個人時間（研究・恋愛・趣味・組織活動）",
+      "night": "休息・秘密行動（秘密組織NPCのみ）"
+    }
+  },
+  "decision_layers": [
+    {
+      "priority": 1,
+      "name": "生存・安全",
+      "description": "自国が攻撃・災害にさらされた場合は最優先で防衛行動を取る"
+    },
+    {
+      "priority": 2,
+      "name": "国家目標",
+      "description": "所属国の国是・政策に沿った行動。国庫が危機的な場合は経済行動を優先"
+    },
+    {
+      "priority": 3,
+      "name": "組織目標",
+      "description": "秘密組織所属NPCは組織の指令に従う（国家目標と矛盾する場合は葛藤イベント発生）"
+    },
+    {
+      "priority": 4,
+      "name": "個人目標",
+      "description": "恋愛・研究・出世・友人関係の維持・趣味"
+    },
+    {
+      "priority": 5,
+      "name": "アルカディア攻略",
+      "description": "関心のあるNPCは空き時間に攻略計画を進める"
+    }
+  ],
+  "autonomous_actions": {
+    "diplomacy": {
+      "description": "NPCは関係値と国益に基づいて自律的に外交交渉を行う",
+      "triggers": [
+        "関係値50以上で友好条約を提案",
+        "同盟国が攻撃されたら支援を申し出る",
+        "経済格差が大きい場合に貿易交渉を提案"
+      ]
+    },
+    "trade": {
+      "description": "商人NPCは定期的に取引を実行する",
+      "frequency": "週1回の取引イベント。商才値が高いほど有利な条件",
+      "cross_nation": "関係値30以上の国のNPCと自動的に貿易を発生させる"
+    },
+    "research": {
+      "description": "研究NPCは興味分野の技術を自動的に進める",
+      "progress_rate": "研究値/100 × 1% per day の技術進捗",
+      "collaboration": "関係値60以上の研究者同士は共同研究ボーナス+50%"
+    },
+    "romance": {
+      "description": "関係値に基づいて恋愛イベントが自律発生",
+      "event_triggers": [
+        "関係値75到達: 告白イベント検討フェーズ（月1回判定）",
+        "同じイベントに2回以上参加: 関係値+5",
+        "手紙・文通中: 月1回関係値+3"
+      ]
+    },
+    "arcadia_planning": {
+      "description": "アルカディアに関心のあるNPCが自律的に攻略計画を進める",
+      "interested_npcs": [
+        "npc_arc_001",
+        "npc_arc_007",
+        "npc_arc_008",
+        "npc_har_002",
+        "npc_grd_009",
+        "npc_cor_007"
+      ],
+      "planning_actions": [
+        "情報収集イベント（週1回）",
+        "他NPCへの同行打診（関係値50以上が条件）",
+        "遠征資金の個人積立（商才値×1000 El/月）"
+      ]
+    },
+    "political": {
+      "description": "指導者NPCは定期的に国内政策を変更する",
+      "policy_frequency": "3ヶ月に1回の政策見直し",
+      "election_cycle": "2年ごとの選挙（国によって制度が異なる）"
+    },
+    "secret_org": {
+      "description": "秘密組織NPCは組織の目標に沿った隠密行動を取る",
+      "actions": [
+        "情報収集",
+        "資金移動",
+        "他NPCへの働きかけ",
+        "政治工作"
+      ],
+      "detection_risk": "行動頻度が高いほど発覚確率が上昇。発覚した場合は組織が危機状態になる"
+    }
+  },
+  "conflict_resolution": {
+    "description": "NPCが目標の矛盾に直面した場合の処理",
+    "method": "優先度レイヤーに従い自動解決。優先度同位の場合は性格trait（誇り・義理・恐怖など）が決定打になる",
+    "narrative_output": "矛盾イベントは/yuiのニュースに反映される"
+  },
+  "event_frequency": {
+    "daily_events": "ルーティン行動・小さな会話・研究進捗",
+    "weekly_events": "取引・外交接触・ロマンスチェック",
+    "monthly_events": "政策変更・選挙・プロポーズ判定・出産判定",
+    "annual_events": "加齢・後継者指名・国家予算編成・アルカディア遠征計画更新"
+  },
+  "last_updated": "2026-04-23"
+}

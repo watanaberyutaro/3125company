@@ -1,0 +1,57 @@
+{
+  "id": "npc_reg_001",
+  "name": "エルドリン・ソルヴェイン",
+  "nation": "regalis",
+  "age": 67,
+  "gender": "男性",
+  "profession": "元老院議員・元外交官",
+  "traits": [
+    "慎重",
+    "外交的",
+    "保守的",
+    "威厳がある"
+  ],
+  "skills": {
+    "外交": 9,
+    "管理": 7,
+    "戦略": 8,
+    "制作": 2,
+    "研究": 5,
+    "商才": 6
+  },
+  "popularity": 82,
+  "wealth": 450000,
+  "current_position": "執政官",
+  "history": "300年続くソルヴェイン家の当主。40年以上外交官として5カ国を渡り歩き、いくつもの条約締結に尽力した。引退後も元老院で強い影響力を持つ。口癖は「急ぐな。外交は忍耐だ」。",
+  "secret_organization": {
+    "name": "黄金の鎖",
+    "role": "名誉後援者（実質は知らない）",
+    "awareness": false
+  },
+  "relationships": {
+    "npc_reg_002": {
+      "type": "romantic_interest",
+      "value": 65,
+      "note": "王妃候補として意識している。まだ告白していない"
+    },
+    "npc_reg_003": {
+      "type": "trusted_general",
+      "value": 85,
+      "note": "最も信頼する武将"
+    },
+    "npc_cor_001": {
+      "type": "rival_respect",
+      "value": 40,
+      "note": "経済的ライバル。能力は認めている"
+    },
+    "npc_arc_001": {
+      "type": "alliance_partner",
+      "value": 55,
+      "note": "知識と政治の共存関係"
+    }
+  },
+  "romance_status": "秘かにリリア・グレイヴァンに惹かれているが、王の立場上踏み出せないでいる",
+  "personality_deep": "外見は厳格だが、実は詩を書く習慣がある。誰にも見せていない",
+  "arcadia_belief": "アルカディアは本当に存在すると信じている。いつか到達したい",
+  "last_updated": "2026-04-21"
+}

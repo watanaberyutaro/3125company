@@ -1,0 +1,51 @@
+{
+  "id": "npc_reg_004",
+  "name": "ソフィア・レガル",
+  "nation": "regalis",
+  "age": 41,
+  "gender": "女性",
+  "profession": "財務大臣",
+  "traits": [
+    "合理的",
+    "数字に強い",
+    "冷静",
+    "野心家"
+  ],
+  "skills": {
+    "外交": 5,
+    "管理": 8,
+    "戦略": 7,
+    "制作": 2,
+    "研究": 6,
+    "商才": 10
+  },
+  "popularity": 76,
+  "wealth": 380000,
+  "current_position": "副執政官",
+  "history": "コルサリア生まれの海商の娘。12歳で王都に移住し、持ち前の計算能力でレガリスの財政を立て直した「数字の魔法使い」。世界の全通貨の換算を暗算でこなすと噂される。",
+  "secret_organization": {
+    "name": "黄金の鎖",
+    "role": "情報収集担当（上級会員）",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_reg_005": {
+      "type": "professional_partner",
+      "value": 60,
+      "note": "組織内の協力者。個人的には距離を置く"
+    },
+    "npc_har_001": {
+      "type": "cultural_friendship",
+      "value": 65,
+      "note": "芸術を通じた交流。公式・非公式両方で会う"
+    },
+    "npc_arc_004": {
+      "type": "information_exchange",
+      "value": 45,
+      "note": "魔法と情報の相互提供関係"
+    }
+  },
+  "romance_status": "恋愛より仕事を優先するタイプ。ただし、コルサリアのゼフ・タイドウォーカーとは謎めいた関係がある",
+  "personality_deep": "完璧な外交スマイルの裏に、鋭い観察眼を持つ。会話相手の本音を瞬時に見抜く",
+  "last_updated": "2026-04-21"
+}

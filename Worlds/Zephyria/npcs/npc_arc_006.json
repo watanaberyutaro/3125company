@@ -1,0 +1,50 @@
+{
+  "id": "npc_arc_006",
+  "name": "ウィタ・モルフォス",
+  "nation": "arcanum",
+  "age": 55,
+  "gender": "female",
+  "profession": "変容魔法の権威 / 倫理委員会 委員長",
+  "traits": [
+    "厳格",
+    "倫理観が強い",
+    "情に脆い"
+  ],
+  "skills": {
+    "外交": 60,
+    "管理": 75,
+    "戦略": 50,
+    "制作": 35,
+    "研究": 80,
+    "商才": 30
+  },
+  "popularity": 55,
+  "wealth": 4000000,
+  "history": "変容魔法（生物の形態を変える魔法）を研究中に事故を起こし、助手が半永久的に変容した事件の責任者。それ以来、魔法倫理の研究と規制に転向した。",
+  "current_position": "禁忌研究院 倫理委員会 委員長",
+  "secret_organization": {
+    "name": "禁書の番人",
+    "role": "倫理審査担当",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_arc_001": {
+      "type": "professional_tension",
+      "value": 45,
+      "note": "オリウスのアルカディア研究が倫理的に問題ないか常に監視している"
+    },
+    "npc_arc_004": {
+      "type": "concerned_mentor",
+      "value": 55,
+      "note": "ネアの野心的な研究の方向性を心配している"
+    },
+    "npc_arc_005": {
+      "type": "potential_danger",
+      "value": 30,
+      "note": "フォスの制御されない才能が危険だと感じている"
+    }
+  },
+  "romance_status": "事故で変容してしまった元助手への責任から、個人的な幸福を追求することをやめている",
+  "personality_deep": "表向きは冷厳な委員長だが、実験動物の世話を毎日欠かさずしている。規則より命を大切にする本質がある",
+  "last_updated": "2026-04-21"
+}

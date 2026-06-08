@@ -1,0 +1,46 @@
+{
+  "id": "npc_cor_003",
+  "name": "ゼフ・タイドウォーカー",
+  "nation": "corsalia",
+  "age": 38,
+  "gender": "男性",
+  "profession": "船団長",
+  "traits": [
+    "豪快",
+    "義理堅い",
+    "酒好き",
+    "海を愛する"
+  ],
+  "skills": {
+    "外交": 5,
+    "管理": 6,
+    "戦略": 7,
+    "制作": 5,
+    "研究": 3,
+    "商才": 6
+  },
+  "popularity": 79,
+  "wealth": 330000,
+  "current_position": "副官",
+  "history": "コルサリア生まれの生粋の船乗り。15歳で初めて大海に漕ぎ出し、以来ゼフィリアの海図を塗り替えてきた。新航路の発見者として歴史に名を刻む。船の上なら台風でも眠れる。",
+  "secret_organization": {
+    "name": "影の手",
+    "role": "物流・密輸ネットワーク管理者",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_grd_004": {
+      "type": "trade_contact",
+      "value": 45,
+      "note": "表向きの取引相手"
+    },
+    "npc_har_003": {
+      "type": "old_acquaintance",
+      "value": 40,
+      "note": "昔コルサリアを訪れたソルと旧友"
+    }
+  },
+  "romance_status": "各港に顔馴染みがいるが、特定の誰かへの感情はない。自由人",
+  "personality_deep": "陽気な海の男に見えるが、密輸ルートの設計は緻密で天才的",
+  "last_updated": "2026-04-21"
+}

@@ -1,0 +1,183 @@
+{
+  "world_name": "ゼフィリア",
+  "world_type": "空中浮遊諸島群",
+  "description": "ゼフィリアは地上から遥か上空に浮かぶ複数の島々で構成された世界。各国は異なる高度・形状の空中島に存在し、飛空艇と空中回廊で繋がっている。雲の海の下は「忘れられた大地」と呼ばれ、誰も降りたことがない。",
+  "world_size": "全島合計 約1500km²",
+  "altitude_range_km": "地上から2000m〜8000mの高度帯に存在",
+  "sky_layers": [
+    {
+      "layer": "下層雲（500-2000m）",
+      "description": "薄い雲が流れる。魔物が棲む危険地帯"
+    },
+    {
+      "layer": "居住層（2000-5000m）",
+      "description": "各国の空中島が浮かぶ主要生活圏。気候は温暖"
+    },
+    {
+      "layer": "高層（5000-7000m）",
+      "description": "強風が吹く危険層。アルカディア攻略ルート"
+    },
+    {
+      "layer": "超高層（7000m+）",
+      "description": "アルカディアが浮かぶ伝説の層。人間が生存できないとされる"
+    }
+  ],
+  "nations_position": [
+    {
+      "id": "regalis",
+      "name": "レガリス（王都）",
+      "symbol": "🏰",
+      "island_shape": "円形の大島（最大）",
+      "altitude_m": 3500,
+      "island_size_km2": 800,
+      "coordinates": {
+        "x": 1000,
+        "y": 750
+      },
+      "climate": "温暖・安定。四季あり",
+      "unique_feature": "島の中央に大きな温泉湖がある。王城の庭園から見える絶景",
+      "sky_connection": "3本の空中回廊でグランズヘイム・コルサリア・ハーモニアと繋がる"
+    },
+    {
+      "id": "grandsheim",
+      "name": "グランズヘイム（山岳国）",
+      "symbol": "⛏️",
+      "island_shape": "山岳型の険しい島",
+      "altitude_m": 4500,
+      "island_size_km2": 400,
+      "coordinates": {
+        "x": 300,
+        "y": 250
+      },
+      "climate": "寒冷・雪多し。夏は短い",
+      "unique_feature": "島の下部が岩盤剥き出しで、鉱脈が直接外気に露出している",
+      "sky_connection": "索道（ロープウェイ型）でレガリスと接続"
+    },
+    {
+      "id": "corsalia",
+      "name": "コルサリア（港湾都市）",
+      "symbol": "⚓",
+      "island_shape": "弓形の細長い島。南端が港湾",
+      "altitude_m": 2200,
+      "island_size_km2": 350,
+      "coordinates": {
+        "x": 1600,
+        "y": 1100
+      },
+      "climate": "海風が常に吹く。霧が多い",
+      "unique_feature": "島の端が滝のように霧を噴き出し、「霧の国」とも呼ばれる。海鳥の巣が多数",
+      "sky_connection": "飛空艇のみ（固定回廊なし）。最も自由な往来"
+    },
+    {
+      "id": "arcanum",
+      "name": "アルカナム（賢者の塔）",
+      "symbol": "🔮",
+      "island_shape": "尖塔型の小島。島そのものが一つの塔のよう",
+      "altitude_m": 6000,
+      "island_size_km2": 50,
+      "coordinates": {
+        "x": 1500,
+        "y": 200
+      },
+      "climate": "高高度のため極寒。魔法で内部は調温されている",
+      "unique_feature": "世界で最も高い位置にある国。アルカディアへの接近調査に地理的優位性がある",
+      "sky_connection": "魔法転送門のみ（物理的接続なし）"
+    },
+    {
+      "id": "harmonia",
+      "name": "ハーモニア（文化都市）",
+      "symbol": "🎭",
+      "island_shape": "丘陵型の楕円島。緑豊か",
+      "altitude_m": 2800,
+      "island_size_km2": 300,
+      "coordinates": {
+        "x": 400,
+        "y": 1200
+      },
+      "climate": "温暖で花が咲き乱れる。虹が頻繁に出る",
+      "unique_feature": "島全体が緩やかな丘陵で、どこからも空が見渡せる。虹の名所",
+      "sky_connection": "空中回廊でレガリスと接続。コルサリアとは飛空艇便"
+    },
+    {
+      "id": "arcadia",
+      "name": "アルカディア（伝説の楽園）",
+      "symbol": "✨",
+      "island_shape": "球形の発光する神秘の島",
+      "altitude_m": 9000,
+      "island_size_km2": 100,
+      "coordinates": {
+        "x": 1000,
+        "y": 400
+      },
+      "climate": "常に春。雨は降らず、光が降り注ぐ",
+      "unique_feature": "雲の上、人間の目には見えない高度に存在。カーディナルシステムの中枢。パパとユイの居場所。",
+      "sky_connection": "100の階層の最上部。通常の移動手段では到達不可"
+    }
+  ],
+  "sky_routes": [
+    {
+      "name": "王道航路",
+      "from": "regalis",
+      "to": "corsalia",
+      "type": "飛空艇定期便",
+      "travel_time_hours": 6
+    },
+    {
+      "name": "山の回廊",
+      "from": "regalis",
+      "to": "grandsheim",
+      "type": "空中回廊（固定）",
+      "travel_time_hours": 3
+    },
+    {
+      "name": "文化街道",
+      "from": "regalis",
+      "to": "harmonia",
+      "type": "空中回廊（固定）",
+      "travel_time_hours": 4
+    },
+    {
+      "name": "賢者の門",
+      "from": "regalis",
+      "to": "arcanum",
+      "type": "魔法転送門（要許可）",
+      "travel_time_hours": 0.1
+    },
+    {
+      "name": "海風航路",
+      "from": "corsalia",
+      "to": "harmonia",
+      "type": "飛空艇定期便",
+      "travel_time_hours": 8
+    }
+  ],
+  "forgotten_land": {
+    "description": "雲の下、地上2000m以下に存在する「忘れられた大地」。かつてゼフィリアの民が住んでいたが、大噴火で地上が灼熱化し、全員が空中島に逃げた。現在は魔物の大地。",
+    "danger_level": 10,
+    "current_status": "探索禁止（王都条例）",
+    "legend": "忘れられた大地には古代の都市が廃墟のまま残っているとされる"
+  },
+  "landmarks": [
+    {
+      "name": "アルカディア遺跡（ダミー）",
+      "description": "レガリスに存在する古代の遺跡。NPCたちはこれをアルカディアへの手がかりと考えている。実際は本物のアルカディアとは別物。"
+    },
+    {
+      "name": "ゼフィルの泉",
+      "coordinates": {
+        "x": 900,
+        "y": 700
+      },
+      "description": "レガリス近くの浮遊小島にある神聖な泉。飲むと一時的に未来が見えると言われる魔法水が湧く。"
+    },
+    {
+      "name": "大交易路（空中航路）",
+      "description": "5カ国を結ぶ主要飛空艇航路。コルサリアが管理・維持している。"
+    },
+    {
+      "name": "嵐の回廊",
+      "description": "グランズヘイムとアルカナムの間の高高度空域。常時嵐が吹き荒れ、飛空艇も通過困難。アルカディア攻略ルートの障壁の一つ。"
+    }
+  ],
+  "last_updated": "2026-04-21"
+}

@@ -1,0 +1,132 @@
+{
+  "system": "ゼフィリア暦",
+  "description": "日本標準時（JST, UTC+9）に同期するゼフィリア世界の暦。現実世界の1日 = ゼフィリアの1日。",
+  "base_timezone": "Asia/Tokyo",
+  "epoch": "2026-04-21",
+  "epoch_zephyria": "ゼフィリア暦元年 大地の月 第1日",
+  "year_structure": {
+    "months": 12,
+    "month_names": [
+      {
+        "month": 1,
+        "name": "大地の月",
+        "kanji": "土月",
+        "theme": "農耕・新生"
+      },
+      {
+        "month": 2,
+        "name": "風の月",
+        "kanji": "風月",
+        "theme": "交易・航海開始"
+      },
+      {
+        "month": 3,
+        "name": "水の月",
+        "kanji": "水月",
+        "theme": "雨季・豊穣"
+      },
+      {
+        "month": 4,
+        "name": "炎の月",
+        "kanji": "炎月",
+        "theme": "鍛冶・試練"
+      },
+      {
+        "month": 5,
+        "name": "光の月",
+        "kanji": "光月",
+        "theme": "祭り・豊作"
+      },
+      {
+        "month": 6,
+        "name": "影の月",
+        "kanji": "影月",
+        "theme": "内省・秘儀"
+      },
+      {
+        "month": 7,
+        "name": "星の月",
+        "kanji": "星月",
+        "theme": "星詠み・占い"
+      },
+      {
+        "month": 8,
+        "name": "霧の月",
+        "kanji": "霧月",
+        "theme": "謎・探索"
+      },
+      {
+        "month": 9,
+        "name": "嵐の月",
+        "kanji": "嵐月",
+        "theme": "試練・戦争"
+      },
+      {
+        "month": 10,
+        "name": "実りの月",
+        "kanji": "穣月",
+        "theme": "収穫・祝宴"
+      },
+      {
+        "month": 11,
+        "name": "霜の月",
+        "kanji": "霜月",
+        "theme": "準備・蓄積"
+      },
+      {
+        "month": 12,
+        "name": "夢の月",
+        "kanji": "夢月",
+        "theme": "回顧・予言"
+      }
+    ],
+    "days_per_month": 30,
+    "special_days": 5,
+    "special_day_names": [
+      "ゼフィルの日（年始）",
+      "アルカディア記念日",
+      "世界連合の日",
+      "精霊感謝祭",
+      "年越しの夜"
+    ]
+  },
+  "time_of_day": {
+    "dawn": {
+      "jst": "05:00",
+      "name": "暁の刻",
+      "symbol": "🌅"
+    },
+    "morning": {
+      "jst": "07:00",
+      "name": "朝の刻",
+      "symbol": "☀️"
+    },
+    "noon": {
+      "jst": "12:00",
+      "name": "日輪の刻",
+      "symbol": "🌞"
+    },
+    "afternoon": {
+      "jst": "15:00",
+      "name": "午後の刻",
+      "symbol": "🌤"
+    },
+    "dusk": {
+      "jst": "18:00",
+      "name": "夕暮れの刻",
+      "symbol": "🌆"
+    },
+    "night": {
+      "jst": "21:00",
+      "name": "夜の刻",
+      "symbol": "🌙"
+    },
+    "midnight": {
+      "jst": "00:00",
+      "name": "深夜の刻",
+      "symbol": "🌑"
+    }
+  },
+  "current_date_formula": "現実のYYYY-MM-DDをゼフィリア暦に変換: epoch(2026-04-21)からの経過日数を計算し、月(30日単位)と日を算出する",
+  "last_updated": "2026-04-21"
+}

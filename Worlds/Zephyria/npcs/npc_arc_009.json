@@ -1,0 +1,50 @@
+{
+  "id": "npc_arc_009",
+  "name": "ジン・エコーストーン",
+  "nation": "arcanum",
+  "age": 27,
+  "gender": "male",
+  "profession": "魔法道具職人",
+  "traits": [
+    "職人気質",
+    "孤独を好む",
+    "独創的"
+  ],
+  "skills": {
+    "外交": 25,
+    "管理": 30,
+    "戦略": 20,
+    "制作": 90,
+    "研究": 70,
+    "商才": 55
+  },
+  "popularity": 42,
+  "wealth": 3500000,
+  "history": "グランズヘイムで鍛冶を学んだ後、アルカナムで魔法付与の技術を修得。魔法と鍛冶の融合という独自分野を開拓している。",
+  "current_position": "アルカナム 魔法道具工房「ストーン&マジック」経営者",
+  "secret_organization": {
+    "name": null,
+    "role": "無所属",
+    "awareness": false
+  },
+  "relationships": {
+    "npc_grd_002": {
+      "type": "former_mentor",
+      "value": 70,
+      "note": "ブリンの工房で修業した。今でも尊敬している"
+    },
+    "npc_grd_004": {
+      "type": "trade_partner",
+      "value": 55,
+      "note": "トルンから素材を仕入れている"
+    },
+    "npc_arc_003": {
+      "type": "friendly_colleague",
+      "value": 60,
+      "note": "セロから魔法理論を学び、お互いの知識を交換"
+    }
+  },
+  "romance_status": "グランズヘイムにいた頃に好きな人がいたが、アルカナムに移ってから疎遠になった",
+  "personality_deep": "魔法道具に意識が宿ると信じており、道具に名前をつけて呼びかけながら作業する。周囲には変人と思われているが、その道具の性能が異常に高い",
+  "last_updated": "2026-04-21"
+}

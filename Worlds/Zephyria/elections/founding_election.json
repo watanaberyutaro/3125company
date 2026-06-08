@@ -1,0 +1,172 @@
+{
+  "date": "2026-04-23",
+  "type": "建国選挙",
+  "results": {
+    "regalis": {
+      "candidates": [
+        {
+          "id": "npc_reg_001",
+          "name": "エルドリン・ソルヴェイン",
+          "votes": 820,
+          "popularity": 82
+        },
+        {
+          "id": "npc_reg_004",
+          "name": "ソフィア・レガル",
+          "votes": 760,
+          "popularity": 76
+        },
+        {
+          "id": "npc_reg_002",
+          "name": "リリア・グレイヴァン",
+          "votes": 740,
+          "popularity": 74
+        },
+        {
+          "id": "npc_reg_005",
+          "name": "ダリウス・クロムウェル",
+          "votes": 710,
+          "popularity": 71
+        },
+        {
+          "id": "npc_reg_003",
+          "name": "ボルド・カスティール",
+          "votes": 680,
+          "popularity": 68
+        }
+      ],
+      "total_votes": 1000,
+      "turnout": 89.4,
+      "leader_title": "執政官",
+      "deputy_title": "副執政官"
+    },
+    "grandsheim": {
+      "candidates": [
+        {
+          "id": "npc_grd_001",
+          "name": "ガルド・ストーンフィスト",
+          "votes": 910,
+          "popularity": 91
+        },
+        {
+          "id": "npc_grd_002",
+          "name": "ブリン・コッパーアーム",
+          "votes": 770,
+          "popularity": 77
+        },
+        {
+          "id": "npc_grd_003",
+          "name": "ズグラ・ハンマーソング",
+          "votes": 670,
+          "popularity": 67
+        },
+        {
+          "id": "npc_grd_004",
+          "name": "トルン・グラニット",
+          "votes": 580,
+          "popularity": 58
+        }
+      ],
+      "total_votes": 1000,
+      "turnout": 94.1,
+      "leader_title": "頭領",
+      "deputy_title": "副頭領"
+    },
+    "corsalia": {
+      "candidates": [
+        {
+          "id": "npc_cor_001",
+          "name": "マリス・コルレオン",
+          "votes": 880,
+          "popularity": 88
+        },
+        {
+          "id": "npc_cor_003",
+          "name": "ゼフ・タイドウォーカー",
+          "votes": 790,
+          "popularity": 79
+        },
+        {
+          "id": "npc_cor_002",
+          "name": "テイラ・ウィンドサーフ",
+          "votes": 720,
+          "popularity": 72
+        },
+        {
+          "id": "npc_cor_004",
+          "name": "ソラ・ペトロス",
+          "votes": 650,
+          "popularity": 65
+        }
+      ],
+      "total_votes": 1000,
+      "turnout": 82.7,
+      "leader_title": "ギルドマスター",
+      "deputy_title": "副官"
+    },
+    "arcanum": {
+      "candidates": [
+        {
+          "id": "npc_arc_001",
+          "name": "オリウス・ルーメン六世",
+          "votes": 950,
+          "popularity": 95
+        },
+        {
+          "id": "npc_arc_002",
+          "name": "ヴィラ・アーカナ",
+          "votes": 780,
+          "popularity": 78
+        },
+        {
+          "id": "npc_arc_003",
+          "name": "セロ・クリスタル",
+          "votes": 660,
+          "popularity": 66
+        },
+        {
+          "id": "npc_arc_004",
+          "name": "ネア・ソルシア",
+          "votes": 540,
+          "popularity": 54
+        }
+      ],
+      "total_votes": 1000,
+      "turnout": 76.3,
+      "leader_title": "大賢者",
+      "deputy_title": "副賢者"
+    },
+    "harmonia": {
+      "candidates": [
+        {
+          "id": "npc_har_001",
+          "name": "カンタ・メロディ",
+          "votes": 910,
+          "popularity": 91
+        },
+        {
+          "id": "npc_har_003",
+          "name": "ソル・ハーモン",
+          "votes": 790,
+          "popularity": 79
+        },
+        {
+          "id": "npc_har_004",
+          "name": "ミア・リズム",
+          "votes": 710,
+          "popularity": 71
+        },
+        {
+          "id": "npc_har_002",
+          "name": "ルーン・エコー",
+          "votes": 630,
+          "popularity": 63
+        }
+      ],
+      "total_votes": 1000,
+      "turnout": 88.2,
+      "leader_title": "詩人王",
+      "deputy_title": "副詩人王"
+    }
+  }
+}

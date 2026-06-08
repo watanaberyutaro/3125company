@@ -1,0 +1,112 @@
+{
+  "id": "regalis",
+  "name": "レガリス",
+  "symbol": "🏰",
+  "treasury": 10000000,
+  "total_earned": 10000000,
+  "completed_quests": 0,
+  "active_quests": 0,
+  "citizens": [
+    "フリーレン",
+    "フェルン",
+    "アイゼン",
+    "ヒンメル",
+    "フランメ",
+    "シュタルク",
+    "ゼーリエ",
+    "npc_reg_001",
+    "npc_reg_004",
+    "npc_reg_002",
+    "npc_reg_005",
+    "npc_reg_003"
+  ],
+  "specialties": [
+    "外交",
+    "調整",
+    "全体管理"
+  ],
+  "weaknesses": [
+    "専門的深掘り",
+    "スピード"
+  ],
+  "personality": "真面目で礼儀正しい。少し融通が利かない。",
+  "status": "active",
+  "alliances": [],
+  "tensions": [],
+  "immigrants": [],
+  "last_updated": "2026-04-23",
+  "path": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/regalis",
+  "folders": {
+    "_inbox": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/regalis/_inbox",
+    "_pending": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/regalis/_pending",
+    "_done": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/regalis/_done",
+    "_archive": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/regalis/_archive",
+    "_diplomacy": "/Users/watanaberyuutarou/.cardinal/worlds/zephyria/nations/regalis/_diplomacy"
+  },
+  "leader": {
+    "npc_id": "npc_reg_001",
+    "name": "エルドリン・ソルヴェイン",
+    "title": "執政官",
+    "votes": 820,
+    "elected_at": "2026-04-23"
+  },
+  "deputy": {
+    "npc_id": "npc_reg_004",
+    "name": "ソフィア・レガル",
+    "title": "副執政官",
+    "votes": 760,
+    "elected_at": "2026-04-23"
+  },
+  "election_history": [
+    {
+      "date": "2026-04-23",
+      "type": "建国選挙",
+      "turnout": 89.4
+    }
+  ],
+  "economy": {
+    "population": 520000,
+    "population_growth_rate": 0.012,
+    "gdp_annual": 9360000,
+    "gdp_per_capita": 18,
+    "tax_rate": 0.15,
+    "tax_revenue_annual": 1404000,
+    "unemployment_rate": 0.032,
+    "happiness_index": 74,
+    "resources": {
+      "魔法石": {
+        "amount": "中",
+        "export": true,
+        "price_per_unit": 5000
+      },
+      "農作物": {
+        "amount": "大",
+        "export": true,
+        "price_per_unit": 800
+      },
+      "加工品": {
+        "amount": "大",
+        "export": true,
+        "price_per_unit": 2000
+      },
+      "鋼鉄": {
+        "amount": "小",
+        "export": false,
+        "price_per_unit": 3000
+      }
+    },
+    "imports": [
+      "鋼鉄",
+      "宝石",
+      "魔法書",
+      "芸術品"
+    ],
+    "exports": [
+      "魔法石",
+      "農作物",
+      "加工品"
+    ],
+    "trade_balance_annual": 280000,
+    "last_calculated": "2026-04-23"
+  }
+}

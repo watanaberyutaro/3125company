@@ -1,0 +1,51 @@
+{
+  "id": "npc_reg_006",
+  "name": "アルバ・シルヴィア",
+  "nation": "regalis",
+  "age": 28,
+  "gender": "female",
+  "profession": "王立魔導師（第3席）",
+  "traits": [
+    "情熱的",
+    "やや衝動的",
+    "向上心が高い"
+  ],
+  "skills": {
+    "外交": 30,
+    "管理": 40,
+    "戦略": 55,
+    "制作": 30,
+    "研究": 75,
+    "商才": 20
+  },
+  "popularity": 62,
+  "wealth": 4800000,
+  "history": "辺境の貧しい家出身。魔法の才能を見出され王立学院に奨学金入学。首席卒業後、王立魔導師団に最年少で採用された。",
+  "current_position": "王都守護のための魔法結界維持を担当",
+  "secret_organization": {
+    "name": null,
+    "role": "無所属",
+    "awareness": false
+  },
+  "relationships": {
+    "npc_reg_001": {
+      "type": "admiration",
+      "value": 70,
+      "note": "国王を遠くから尊敬している"
+    },
+    "npc_arc_003": {
+      "type": "research_rival",
+      "value": 50,
+      "note": "同世代の魔法使いとして密かに競い合っている"
+    },
+    "npc_reg_007": {
+      "type": "close_friend",
+      "value": 80,
+      "note": "学院時代からの唯一の親友"
+    }
+  },
+  "romance_status": "恋愛より研究と出世を優先している。ただし同期入学のクレム（npc_reg_007）に特別な感情を持っている",
+  "personality_deep": "貧困から這い上がってきた経験から、「力がなければ何も守れない」という信念がある。一方で孤児院の子供たちに魔法の基礎を教えるボランティアを続けている",
+  "arcadia_belief": "アルカディアは強者のみが到達できる場所だと思っている",
+  "last_updated": "2026-04-21"
+}

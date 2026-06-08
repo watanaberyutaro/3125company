@@ -1,0 +1,46 @@
+{
+  "id": "npc_grd_003",
+  "name": "ズグラ・ハンマーソング",
+  "nation": "grandsheim",
+  "age": 61,
+  "gender": "男性",
+  "profession": "職人ギルド長",
+  "traits": [
+    "陽気",
+    "話好き",
+    "交渉上手",
+    "職人には厳しい"
+  ],
+  "skills": {
+    "外交": 6,
+    "管理": 9,
+    "戦略": 7,
+    "制作": 8,
+    "研究": 4,
+    "商才": 7
+  },
+  "popularity": 67,
+  "wealth": 280000,
+  "current_position": null,
+  "history": "グランズヘイム唯一の「外交できる職人」として知られる。レガリスとの通商条約交渉を単独で成功させた実績を持つ。ハンマーを振るいながら歌を歌う習慣があり、それが「ハンマーソング」の由来。",
+  "secret_organization": {
+    "name": "深鉱の誓い",
+    "role": "書記・記録担当",
+    "awareness": true
+  },
+  "relationships": {
+    "npc_har_002": {
+      "type": "knowledge_exchange",
+      "value": 55,
+      "note": "古代の歌とグランズヘイムの伝承を交換している"
+    },
+    "npc_grd_001": {
+      "type": "historian_duty",
+      "value": 70,
+      "note": "族長への忠誠と歴史家としての使命"
+    }
+  },
+  "romance_status": "恋愛より歴史の保存を優先。独身",
+  "personality_deep": "見た目は厳しい老職人だが、伝承を語るとき目が輝く",
+  "last_updated": "2026-04-21"
+}

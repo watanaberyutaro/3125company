@@ -1,0 +1,164 @@
+{
+  "justice_system": {
+    "description": "各国が独自の法体系を持つ。共通法は王都が提案し、各国が採択するかどうかを決める。",
+    "common_laws": [
+      {
+        "law": "殺人禁止",
+        "penalty": "終身追放または死刑（各国判断）"
+      },
+      {
+        "law": "奴隷制禁止",
+        "penalty": "財産没収・追放",
+        "note": "コルサリアで200年前に廃止された最後の国"
+      },
+      {
+        "law": "降下禁止令（忘れられた大地）",
+        "penalty": "罰金50万El・資産没収の可能性"
+      },
+      {
+        "law": "アルカディア座標情報の独占禁止",
+        "penalty": "外交的制裁",
+        "note": "アルカナムのみ例外扱いで情報を保有中"
+      }
+    ],
+    "nation_courts": {
+      "regalis": "王立裁判所。3審制。陪審員制度あり",
+      "grandsheim": "族長評議会による裁定。慣習法重視",
+      "corsalia": "商業仲裁裁判所がメイン。金銭解決が多い",
+      "arcanum": "倫理委員会が兼任。研究関連の法律が特に厳格",
+      "harmonia": "コミュニティ調停システム。対話・和解優先"
+    },
+    "secret_org_treatment": "秘密組織は各国で違法ではないが、不法行為（暗殺・情報窃取）は犯罪。組織の存在自体は默認されている。"
+  },
+  "education_system": {
+    "description": "義務教育なし。ただし各国が教育機関を持ち、才能ある人材を発掘している。",
+    "institutions": [
+      {
+        "name": "レガリス王立学院",
+        "nation": "regalis",
+        "type": "総合大学",
+        "speciality": "政治・軍事・外交",
+        "tuition": "高い（奨学金制度あり）"
+      },
+      {
+        "name": "グランズヘイム職人学校",
+        "nation": "grandsheim",
+        "type": "職業訓練校",
+        "speciality": "鍛冶・採掘・工学",
+        "tuition": "無料（国家投資）"
+      },
+      {
+        "name": "コルサリア商業学院",
+        "nation": "corsalia",
+        "type": "ビジネス学校",
+        "speciality": "貿易・情報・交渉",
+        "tuition": "中程度"
+      },
+      {
+        "name": "アルカナム魔法学院",
+        "nation": "arcanum",
+        "type": "研究大学",
+        "speciality": "科学・観測・分析",
+        "tuition": "非常に高い（特待生制度あり）"
+      },
+      {
+        "name": "ハーモニア芸術院",
+        "nation": "harmonia",
+        "type": "芸術学校",
+        "speciality": "音楽・演劇・絵画・文学",
+        "tuition": "中程度"
+      },
+      {
+        "name": "各地の寺小屋",
+        "nation": "all",
+        "type": "初等教育",
+        "speciality": "読み書き・計算",
+        "tuition": "無料または少額"
+      }
+    ],
+    "literacy_rate": {
+      "regalis": 0.75,
+      "grandsheim": 0.6,
+      "corsalia": 0.8,
+      "arcanum": 0.95,
+      "harmonia": 0.85
+    }
+  },
+  "healthcare_system": {
+    "description": "魔法なし。薬草医学・外科・精神医療の組み合わせ。",
+    "providers": [
+      {
+        "name": "王立病院",
+        "nation": "regalis",
+        "quality": "高",
+        "cost": "中"
+      },
+      {
+        "name": "職人医療組合",
+        "nation": "grandsheim",
+        "quality": "中（外傷専門）",
+        "cost": "低"
+      },
+      {
+        "name": "港湾診療所",
+        "nation": "corsalia",
+        "quality": "中",
+        "cost": "中"
+      },
+      {
+        "name": "研究病院",
+        "nation": "arcanum",
+        "quality": "非常に高",
+        "cost": "高い・実験的"
+      },
+      {
+        "name": "ハーモニア療養院",
+        "nation": "harmonia",
+        "quality": "高（精神的ケア特化）",
+        "cost": "中"
+      }
+    ],
+    "average_lifespan": 72,
+    "infant_mortality_rate": 0.08,
+    "plague_history": "200年前に大疫病が発生。コルサリアが発端で5カ国に広まり30万人が死亡した。以来、防疫協定が締結されている。"
+  },
+  "communication_infrastructure": {
+    "description": "情報伝達手段。魔法なし。物理・化学・生物的手段のみ。",
+    "methods": [
+      {
+        "name": "飛空艇郵便",
+        "speed": "国内2日、国際5-10日",
+        "cost": "500El/通",
+        "reliability": 0.95
+      },
+      {
+        "name": "信号炎（緊急用）",
+        "speed": "数時間（視認可能範囲）",
+        "cost": "低",
+        "reliability": 0.8,
+        "note": "各島の見張り塔が中継"
+      },
+      {
+        "name": "伝書鳥（高速便）",
+        "speed": "国内12時間",
+        "cost": "2000El/通",
+        "reliability": 0.85
+      },
+      {
+        "name": "音声筒（近距離）",
+        "speed": "即時（1km以内）",
+        "cost": "装置代30万El",
+        "reliability": 0.99,
+        "note": "グランズヘイムが開発した機械装置"
+      },
+      {
+        "name": "通信塔ネットワーク",
+        "speed": "国内即時、国際2時間",
+        "cost": "初期設置1000万El",
+        "status": "建設中（レガリス-グランズヘイム間のみ完成）",
+        "requires_tech": "eng_6"
+      }
+    ]
+  },
+  "last_updated": "2026-04-23"
+}

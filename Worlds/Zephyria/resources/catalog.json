@@ -1,0 +1,362 @@
+{
+  "description": "ゼフィリア世界の全資源一覧。各国の産出・需要・基準価格。",
+  "resources": [
+    {
+      "id": "iron",
+      "name": "鉄鉱石",
+      "category": "鉱物",
+      "unit": "トン",
+      "base_price_per_unit": 1200,
+      "produces": {
+        "grandsheim": 8000,
+        "regalis": 1000
+      },
+      "consumes": {
+        "regalis": 5000,
+        "corsalia": 2000,
+        "harmonia": 1000,
+        "arcanum": 500
+      },
+      "notes": "グランズヘイムが世界最大の産出国。王都は製造業の消費が多い"
+    },
+    {
+      "id": "mithril",
+      "name": "ミスリル鉱",
+      "category": "希少鉱物",
+      "unit": "kg",
+      "base_price_per_unit": 50000,
+      "produces": {
+        "grandsheim": 200
+      },
+      "consumes": {
+        "arcanum": 100,
+        "regalis": 80,
+        "corsalia": 20
+      },
+      "notes": "最高品質の工具・武器素材。採掘量が限られるため超高値"
+    },
+    {
+      "id": "copper",
+      "name": "銅鉱石",
+      "category": "鉱物",
+      "unit": "トン",
+      "base_price_per_unit": 800,
+      "produces": {
+        "grandsheim": 5000,
+        "corsalia": 500
+      },
+      "consumes": {
+        "regalis": 2000,
+        "harmonia": 1500,
+        "corsalia": 1000
+      }
+    },
+    {
+      "id": "coal",
+      "name": "石炭",
+      "category": "燃料",
+      "unit": "トン",
+      "base_price_per_unit": 600,
+      "produces": {
+        "grandsheim": 12000
+      },
+      "consumes": {
+        "grandsheim": 8000,
+        "regalis": 3000,
+        "corsalia": 1000
+      },
+      "notes": "グランズヘイムの大炉で大量消費。余剰を輸出"
+    },
+    {
+      "id": "timber",
+      "name": "木材",
+      "category": "農林",
+      "unit": "m³",
+      "base_price_per_unit": 400,
+      "produces": {
+        "harmonia": 8000,
+        "regalis": 3000
+      },
+      "consumes": {
+        "grandsheim": 2000,
+        "corsalia": 5000,
+        "regalis": 4000
+      },
+      "notes": "コルサリアは飛空艇建造に大量消費"
+    },
+    {
+      "id": "wheat",
+      "name": "小麦",
+      "category": "食料",
+      "unit": "トン",
+      "base_price_per_unit": 300,
+      "produces": {
+        "regalis": 15000,
+        "harmonia": 8000
+      },
+      "consumes": {
+        "all": 12000
+      },
+      "notes": "王都が最大の穀物地帯。全国への食料供給基地"
+    },
+    {
+      "id": "fish",
+      "name": "干し魚・海産物",
+      "category": "食料",
+      "unit": "トン",
+      "base_price_per_unit": 500,
+      "produces": {
+        "corsalia": 10000
+      },
+      "consumes": {
+        "regalis": 3000,
+        "grandsheim": 2000,
+        "harmonia": 2000,
+        "arcanum": 500
+      }
+    },
+    {
+      "id": "herbs",
+      "name": "薬草",
+      "category": "農林",
+      "unit": "kg",
+      "base_price_per_unit": 800,
+      "produces": {
+        "grandsheim": 3000,
+        "harmonia": 5000
+      },
+      "consumes": {
+        "arcanum": 2000,
+        "regalis": 2000,
+        "corsalia": 1000
+      },
+      "notes": "グランズヘイム山岳の高山薬草は特に高品質"
+    },
+    {
+      "id": "wool",
+      "name": "羊毛・繊維",
+      "category": "農林",
+      "unit": "トン",
+      "base_price_per_unit": 600,
+      "produces": {
+        "harmonia": 4000,
+        "regalis": 2000
+      },
+      "consumes": {
+        "all": 3000
+      }
+    },
+    {
+      "id": "dye",
+      "name": "天然染料",
+      "category": "農林",
+      "unit": "kg",
+      "base_price_per_unit": 1500,
+      "produces": {
+        "harmonia": 2000,
+        "corsalia": 500
+      },
+      "consumes": {
+        "harmonia": 1000,
+        "regalis": 800
+      },
+      "notes": "ハーモニアの虹花から採れる染料は世界最高品質"
+    },
+    {
+      "id": "salt",
+      "name": "塩",
+      "category": "食料",
+      "unit": "トン",
+      "base_price_per_unit": 400,
+      "produces": {
+        "corsalia": 5000
+      },
+      "consumes": {
+        "all": 2000
+      },
+      "notes": "コルサリアが独占。塩の価格操作は政治問題になった歴史がある"
+    },
+    {
+      "id": "oil",
+      "name": "植物油・燃料油",
+      "category": "燃料",
+      "unit": "トン",
+      "base_price_per_unit": 700,
+      "produces": {
+        "regalis": 3000,
+        "harmonia": 2000
+      },
+      "consumes": {
+        "corsalia": 3000,
+        "grandsheim": 1500
+      }
+    },
+    {
+      "id": "glass",
+      "name": "ガラス製品",
+      "category": "製造品",
+      "unit": "個",
+      "base_price_per_unit": 200,
+      "produces": {
+        "arcanum": 50000,
+        "harmonia": 30000
+      },
+      "consumes": {
+        "corsalia": 20000,
+        "regalis": 40000
+      },
+      "notes": "アルカナムの精密ガラスは観測機器の素材として需要が高い"
+    },
+    {
+      "id": "weapon",
+      "name": "武器・防具",
+      "category": "製造品",
+      "unit": "個",
+      "base_price_per_unit": 15000,
+      "produces": {
+        "grandsheim": 5000
+      },
+      "consumes": {
+        "regalis": 3000,
+        "corsalia": 1500,
+        "arcanum": 200
+      },
+      "notes": "グランズヘイム製品は世界最高品質として知られる"
+    },
+    {
+      "id": "tool",
+      "name": "精密工具",
+      "category": "製造品",
+      "unit": "個",
+      "base_price_per_unit": 8000,
+      "produces": {
+        "grandsheim": 8000
+      },
+      "consumes": {
+        "all": 2000
+      }
+    },
+    {
+      "id": "paper",
+      "name": "紙・羊皮紙",
+      "category": "製造品",
+      "unit": "枚",
+      "base_price_per_unit": 50,
+      "produces": {
+        "harmonia": 500000,
+        "regalis": 200000
+      },
+      "consumes": {
+        "arcanum": 200000,
+        "regalis": 150000,
+        "all": 100000
+      }
+    },
+    {
+      "id": "art",
+      "name": "芸術品・装飾品",
+      "category": "文化品",
+      "unit": "件",
+      "base_price_per_unit": 50000,
+      "produces": {
+        "harmonia": 2000
+      },
+      "consumes": {
+        "regalis": 800,
+        "corsalia": 600,
+        "arcanum": 200
+      }
+    },
+    {
+      "id": "info",
+      "name": "情報・諜報",
+      "category": "サービス",
+      "unit": "件",
+      "base_price_per_unit": 20000,
+      "produces": {
+        "corsalia": 1000
+      },
+      "consumes": {
+        "all": 300
+      },
+      "notes": "コルサリアの影の手が市場を独占。品質・信頼性は価格依存"
+    },
+    {
+      "id": "ship",
+      "name": "飛空艇",
+      "category": "製造品",
+      "unit": "艇",
+      "base_price_per_unit": 500000,
+      "produces": {
+        "corsalia": 200,
+        "grandsheim": 50
+      },
+      "consumes": {
+        "regalis": 80,
+        "grandsheim": 30,
+        "harmonia": 20
+      }
+    },
+    {
+      "id": "food_luxury",
+      "name": "高級食材",
+      "category": "食料",
+      "unit": "kg",
+      "base_price_per_unit": 3000,
+      "produces": {
+        "corsalia": 500,
+        "harmonia": 300
+      },
+      "consumes": {
+        "regalis": 400
+      },
+      "notes": "王都貴族向け高級品。価格は季節・天候で大きく変動"
+    },
+    {
+      "id": "ancient_relics",
+      "name": "古代遺物の断片",
+      "category": "希少品",
+      "unit": "個",
+      "base_price_per_unit": 100000,
+      "produces": {
+        "arcanum": 10,
+        "corsalia": 5
+      },
+      "consumes": {
+        "arcanum": 8,
+        "regalis": 3
+      },
+      "notes": "忘れられた大地の探索や古代遺跡から稀に発見される"
+    },
+    {
+      "id": "sky_stone",
+      "name": "浮遊石",
+      "category": "希少鉱物",
+      "unit": "トン",
+      "base_price_per_unit": 200000,
+      "produces": {
+        "grandsheim": 50,
+        "arcanum": 10
+      },
+      "consumes": {
+        "corsalia": 30,
+        "regalis": 20
+      },
+      "notes": "空中島の地盤を構成する特殊鉱石。飛空艇の推力装置に不可欠"
+    },
+    {
+      "id": "food_grain",
+      "name": "保存食・乾燥食料",
+      "category": "食料",
+      "unit": "トン",
+      "base_price_per_unit": 450,
+      "produces": {
+        "regalis": 5000
+      },
+      "consumes": {
+        "all": 2000
+      },
+      "notes": "遠征・長距離航行の必需品"
+    }
+  ]
+}
