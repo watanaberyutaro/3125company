@@ -52,6 +52,9 @@ render() {
         local start_line=$(grep -n "=== START" "$LOG_FILE" | tail -1 | cut -d: -f1)
         if [ -n "$start_line" ]; then
             log_buf=$(tail -n +"$start_line" "$LOG_FILE" | tail -${MAX_LOG} | sed 's/^/  /')
+        else
+            # === START マーカーがないログでも空表示にせず通常のtailを出す
+            log_buf=$(tail -${MAX_LOG} "$LOG_FILE" 2>/dev/null | sed 's/^/  /')
         fi
     fi
 
