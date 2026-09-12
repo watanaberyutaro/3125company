@@ -26,7 +26,7 @@ from pathlib import Path
 # ─────────────────────────────────────────
 # 設定
 # ─────────────────────────────────────────
-VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Cardinal/Cardinal"
+VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
 CACHE_PATH = os.path.join(VAULT, ".company/secretary/.topics_cache.json")
 DAYS = 7
 MAX_PREVIEW_LINES = 60  # ファイル先頭の読み取り上限
