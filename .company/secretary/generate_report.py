@@ -13,7 +13,7 @@ import os
 import hashlib
 from datetime import datetime, timedelta
 
-VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Cardinal/Cardinal"
+VAULT = "/Users/watanaberyuutarou/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault"
 CACHE_PATH = os.path.join(VAULT, ".company/secretary/.report_cache.json")
 DAYS = 7
 MAX_PREVIEW_LINES = 80   # 内容プレビューの最大行数
